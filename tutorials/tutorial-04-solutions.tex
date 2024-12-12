@@ -1,0 +1,51 @@
+\begin{enumerate}
+		\item \begin{enumerate}
+			\item We know that $\vec 0\in \Null(M)$. We also know that $\vec u-\vec v=\mat{3\\-1}\in \Null(M)$. Since $\Null(M)$
+			is a subspace, we also have that $2\mat{3\\-1}\in\Null(M)$, along with many others.
+			\item We can add a vector in the null space to any existing solution. For example, $\vec u+\mat{3\\-1}$, $\vec u+\mat{6\\-2}$, 
+			and $\vec u+\mat{9\\-3}$ are all solutions.
+			\item No. Unless $M\vec 0=\vec b$, we do not expect the solution set to the a subspace. If the solution set is not a subspace
+			it is unlikely that summing two random solutions will result in another solution.
+		\end{enumerate}
+		
+		\item \begin{enumerate}
+			\item Differentiating, we see $u''+u=t^2-2$ and $v''+v=t^2-2$.
+			\item By computing $u(t)-v(t)=-2\sin t$, we can guess that $u-2\sin$, $u-4\sin$, and $u-6\sin$ are all solutions. Computing,
+			we verify that they indeed are.
+			\item The transformation can be described in words by ``Take the second derivative of the function and then add one copy of the original function''.
+			\item Similarly to the previous problem, we do not expect the solution set to be a subspace. However, with the transformation described in
+			part (c), we can realize $t^2-2+K\sin t$ as a particular solution, $t^2-2$, plus a multiple of something in the null space, $\sin t$.
+		\end{enumerate}
+		
+		\item \begin{enumerate}
+			\item Let $f,g\in \mathcal C$ and let $k$ be a scalar. Then 
+			\[\Id(f+g)=f+g=\Id(f)+\Id(g)\]
+			similarly,
+			\[
+				\Id(kf)=kf=k\Id(f)
+			\]
+				and so $\Id$ is linear.
+
+			For $D^2$, we compute
+			\[
+				D^2(f+g)=(f+g)''=f''+g''=D^2(f)+D^2(g)
+			\]
+			 and 
+			 \[
+			 	D^2(kf)=(kf)''=k(f'')=kD^2(f)
+			 \]
+				and so $D^2$ is linear.
+
+			\item The sum of linear transformation is linear, so $T$ is linear.
+			\item Computing $T(\sin) = -\sin+\sin=0$ and $T(\cos) = -\cos+\cos=0$ and so $\sin,\cos\in \Null(T)$.
+			\item First note that $\{\sin,\cos\}$ is a linearly independent set. Therefore $\Null(T)=\Span\{\sin,\cos\}$.
+
+			Now, notice that $t^2-2$ is a particular solution to $T(f)=t^2$. Because the equation $T(f)=t^2$ is a linear equation,
+			we can write the complete solution as $\text{particular}+\Null(T)$ and so the complete solution to $T(f)=t^2$ is
+			\[
+				\{t^2-2\}+\Span\{\sin t,\cos t\}.
+			\]
+			Finally, notice that solutions to $T(f)=t^2$ are the same thing as solutions to $y''+y=t^2$.
+		\end{enumerate}
+\end{enumerate}
+	

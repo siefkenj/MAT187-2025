@@ -1,0 +1,76 @@
+		\begin{objectives}
+			In this tutorial you will explore some of the ways that Linear Algebra techniques can be applied to the
+			study of differential equations.
+
+				These problems relate to the following course learning objectives:
+						\textit{Apply linear algebra techniques to classify solutions of linear systems of ordinary differential
+			equations including rigorously classifying the stability of equilibrium solutions and creating
+			linear approximations to non-linear systems of ordinary differential equations.}
+		\end{objectives}
+
+		\vspace{-.5em}
+		\subsection*{Problems}
+		\vspace{-.5em}
+
+	%	In MAT223, you studied linear algebra in the context of $\R^n$ where vectors were geometric objects. We can expand our notion of 
+	%	vectors to include \emph{functions} from $\R$ to $\R$ (you can think of functions as vectors in $\R^{\infty}$).
+
+\begin{enumerate}
+	\item\label{q1}
+	Recall from Linear Algebra that for a matrix $M$, the complete solution to the equation $M\vec x=\vec b$ can be expressed as
+	$
+		\Null(M)+\{\vec p\}
+	$
+		where $\vec p$ is a particular solution to $M\vec x=\vec b$.
+		
+	\begin{enumerate}
+		\item Suppose $\vec u=\mat{1\\2}$ and $\vec v=\mat{-2\\3}$ are two solutions to $M\vec x=\vec b$. Use this information
+		to find at least three vectors in $\Null(M)$.
+		\item Based on the information above, find three more solutions to $M\vec x=\vec b$.
+		\item Do you expect $\vec u+\vec v$ to be a solution to $M\vec x=\vec b$? Why or why not?
+	\end{enumerate}
+
+	\item Consider the differential equation
+	\[
+		y''+y=t^2
+	\]
+	\begin{enumerate}
+		\item Show that $u(t)=t^2-2+\sin t$ and $v(t)=t^2-2+3\sin t$ are solutions to the differential equation.
+		\item Use a process similar to what you did in Question \ref{q1} to guess three additional solutions to the differential equation. Verify
+		whether or not your guesses are actually solutions.
+		\item The function $u(t)-v(t)=-2\sin t$ can be considered to be in the ``null space'' of some transformation. What is this transformation?
+		\item Let $K\neq 1$. Why is $t^2-2+K\sin t$ a solution to the differential equation but $K(t^2-2+\sin t)$ not? Explain using linear algebra concepts.
+	\end{enumerate}
+
+	\item In this question, we will continue exploring the differential equation $y''+y=t^2$.
+	
+	Let $\mathcal C=\{\text{infinitely differentiable functions from $\R$ to $\R$}\}$, let $\Id:\mathcal C\to\mathcal C$
+	be the identity transformation, and let $D^2:\mathcal C\to\mathcal C$ be the transformation that sends a function to its second derivative.
+	Additionally,define $T=D^2+\Id$.
+
+	\begin{enumerate}
+		\item Show that $\Id$ and $D^2$ are linear transformations. (Use the same definition of Linear Transformation as in your Linear Algebra courses.)
+		\item Show that $T$ is a linear transformation.
+		\item Find $\Null(\Id)$ and $\Null(D^2)$.
+		\item Show that $\sin$ and $\cos$ are in $\Null(T)$.
+		\item You may take as a fact that $\Null(T)$ is two dimensional. Using this fact, find the complete solution to $y''+y=t^2$. Justify your steps.
+	\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
