@@ -10,7 +10,7 @@
 	hidelinks=true,
 	linkcolor = {0 0 1},
 	% Metadata to be embedded by hyperxmp
-	pdftitle={Ordinary Differential Equations (\jobname)},
+	pdftitle={Calculus II (\jobname)},
 	pdfauthor={Jason Siefken, Geoff McGregor, Arman Pannu},
 	pdfauthortitle={Author},
 	pdfcopyright={Copyright (C) \copyrightdate, Jason Siefken, Geoff McGregor, Arman Pannu},
@@ -330,52 +330,69 @@
 
 \begin{slide}
 	\question
-	You are observing starfish that made their way to a previously uninhabited tide-pool.
-	You'd like to predict the year-on-year population of these starfish.
+	Consider the plot of the complex numbers $p_1$, $p_2$, $p_3$, $p_4$ in the complex plane.
 
-	You start with a simple assumption
-	\[
-		\# \text{new children per year}\ \sim\ \text{size of current population}
-	\]
+	\includegraphics[width=2.4in]{complex1.jpg}
+
 	\begin{parts}
-		\item Come up with a mathematical model for the number of star fish in a given year.
-		Your model should
-		\begin{itemize}
-			\item Define any notation (variables and parameters) you use
-			\item Include at least one formula/equation
-			\item Explain how your formula/equation relates to the starting assumption
-		\end{itemize}
+		\item For which complex numbers is the real part grater than the imaginary part?
+		\item Which complex number has the smallest \emph{modulus}/\emph{absolute value}?
+		\item Which complex number has the largest \emph{argument}?
+		Is your answer at all ambiguous?
 	\end{parts}
 \end{slide}
 
 \begin{slide}
 	\question
-		Let
+	Consider the plot of the complex number $p$ in the complex plane.
 
-		\begin{tabular}{rl}
-			(Birth Rate) & $K=1.1$ children per starfish per year \\
-			(Initial Pop.) & $P_0=10$ star fish
-		\end{tabular}
+	\includegraphics[width=2.4in]{complex2.jpg}
 
-		and define the model \textbf{M$_1$} to be the model for starfish population with
-		these parameters.
 	\begin{parts}
-		\item Simulate the total number of starfish per year using Excel.
+		\item Sketch the complex number $2p$.
+		\item Sketch the complex number $p^2$.
+		\item Sketch the complex numbers $p^n$ for $n=3,4,\ldots$. Will your answer 
+		depend on $r$?
+
+		\bigskip 
+		\item Use the geometry of the complex plane to find $\sqrt{i}$. Express
+		your answer in both polar and rectangular form.
 	\end{parts}
 \end{slide}
 
 \begin{slide}
 	\question
-	Recall the model \textbf{M$_1$} (from the previous question). 
+	Consider the equation 
+	\begin{equation}
+		\label{eq:complex}
+		z^3=-1
+	\end{equation}
 
-	Define the model \textbf{M$_1^*$} to be
-	\[
-		P(t) = P_0 e^{0.742 t}
-	\]
 	\begin{parts}
-		\item Are \textbf{M$_1$} and \textbf{M$_1^*$} different models or the same?
-		\item Which of \textbf{M$_1$} or \textbf{M$_1^*$} is better?
-		\item List an advantage and a disadvantage for each of \textbf{M$_1$} and \textbf{M$_1^*$}.
+		\item Find a solution to Equation \eqref{eq:complex}.
+		\item If $z=re^{i\theta}$ is a solution to Equation \eqref{eq:complex}, 
+		what conditions must $r$ and $theta$ satisfy? Justify your conclusions.
+		\item Find all solutions to Equation \eqref{eq:complex}.
+
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the equation 
+	\begin{equation}
+		\label{eq:complex2}
+		z^n=1
+	\end{equation}
+
+	\begin{parts}
+		\item Solutions to Equation \eqref{eq:complex2} are called \emph{roots of unity}.
+		How many roots of unity are there (for a fixed value of $n$)?
+		\item Find the roots of unity for $n=4$.
+		\item Let $n=4$. Geometrically, what should the \emph{sum} of the roots of unity be?
+		Verify your answer algebraically.
+		\item Let $n=5$. What should the sum of the roots of unity be? 
+
 	\end{parts}
 \end{slide}
 
