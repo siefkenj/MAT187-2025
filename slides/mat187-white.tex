@@ -486,6 +486,139 @@
 	\end{parts}
 \end{slide}
 
+\begin{slide}
+	\question
+	For each polynomial approximation, determine whether the approximation is best at
+	$0$, best on the interval $[-1,1]$, or whether it's not a good approximation.
+
+	% Show list of 4 pictures approximating (a bell curve?) with 
+	% different styles of approximation
+\end{slide}
+
+\begin{slide}
+	\question
+	The function $f$ satisfies
+	\[f(0)= \qquad f'(0)=\qquad f''(0)=\qquad ...\]
+	Which polynomial below is a Taylor polynomial for $f$ centered at $0$?
+
+	% list equations of previous 4 approximations
+\end{slide}
+
+
+
+\begin{slide}
+	\question
+	A bee is flying through the air towards a delicious nectar snack.
+
+	The bee's distance from the flower (nectar) is given by $d(t)$.
+
+	You know that a first-order Taylor approximation to $d(t)$ at time $t=2$
+	is
+	\[
+		A_1(t)=3(t-2)+1
+	\]
+
+	\begin{parts}
+		\item Estimate the distance of the bee from the flower at time 
+		$2.1$. Is your answer exact or approximate?
+		\item Estimate the velocity of the been at time $2.1$. Is your answer exact or approximate?
+		\item Are there any times you can compute the \emph{exact} distance the bee is from the flower?
+		\item Are there any times you can compute the \emph{exact} velocity?
+		\item What is your best estimate for the acceleration of the 
+		bee at time $2.1$?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	A bee is flying through the air towards a delicious nectar snack.
+
+	The bee's distance from the flower (nectar) is given by $d(t)$.
+
+	You know that a second-order Taylor approximation to $d(t)$ at time $t=2$
+	is
+	\[
+		A_2(t)=3(t-2) + 2(t-2)^2 + 1
+	\]
+
+	\begin{parts}
+		\item Estimate the distance of the bee from the flower at time 
+		$2.1$. Is your answer exact or approximate?
+		\item Estimate the velocity of the been at time $2.1$. Is your answer exact or approximate?
+		\item Are there any times you can compute the \emph{exact} distance the bee is from the flower?
+		\item Are there any times you can compute the \emph{exact} velocity?
+		\item What is your best estimate for the acceleration of the 
+		bee at time $2.1$?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Based on the pictures, which polynomial approximations do you think
+	are \emph{Taylor} polynomials?
+
+	% Show list of 4 pictures approximating (a bell curve?) with 
+	% different styles of approximation
+\end{slide}
+
+
+\begin{slide}
+	\question
+	Let $f(x)=e^x$ and let $P_n(x)$ be the $n$th degree Taylor approximation to $f$ centered at $0$. In particular
+	\[
+		P_3(x)=1+x+\frac{x^2}{2}+\frac{x^3}{6}
+	\]
+	Let $R_n(x)$ be the error in $P_n(x)$.
+
+	\begin{parts}
+		\item Find $R_3(1.5)$ (you may use a calculator).
+		\item What is the largest value of $R_3(x)$ when $0\leq x\leq 2$?
+		\item Is there a value of $x$ for which $R_3(x)=0$? What does this 
+		say about $P_3$?
+
+		\medskip 
+		\item Given that $|f^{(5)}(x)| \leq 8$ when $x\in [0,2]$, can you find an upper bound for $R_4(x)$ (when $x\in [0,2]$)?
+		\item Given what you know from the previous part(s), can you bound $R_n(x)$?
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+	We are approximating an infinitely differentiable function $f$
+	by using a Taylor polynomial, $P_n$, centered at $a$ of degree $n$.
+
+	We approximate $f(x)\approx P_n(x)$. Which of the following affect the
+	size of the error in $P_n(x)$ (i.e., the magnitude of $R_n(x)$)?
+
+	\begin{enumerate}
+		\item The degree of $P_n$, i.e., $n$.
+		\item The magnitude of $f(a)$, i.e., $|f(a)|$.
+		\item The magnitudes of the derivatives of $f$ at $a$, i.e., the size of $|f'(a)|$, $|f''(a)|$, etc..
+		\item The distance from $a$ that you are approximating at, i.e., 
+		the size of $|x-a|$.
+
+	\end{enumerate}
+\end{slide}
+
+\begin{slide}
+	\question
+	Use Desmos to conjecture about the following questions.
+
+	\url{https://www.desmos.com/calculator/nrru5n0gqq}
+
+	\begin{parts}
+		\item When approximating $\sin(x)$ using Taylor polynomials centered at $x=0$, higher degree polynomials will approximate $\sin(2)$ better.
+		\item When approximating $\tan(x)$ using Taylor polynomials centered at $x=0$, higher degree polynomials will approximate $\tan(2)$ better.
+
+		\item When approximating $f(x)=\frac{1}{1+x^2}$ using Taylor polynomials centered at $x=0$, higher degree polynomials will approximate $f(2)$ better.
+
+		\item Make a conjecture about the relationship between the degree of your Taylor approximation and the accuracy of its values. Does
+		this contradict what you know from Taylor's remainder theorem?
+
+	\end{parts}
+\end{slide}
+
 
 
 %\begin{slide}
