@@ -488,18 +488,37 @@
 
 \begin{slide}
 	\question
-	For each polynomial approximation, determine whether the approximation is best at
-	$0$, best on the interval $[-1,1]$, or whether it's not a good approximation.
+	\begin{parts}
+	\item For each polynomial approximation of the bell curve, is the approximation best at
+	$0$, best on the interval $[-2,2]$, or best on the interval $[0,2]$.
 
+	% https://www.desmos.com/calculator/qjruzy8gvw
+	(A)~\includegraphics[width=1.25in]{B2-Plot1.png}
+	(B)~\includegraphics[width=1.25in]{B2-Plot2.png}\\
+	(C)~\includegraphics[width=1.25in]{B2-Plot3.png}
+	(D)~\includegraphics[width=1.25in]{B2-Plot4.png}
 	% Show list of 4 pictures approximating (a bell curve?) with 
 	% different styles of approximation
+	\item Based on the pictures, which polynomial(s) do you think come from a Taylor approximation?
+	\end{parts}
 \end{slide}
 
 \begin{slide}
 	\question
 	The function $f$ satisfies
-	\[f(0)= \qquad f'(0)=\qquad f''(0)=\qquad ...\]
-	Which polynomial below is a Taylor polynomial for $f$ centered at $0$?
+	\[f(0)= 1\qquad f'(0)=0\qquad f''(0)=-2\]\[ f'''(0)=0\qquad f''''(0)=12\]
+
+	\begin{parts}
+		\item Write down $T_4$, the 4th degree Taylor approximation to $f$ centered at $0$.
+		\item Use Desmos to compare the graph of $T_4$ with the graphs of $g_1$,
+		$g_2$, $g_3$, and $g_4$. Which of the $g$'s do you think is most likely equal to $f$?
+		\begin{enumerate}
+			\item $g_1(x)=e^{-|x|}$
+			\item $g_2(x)=e^{-x^2}$
+			\item $\displaystyle g_3(x)=\frac{1}{1+x^2}$
+			\item $\displaystyle g_3(x)=\frac{1}{1+(2x)^4}$
+		\end{enumerate}
+	\end{parts}
 
 	% list equations of previous 4 approximations
 \end{slide}
@@ -508,9 +527,10 @@
 
 \begin{slide}
 	\question
-	A bee is flying through the air towards a delicious nectar snack.
+	A bee is flying through the air looking for a delicious nectar snack. The Corn Marigold 
+	flower is known to be a great source of nectar. 
 
-	The bee's distance from the flower (nectar) is given by $d(t)$.
+	The bee's distance from a Corn Marigold flower at time $t$ is given by $d(t)$.
 
 	You know that a first-order Taylor approximation to $d(t)$ at time $t=2$
 	is
@@ -531,14 +551,15 @@
 
 \begin{slide}
 	\question
-	A bee is flying through the air towards a delicious nectar snack.
+	A bee is flying through the air looking for a delicious nectar snack. The Corn Marigold 
+	flower is known to be a great source of nectar. 
 
-	The bee's distance from the flower (nectar) is given by $d(t)$.
-
+	The bee's distance from a Corn Marigold flower at time $t$ is given by $d(t)$.
+	
 	You know that a second-order Taylor approximation to $d(t)$ at time $t=2$
 	is
 	\[
-		A_2(t)=3(t-2) + 2(t-2)^2 + 1
+		A_2(t)=2(t-2)^2 + 3(t-2) + 1
 	\]
 
 	\begin{parts}
@@ -554,9 +575,13 @@
 
 \begin{slide}
 	\question
-	Based on the pictures, which polynomial approximations do you think
+	Based on the pictures, which polynomial approximations of the bell curve do you think
 	are \emph{Taylor} polynomials?
 
+	(A)~\includegraphics[width=1.25in]{B2-Plot1.png}
+	(B)~\includegraphics[width=1.25in]{B2-Plot2.png}\\
+	(C)~\includegraphics[width=1.25in]{B2-Plot3.png}
+	(D)~\includegraphics[width=1.25in]{B2-Plot4.png}
 	% Show list of 4 pictures approximating (a bell curve?) with 
 	% different styles of approximation
 \end{slide}
@@ -585,17 +610,17 @@
 
 \begin{slide}
 	\question
-	We are approximating an infinitely differentiable function $f$
-	by using a Taylor polynomial, $P_n$, centered at $a$ of degree $n$.
+	Let $f$ be an infinitely differentiable function, and let $P_n$ be a
+	a Taylor polynomial for $f$ of degree $n$ centered at $a$.
 
 	We approximate $f(x)\approx P_n(x)$. Which of the following affect the
 	size of the error in $P_n(x)$ (i.e., the magnitude of $R_n(x)$)?
 
 	\begin{enumerate}
-		\item The degree of $P_n$, i.e., $n$.
-		\item The magnitude of $f(a)$, i.e., $|f(a)|$.
-		\item The magnitudes of the derivatives of $f$ at $a$, i.e., the size of $|f'(a)|$, $|f''(a)|$, etc..
-		\item The distance from $a$ that you are approximating at, i.e., 
+		\item[(A)] The degree of $P_n$, i.e., $n$.
+		\item[(B)] The magnitude of $f(a)$, i.e., $|f(a)|$.
+		\item[(C)] The magnitudes of the derivatives of $f$ at $a$, i.e., the size of $|f'(a)|$, $|f''(a)|$, etc..
+		\item[(D)] The distance from $a$ that you are approximating at, i.e., 
 		the size of $|x-a|$.
 
 	\end{enumerate}
@@ -608,10 +633,10 @@
 	\url{https://www.desmos.com/calculator/nrru5n0gqq}
 
 	\begin{parts}
-		\item When approximating $\sin(x)$ using Taylor polynomials centered at $x=0$, higher degree polynomials will approximate $\sin(2)$ better.
-		\item When approximating $\tan(x)$ using Taylor polynomials centered at $x=0$, higher degree polynomials will approximate $\tan(2)$ better.
+		\item True/False? When approximating $\sin(x)$ using Taylor polynomials centered at $x=0$, higher degree polynomials will approximate $\sin(2)$ better.
+		\item True/False? When approximating $\tan(x)$ using Taylor polynomials centered at $x=0$, higher degree polynomials will approximate $\tan(2)$ better.
 
-		\item When approximating $f(x)=\frac{1}{1+x^2}$ using Taylor polynomials centered at $x=0$, higher degree polynomials will approximate $f(2)$ better.
+		\item True/False? When approximating $f(x)=\frac{1}{1+x^2}$ using Taylor polynomials centered at $x=0$, higher degree polynomials will approximate $f(2)$ better.
 
 		\item Make a conjecture about the relationship between the degree of your Taylor approximation and the accuracy of its values. Does
 		this contradict what you know from Taylor's remainder theorem?
