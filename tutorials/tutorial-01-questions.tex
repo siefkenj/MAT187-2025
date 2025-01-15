@@ -1,68 +1,90 @@
-		\begin{objectives}
-			In this tutorial, you practice creating and using polynomial approximations of functions.
-		\end{objectives}
+\begin{objectives}
+	In this tutorial, you practice creating and using polynomial approximations of functions.
+\end{objectives}
 
-	%	\bigskip
+%	\bigskip
 
 
-		\subsection*{Problems}
-		
-		\begin{enumerate}
-			\item  The inverse square root function, $f(x) = 1/\sqrt{x}$ is an important function
-			when simulating light and reflections in computer graphics.  However, computing square 
-			roots can be expensive, so we will use much-simpler polynomial approximations.
-				\begin{enumerate}
-					\item Find the first and second degree Taylor approximations to $f$ at $x=4$.
-					Use each of these polynomials to approximate $f(2)$. Use a calculator 
-					to quantify the error in each approximation.
-					\item Find the quadratic polynomial that interpolates between the points 
-					$(3,f(3))$, $(4,f(4))$, and $(5,f(5))$. 
-					Use this polynomial to approximate $f(2)$ and quantify its error.
+\subsection*{Problems}
 
-					\item Use Desmos to graphically answer the following: 
-					In what region(s) is the interpolating polynomial better?
-					In what region(s) is the Taylor polynomial better?
+\begin{enumerate}
+	\item  The inverse square root function, $f(x) = 1/\sqrt{x}$ is an important function
+	      when simulating light and reflections in computer graphics.  However, computing square
+	      roots can be expensive, so we will use much-simpler polynomial approximations.
+	      \begin{enumerate}
+		      \item Find the first and second degree Taylor approximations to $f$ centered at $4$.
+		            Use each of these polynomials to approximate $f(2)$. Use a calculator
+		            to quantify the error in each approximation.
+		      \item Find the quadratic polynomial that interpolates between the points
+		            $(3,f(3))$, $(4,f(4))$, and $(5,f(5))$.
+		            Use this polynomial to approximate $f(2)$ and quantify its error.
 
-					\item Find the third and fourth degree Taylor approximations to $f$ at $x=4$.
-					How well do they approximate $f(0.5)$. What about $f(7.5)$?
+		      \item Use Desmos to graphically answer the following:
+		            In what region(s) is the interpolating polynomial better?
+		            In what region(s) is the Taylor polynomial better?
 
-					\item Write down the remainder formula for the $n$th order 
-                    Taylor approximation of $f$. Can you use this formula to interpret the error as $x$ tends to zero, and as $x$ moves away from $4$?
-				\end{enumerate}
+		      \item Find the third and fourth degree Taylor approximations to $f$ centered at $4$.
+		            How well do they approximate $f(0.5)$. What about $f(7.5)$?
 
-				\item The step function $H(x)$  defined by 
-                
-                \[H(x) = \begin{cases}
-				    0  \text{ if } x < 0\\
-                        1 \text { if } x \geq 1
-				\end{cases}\] 
-                
-                is an important function in circuits and control theory, and is used to distinguish between an on and off state. For example, $H(x^2-1)$ indicates the region where $x^2 \geq 1$ holds true. Approximating $H(x)$ by ``smoother'' functions enables the use of calculus, and has an important application in machine learning. 
-                \begin{enumerate}
-                    \item Approximate by Taylor series
-                    \begin{enumerate}
-                        \item The logistic function $L_k(x) = \frac{1}{1+e^{-2kx}}$ with scaling $k$ is a good approximation for the step function as $k$ tends to infinity. Find a third order Taylor polynomial $p(x)$ for $L_k(x)$ based at $x=0$.
-                        \item What is the largest error between $L_k(x)$ and its Taylor polynomial over the region $[-1,1]$?  
-                        \item Let $\epsilon >0$ be small. What is the largest error between $L_k(x)$ and $H(x)$ over the region $[\epsilon,1]$? The answer will be a function of $\epsilon$ and $k$. What happens to the error when $k\to \infty$?
-                        
-                        \item Estimate the error over the interval $|x|\leq 1, |x| \geq \epsilon$ when approximating $H(x)$ by $p(x)$. 
+		      \item Write down the remainder formula for the $n$th order
+		            Taylor approximation of $f$.
+		            What does this formula say about the error of your Taylor approximations near $0$?
+		            What about near $8$?
+	      \end{enumerate}
 
-                    \end{enumerate}
-                
-                
-                \item Approximation by Polynomial Interpolation
+	\item The step function $H(x)$  defined by
+	      \[
+		      H(x) = \begin{cases}
+			      0  \text{ if } x < 0 \\
+			      1 \text { if } x \geq 1
+		      \end{cases}
+	      \]
+	      is an important function in circuits and control theory
+	      and is used to distinguish between an on and off state.
+		  In this question, we will experiment with approximating $H$ via a polynomial.
+	      \begin{enumerate}
+		      \item \textbf{Approximate by Taylor Polynomials}
+		            \begin{enumerate}
+						\item Find a formula for the $n$th degree Taylor approximation to $H$ centered 
+						at $1$. Does this provide a good approximation of $H$? If you changed where your
+						Taylor approximation was centered, would your approximation improve?
+			            \item The logistic function $L_k(x) = \frac{1}{1+e^{-2kx}}$ with scaling parameter $k$ 
+						can be use to approximate the step function for large $k$.
+						
+						Find a third order Taylor polynomial $P_3(x)$ for $L_k(x)$ centered at $x=0$.
+			            \item What is the largest error between 
+						$L_k$ and $P_3$ over the region $[-1,1]$? (Hint: Use Desmos to explore the error graphically.)
 
-                \begin{enumerate}
-                    \item Pick four interpolation points $x_1,x_2,x_3,x_4 \in [-1,1]$, and construct a third order polynomial $p(x) = ax^3 + bx^2 +cx + d$ interpolating $H(x)$.   
-                    \item Observe the error $|H(x) - p(x)|$ over the interval $[-1,1]$.  
-                \end{enumerate}
-                
-                \end{enumerate} 
+						\item In a particular electronics application $H(v)$ models the output 
+						voltage of a circuit given input voltage $v$. You would like to model 
+						this situation with a continuous function, $f$, subject to the following requirement:
+						$f(v)$ is within 1\% of the value $1$ volt when $v\geq .01$ volts.
 
-				\item Consider the functions $e^x$, $\cos{x}$, $\sin{x}$, $\cosh{x}$, and $\sinh{x}$.
-                \begin{enumerate}
-                    \item Write the 4th order Taylor polynomials for the above functions centred around $x=0$
-                    \item Write the Taylor polynomials for $e^{ix}$ and $\cos{x} + i\sin{x}$, also centred around $x=0$. Which identity does this remind you of?
-                    \item Write the 4th order Taylor polynomial for $\cosh{x} + \sinh{x}$ centred around $x=0$. Which identity does this remind you of?
-                \end{enumerate}
-		\end{enumerate}
+						Find a value of $k$ so that $L_k$ approximates $h$ within the required tolerance.
+						Then, find a Taylor approximation of $L_k$ that meets the requirement.
+		            \end{enumerate}
+
+
+		      \item \textbf{Approximation by Polynomial Interpolation}
+
+		            \begin{enumerate}
+			            \item Pick four interpolation points $x_1,x_2,x_3,x_4 \in [-1,1]$, and construct a third order polynomial, $Q_3$, interpolating $H(x)$ using Lagrange's method.
+			            \item Graph $H$, $Q_3$, and $P_3$ (your 3rd-order Taylor approximation from the previous part) in Desmos.
+						Do both approximations do a good job? When would you use one approximation over the other?
+		            \end{enumerate}
+
+	      \end{enumerate}
+
+	\item The functions $\sin$ and $\cos$ are closely linked to $e^x$ by Euler's formula: $e^{i\theta}=\cos\theta+i\sin\theta$.
+	      \begin{enumerate}
+		      \item Find an expression for $\sin\theta$ as a linear combination of exponentials (Hint: 
+			  think about $e^{i\theta}$ and $e^{-i\theta}$).
+			  \item Find an expression for $\cos\theta$ as a linear combination of exponentials.
+			  \item The \emph{hyperbolic sine} can be define from $\sin$ by the formula $\sinh\theta =-i\sin(i\theta)$. 
+			  Use this fact to find a formula for $\sinh\theta$ in terms of exponentials.
+			  \item The \emph{hyperbolic cosine} can be define from $\cos$ by the formula $\cosh\theta =\cos(i\theta)$.
+			  Use this fact to find a formula for $\cosh\theta$ in terms of exponentials.
+			  \item $\sin$ and $\cos$ satisfy the identity $\sin^2\theta+\cos^2\theta=1$. Find a similar identity
+			  for $\sinh$ and $\cosh$.
+	      \end{enumerate}
+\end{enumerate}
