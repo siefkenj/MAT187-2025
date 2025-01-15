@@ -1,18 +1,10 @@
 		\subsection*{Learning Objectives} Students need to be able to\ldots
 		\begin{itemize}
-			\item Create a spreadsheet that runs Euler's method to approximate the solution to a differential equation.
-			\item Recognize the difference between the approximation suggested by Euler's method and the \emph{true} solution
-			to a differential equation. This includes adjusting the step size of Euler's method to discern what is error vs. what
-			is the underlying solution.
+			\item Find a polynomial given a set of points that it goes through using Lagrange interpolation.
+			\item Construct a Taylor polynomial and approximate its error by using Taylor's Remainder Theorem.
 		\end{itemize}
 
-
-		\subsection*{Context} In class we have created a spreadsheet to make an Euler approximation
-		for an ODE. However, we haven't done this very many times. Students need more practice!
-
-		This week we will start making Euler approximations for systems of ODEs using spreadsheets,
-		so we need students to have a firm understanding of how to use spreadsheets and the errors
-		that can arise.
+		\subsection*{Context} 
 
 
 		\subsection*{What to Do} This is the first tutorial of the term, and
@@ -45,22 +37,13 @@
 
 		This introduction should take no more than 5 minutes.
 
-		Next, introduce the learning objectives for the day's tutorial. Explain
-		that the goal of this tutorial. Their worksheet has the ``formal'' objectives
-		stated and these instructions have the ``hidden'' objectives. Feel free
-		to share with them the hidden objectives as well.
+		Next, introduce the learning objectives for the day's tutorial. Explain the goal of this tutorial. Their worksheet has the ``formal'' objectives stated and these instructions have the ``hidden'' objectives. Feel free to share with them the hidden objectives as well.
 
-		Ask the students to pair up and
+		Ask the students to get together in groups and
 		start working on the problem list. Circulate around the room during
 		this time and ask groups what they're thinking. They will be tempted
 		to move quickly through the list without thoroughly checking their
 		new answers---encourage them to think deeply.
-
-		Problem 1 is a straightforward repetition of what we have done in class, but that doesn't mean
-		students will know how to do it. Encourage them to outline how they would compute the first few steps
-		of Euler's method before they make a spreadsheet. Then, encourage them to start a new spreadsheet from scratch rather
-		than modify the spreadsheet we have from class. However, if a group is really struggling, you can give the opposite
-		advice: look at a spreadsheet we used in class.
 
 		There are too many problems to finish in 50 minutes and \emph{you should not be going
 		over the solution to every problem}. Solutions will be posted for the students. The goal
@@ -72,27 +55,9 @@
 		that most groups have at least started, and do this problem as a wrapup. Seeing an expert do the
 		problem is the student's reward for working so hard.
 
-		Since this tutorial involves making spreadsheets, a computer and projector setup is required.
-		Check out your tutorial room before the first tutorial to see if it has the required technology.
-		Also, rehearse making a spreadsheet for Question 1. Programming on the fly often doesn't end well.
-
 		Notes:
 		\begin{enumerate}
-			\item For part (b), students may ignore the scale of the axes. They'll see a squiggle but fail to notice that the range of that
-			squiggle is -0.001 to 0.001, which could be completely attributed to error.
+			\item Most groups will not have time to get to the last problem. That's okay! The moral is that you can prove some interesting identities using Taylor polynomials.
 
-			For part (c) they can manually scan through their data or try to guess from their graph. They can also use a spreadsheet formula
-			like \verb|=IF(D5>MAX(D3:D4,D6:D7), 1, 0)| to indicate whether the current cell value is larger than the four surrounding cells.
-			Then, they can scroll to find the position of the 1s.
-
-			For part (d) they may not recognize that they can check concavity directly from the differential equation.
-
-			\item For (b), have them actually give you the explanation. We're looking for something substantially more than ``the
-			graphs get more and more periodic''. When we start doing systems of equations, this analysis will be important.
-
-			\item Most groups will not have time to get to this problem. That's okay! The moral is that you won't always
-			end up with increasing errors when using Euler's method (though often times you will), and only advanced students need
-			to understand this subtlety.
-
-			Make sure the class knows that its okay that they didn't get to this problem, but that it is good practice for them to do it at home.
+			Make sure the class knows that it's okay that they didn't get to this problem, but that it is good practice for them to do it at home.
 		\end{enumerate}

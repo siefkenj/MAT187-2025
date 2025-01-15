@@ -1,6 +1,5 @@
 		\begin{objectives}
-			In this tutorial, you practice creating and using polynomial approximations of
-			functions.
+			In this tutorial, you practice creating and using polynomial approximations of functions.
 		\end{objectives}
 
 	%	\bigskip
@@ -27,15 +26,43 @@
 					\item Find the third and fourth degree Taylor approximations to $f$ at $x=4$.
 					How well do they approximate $f(0.5)$. What about $f(7.5)$?
 
-					\item % Finish off with insights about the asymptote blocking convergence
+					\item Write down the remainder formula for the $n$th order 
+                    Taylor approximation of $f$. Can you use this formula to interpret the error as $x$ tends to zero, and as $x$ moves away from $4$?
 				\end{enumerate}
 
-				\item % Try to approximate a step function? Let them use either
-				% interpolation or the Taylor series of something that becomes just like the 
-				% step function? This could be fund and frustrating!
-                Try to approximate a step function.
+				\item The step function $H(x)$  defined by 
+                
+                \[H(x) = \begin{cases}
+				    0  \text{ if } x < 0\\
+                        1 \text { if } x \geq 1
+				\end{cases}\] 
+                
+                is an important function in circuits and control theory, and is used to distinguish between an on and off state. For example, $H(x^2-1)$ indicates the region where $x^2 \geq 1$ holds true. Approximating $H(x)$ by ``smoother'' functions enables the use of calculus, and has an important application in machine learning. 
+                \begin{enumerate}
+                    \item Approximate by Taylor series
+                    \begin{enumerate}
+                        \item The logistic function $L_k(x) = \frac{1}{1+e^{-2kx}}$ with scaling $k$ is a good approximation for the step function as $k$ tends to infinity. Find a third order Taylor polynomial $p(x)$ for $L_k(x)$ based at $x=0$.
+                        \item What is the largest error between $L_k(x)$ and its Taylor polynomial over the region $[-1,1]$?  
+                        \item Let $\epsilon >0$ be small. What is the largest error between $L_k(x)$ and $H(x)$ over the region $[\epsilon,1]$? The answer will be a function of $\epsilon$ and $k$. What happens to the error when $k\to \infty$?
+                        
+                        \item Estimate the error over the interval $|x|\leq 1, |x| \geq \epsilon$ when approximating $H(x)$ by $p(x)$. 
 
-				\item % A question where they need to approximate a function on R^2 by
-				% using a complex polynomial and then taking the real and imaginary parts
-				% would be neat.
+                    \end{enumerate}
+                
+                
+                \item Approximation by Polynomial Interpolation
+
+                \begin{enumerate}
+                    \item Pick four interpolation points $x_1,x_2,x_3,x_4 \in [-1,1]$, and construct a third order polynomial $p(x) = ax^3 + bx^2 +cx + d$ interpolating $H(x)$.   
+                    \item Observe the error $|H(x) - p(x)|$ over the interval $[-1,1]$.  
+                \end{enumerate}
+                
+                \end{enumerate} 
+
+				\item Consider the functions $e^x$, $\cos{x}$, $\sin{x}$, $\cosh{x}$, and $\sinh{x}$.
+                \begin{enumerate}
+                    \item Write the 4th order Taylor polynomials for the above functions centred around $x=0$
+                    \item Write the Taylor polynomials for $e^{ix}$ and $\cos{x} + i\sin{x}$, also centred around $x=0$. Which identity does this remind you of?
+                    \item Write the 4th order Taylor polynomial for $\cosh{x} + \sinh{x}$ centred around $x=0$. Which identity does this remind you of?
+                \end{enumerate}
 		\end{enumerate}
