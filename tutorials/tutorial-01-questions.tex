@@ -31,12 +31,13 @@
 		            What does this formula say about the error of your Taylor approximations near $0$?
 		            What about near $8$?
 	      \end{enumerate}
+          \clearpage
 
 	\item The step function $H(x)$  defined by
 	      \[
 		      H(x) = \begin{cases}
 			      0  \text{ if } x < 0 \\
-			      1 \text { if } x \geq 1
+			      1 \text { if } x \geq 0
 		      \end{cases}
 	      \]
 	      is an important function in circuits and control theory
@@ -51,7 +52,7 @@
 			            \item The logistic function $L_k(x) = \frac{1}{1+e^{-2kx}}$ with scaling parameter $k$ 
 						can be use to approximate the step function for large $k$.
 						
-						Find a third order Taylor polynomial $P_3(x)$ for $L_k(x)$ centered at $x=0$.
+						Find a third order Taylor polynomial $P_3(x)$ for $L_k(x)$ centered at $x=0$. (To help with this, you can take for granted that $L_k'''(0) = -k^3, L_k''(0) =0, L_k'(0)=k/2$)
 			            \item What is the largest error between 
 						$L_k$ and $P_3$ over the region $[-1,1]$? (Hint: Use Desmos to explore the error graphically.)
 
@@ -74,7 +75,7 @@
 		            \end{enumerate}
 
 	      \end{enumerate}
-
+    \clearpage
 	\item The functions $\sin$ and $\cos$ are closely linked to $e^x$ by Euler's formula: $e^{i\theta}=\cos\theta+i\sin\theta$.
 	      \begin{enumerate}
 		      \item Find an expression for $\sin\theta$ as a linear combination of exponentials (Hint: 
