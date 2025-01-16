@@ -19,7 +19,7 @@
 
                 By direct evaluation we get $|q(2)-f(2)| \approx 0.0278$.
 
-                \item Graphing the inequality $|f(x) - p_2(x)| < |f(x) - q(x)$ shows the region where the Taylor polynomial is better. Both approximations suffer as $x$ goes to zero. the Taylor approximation is better near $x=4$, but the interpolating polynomial is better for a larger region. 
+                \item Graphing the inequality $|f(x) - p_2(x)| < |f(x) - q(x)|$ shows the region where the Taylor polynomial is better. Both approximations suffer as $x$ goes to zero. the Taylor approximation is better near $x=4$, but the interpolating polynomial is better for a larger region. 
 
                 \item For this question we need the third and fourth derivatives of $f(x)$: $f'''(x) = \frac{-15}{8}x^{-7/2}$ and $f^{(4)}(x) = \frac{105}{16}x^{-9/2}$. With this, the third and fourth order Taylor polynomials are:
 
@@ -42,62 +42,69 @@
 			\end{enumerate}
 			\item \begin{enumerate}
 			    \item 
-                \begin{enumerate} \item 
-                We'll need to know the first few derivatives of $L_k(x)$. A short computation tells us:
+                \begin{enumerate} 
+                \item Since $H(x)$ is constant near $x=1$, we know that all derivatives of $H(x)$ are zero at $x=1$, i.e. $H^{(n)}(1)=0$ for all $n$. So the Taylor polynomial is:
 
-                \[L_k'(x) = \frac{2ke^{-2kx}}{(1+e^{-2kx})^2} = 2k\frac{1}{1+e^{-2kx}}(1-\frac{1}{1+e^{-2kx}})=2kL_k(x)(1-L_k(x))\]
+                \[P_n(x) = 1\]
 
-                Notice that $L_k'(0) = k/2$. We can apply this identity a few times:
+                This isn't a very good approximation of $H(x)$, and moving the base point won't improve the situation.
 
-                \[L_k''(x) = L_k'(x)(1-L_k(x)) + L_k(x)(1-L_k'(x))\]
+            
+                \item Observe that as $k$ increases, the error gets much much worse over the interval $[-1,1]$ 
 
-                Notice $L_k''(0) = 0$. 
+                The Taylor polynomial of $L_k$ based at zero is:
 
-                \[L_k'''(x) = L_k''(x)(1-L_k(x)) + 2L_k'(x)(1-L_k'(x)) + L_k(x)(1-L_k''(x))\]
-
-                Since $L_k''(0) = 0$ and $L_k'(0) = k/2$, we get:
-
-                \[L_k'''(0) = 2L_k'(0)(1-L_k'(0)) + L_k(0) = \frac{1+2k(1-k)}{2}\]
-
-                So the Taylor series of $L_k$ based at zero is:
-
-                \[p(x) = L_k(0) + L_k'(0)x +L_k'(0)x^2/2 + L_k'''(0)x^3/3!\]
+                \[p(x) = L_k(0) + L_k'(0)x +L_k'(0)x^2/2 + L_k'''(0)x^3/3! = kx/2 + k^3x^3/3!\]
                 \item 
                 
-                \item We're looking to maximize $|H(x)-L_k(x)|$ over the interval $[\epsilon, 1]$. Since $x > \epsilon >0$, $|H(x) - L_k(x)| = 1 - L_k(x)$. The derivative of $L_k$ is:
+                \item To guarantee that $L_k(v)$ is within 1 percent of 1 volt when $v \geq .01$ volts, we need to require that $v\geq 0.01 $ implies $L_k(v)\geq 0.99$. We don't need to worry about the upper bound because $L_k(v) \leq 1$. 
 
-                \[L_k'(x) = 2k\frac{1}{1+e^{-2kx}}(1-\frac{1}{1+e^{-2kx}})\]
+                By inspection, $L_k$ is an increasing function. So $L_k(0.01)\leq L_k(v)$ for $v \geq 0.01$. So it's enough for us to require that $L_k(0.01)\geq 0.99$.
 
-                Which is always positive. It follows that $1-L_k(x)$ is always decreasing, and so obtains a maximum at $x = \epsilon$. 
-                So for $x \in [\epsilon, 1]$:
+                Written out, this is:
 
-                \[|L_k(x)-H(x)| \leq 1 -\frac{1}{1+e^{-2k\epsilon}} = \frac{e^{-2k\epsilon}}{1 + e^{-2k \epsilon}}\]
+                \[\frac{1}{1+e^{-2k\cdot 0.01}} \geq 0.99\]
+                Since the denominator is always positive, multiplying out wont change the inequality:
+                \[1 \geq 0.99 + 0.99 e^{-2k \cdot 0.01}\]
 
-                We can see that the limit will go to zero. 
+                \[\ln(0.01/0.99) \geq -2k\cdot 0.01\]
+                \[\implies \ln(0.99/0.01)/(2\cdot 0.01)\leq k\]
+
+                Calculating directly, we get $k\geq 229.76$ is sufficient. 
                 
                 \end{enumerate}
+            \item 
+            \begin{enumerate} 
+            \item A reasonable choice of interpolation points are $x = -1,-\frac{1}{2},\frac{1}{2},1$. Then the interpolating polynomial in terms of Lagrange polynomials will be:
 
+            \[H(-1)L_{-1}(x) + H(-\frac{1}{2})L_{-\frac{1}{2}}(x) + H(\frac{1}{2})L_{\frac{1}{2}}(x) + H(1)L_1(x)\]
+
+            But $H(-1) = H(-1/2) = 0$, so we only have to find the Lagrange polynomials based at $1$ and $\frac{1}{2}$. These are:
+
+            \[L_1(x)=\frac{(x+1)(x+\frac{1}{2})(x-\frac{1}{2})}{(1+1)(1+\frac{1}{2})(1-\frac{1}{2})}\]
+            \[L_{\frac{1}{2}}(x) = \frac{(x+1)(x+\frac{1}{2})(x-1)}{(\frac{1}{2}+1)(\frac{1}{2}+\frac{1}{2})(\frac{1}{2}-1)}\]
+
+            And the interpolating polynomial is:
+
+            \[Q_3 = \frac{(x+1)(x+\frac{1}{2})(x-\frac{1}{2})}{(1+1)(1+\frac{1}{2})(1-\frac{1}{2})} +\frac{(x+1)(x+\frac{1}{2})(x-1)}{(\frac{1}{2}+1)(\frac{1}{2}+\frac{1}{2})(\frac{1}{2}-1)}\]
+
+            \item When graphing, we can see that the Taylor polynomial is very accurate near $x=0$, but loses accuracy as $x$ moves away from $0$. On the other hand, $Q_3$ is less accurate at the origin, but maintains a better overall accuracy throughout throughout $[-1,1]$.  
+
+            \end{enumerate}
 
                 
 			\end{enumerate}
-			\item \begin{enumerate}
-				\item The required Taylor polynomials are:
-                \[e^x = 1 + x + \frac{1}{2}x^2 + \frac{1}{6}x^3\]
-                \[\cos{x} = 1 - \frac{1}{2}x^2 + \frac{1}{24}x^4 \]
-                \[\sin{x} = x - \frac{1}{6}x^3\]
-                \[\cosh{x} = 1 + \frac{1}{2}x^2 + \frac{1}{4}x^4\]
-                \[\sinh{x} = x + \frac{1}{6}x^3\]
+			\item 
+            \begin{enumerate}
+				\item If we consider $e^{i\theta} - e^{-i\theta}$, we get $e^{i\theta} - e^{-i\theta} = 2i\sin{\theta} \implies \sin{\theta} = \frac{e^{i\theta} - e^{-i\theta}}{2i}$.
 
-                \item The required Taylor polynomials are:
-                \[e^{ix} = 1 + ix - \frac{1}{2}x^2 - \frac{1}{6}x^3 + \frac{1}{24}x^4\]
-                \[\cos{x} + i\sin{x} = 1 - \frac{1}{2}x^2 + \frac{1}{24}x^4 + ix - \frac{i}{6}x^3\]
+                \item If we consider $e^{i\theta} + e^{-i\theta}$, we get $e^{i\theta} + e^{-i\theta} = 2\cos{\theta} \implies \cos{\theta} = \frac{e^{i\theta} + e^{-i\theta}}{2}$.
 
-                This demonstrates Euler's identity where $e^{ix} = \cos{x} + i\sin{x}$.
+                \item Using Part A, we can substitute $i\theta$ into $\sin{\theta}$, giving $\sinh{\theta} = -i\frac{e^{i^2\theta} - e^{-i^2\theta}}{2i} = \frac{e^\theta - e^{-\theta}}{2}$.
 
-                \item The required Taylor polynomial is:
-                \[\cosh{x} + \sinh{x} = 1 + \frac{1}{2}x^2 + \frac{1}{4}x^4 + x + \frac{1}{6}x^3\]
+                \item Using Part B, we can substitute $i\theta$ into $\cos{\theta}$, giving $\cosh{\theta} = \frac{e^{i^2\theta} + e^{-i^2\theta}}{2} = \frac{e^\theta + e^{-\theta}}{2}$.
 
-                Looking at the Taylor polynomial for $e^x$ from Part A, we can see that the identity $e^x = \cosh{x} + \sinh{x}$ holds.
+                \item There are several answers here. Using Parts C and D, we can see that $\sinh{\theta} + \cosh{\theta} = e^\theta$, and also $\cosh^2{\theta} - \sinh^2{\theta} = 1$.
 
 			\end{enumerate}
 		\end{enumerate}
