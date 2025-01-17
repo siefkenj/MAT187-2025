@@ -1,110 +1,115 @@
-		\begin{enumerate}
-			\item \begin{enumerate}
-			    \item Computing the derivative of $f(x) = 1/\sqrt{x}$, we have $f'(x) = \frac{-1}{2\sqrt{x^3}}$ and $f''(x) = \frac{3}{4\sqrt{x^5}}$. 
-                The first and second Taylor polynomials for $f$ are:
-                \[p_1(x) = \frac{1}{2} -\frac{1}{16}x\]
-                \[p_2(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}(x-4)^2\]
+\begin{enumerate}
+	\item \begin{enumerate}
+		      \item Computing the derivative of $f(x) = 1/\sqrt{x}$, we have $f'(x) = \frac{-1}{2\sqrt{x^3}}$ and $f''(x) = \frac{3}{4\sqrt{x^5}}$.
+		            The first and second Taylor polynomials for $f$ are:
+		            \[p_1(x) = \frac{1}{2} -\frac{1}{16}x\]
+		            \[p_2(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}(x-4)^2\]
 
-                Comparing with a calculator, we have $|p_1(2) - f(2)| \approx 0.082$ and $|p_2(2) - f(2)| \approx 0.011$.
+		            Comparing with a calculator, we have $|p_1(2) - f(2)| \approx 0.082$ and $|p_2(2) - f(2)| \approx 0.011$.
 
-                \item The Lagrange polynomials for the points $3,4,5$ are:
+		      \item The Lagrange polynomials for the points $3,4,5$ are:
 
-                \[(x-4)(x-5)/(3-4)(3-5), (x-3)(x-5)/(4-3)(4-5), (x-3)(x-4)/(5-3)(5-4)\]
-                Which amount to:
-                \[\frac{(x-4)(x-5)}{2}, \frac{(x-3)(x-5)}{-1}, \frac{(x-3)(x-4)}{2}\]
+		            \[
+			            \frac{(x-4)(x-5)}{(3-4)(3-5)}\qquad \frac{(x-3)(x-5)}{(4-3)(4-5)}
+			            \qquad \frac{(x-3)(x-4)}{(5-3)(5-4)},
+		            \]
+		            which simplify to
+		            \[
+			            \frac{(x-4)(x-5)}{2}\qquad \frac{(x-3)(x-5)}{-1}\qquad \frac{(x-3)(x-4)}{2}.
+		            \]
 
-                So the interpolating polynomial $q(x)$ through the points $(3,f(3)),(4,f(4)),(5,f(5))$ is:
+		            So the interpolating polynomial $q(x)$ through the points $(3,f(3)),(4,f(4)),(5,f(5))$ is:
 
-                \[q(x) = \frac{1}{\sqrt{3}}\frac{(x-4)(x-5)}{2} + \frac{1}{\sqrt{4}}\frac{(x-3)(x-5)}{-1} + \frac{1}{\sqrt{5}}\frac{(x-3)(x-4)}{2}\]
+		            \[q(x) = \frac{1}{\sqrt{3}}\frac{(x-4)(x-5)}{2} + \frac{1}{\sqrt{4}}\frac{(x-3)(x-5)}{-1} + \frac{1}{\sqrt{5}}\frac{(x-3)(x-4)}{2}\]
 
-                By direct evaluation we get $|q(2)-f(2)| \approx 0.0278$.
+		            By direct evaluation we get $|q(2)-f(2)| \approx 0.0278$.
 
-                \item Graphing the inequality $|f(x) - p_2(x)| < |f(x) - q(x)|$ shows the region where the Taylor polynomial is better. Both approximations suffer as $x$ goes to zero. the Taylor approximation is better near $x=4$, but the interpolating polynomial is better for a larger region. 
+		      \item Graphing the inequality $|f(x) - p_2(x)| < |f(x) - q(x)|$ shows the region where the Taylor polynomial is better. Both approximations suffer as $x$ goes to zero. the Taylor approximation is better near $x=4$, but the interpolating polynomial is better for a larger region.
 
-                \item For this question we need the third and fourth derivatives of $f(x)$: $f'''(x) = \frac{-15}{8}x^{-7/2}$ and $f^{(4)}(x) = \frac{105}{16}x^{-9/2}$. With this, the third and fourth order Taylor polynomials are:
+		      \item For this question we need the third and fourth derivatives of $f(x)$: $f'''(x) = \frac{-15}{8}x^{-7/2}$ and $f^{(4)}(x) = \frac{105}{16}x^{-9/2}$. With this, the third and fourth order Taylor polynomials are:
 
-                \[p_3(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}(x-4)^2 -\frac{15}{8\cdot 2^7} (x-4)^3\]
-                \[p_4(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}(x-4)^2 -\frac{15}{8}\cdot 4^{-7/2}(x-4)^3 + \frac{105}{16 \cdot 2^9}(x-4)^4\]
+		            \[p_3(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}(x-4)^2 -\frac{15}{8\cdot 2^7} (x-4)^3\]
+		            \[p_4(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}(x-4)^2 -\frac{15}{8}\cdot 4^{-7/2}(x-4)^3 + \frac{105}{16 \cdot 2^9}(x-4)^4\]
 
-                Now we compute the errors at $0.5$ and $7.5$. The errors are $|p_3(2)-f(2)| \approx 0.128$ and $|p_4(2)-f(2)| \approx 0.333$. The error at $0.5$ is $|p_3(0.5)-f(0.5)| \approx 0.21$ and $|p_4(0.5)-f(0.5)| \approx 2.1$. The error at $7.5$ is $|p_3(7.5)-f(7.5)| \approx 0.42$ and $|p_4(7.5)-f(7.5)| \approx 1.49$. 
+		            Now we compute the errors at $0.5$ and $7.5$. The errors are $|p_3(2)-f(2)| \approx 0.128$ and $|p_4(2)-f(2)| \approx 0.333$. The error at $0.5$ is $|p_3(0.5)-f(0.5)| \approx 0.21$ and $|p_4(0.5)-f(0.5)| \approx 2.1$. The error at $7.5$ is $|p_3(7.5)-f(7.5)| \approx 0.42$ and $|p_4(7.5)-f(7.5)| \approx 1.49$.
 
-                \item As $x$ approaches $0$, the value of $f$ and its derivatives blows up. The remainder formula is:
+		      \item As $x$ approaches $0$, the value of $f$ and its derivatives blows up. The remainder formula is:
 
-                \[R_n(x) = f^{(n+1)}(c)/(n+1)!(x-a)^{n+1}\]
+		            \[R_n(x) = f^{(n+1)}(c)/(n+1)!(x-a)^{n+1}\]
 
-                Here's where the problem comes from: we don't know which $c$ this holds for, except that it lives in $(x,a)$. So to put the remainder formula to use we need an upper bound for $f^{(n+1)}(c)$. But because $\frac{1}{\sqrt{x}}$ has a singularity at zero, its derivatives are unbounded near zero! This suggests that no matter how many terms we have in our Taylor polynomial, the error will blow up near $x=0$. On the other hand, for large $x$ the derivative is bounded, but $(x-a)^{n+1}$ can become unwieldly. 
+		            Here's where the problem comes from: we don't know which $c$ this holds for, except that it lives in $(x,a)$. So to put the remainder formula to use we need an upper bound for $f^{(n+1)}(c)$. But because $\frac{1}{\sqrt{x}}$ has a singularity at zero, its derivatives are unbounded near zero! This suggests that no matter how many terms we have in our Taylor polynomial, the error will blow up near $x=0$. On the other hand, for large $x$ the derivative is bounded, but $(x-a)^{n+1}$ can become unwieldly.
 
-                
-                
-                
 
-                
-			\end{enumerate}
-			\item \begin{enumerate}
-			    \item 
-                \begin{enumerate} 
-                \item Since $H(x)$ is constant near $x=1$, we know that all derivatives of $H(x)$ are zero at $x=1$, i.e. $H^{(n)}(1)=0$ for all $n$. So the Taylor polynomial is:
 
-                \[P_n(x) = 1\]
 
-                This isn't a very good approximation of $H(x)$, and moving the base point won't improve the situation.
 
-            
-                \item Observe that as $k$ increases, the error gets much much worse over the interval $[-1,1]$ 
 
-                The Taylor polynomial of $L_k$ based at zero is:
+	      \end{enumerate}
+	\item \begin{enumerate}
+		      \item
+		            \begin{enumerate}
+			            \item Since $H(x)$ is constant near $x=1$, we know that all derivatives of $H(x)$ are zero at $x=1$, i.e. $H^{(n)}(1)=0$ for all $n$. So the Taylor polynomial is:
 
-                \[p(x) = L_k(0) + L_k'(0)x +L_k'(0)x^2/2 + L_k'''(0)x^3/3! = kx/2 + k^3x^3/3!\]
-                \item 
-                
-                \item To guarantee that $L_k(v)$ is within 1 percent of 1 volt when $v \geq .01$ volts, we need to require that $v\geq 0.01 $ implies $L_k(v)\geq 0.99$. We don't need to worry about the upper bound because $L_k(v) \leq 1$. 
+			                  \[P_n(x) = 1\]
 
-                By inspection, $L_k$ is an increasing function. So $L_k(0.01)\leq L_k(v)$ for $v \geq 0.01$. So it's enough for us to require that $L_k(0.01)\geq 0.99$.
+			                  This isn't a very good approximation of $H(x)$, and moving the base point won't improve the situation.
 
-                Written out, this is:
 
-                \[\frac{1}{1+e^{-2k\cdot 0.01}} \geq 0.99\]
-                Since the denominator is always positive, multiplying out wont change the inequality:
-                \[1 \geq 0.99 + 0.99 e^{-2k \cdot 0.01}\]
+			            \item Observe that as $k$ increases, the error gets much much worse over the interval $[-1,1]$
 
-                \[\ln(0.01/0.99) \geq -2k\cdot 0.01\]
-                \[\implies \ln(0.99/0.01)/(2\cdot 0.01)\leq k\]
+			                  The Taylor polynomial of $L_k$ based at zero is:
 
-                Calculating directly, we get $k\geq 229.76$ is sufficient. 
-                
-                \end{enumerate}
-            \item 
-            \begin{enumerate} 
-            \item A reasonable choice of interpolation points are $x = -1,-\frac{1}{2},\frac{1}{2},1$. Then the interpolating polynomial in terms of Lagrange polynomials will be:
+			                  \[p(x) = L_k(0) + L_k'(0)x +L_k'(0)x^2/2 + L_k'''(0)x^3/3! = kx/2 + k^3x^3/3!\]
+			            \item
 
-            \[H(-1)L_{-1}(x) + H(-\frac{1}{2})L_{-\frac{1}{2}}(x) + H(\frac{1}{2})L_{\frac{1}{2}}(x) + H(1)L_1(x)\]
+			            \item To guarantee that $L_k(v)$ is within 1 percent of 1 volt when $v \geq .01$ volts, we need to require that $v\geq 0.01 $ implies $L_k(v)\geq 0.99$. We don't need to worry about the upper bound because $L_k(v) \leq 1$.
 
-            But $H(-1) = H(-1/2) = 0$, so we only have to find the Lagrange polynomials based at $1$ and $\frac{1}{2}$. These are:
+			                  By inspection, $L_k$ is an increasing function. So $L_k(0.01)\leq L_k(v)$ for $v \geq 0.01$. So it's enough for us to require that $L_k(0.01)\geq 0.99$.
 
-            \[L_1(x)=\frac{(x+1)(x+\frac{1}{2})(x-\frac{1}{2})}{(1+1)(1+\frac{1}{2})(1-\frac{1}{2})}\]
-            \[L_{\frac{1}{2}}(x) = \frac{(x+1)(x+\frac{1}{2})(x-1)}{(\frac{1}{2}+1)(\frac{1}{2}+\frac{1}{2})(\frac{1}{2}-1)}\]
+			                  Written out, this is:
 
-            And the interpolating polynomial is:
+			                  \[\frac{1}{1+e^{-2k\cdot 0.01}} \geq 0.99\]
+			                  Since the denominator is always positive, multiplying out wont change the inequality:
+			                  \[1 \geq 0.99 + 0.99 e^{-2k \cdot 0.01}\]
 
-            \[Q_3 = \frac{(x+1)(x+\frac{1}{2})(x-\frac{1}{2})}{(1+1)(1+\frac{1}{2})(1-\frac{1}{2})} +\frac{(x+1)(x+\frac{1}{2})(x-1)}{(\frac{1}{2}+1)(\frac{1}{2}+\frac{1}{2})(\frac{1}{2}-1)}\]
+			                  \[\ln(0.01/0.99) \geq -2k\cdot 0.01\]
+			                  \[\implies \ln(0.99/0.01)/(2\cdot 0.01)\leq k\]
 
-            \item When graphing, we can see that the Taylor polynomial is very accurate near $x=0$, but loses accuracy as $x$ moves away from $0$. On the other hand, $Q_3$ is less accurate at the origin, but maintains a better overall accuracy throughout throughout $[-1,1]$.  
+			                  Calculating directly, we get $k\geq 229.76$ is sufficient.
 
-            \end{enumerate}
+		            \end{enumerate}
+		      \item
+		            \begin{enumerate}
+			            \item A reasonable choice of interpolation points are $x = -1,-\frac{1}{2},\frac{1}{2},1$. Then the interpolating polynomial in terms of Lagrange polynomials will be:
 
-                
-			\end{enumerate}
-			\item 
-            \begin{enumerate}
-				\item If we consider $e^{i\theta} - e^{-i\theta}$, we get $e^{i\theta} - e^{-i\theta} = 2i\sin{\theta} \implies \sin{\theta} = \frac{e^{i\theta} - e^{-i\theta}}{2i}$.
+			                  \[H(-1)L_{-1}(x) + H(-\frac{1}{2})L_{-\frac{1}{2}}(x) + H(\frac{1}{2})L_{\frac{1}{2}}(x) + H(1)L_1(x)\]
 
-                \item If we consider $e^{i\theta} + e^{-i\theta}$, we get $e^{i\theta} + e^{-i\theta} = 2\cos{\theta} \implies \cos{\theta} = \frac{e^{i\theta} + e^{-i\theta}}{2}$.
+			                  But $H(-1) = H(-1/2) = 0$, so we only have to find the Lagrange polynomials based at $1$ and $\frac{1}{2}$. These are:
 
-                \item Using Part A, we can substitute $i\theta$ into $\sin{\theta}$, giving $\sinh{\theta} = -i\frac{e^{i^2\theta} - e^{-i^2\theta}}{2i} = \frac{e^\theta - e^{-\theta}}{2}$.
+			                  \[L_1(x)=\frac{(x+1)(x+\frac{1}{2})(x-\frac{1}{2})}{(1+1)(1+\frac{1}{2})(1-\frac{1}{2})}\]
+			                  \[L_{\frac{1}{2}}(x) = \frac{(x+1)(x+\frac{1}{2})(x-1)}{(\frac{1}{2}+1)(\frac{1}{2}+\frac{1}{2})(\frac{1}{2}-1)}\]
 
-                \item Using Part B, we can substitute $i\theta$ into $\cos{\theta}$, giving $\cosh{\theta} = \frac{e^{i^2\theta} + e^{-i^2\theta}}{2} = \frac{e^\theta + e^{-\theta}}{2}$.
+			                  And the interpolating polynomial is:
 
-                \item There are several answers here. Using Parts C and D, we can see that $\sinh{\theta} + \cosh{\theta} = e^\theta$, and also $\cosh^2{\theta} - \sinh^2{\theta} = 1$.
+			                  \[Q_3 = \frac{(x+1)(x+\frac{1}{2})(x-\frac{1}{2})}{(1+1)(1+\frac{1}{2})(1-\frac{1}{2})} +\frac{(x+1)(x+\frac{1}{2})(x-1)}{(\frac{1}{2}+1)(\frac{1}{2}+\frac{1}{2})(\frac{1}{2}-1)}\]
 
-			\end{enumerate}
-		\end{enumerate}
+			            \item When graphing, we can see that the Taylor polynomial is very accurate near $x=0$, but loses accuracy as $x$ moves away from $0$. On the other hand, $Q_3$ is less accurate at the origin, but maintains a better overall accuracy throughout throughout $[-1,1]$.
+
+		            \end{enumerate}
+
+
+	      \end{enumerate}
+	\item
+	      \begin{enumerate}
+		      \item If we consider $e^{i\theta} - e^{-i\theta}$, we get $e^{i\theta} - e^{-i\theta} = 2i\sin{\theta} \implies \sin{\theta} = \frac{e^{i\theta} - e^{-i\theta}}{2i}$.
+
+		      \item If we consider $e^{i\theta} + e^{-i\theta}$, we get $e^{i\theta} + e^{-i\theta} = 2\cos{\theta} \implies \cos{\theta} = \frac{e^{i\theta} + e^{-i\theta}}{2}$.
+
+		      \item Using Part A, we can substitute $i\theta$ into $\sin{\theta}$, giving $\sinh{\theta} = -i\frac{e^{i^2\theta} - e^{-i^2\theta}}{2i} = \frac{e^\theta - e^{-\theta}}{2}$.
+
+		      \item Using Part B, we can substitute $i\theta$ into $\cos{\theta}$, giving $\cosh{\theta} = \frac{e^{i^2\theta} + e^{-i^2\theta}}{2} = \frac{e^\theta + e^{-\theta}}{2}$.
+
+		      \item There are several answers here. Using Parts C and D, we can see that $\sinh{\theta} + \cosh{\theta} = e^\theta$, and also $\cosh^2{\theta} - \sinh^2{\theta} = 1$.
+
+	      \end{enumerate}
+\end{enumerate}
