@@ -591,7 +591,7 @@
 	\[
 		P_3(x)=1+x+\frac{x^2}{2}+\frac{x^3}{6}
 	\]
-	Let $R_n(x)$ be the error in $P_n(x)$.
+	Let $R_n(x)$ be the (signed) error in $P_n(x)$.
 
 	\begin{parts}
 		\item Find $R_3(1.5)$ (you may use a calculator).
@@ -600,7 +600,12 @@
 		say about $P_3$?
 
 		\medskip 
-		\item Given that $|f^{(5)}(x)| \leq 8$ when $x\in [0,2]$, can you find an upper bound for $R_4(x)$ (when $x\in [0,2]$)?
+		\item Given that $|f^{(5)}(x)| \leq 8$ when $x\in [0,2]$, 
+		find an upper bound for $R_4(x)$ that
+		\begin{enumerate}
+			\item works for a fixed $x\in[0,2]$
+			\item works simultaneously for all $x\in[0,2]$
+		\end{enumerate}
 		\item Given what you know from the previous part(s), can you bound $R_n(x)$?
 	\end{parts}
 \end{slide}
@@ -673,27 +678,44 @@
 \end{slide}
 
 \begin{slide}
+	% https://www.desmos.com/calculator/5lszweq0bd
 	\question
 	In a classic problem, you are trying to find the volume of a wine barrel. 
+	Let $r(\ell)$ represent the radius of the barrel $\ell$ cm from the base. The total
+	length of the barrel is 80cm.
+
+	You know the volume of the barrel can be computed exactly by
+	\[
+		\int_0^{80}\pi [r(\ell)]^2\,\mathrm d \ell.
+	\]
+
+	You have measured the barrel in several places and gotten the following data
+	\begin{center}
+		\begin{tabular}{ccccc}
+			h(0)&h(20)&h(40)&h(60)&h(80)\\
+			12.8 & 21.2 & 22.7 & 21.4 & 13.4  \\
+		\end{tabular}
+	\end{center}
 
 	\begin{parts}
-		\item Make three sketches: one where the left-endpoint rule is used to approximate $I$, 
-		one where the right-endpoint rule is used, 
-		and one where the trapezoid rule is used.
+		\item Make a sketch of the barrel's profile.
 
-		\item For the left-endpoint, right-endpoint, and trapezoid rules, which will give over estimates of
-		$I$ and which will give underestimates? Will any give an exact value?
+		\item Based on your sketch, do you think using a trapezoid approximation will produce an over 
+		or under estimate for the volume?
 
-		\item Consider the following estimates of $I$:
-		\begin{itemize}
-			\item $E_1=53.797$
-			\item $E_2=32.505$
-			\item $E_3=43.151$
-		\end{itemize}
-		Which estimates come from a left-endpoint approximation, a right-endpoint approximation, 
-		and a trapezoid approximation?
+		\item Use a trapezoid approximation to estimate the volume of the barrel.
 
-		\emph{Hint: you know calculus!}
+		\item Use a Simpson's approximation to estimate the volume of the barrel. 
+		
+		\emph{Reminder:}
+		if $p$ is a quadratic polynomial, 
+		\[
+		 \int_a^b p(x)\,\mathrm d x = \frac{b-a}{6}\left(p(a)+4p\Big(\frac{a+b}{2}\Big)+p(b)\right)
+		 \]
+
+		 \item The exact (rounded) volume of the barrel is 104384cm$^3$. What approximation
+		 method was most accurate? Why?
+
 
 	\end{parts}
 \end{slide}
