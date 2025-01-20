@@ -9,16 +9,21 @@
 	\item 
     
         \begin{enumerate}
-            \item %Practice shfting indices to match terms
-            Consider the series: 
-             $\displaystyle \sum_{i=0}^\infty 2^{i}$ and $\displaystyle \sum_{i=2}^\infty 2^{i-2}$.
+			\item Consider $A=\displaystyle \sum_{i=2}^\infty 3^{i}$. Rewrite $B$ (using summation notation) as
+			a sum starting from $i=0$.
+            \item %Practice shifting indices to match terms
+            Consider  $A=\displaystyle \sum_{i=2}^\infty 3^{i}$ and
+             $
+			 B=\displaystyle \sum_{i=0}^\infty 2^{i}$.
 
-            Write down one series that represents the addition of both series.
+            Write down an expression for $A+B$ using a single summation.
+
+			\emph{Hint:} Pay close attention to the indices!
 
             \item %Practice pulling terms from the start or end of a sum
             Consider the series $\displaystyle \sum_{i=1}^\infty \frac{i^3}{2+e^{i-1}}$. Rewrite the series so that it starts at $i=4$.
             
-            \item Suppose we have the following partial sums: $\displaystyle \displaystyle \sum_{i=0}^n \ln{i}$, $\displaystyle \sum_{i=0}^n \ln{i^2}$, $\displaystyle \sum_{j=1}^n \log_{10}{j}, \displaystyle \sum_{j=3}^n \ln{j}, \displaystyle \sum_{j=1}^n \ln{\frac{j}{3}}$. Using index shifting and properties of logarithms, write an expression for the sum of these partial sums that includes only one summation.
+            %\item Suppose we have the following partial sums: $\displaystyle \displaystyle \sum_{i=0}^n \ln{i}$, $\displaystyle \sum_{i=0}^n \ln{i^2}$, $\displaystyle \sum_{j=1}^n \log_{10}{j}, \displaystyle \sum_{j=3}^n \ln{j}, \displaystyle \sum_{j=1}^n \ln{\frac{j}{3}}$. Using index shifting and properties of logarithms, write an expression for the sum of these partial sums that includes only one summation.
             
         \end{enumerate}% Some questions on summation notation
         
@@ -26,22 +31,35 @@
 
         Let 
         
-        \[S_n = \sum^n_{k=0} \left(\frac{1}{2}\right)^k\]
+        \[S_n = \sum^n_{k=0} \left(\tfrac{1}{2}\right)^k\]
 
         \begin{enumerate}
             \item Interpret $S_n$ geometrically, in terms of length or area.
 
-            \item Use your interpretation from part a) to come up with a bound for the \textit{tail} of the infinite sum $S_{\infty}-S_k$ given by $\displaystyle \sum_{n=k+1}^\infty \frac{1}{2}^n$. Draw a picture to demonstrate the bound.
+            \item Define $S_\infty=\lim_{n\to\infty}S_n$. The \emph{tail sum} of sum $S_n$
+			is the number $S_\infty - S_n$. 
 
-            \item How large must $n$ be to approximate $\displaystyle \sum_{k=0}^\infty (\frac{1}{2})^k$ with an error less than $0.01$?
-        \end{enumerate}
+			Use your interpretation from part (a) to come up with a bound for the tail sum of $S_n$.
 
-        \item A ball is dropped from a height of 10 metres. Each time the ball bounces, it loses $9$\% of its total energy. 
+            \item How large must $n$ be so that $S_n$ is within $0.01$ of $S_\infty$?
+		\end{enumerate}
+
+		\item A \emph{geometric} series is one that takes the form $S_n=\sum_{i=0}^n \alpha^i$.
+		\begin{enumerate}
+			\item Compute the quantity $S_n-\alpha S_n$. Simplify your answer.
+			\item Solve $S_n-\alpha S_n=\,??$ for $S_n$, where $??$ is filled in with your answer from the previous part. 
+			\item Give a closed-form formula for $S_n$ (i.e., one that does not involve summation notation).
+			\item Use your formula to compute $S_\infty =\lim_{n\to\infty} S_n$.
+		\end{enumerate}
+
+        \item A ball is dropped from a height of 10 metres. Each time the ball bounces, the maximum height of the bounce is $9$\% less than the maximum height of the previous bounce. 
         
         \begin{enumerate}
             \item Write down a series that represents the total distance the ball will travel after $N$ bounces.
-            \item After how many bounces can we be certain the ball won't move a further $1$ cm?
-            \item Give an estimate for the long-time limit of the distance travelled by the ball.
+            \item After how many bounces can we be certain the ball won't bounce higher than $10$cm?
+            \item After how many bounces can we be certain the the total distance the ball moves (i.e., combining all future bounces) won't bounce larger than $10$cm?
+            \item What is the total distance the ball will travel (i.e., combining all bounces)
+			over its entire lifetime?
         \end{enumerate}
 
 	% Some questions where tail sums are bounded
