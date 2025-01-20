@@ -6,6 +6,45 @@
 	\vspace{-1em}
 \subsection*{Problems}
 \begin{enumerate}
-	\item % Some questions on summation notation
+	\item 
+    
+        \begin{enumerate}
+            \item %Practice shfting indices to match terms
+            Consider the series: 
+             $\displaystyle \sum_{i=0}^\infty 2^{i}$ and $\displaystyle \sum_{i=2}^\infty 2^{i-2}$.
+
+            Write down one series that represents the addition of both series.
+
+            \item %Practice pulling terms from the start or end of a sum
+            Consider the series $\displaystyle \sum_{i=1}^\infty \frac{i^3}{2+e^{i-1}}$. Rewrite the series so that it starts at $i=4$.
+            
+            \item Suppose we have the following partial sums: $\displaystyle \displaystyle \sum_{i=0}^n \ln{i}$, $\displaystyle \sum_{i=0}^n \ln{i^2}$, $\displaystyle \sum_{j=1}^n \log_{10}{j}, \displaystyle \sum_{j=3}^n \ln{j}, \displaystyle \sum_{j=1}^n \ln{\frac{j}{3}}$. Using index shifting and properties of logarithms, write an expression for the sum of these partial sums that includes only one summation.
+            
+        \end{enumerate}% Some questions on summation notation
+        
+        \item %Geometric Series
+
+        Let 
+        
+        \[S_n = \sum^n_{k=0} \left(\frac{1}{2}\right)^k\]
+
+        \begin{enumerate}
+            \item Interpret $S_n$ geometrically, in terms of length or area.
+
+            \item Use your interpretation from part a) to come up with a bound for the \textit{tail} of the infinite sum $S_{\infty}-S_k$ given by $\displaystyle \sum_{n=k+1}^\infty \frac{1}{2}^n$. Draw a picture to demonstrate the bound.
+
+            \item How large must $n$ be to approximate $\displaystyle \sum_{k=0}^\infty (\frac{1}{2})^k$ with an error less than $0.01$?
+        \end{enumerate}
+
+        \item A ball is dropped from a height of 10 metres. Each time the ball bounces, it loses $9$\% of its total energy. 
+        
+        \begin{enumerate}
+            \item Write down a series that represents the total distance the ball will travel after $N$ bounces.
+            \item After how many bounces can we be certain the ball won't move a further $1$ cm?
+            \item Give an estimate for the long-time limit of the distance travelled by the ball.
+        \end{enumerate}
+
 	% Some questions where tail sums are bounded
+    % Give series with bound, then use error estimate, don't use x
+    % Draw picture to show bound
 \end{enumerate}

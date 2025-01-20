@@ -28,16 +28,16 @@
 
 		      \item For this question we need the third and fourth derivatives of $f(x)$: $f'''(x) = \frac{-15}{8}x^{-7/2}$ and $f^{(4)}(x) = \frac{105}{16}x^{-9/2}$. With this, the third and fourth order Taylor polynomials are:
 
-		            \[p_3(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}(x-4)^2 -\frac{15}{8\cdot 2^7} (x-4)^3\]
-		            \[p_4(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}(x-4)^2 -\frac{15}{8}\cdot 4^{-7/2}(x-4)^3 + \frac{105}{16 \cdot 2^9}(x-4)^4\]
+                \[p_3(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}\frac{(x-4)^2}{2!} -\frac{15}{8\cdot 2^7} \frac{(x-4)^3}{3!}\]
+                \[p_4(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}\frac{(x-4)^2}{2!} -\frac{15}{8}\cdot 4^{-7/2}\frac{(x-4)^3}{3!} + \frac{105}{16 \cdot 2^9}\frac{(x-4)^4}{4!}\]
 
-		            Now we compute the errors at $0.5$ and $7.5$. The errors are $|p_3(2)-f(2)| \approx 0.128$ and $|p_4(2)-f(2)| \approx 0.333$. The error at $0.5$ is $|p_3(0.5)-f(0.5)| \approx 0.21$ and $|p_4(0.5)-f(0.5)| \approx 2.1$. The error at $7.5$ is $|p_3(7.5)-f(7.5)| \approx 0.42$ and $|p_4(7.5)-f(7.5)| \approx 1.49$.
+                Now we compute the errors at $0.5$ and $7.5$. The errors are $|p_3(2)-f(2)| \approx 0.128$ and $|p_4(2)-f(2)| \approx 0.333$. The error at $0.5$ is $|p_3(0.5)-f(0.5)| \approx 0.44$ and $|p_4(0.5)-f(0.5)| \approx 0.37$. The error at $7.5$ is $|p_3(7.5)-f(7.5)| \approx 0.045$ and $|p_4(7.5)-f(7.5)| \approx 0.035$. 
 
 		      \item As $x$ approaches $0$, the value of $f$ and its derivatives blows up. The remainder formula is:
 
 		            \[R_n(x) = f^{(n+1)}(c)/(n+1)!(x-a)^{n+1}\]
 
-		            Here's where the problem comes from: we don't know which $c$ this holds for, except that it lives in $(x,a)$. So to put the remainder formula to use we need an upper bound for $f^{(n+1)}(c)$. But because $\frac{1}{\sqrt{x}}$ has a singularity at zero, its derivatives are unbounded near zero! This suggests that no matter how many terms we have in our Taylor polynomial, the error will blow up near $x=0$. On the other hand, for large $x$ the derivative is bounded, but $(x-a)^{n+1}$ can become unwieldly.
+                Here's where the problem comes from: we don't know which $c$ this holds for, except that it lives in $(x,a)$. So to put the remainder formula to use we need an upper bound for $f^{(n+1)}(c)$. But because $\frac{1}{\sqrt{x}}$ has a singularity at zero, its derivatives are unbounded near zero, and the remainder is not as easily controlled. This leads to a much worse error near $0$ than near $7.5$, where the higher derivatives are smaller. 
 
 
 
