@@ -1,6 +1,6 @@
 \documentclass{workbook}
 
-\newcommand{\copyrightdate}{2024}
+\newcommand{\copyrightdate}{2025}
 
 \usepackage{ifxetex}
 \usepackage[utf8]{inputenc}
@@ -653,26 +653,31 @@
 %
 \begin{slide}
 	\question
-	Consider the function $f(x)=4x^2+1$ and the value $\displaystyle I=\int_{-1}^3f(x)\,\mathrm d x$.
+	Consider the function $f(x)=\frac{1}{2}x^2+1$ and the value $\displaystyle I=\int_{0}^3f(x)\,\mathrm d x$.
 
 	\begin{parts}
 		\item Make three sketches: one where the left-endpoint rule is used to approximate $I$, 
 		one where the right-endpoint rule is used, 
-		and one where the trapezoid rule is used.
+		and one where the trapezoid rule is used. (Use at least three intervals.)
 
 		\item For the left-endpoint, right-endpoint, and trapezoid rules, which will give over estimates of
 		$I$ and which will give underestimates? Will any give an exact value?
 
+		\medskip
 		\item Consider the following estimates of $I$:
 		\begin{itemize}
-			\item $E_1=53.797$
-			\item $E_2=32.505$
-			\item $E_3=43.151$
+			\item $E_1=8.6875$
+			\item $E_2=6.4375$
+			\item $E_3=7.5625$
 		\end{itemize}
+		Each estimate comes from using the same partition.
+
 		Which estimates come from a left-endpoint approximation, a right-endpoint approximation, 
 		and a trapezoid approximation?
 
 		\emph{Hint: you know calculus!}
+
+		\item (Homework) Will the midpoint rule produce an over or under estimate of $I$?
 
 	\end{parts}
 \end{slide}
@@ -692,13 +697,13 @@
 	You have measured the barrel in several places and gotten the following data
 	\begin{center}
 		\begin{tabular}{ccccc}
-			h(0)&h(20)&h(40)&h(60)&h(80)\\
+			r(0)&r(20)&r(40)&r(60)&r(80)\\
 			12.8 & 21.2 & 22.7 & 21.4 & 13.4  \\
 		\end{tabular}
 	\end{center}
 
 	\begin{parts}
-		\item Make a sketch of the barrel's profile.
+		\item Make a sketch of the barrel's profile. Make a second sketch of $\pi [r(\ell)]^2$.
 
 		\item Based on your sketch, do you think using a trapezoid approximation will produce an over 
 		or under estimate for the volume?
