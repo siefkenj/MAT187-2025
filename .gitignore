@@ -1,0 +1,9 @@
+*.aux
+*.out
+*.fls
+*.idx
+*.log
+*.ind
+*.ilg
+*.fdb_latexmk
+*.pagebounds
