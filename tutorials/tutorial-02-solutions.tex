@@ -1,5 +1,12 @@
 \begin{enumerate}
     \item
+    \begin{enumerate}
+        \item Shifting the index by 2, we get the sum $\displaystyle \sum_{i=0}^\infty 3^{i+2}$.
+
+        \item Using our answer from Part A, this would be given as $\displaystyle A+B = \sum_{i=0}^\infty 3^{i+2} + \sum_{i=0}^\infty 2^i = \sum_{i=0}^\infty \left(3^{i+2} + 2^i\right)$.
+
+        \item Shifting the index by 3, we get the sum $\displaystyle \sum_{i=4}^\infty \frac{(i-3)^3}{2+e^{i-4}}$.
+    \end{enumerate}
     
     \item \begin{enumerate}
         \item 
@@ -8,15 +15,49 @@
     \item From the interpretation in part a), we can see that the tail $\sum_{m=k+1}^\infty \frac{1}{2^m} \leq \frac{1}{2^k}$. 
 
     \item We need the tail/error to satisfy $\frac{1}{2^k}\leq 0.01$. in other words, $\log_2(100)\leq k$. With a calculator $\log_2(100) \approx 6.64$, so $k\geq 7$ is enough. 
-   
+
+    \end{enumerate}
+
+    \item 
+
+    \begin{enumerate}
+        \item The quantity $S_n - \alpha S_n$ is:
+
+        \[\sum_{k=0}^n\alpha^k - \alpha \sum_{k=0}^n\alpha^k = \sum_{k=0}^n\alpha^k -  \sum_{k=0}^n\alpha^{k+1}\]
+
+        Peeling off the first term of the left sum and the last term of the right sum:
+        \[= 1 +\sum_{k=1}^n\alpha^k -\sum_{k=0}^{n-1}\alpha^{k+1}-\alpha^{n+1} \]
+        Cancelling the sums:
+        \[= 1-\alpha^{n+1}\]
+
+        \item  From part $(a)$, $S_n(1-\alpha)=1-\alpha^{n+1}$. So $S_n = \dfrac{1-\alpha^{n+1}}{1-\alpha}$
+
+        \item The closed form for $S_n$ is $S_n = \dfrac{1-\alpha^{n+1}}{1-\alpha}$.
+
+        \item We have that $\lim_{n\to \infty} \dfrac{1-\alpha^{n+1}}{1-\alpha}= \frac{1}{1-\alpha} - (1-\alpha)\lim_{n\to \infty} \alpha^{n+1}$. Since $\alpha<1$, $\alpha^{n+1}$ will go to zero. So we can see that $S_\infty = \frac{1}{1-\alpha}$ 
     \end{enumerate}
     \item
     \begin{enumerate}
-        \item The total energy at time of impact is $E \approx 10\cdot 9.81$. Since ball loses $9$\% of the energy at impact, the highest the ball will travel after impact is $10\cdot 0.91 = 9.1$. After each impact, the height is reduced by a further factor of $0.91$. The initial distance traveled is $10$, and each distance after the initial bounce is $2\cdot10\cdot(0.91)^k$, where $k$ is the number of previous bounces. The distance after $N$ bounces, and just before the $N+1$st bounce is:
-        
-        \[D_N = 10+\sum_{k=1}^N 20 \cdot(0.91)^k\]
+        \item Each bounce, the maximum height reached is $0.91$ times the previous maximum height. The total distance travelled after one bounce will be twice the maximum height reached. The series representing the total distance the ball will travel immediately after $N$ bounces is:
 
-        \item 
+        \[10 + \sum_{k=1}^{N-1}2\cdot 10 \cdot (0.91)^k\]
+        
+
+        \item We need that $10\cdot (0.91)^k \leq 0.1$. Equivalently, $(0.91)^k \leq 0.01$ and then $k\ln(0.91) \leq \ln(0.01) $. Since $\ln(0.91) < 0$, dividing out by $\ln(0.91)$ reverses the inequality. We then need that $k \geq \dfrac{\ln(0.01)}{\ln(0.91)} \approx 48.83$. So after $k=49$ bounces, the ball is bouncing less than $10$cm. 
+
+        \item The tail of the infinite sum is
+
+        \[\sum_{k=N}^\infty 20 \cdot (0.91)^k = 20(0.91)^N(\sum_{k=0}^\infty (0.91)^k)\]
+
+        From question 3, we know that $\sum_{k=0}^\infty (0.91) = \frac{1}{1-0.91}$. So we need to know when $\dfrac{20(0.91)^N}{1-0.91} \leq 0.1$. i.e. $N \geq \dfrac{\ln(0.09\cdot0.1\cdot\dfrac{1}{20})}{\ln(0.91)} \approx 81.7$. So after $82$ bounces, the ball won't travel any further than $10$cm. 
+
+        
+
+        \item Using the geometric series formula we can find the total distance over the lifetime of the ball.
+
+        \[\lim_{N\to \infty} 10 + \sum_{k=0}^N 20\cdot(0.91)^k = 10 + 20 \lim_{N\to \infty}\sum_{k=1}^n(0.91)^k = 10 +\frac{20 \cdot 0.91}{1-0.9 1} \approx 212.2\]
+
+        So the total vertical distance travelled over the lifetime of the ball is approximately $212.2$m.
     \end{enumerate}
     
     

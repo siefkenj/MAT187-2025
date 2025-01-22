@@ -3,9 +3,9 @@
 		      \item Computing the derivative of $f(x) = 1/\sqrt{x}$, we have $f'(x) = \frac{-1}{2\sqrt{x^3}}$ and $f''(x) = \frac{3}{4\sqrt{x^5}}$.
 		            The first and second Taylor polynomials for $f$ are:
 		            \[p_1(x) = \frac{1}{2} -\frac{1}{16}x\]
-		            \[p_2(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}(x-4)^2\]
+		            \[p_2(x) = \frac{1}{2} -\frac{1}{16}(x-4) + \frac{3}{128}\frac{(x-4)^2}{2!}\]
 
-		            Comparing with a calculator, we have $|p_1(2) - f(2)| \approx 0.082$ and $|p_2(2) - f(2)| \approx 0.011$.
+		            Comparing with a calculator, we have $|p_1(2) - f(2)| \approx 0.082$ and $|p_2(2) - f(2)| \approx 0.035$.
 
 		      \item The Lagrange polynomials for the points $3,4,5$ are:
 
@@ -62,7 +62,7 @@
 			                  \[p(x) = L_k(0) + L_k'(0)x +L_k'(0)x^2/2 + L_k'''(0)x^3/3! = kx/2 + k^3x^3/3!\]
 			            \item
 
-			            \item To guarantee that $L_k(v)$ is within 1 percent of 1 volt when $v \geq .01$ volts, we need to require that $v\geq 0.01 $ implies $L_k(v)\geq 0.99$. We don't need to worry about the upper bound because $L_k(v) \leq 1$.
+			            \item To guarantee that $L_k(v)$ is within 1 percent of 1 volt when $v \geq .01$ volts, we need to require that $v\geq 0.01 $ implies $1.01 \geq L_k(v)\geq 0.99$. We don't need to worry about the upper bound because $L_k(v) \leq 1$.
 
 			                  By inspection, $L_k$ is an increasing function. So $L_k(0.01)\leq L_k(v)$ for $v \geq 0.01$. So it's enough for us to require that $L_k(0.01)\geq 0.99$.
 
