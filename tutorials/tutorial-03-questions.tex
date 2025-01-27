@@ -4,9 +4,44 @@
 
 \subsection*{Problems}
 
-\begin{enumerate}
-	\item % Find a Taylor series. differentiate it. square it. integrate it.
 
-	\item % Prove Euler's formula from Complex numbers
+
+
+\begin{enumerate}
+    % Find a Taylor series. differentiate it. square it. integrate it.
+    \item Consider the function $e^{\cos{x}}$. 
+    
+    \begin{enumerate}
+        \item Write its Taylor series centred around $x=0$.
+        \item Write an expression for the square, derivative, and indefinite integral of the series you found in Part A.
+        \item Independent from the previous parts, write the Maclaurin series for the square, derivative, and indefinite integral of the above function.
+        \item Compare your answers for Parts B and C. Do they match?
+    \end{enumerate}
+
+	\item In this questions, we will prove Euler's formula: $e^{ix} = \cos{x} + i\sin{x}$.
+    \begin{enumerate}
+        \item Write the Taylor series for $e^{ix}$ centred around $x=0$.
+        \item Write a single series expression for $\cos{x} + i\sin{x}$ using the Taylor series for $\cos{x}$ and $\sin{x}$ centred around $x=0$.
+        \item Manipulate your expression from Part A to match that of Part B.
+    \end{enumerate}
+
+    \item The angle $\Theta$ in radians of a robotic arm measured from the horizontal axis is known:
+
+    \[\Theta(t) = \omega t - t^2 + R_2(t) \]
+
+    Where $R_2(t)$ is an unknown error term with $|R_2(t)| \leq \dfrac{1}{10}t^3$, and $\omega$ is the angular velocity of the arm. 
+    \begin{enumerate}
+
+        \item Write down and simplify the expression for $\Theta^2$. Collect the constant, linear, and quadratic terms together, and leave the rest of the terms at the end. 
+
+        
+        \item If the length of the arm is $10$ metres, the vertical position of the end is $y(t) = 10 \sin(\Theta(t))$. Using the estimate $\sin(x) = x + R(x)$, where $R(x) \leq \dfrac{x^2}{2}$, find the second order Taylor polynomial for $y(t)$.
+        
+        \item  The remainder for part $b)$ is $R(\Theta(t)) + R_2(t)$. Find a bound on this error term.  
+
+        \item Find a value of $\omega$ to make sure the robot arm catches a ball within a certain time
+
+        
+    \end{enumerate}
 		
 \end{enumerate}
