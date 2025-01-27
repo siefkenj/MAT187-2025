@@ -27,19 +27,19 @@
 
     \item The angle $\Theta$ in radians of a robotic arm measured from the horizontal axis is known:
 
-    \[\Theta(t) = 1 + \omega t - t^2 + R_2(t) \]
+    \[\Theta(t) = \omega t - t^2 + R_2(t) \]
 
-    Where $R_2(t)$ is an unknown error term with $|R_2(t)| \leq \dfrac{1}{10}t^3$, and $\omega$ is the angular velocity of the arm.  
+    Where $R_2(t)$ is an unknown error term with $|R_2(t)| \leq \dfrac{1}{10}t^3$, and $\omega$ is the angular velocity of the arm. 
     \begin{enumerate}
 
-        \item Write down and simplify the expression for $\Theta^2$. 
-        
-        \item 
+        \item Write down and simplify the expression for $\Theta^2$. Collect the constant, linear, and quadratic terms together, and leave the rest of the terms at the end. 
 
         
-        \item If the length of the arm is $10$ metres, the horizontal position of the end is $x(t) = 10 \cos(\Theta(t))$. Without taking derivatives, find the second order Taylor polynomial for $x(t)$ based at zero. 
+        \item If the length of the arm is $10$ metres, the vertical position of the end is $y(t) = 10 \sin(\Theta(t))$. Using the estimate $\sin(x) = x + R(x)$, where $R(x) \leq \dfrac{x^2}{2}$, find the second order Taylor polynomial for $y(t)$.
         
-        \item  
+        \item  The remainder for part $b)$ is $R(\Theta(t)) + R_2(t)$. Find a bound on this error term.  
+
+        \item Find a value of $\omega$ to make sure the robot arm catches a ball within a certain time
 
         
     \end{enumerate}
