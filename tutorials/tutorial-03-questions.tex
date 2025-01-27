@@ -1,5 +1,5 @@
 		\begin{objectives}
-			In this tutorial you practice manipulating Taylor series
+			In this tutorial you practice manipulating Taylor series.
 		\end{objectives}
 
 \subsection*{Problems}
@@ -9,13 +9,25 @@
 
 \begin{enumerate}
     % Find a Taylor series. differentiate it. square it. integrate it.
-    \item Consider the function $e^{\cos{x}}$. 
+    \item Consider the function $f(x)=e^{-x}$. 
     
     \begin{enumerate}
-        \item Write its Taylor series centred around $x=0$.
-        \item Write an expression for the square, derivative, and indefinite integral of the series you found in Part A.
-        \item Independent from the previous parts, write the Maclaurin series for the square, derivative, and indefinite integral of the above function.
-        \item Compare your answers for Parts B and C. Do they match?
+        \item Write the Taylor series for $f$ centred at $x=0$.
+        \item Find a series representation for the following functions by term-by-term manipulation of the Taylor series for $f$:
+        \[
+            g_1(x)=f(x^2)\qquad g_2(x)=f(\sqrt{x})\qquad g_3(x)=\frac{\mathrm d}{\mathrm d x}f(x)
+        \]
+        \item Which series from the previous part are \emph{power series}?
+
+    \end{enumerate}
+
+    \item Again, consider $f(x)=e^{-x}$ and its Taylor series representation at $x=0$,
+    $\displaystyle f(x)= \sum_{n=0}^\infty a_n \frac{x^n}{n!}$
+    \begin{enumerate}
+        \item Write out the first five terms of the sequence $a_n$.
+        \item Consider $g(x)=(f(x))^2$.  Find a series representation for $g(x)$ by squaring the series representation for $f(x)$. 
+        \item Find a series representation for $g(x)$ by directly computing the Taylor series for $g$ centered at $x=0$.
+        \item Do your series representations from the previous parts match? Do you expect them to always match?
     \end{enumerate}
 
 	\item In this questions, we will prove Euler's formula: $e^{ix} = \cos{x} + i\sin{x}$.
