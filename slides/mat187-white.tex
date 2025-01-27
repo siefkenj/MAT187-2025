@@ -980,6 +980,42 @@
 	\end{parts}
 \end{slide}
 
+\begin{slide}
+	Let $f(x)=\sin(x)$ and let 
+	\[
+		T(x)=\sum_{n=0}^\infty (-1)^{n+1}\frac{x^{2n+1}}{(2n+1)!}
+	\]
+	be the Taylor series for $f$ centered at $0$. We know that
+	$f(x)=T(x)$ for all $x\in \R$.
+
+	\begin{parts}
+		\item Find a series representation for $g_1(x)=\sin(2x)$ (without 
+		computing any derivatives).
+		\item Find a series representation for $g_2(x)=\sin(x^2)$.
+		\item Use WolframAlpha to integrate $g_2$. Does WolframAlpha's solution make sense?
+		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term. What should you do with the constants of integration?
+		\item For which $x$ do you expect $g_3(x)$ to be valid? Explain.
+		\item When would it be advantageous to integrate a Taylor series term by term instead of integrating the original function? Explain.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	Let $f(x)=\frac{1}{1-x}$ and let 
+	\[
+		T(x)=\sum_{n=0}^\infty \frac{x^n}{n!}
+	\]
+	be the Taylor series for $f$ centered at $0$. We know that
+	$f(x)=T(x)$ for all $x\in (-1,1)$.
+
+	\begin{parts}
+		\item Find a series representation for $g_1(x)=f(2x)$ (without 
+		computing any derivatives).
+		\item Find a series representation for $g_2(x)=f(x^2)$.
+		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term. 
+		\item For which $x$ do you expect $g_3(x)$ to be valid? Explain.
+	\end{parts}
+\end{slide}
+
 %\begin{slide}
 %	\question
 %	In the model \textbf{M$_1$}, we assumed the starfish had $K$ children at one point during the year.
