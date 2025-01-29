@@ -871,15 +871,15 @@
 		\sum_{i=1}^\infty a_i
 	\]
 	\begin{parts}
-		\item Write down a formula for the left-endpoint approximation of
+		\item Use $\Sigma$-notation to write down a formula for the left-endpoint approximation of
 		$\displaystyle \int_1^n \frac{1}{x}\,\mathrm d x$ using a partition
 		whose intervals are width $1$.
 
 		\bigskip
 		\bigskip
 		\bigskip
-		\item Write down a formula for the right-endpoint approximation of
-		$\displaystyle \int_2^n \frac{1}{x}\,\mathrm d x$ using a partition
+		\item Use $\Sigma$-notation to write down a formula for the right-endpoint approximation of
+		$\displaystyle \int_1^n \frac{1}{x}\,\mathrm d x$ using a partition
 		whose intervals are width $1$.
 		\item Use the actual value of $\displaystyle \int_1^n \frac{1}{x}\,\mathrm d x$ to give upper and lower bounds for $S_n$.
 		\item Does $S_n$ converge or diverge? Explain.
@@ -896,18 +896,19 @@
 		\sum_{i=1}^\infty a_i
 	\]
 	\begin{parts}
-		\item Write down a formula for the left-endpoint approximation of
+		\item Use $\Sigma$-notation to write down a formula for the left-endpoint approximation of
 		$\displaystyle \int_1^n \frac{1}{x^2}\,\mathrm d x$ using a partition
 		whose intervals are width $1$.
 		
 		\bigskip
 		\bigskip
 		\bigskip
-		\item Write down a formula for the right-endpoint approximation of
-		$\displaystyle \int_2^n \frac{1}{x^2}\,\mathrm d x$ using a partition
+		\item Use $\Sigma$-notation to write down a formula for the right-endpoint approximation of
+		$\displaystyle \int_1^n \frac{1}{x^2}\,\mathrm d x$ using a partition
 		whose intervals are width $1$.
 		\item Use the actual value of $\displaystyle \int_1^n \frac{1}{x^2}\,\mathrm d x$ to give upper and lower bounds for $S_n$.
 		\item Does $S_n$ converge or diverge? Explain.
+		\item Conjecture about the convergence of $\displaystyle \sum_{i=1}^\infty i^{\alpha}$ for $\alpha> 0$. Can you justify your answer by comparing with known integrals?
 	\end{parts}
 \end{slide}
 
@@ -926,6 +927,107 @@
 		the convergence of $A_n$, $B_n$, $C_n$.
 		\item Can you decide the convergence of $D_n$ using a comparison to
 		a known integral? Explain.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the function $f(x)=\sin(x)$.
+
+	\begin{parts}
+		\item Write down $T_k(x)$, the $k$th Taylor approximation to 
+		$f$ centered at $0$. You may use ``$\cdots$'' notation or $\Sigma$-notation. 
+
+		\item Write down, using $\Sigma$-notation, $T(x)$, the Taylor series
+		for $f$ centered at $0$.
+
+		\item In general a Taylor series may be written as $\displaystyle 
+		\sum_{n=0}^\infty a_n \frac{x^{n}}{n!}$, where $a_n$ is a sequence.
+		Find $a_n$ in this case.
+
+		\item Let $R_k(x)=f(x)-T_k(x)$. Find an expression for $R_k(x)$
+		using Taylor's Remainder Theorem. Use your expression to find an upper bound for $R_k(x)$ (Hint: your bound may depend on $x$).
+	
+		\item Using the fact that for any $\alpha\in \R$, 
+		$\displaystyle \lim_{n\to\infty} \frac{\alpha^n}{n!}=0$, 
+		find $\displaystyle \lim_{k\to\infty} R_k(x)$.
+
+		\item For which $x$ is $f(x)=T(x)$? Justify your answer.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the function $g(x)=\frac{1}{1-x}$. The $k$th Taylor approximation
+	of $g$ centered at $0$ is 
+	\[
+	T_k(x)=\sum_{i=0}^k x^k
+	\]
+	and the remainder $R_k(x)=g(x)-T_k(x)$ satisfies 
+	\[
+		|R_k(x)| \leq \left(\frac{x}{1-x}\right)^{k+1}
+	\]
+	when $x\geq 0$ and
+	\[
+		|R_k(x)| \leq x^{k+1}
+	\]
+	when $x< 0$.
+
+	\bigskip
+	\bigskip
+	\bigskip
+	\begin{parts}
+		\item For which $x$ is $\lim_{k\to\infty}R_k(x)=0$?
+
+		\item Let $T(x)$ be the Taylor series for $g$ centered at $0$.
+		For which $x$ can you guarantee that $g(x)=T(x)$?
+
+		\item Use the following Desmos link to numerically answer the question: for which $x$ does $g(x)=T(x)$?
+
+		{\small\url{https://www.desmos.com/calculator/yi4qczkxqn}}
+
+		\item Does your answer to the previous part contradict Taylor's remainder theorem?
+
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Let $f(x)=\sin(x)$ and let 
+	\[
+		T(x)=\sum_{n=0}^\infty (-1)^{n}\frac{x^{2n+1}}{(2n+1)!}
+	\]
+	be the Taylor series for $f$ centered at $0$. We know that
+	$f(x)=T(x)$ for all $x\in \R$.
+
+	\begin{parts}
+		\item Find a series representation for $g_1(x)=f(2x)$ (without 
+		computing any derivatives).
+		\item Find a series representation for $g_2(x)=f(x^2)$.
+		\item Use WolframAlpha to integrate $g_2$. Does WolframAlpha's solution make sense?
+		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term. What should you do with the constants of integration?
+		\item For which $x$ do you expect $g_3(x)$ to be valid? Explain.
+		\item When would it be advantageous to integrate a Taylor series term by term instead of integrating the original function? Explain.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Let $f(x)=\frac{1}{1-x}$ and let 
+	\[
+		T(x)=\sum_{n=0}^\infty \frac{x^n}{n!}
+	\]
+	be the Taylor series for $f$ centered at $0$. We know that
+	$f(x)=T(x)$ for all $x\in (-1,1)$.
+
+	\begin{parts}
+		\item Find a series representation for $g_1(x)=f(2x)$ (without 
+		computing any derivatives).
+		\item For which $x$ do you expect your series for $g_1(x)$ to be valid (i.e. to equal
+		$f(2x)$)? Explain.
+		\item Find a series representation for $g_2(x)=f(x^2)$.
+		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term. 
+		\item For which $x$ do you expect $g_3(x)$ to be valid? Explain.
 	\end{parts}
 \end{slide}
 
