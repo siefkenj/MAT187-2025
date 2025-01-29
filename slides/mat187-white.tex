@@ -948,7 +948,9 @@
 		\item Let $R_k(x)=f(x)-T_k(x)$. Find an expression for $R_k(x)$
 		using Taylor's Remainder Theorem. Use your expression to find an upper bound for $R_k(x)$ (Hint: your bound may depend on $x$).
 	
-		\item Using the fact that for any $\alpha\in \R$, $\lim_{n\to\infty} \frac{\alpha^n}{n!}=0$, find $\lim_{k\to\infty} R_k(x)$.
+		\item Using the fact that for any $\alpha\in \R$, 
+		$\displaystyle \lim_{n\to\infty} \frac{\alpha^n}{n!}=0$, 
+		find $\displaystyle \lim_{k\to\infty} R_k(x)$.
 
 		\item For which $x$ is $f(x)=T(x)$? Justify your answer.
 	\end{parts}
@@ -961,12 +963,19 @@
 	\[
 	T_k(x)=\sum_{i=0}^k x^k
 	\]
-	and the remainder $R_k(x)=g(x)=T_k(x)$ satisfies 
+	and the remainder $R_k(x)=g(x)-T_k(x)$ satisfies 
 	\[
-		|R_k(x)| \leq \frac{1}{1-x}\left(\frac{x}{1-x}\right)^{k+1}
+		|R_k(x)| \leq \left(\frac{x}{1-x}\right)^{k+1}
 	\]
-	when $x\geq 0$.
+	when $x\geq 0$ and
+	\[
+		|R_k(x)| \leq x^{k+1}
+	\]
+	when $x< 0$.
 
+	\bigskip
+	\bigskip
+	\bigskip
 	\begin{parts}
 		\item For which $x$ is $\lim_{k\to\infty}R_k(x)=0$?
 
@@ -975,7 +984,7 @@
 
 		\item Use the following Desmos link to numerically answer the question: for which $x$ does $g(x)=T(x)$?
 
-		\url{https://www.desmos.com/calculator/yi4qczkxqn}
+		{\small\url{https://www.desmos.com/calculator/yi4qczkxqn}}
 
 		\item Does your answer to the previous part contradict Taylor's remainder theorem?
 
@@ -986,15 +995,15 @@
 	\question
 	Let $f(x)=\sin(x)$ and let 
 	\[
-		T(x)=\sum_{n=0}^\infty (-1)^{n+1}\frac{x^{2n+1}}{(2n+1)!}
+		T(x)=\sum_{n=0}^\infty (-1)^{n}\frac{x^{2n+1}}{(2n+1)!}
 	\]
 	be the Taylor series for $f$ centered at $0$. We know that
 	$f(x)=T(x)$ for all $x\in \R$.
 
 	\begin{parts}
-		\item Find a series representation for $g_1(x)=\sin(2x)$ (without 
+		\item Find a series representation for $g_1(x)=f(2x)$ (without 
 		computing any derivatives).
-		\item Find a series representation for $g_2(x)=\sin(x^2)$.
+		\item Find a series representation for $g_2(x)=f(x^2)$.
 		\item Use WolframAlpha to integrate $g_2$. Does WolframAlpha's solution make sense?
 		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term. What should you do with the constants of integration?
 		\item For which $x$ do you expect $g_3(x)$ to be valid? Explain.
@@ -1014,7 +1023,8 @@
 	\begin{parts}
 		\item Find a series representation for $g_1(x)=f(2x)$ (without 
 		computing any derivatives).
-		\item For which $x$ do you expect $g_2(x)$ to be valid? Explain.
+		\item For which $x$ do you expect your series for $g_1(x)$ to be valid (i.e. to equal
+		$f(2x)$)? Explain.
 		\item Find a series representation for $g_2(x)=f(x^2)$.
 		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term. 
 		\item For which $x$ do you expect $g_3(x)$ to be valid? Explain.
