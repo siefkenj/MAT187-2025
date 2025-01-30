@@ -946,7 +946,7 @@
 		Find $a_n$ in this case.
 
 		\item Let $R_k(x)=f(x)-T_k(x)$. Find an expression for $R_k(x)$
-		using Taylor's Remainder Theorem. Use your expression to find an upper bound for $R_k(x)$ (Hint: your bound may depend on $x$).
+		using Taylor's Remainder Theorem. Use your expression to find an upper bound for $|R_k(x)|$ (Hint: your bound may depend on $x$).
 	
 		\item Using the fact that for any $\alpha\in \R$, 
 		$\displaystyle \lim_{n\to\infty} \frac{\alpha^n}{n!}=0$, 
@@ -965,7 +965,7 @@
 	\]
 	and the remainder $R_k(x)=g(x)-T_k(x)$ satisfies 
 	\[
-		|R_k(x)| \leq \left(\frac{x}{1-x}\right)^{k+1}
+		|R_k(x)| \leq \frac{1}{1-x}\left(\frac{x}{1-x}\right)^{k+1}
 	\]
 	when $x\geq 0$ and
 	\[
@@ -1015,7 +1015,7 @@
 	\question
 	Let $f(x)=\frac{1}{1-x}$ and let 
 	\[
-		T(x)=\sum_{n=0}^\infty \frac{x^n}{n!}
+		T(x)=\sum_{n=0}^\infty x^n
 	\]
 	be the Taylor series for $f$ centered at $0$. We know that
 	$f(x)=T(x)$ for all $x\in (-1,1)$.
@@ -1024,7 +1024,7 @@
 		\item Find a series representation for $g_1(x)=f(2x)$ (without 
 		computing any derivatives).
 		\item For which $x$ do you expect your series for $g_1(x)$ to be valid (i.e. to equal
-		$f(2x)$)? Explain.
+		$f(2x)$? Explain.
 		\item Find a series representation for $g_2(x)=f(x^2)$.
 		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term. 
 		\item For which $x$ do you expect $g_3(x)$ to be valid? Explain.
