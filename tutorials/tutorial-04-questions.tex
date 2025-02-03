@@ -8,10 +8,14 @@
 
 
 \begin{enumerate}
-    \item 
+    \item This question is about integration by parts. For each integral, identify what the ``parts'' are (i.e., the $u$ and $v$ in the formula
+    $\displaystyle \int u'v = uv-\int uv'$).
     \begin{enumerate}
-        \item Compute $\displaystyle\int\log_b x\,dx$ where $b$ is any positive number.
-        \item You are given that $\displaystyle\int_1^2 xf'(2x)\,dx=8$ and a table of values of $f$. Find $\displaystyle\int_1^2 f(2x)\,dx$.
+        \item $\displaystyle \int x\sin x\,\mathrm d x$
+        \item $\displaystyle\int\log_b x\,\mathrm d x$ where $b>0$.
+    \end{enumerate}
+    \item 
+    For an unknown function $f$, you know $\displaystyle\int_1^2 xf'(2x)\,\mathrm d x=8$ and 
     	\begin{align*}
     	    \hfill\begin{tabular}{c||c|c|c|c|c|c|c}
             $x$&$0$&$1$&$2$&$3$&$4$&$5$&$6$\\
@@ -19,59 +23,82 @@
             $f(x)$&$2$&$-4$&$10$&$6$&$-2$&$8$&$-12$
             \end{tabular}\hfill\null
     	\end{align*}
-    \end{enumerate}
 
-    \item
+        Use this information to find $\displaystyle\int_1^2 f(2x)\,\mathrm d x$.
+
+    \item \phantom{x}
     \begin{enumerate}
-        \item Find the integral $\displaystyle\int\frac{dx}{x^2-2x+10}$.
-        \begin{minipage}{\linewidth-5cm}
-        \item The upper half of an ellipse centered at the origin with axes $a$ and $b$ is described by $y = \frac{b}{a}\sqrt{a^2-x^2}$ (see figure). Find the area of the ellipse in terms of $a$ and $b$.
-        \end{minipage}\hfill
-        \begin{minipage}{4cm}
-    	\flushright
-    	\begin{tikzpicture}[scale=0.45,line width=1]
-    		\draw [tolTeal] (0,0) ellipse (3 and 2);
-    			\draw[->] (-4,0) -- (4.2,0) node [below] {$x$};
-    		\draw[->] (0,-2.5) -- (0,3.2) node [left] {$y$};
-    		\node at (3,0) [below right,tolTeal] {$a$};
-    		\node at (0,2) [above left,tolTeal] {$b$};
-    	\end{tikzpicture}
+
+        %\item Find the integral $\displaystyle\int\frac{dx}{x^2-2x+10}$.
+        \item \phantom{x}
+        
+        \begin{minipage}{0.5\textwidth}
+        The upper half of an ellipse centered at the origin with axes $a$ and $b$ is described by $y = \frac{b}{a}\sqrt{a^2-x^2}$ (see figure). Use an integral to find the area of the ellipse in terms of $a$ and $b$.
+
+        \emph{Hint: you may want to try trigonometric substitution.}
+        \end{minipage}%
+        \begin{minipage}{0.5\textwidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.45,line width=1]
+                    \draw [tolTeal] (0,0) ellipse (3 and 2);
+                        \draw[->] (-4,0) -- (4.2,0) node [below] {$x$};
+                    \draw[->] (0,-2.5) -- (0,3.2) node [left] {$y$};
+                    \node at (3,0) [below right,tolTeal] {$a$};
+                    \node at (0,2) [above left,tolTeal] {$b$};
+                \end{tikzpicture}
+            \end{center}
+    	\end{minipage}
+
+        \item Evaluate $\int \frac{1}{x^2 - 9}\,\mathrm d x$ for $x > 3$ using trigonometric substitution.
+        
+        \item \phantom{x}
+        
+        \begin{minipage}{0.5\textwidth}
+        A ball with radius 1 is placed inside a cone that has a vertical slope of 1. Set up an integral to determine the cross sectional area of the region underneath the ball but within the cone (grey in the figure).
+        Then, use trigonometric substitution to evaluate the integral.
+        
+        \textit{Hint: Use the fact that the ball must be tangent to the cone.}
+
+        \end{minipage}%
+        \begin{minipage}{0.5\textwidth}
+            \begin{center}
+                \begin{tikzpicture}[scale=0.75,line width=1]
+                    \fill[gray] (0,0) -- ({1/sqrt(2)},{1/sqrt(2)}) arc (-45:-135:1) --cycle;
+                    \draw [tolMagenta] (0,{sqrt(2)}) circle (1);
+                    \draw [tolTeal] (-2,2) -- (0,0) -- (2,2);
+                    \draw[->] (-2,0) -- (2,0) node [below] {$x$};
+                    \draw[->] (0,-0.5) -- (0,3) node [left] {$y$};
+                \end{tikzpicture}
+            \end{center}
     	\end{minipage}
     \end{enumerate}
 
-    \item 
-    \begin{enumerate}
-        \item Evaluate $\int \frac{1}{x^2 - 9}\,dx$ for $x > 3$ using trigonometric substitution.
-        \begin{minipage}{\linewidth-5cm}
-        \item 
-        A ball with radius 1 is placed inside a cone that has a vertical slope of 1. Determine the cross sectional area of the region underneath the ball but within the cone (grey in the figure).
-        
-        \textit{Hint: Use the fact that the ball must be tangent to the cone.}
-        \end{minipage}\hfill
-        \begin{minipage}{4cm}
-	    \flushright
-		\begin{tikzpicture}[scale=0.75,line width=1]
-		\fill[gray] (0,0) -- ({1/sqrt(2)},{1/sqrt(2)}) arc (-45:-135:1) --cycle;
-		\draw [tolMagenta] (0,{sqrt(2)}) circle (1);
-		\draw [tolTeal] (-2,2) -- (0,0) -- (2,2);
-		\draw[->] (-2,0) -- (2,0) node [below] {$x$};
-		\draw[->] (0,-0.5) -- (0,3) node [left] {$y$};
-	\end{tikzpicture}
-	\end{minipage}
-    \end{enumerate}
 
+    \newpage
     \item The Gamma function is defined by the formula 
 
-    \[\Gamma(x) = \int_0^\infty e^{-t}t^{x-1}dt\]
-    
+    \[
+        \Gamma(x) = \int_0^\infty e^{-t}t^{x-1}\,\mathrm dt
+    \]
     It's an extension of the factorial function that works for non-integer values. If you ever graph $x!$ in desmos, this is what's being graphed!
-    \begin{enumerate}
-    \item Use the comparison test to show that the integral converges when $x>0$.
-    
-    \item Show by integration by parts that:
 
-    \[\Gamma(x) = x\Gamma(x-1)\]
-    \item Show that $\Gamma(1) = 1$ and $\Gamma(n) = n!$.
+    In this question, we will study the related antiderivative
+    \[
+        \gamma(n) = \int e^{-t}t^{n-1}\,\mathrm dt.
+    \]
+    
+    \begin{enumerate}
+    
+        \item Show by integration by parts that:
+
+        \[
+            \gamma(n) = x\gamma(n-1)
+        \]
+        \item We will choose our constant of integration so that $\gamma(1)=1$.
+        Given this choice, compute $\gamma(4)$
+        \item Can you find a formula for $\gamma(n)$ assuming $\gamma(1)=1$?
+        \item Does your recursive formula for $\gamma$ still hold
+        when computing $\gamma(x)$ when $x\in \R$ and $x\geq 1$? Explain.
     \end{enumerate}    
 \end{enumerate}
 
