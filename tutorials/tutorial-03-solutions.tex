@@ -1,3 +1,64 @@
 		\begin{enumerate}
 			\item 
+            \begin{enumerate} 
+            \item Since $f'(x) = -f(x)$ and $f(0) = 1$, the derivative will oscillate between $-1$ and $1$. The Taylor series is:
+
+            \[\sum_{n=0}^\infty \frac{(-1)^nx^n}{n!}\]
+
+            \item Simply plugging in $x^2$ and $\sqrt{x}$ into the series above gives:
+
+            \[f(x^2)=\sum_{n=0}^\infty \frac{(-1)^nx^{2n}}{n!}, f(\sqrt{x}) = \sum_{n=0}^\infty \frac{(-1)^n(\sqrt{x})^n}{n!}\]
+
+            On the other hand, we can take the derivative turn by turn to find:
+
+            \[\frac{d}{dx}f(x) = \frac{d}{dx} \sum_{k
+        n=0}^\infty \frac{(-1)^nx^n}{n!} = \frac{d}{dx}(1)+\sum_{n=1}^\infty \frac{n(-1)^nx^{n-1}} {n!}\]
+            \[= \sum_{n=1}^\infty \frac{(-1)^nx^{n-1}}{(n-1)!}\]
+
+            By shifting the indices to start at $n=0$, we find:
+
+            \[=\sum_{n=0}^\infty \frac{(-1)^{n+1}x^{n}}{(n)!} = -f(x)\]
+
+            Which is one way of seeing that $f'(x) = -f(x)$. 
+
+            \item The series which are power series are those which only have integer powers, i.e. come about as infinite sums of polynomials. $f(\sqrt{x})$ is not a power series, since it has fractional powers in its expansion. 
+            \end{enumerate}
+
+            \item 
+
+            \begin{enumerate}
+                \item We know that $a_0 = 1, a_1 = -1, ..., a_n = (-1)^n$.
+                
+                
+                \item To square the series representation, let's say that $g(x) = (f(x))^2=\sum_{n=0}^\infty b_n \frac{x^n}{n!}$. Writing out the first few terms of the expansion:
+
+                \[(a_0 + a_1x + \frac{a_2}{2}x^2 +...)(a_0 + a_1x + \frac{a_2}{2}x^2 +...) = a_0^2 + 2a_0a_1x + (a_2a_0 +a_1^2)x^2 + ...\]
+
+                In general, the $n$th degree term will look like:
+
+                \[\frac{b_n}{n!} = \sum_{k=0}^n \frac{a_{n-k}a_k}{(n-k)!k!}\]
+                \[ = \sum_{k=0}^n \frac{(-1)^n}{(n-k)!k!}\]
+
+                Which implies
+
+                \[b_n = (-1)^n\sum_{k=0}^n {n \choose k} = (-1)^n 2^n\]
+
+            
+
+                \item We know that $g(x) = (e^{-x})^2 = e^{-2x}$. Taking the derivative $n$ times gives $g^{(n)}(0) = (-2)^n$. So the Taylor series at $x=0$ would be:
+
+                \[g(x) = \sum_{n=0}^\infty (-2)^n\frac{x^n}{n!}\]
+
+                \item They do! They should match because the function $f(x) = e^{-x}$ has a Taylor series which converges everywhere. 
+            \end{enumerate}
+
+            \item 
+            \begin{enumerate}
+                \item The first derivatives of $f(x) = e^{ix}$ are $f'(x) = ie^{ix}, f''(x) = -e^{ix}, f'''(x) = -ie^{ix}, f^{(4)}(x) = e^{ix}$, and so on. Therefore, the Taylor Series centred around $x=0$ would be $1 + ix -\frac{1}{2!}x^2 - \frac{i}{3!}x^3 + \frac{1}{4!}x^4 + \dots = \displaystyle \sum_{n=0}^\infty \frac{(ix)^n}{n!}$.
+
+                \item Using the Taylor Series for $\cos{x}$ and $\sin{x}$, we get $\cos{x} + i\sin{x} = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!} x^{2n+1} + i\sum_{n=0}^\infty \frac{(-1)^n}{(2n)!}x^{2n} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \dots + i\left( x - \frac{x^3}{3!} + \dots\right)$
+
+                \item We can factor out $i$ in the term by term expression in Part A to yield the same expression in Part B.
+            \end{enumerate}
+            
 		\end{enumerate}
