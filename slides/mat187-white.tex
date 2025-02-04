@@ -1035,7 +1035,7 @@
 	\question
 	The function $f$ has a Taylor series centered at $0$ of the form
 	\[
-		T(x)=\frac{1}{2}+\frac{x}{3}-\frac{x^2}{4}+\frac{x^3}{5}-\frac{x^4}{6}+\cdots.
+		T(x)=-\frac{1}{2}+\frac{x}{3}-\frac{x^2}{4}+\frac{x^3}{5}-\frac{x^4}{6}+\cdots.
 	\]
 
 	\begin{parts}
@@ -1046,7 +1046,7 @@
 
 		\url{https://www.desmos.com/calculator/try63qzvo5}
 
-		\item For which values of $x$ is your series for $f'(x)$ and $\displaystyle \int f(x)\,\mathrm d x$
+		\item Based on your conjecture, for which values of $x$ should your series for $f'(x)$ and $\displaystyle \int f(x)\,\mathrm d x$ be
 		valid?
 	\end{parts}
 \end{slide}
@@ -1064,25 +1064,187 @@
 	Let $f(x)=\cos(\sqrt{x})$.
 
 	\begin{parts}
-		\item Write down a Taylor series for $f$.
+		\item Write down a Taylor series, $T$, for $f$.
 
 		\emph{Hint: you don't need to take any derivatives.}
 
-		\item Find $f^{(10)}(0)$.
+		\item Find $f^{(6)}(0)$.
 		
-		\item For what $x$ is your series valid? Explain.s
+		\item For what $x$ is $T(x)=f(x)$? Explain.
 
-		\item Using Desmos, make a conjecture: for which values of $x$ does your series converges?
+		\item Using Desmos, make a conjecture: for which values of $x$ does your series converge?
 
 		{\small\url{https://www.desmos.com/calculator/try63qzvo5}}
 
 		\item Let $T$ be a Taylor series for an unknown function $g$.
-		If a Taylor series $T$ converges at a value $x_0$, must it be true that $T(x_0)=g(x_0)$?
+		If $T$ converges at a value $x_0$, must it be true that $T(x_0)=g(x_0)$?
 		Explain. 
 
 	\end{parts}
 \end{slide}
 
+
+\begin{slide}
+	\question
+	\label{geomseq}
+	The sequence $a_n$ is defined by $a_0=10$ and
+	\[
+		\frac{a_{n+1}}{a_n}= \frac{1}{4}
+	\]
+
+	Define $\displaystyle S_n=\sum_{i=0}^n a_n$ and 
+	$\displaystyle S=\lim_{n\to\infty} S_n$.
+
+	\begin{parts}
+		\item  Find an expression for $a_n$.
+		\item Is $S_n$ bounded? Explain.
+		\item Compute $S$.
+
+		\emph{Recall: 
+		$\displaystyle
+			\sum_{i=0}^n \alpha^i = \frac{1-\alpha^{n+1}}{1-\alpha}
+		$}
+
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Recall the sequence $a_n$ from Exercise \ref{geomseq} defined by
+	$a_0=10$ and
+	$\displaystyle
+		\frac{a_{n+1}}{a_n}= \frac{1}{4}
+	$.
+
+	Consider the unknown, positive, sequence $b_n$. You know that $b_0=5$ and 
+	$\displaystyle \frac{b_{n+1}}{b_n} < \frac{1}{5}$.
+
+	\begin{parts}
+		\item Do you have enough information to write down an expression for $b_n$?
+
+		\item Which (if any) of the following relationships must hold for all $n$?
+		\[
+			a_n < b_n \qquad b_n < a_n \qquad a_n = b_n
+		\]
+		Justify your answer. 
+
+		\item Consider the series $\displaystyle \sum_{n=0}^\infty 
+		b_n$. Does the series converge? Justify your answer by comparing with
+		a known series.
+
+		\item If you were told that, actually, $b_0=100$, would that
+		change your answer to the previous part?
+	\end{parts}
+
+\end{slide}
+\begin{slide}
+	\question
+	The ratio test states for a sequence $c_n$ if 
+	\[
+		\lim_{n\to\infty} \frac{|c_{n+1}|}{|c_n|} < 1
+	\]
+	then $\displaystyle \sum_{n=0}^\infty c_n$ converges.
+
+	Recall the sequence $a_n$ from Exercise \ref{geomseq} defined by
+	$a_0=10$ and
+	$\displaystyle
+		\frac{a_{n+1}}{a_n}= \frac{1}{4}
+	$.
+
+	You know the following about the positive sequence $d_n$: 
+	$\displaystyle \lim_{n\to\infty} \frac{d_{n+1}}{d_n} =\rho < \frac{1}{5}$.
+
+	\begin{parts}
+		\item Which (if any) of the following relationships must hold for all $n$?
+		\[
+			a_n < d_n \qquad d_n < a_n \qquad a_n = d_n
+		\]
+		\item Which (if any) of the following relationships \emph{eventually} hold (i.e. hold for all sufficiently large $n$)?
+		\[
+			a_n < d_n \qquad d_n < a_n \qquad a_n = d_n
+		\]
+		Justify your answer.
+
+		\item Justify, without the ratio test, whether $\displaystyle 
+		\sum_{n=0}^\infty d_n$ converges.
+
+		\item Prove the ratio test.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	The ratio test states: If $c_n$ is a sequence and
+	\[
+		\lim_{n\to\infty} \frac{|c_{n+1}|}{|c_n|} =\rho
+	\]
+	then $\displaystyle \sum_{n=0}^\infty c_n$ 
+
+	\begin{minipage}{\textwidth}
+	\begin{itemize}
+		\item Converges if $\rho < 1$
+		\item Diverges if $\rho > 1$
+		\item Inconclusive if $\rho =1$
+	\end{itemize}
+\end{minipage}
+
+	\begin{parts}
+		\item Apply the ratio test to determine the convergence of the 
+		following series:
+		\begin{enumerate}
+			\item $\displaystyle \sum_{n=1}^\infty \frac{2^{n}}{n!}$
+			\item $\displaystyle \sum_{n=1}^\infty \frac{8^n}{(-2)^{n+1}n}$
+			\item $\displaystyle \sum_{n=1}^\infty \frac{1}{n}$
+		\end{enumerate}
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	The Taylor series for $f(x)=\frac{1}{1-2x}$ is
+	\[
+		T(x)=\sum_{n=0}^\infty 2^nx^n
+	\]
+
+	\begin{parts}
+		\item Apply the ratio test to $T(x)$. Does $T(x)$ converge?
+		Does your answer depend on $x$?
+		\item Let $G(x)$ be the Taylor series for $g(x)=e^x$. Apply the ratio
+		test to $G(x)$. Does your answer depend on $x$?
+		\item Write down the largest (open) interval of convergence and the radius of convergence for $T$ and $G$.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
+		\[
+			H(x)=\sum_{n=0}^\infty \frac{(x-a)^n}{(1-a)^{n+1}}.
+		\]
+
+
+	\begin{parts}
+		\item Find the largest (open) interval of converge and radius of convergence for $H$.
+		\item Graph $h$. Just looking at the graph, can you determine 
+		whether a Taylor series for $h$ should have an infinite or finite radius of converge?
+	\end{parts}
+\end{slide}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
 %\begin{slide}
 %	\question
 %	In the model \textbf{M$_1$}, we assumed the starfish had $K$ children at one point during the year.
