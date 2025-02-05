@@ -25,7 +25,19 @@
             \end{enumerate}
 
             \item 
+            \begin{enumerate}
+                \item The term within the Taylor series representation of $e^x$ is given by $\displaystyle \frac{x^n}{n!}$, so we can apply the ratio test:
+                \[\lim_{n\to \infty}\frac{\frac{\left|x^{n+1}\right|}{(n+1)!}}{\frac{|x|^n}{n!}} = \lim_{n\to\infty}\frac{|x|}{n+1} = 0\] 
+                
+                Regardless of the value for $x$, the ratio is always smaller than 1. Therefore, the Taylor series converges for all $x$.
 
+                \item The term within the Taylor series representation of $\ln(1+x)$ is given by $\frac{(-1)^{n-1}x^n}{n}$, so applying the ratio test gives:
+                \[\lim_{n\to\infty}\frac{\frac{|x^{n+1}|}{n+1}}{\frac{|x|^n}{n}} = \lim_{n\to\infty}\frac{1}{1+\frac{1}{n}}|x| = |x|\]
+                
+                Therefore, we require $|x| < 1$ for this series to converge.
+            \end{enumerate}
+            
+            \item 
             \begin{enumerate}
                 \item We know that $a_0 = 1, a_1 = -1, ..., a_n = (-1)^n$.
                 
@@ -33,7 +45,7 @@
                 \item To square the series representation, let's say that $g(x) = (f(x))^2=\sum_{n=0}^\infty b_n \frac{x^n}{n!}$. Writing out the first few terms of the expansion:
 
                 \[(a_0 + a_1x + \frac{a_2}{2}x^2 +...)(a_0 + a_1x + \frac{a_2}{2}x^2 +...) = a_0^2 + 2a_0a_1x + (a_2a_0 +a_1^2)x^2 + ...\]
-
+                We get this by fixing the degree of the term we care about and tracking the product terms with that degree. 
                 In general, the $n$th degree term will look like:
 
                 \[\frac{b_n}{n!} = \sum_{k=0}^n \frac{a_{n-k}a_k}{(n-k)!k!}\]
@@ -42,6 +54,25 @@
                 Which implies
 
                 \[b_n = (-1)^n\sum_{k=0}^n {n \choose k} = (-1)^n 2^n\]
+                
+                More specifically:
+
+                \begin{enumerate}
+                    \item $b_0 = 1$
+                    \item $b_1 = a_0a_1 + a_1 a_0 = -2$
+                    \item $b_2/2! = a_2/2!a_0 + a_1^2 + a_0a_2/2! = a_0a_2 + a_1^2 = 2$
+                    \item Finally we can find $b_3/3! = a_0\dfrac{a_3}{3!} + a_1 \dfrac{a_2}{2!} + \dfrac{a_2}{2!}a_1 + \dfrac{a_3}{3!}a_0 = -1-\frac{1}{3} = -\dfrac{4}{3}$
+
+                    So the fourth order Taylor polynomial would be
+
+                    \[1 -2x +2x^2 -\dfrac{4}{3}x^3 = 1 -2x +4\frac{x^2}{2!} -8\dfrac{x^3}{3!}\]
+
+                    Where we rewrite the Taylor polynomial in a way that looks similar to the Taylor series we'll get in the next step. 
+                    
+                    
+                \end{enumerate}
+
+                
 
             
 
@@ -59,6 +90,5 @@
                 \item Using the Taylor Series for $\cos{x}$ and $\sin{x}$, we get $\cos{x} + i\sin{x} = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!} x^{2n+1} + i\sum_{n=0}^\infty \frac{(-1)^n}{(2n)!}x^{2n} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \dots + i\left( x - \frac{x^3}{3!} + \dots\right)$
 
                 \item We can factor out $i$ in the term by term expression in Part A to yield the same expression in Part B.
-            \end{enumerate}
-            
+            \end{enumerate}            
 		\end{enumerate}
