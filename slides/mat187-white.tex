@@ -1085,14 +1085,14 @@
 
 
 \begin{slide}
-	\question
+	\question%
 	\label{geomseq}
 	The sequence $a_n$ is defined by $a_0=10$ and
 	\[
 		\frac{a_{n+1}}{a_n}= \frac{1}{4}
 	\]
 
-	Define $\displaystyle S_n=\sum_{i=0}^n a_n$ and 
+	Define $\displaystyle S_n=\sum_{i=0}^n a_i$ and 
 	$\displaystyle S=\lim_{n\to\infty} S_n$.
 
 	\begin{parts}
@@ -1174,21 +1174,26 @@
 
 \begin{slide}
 	\question
-	The ratio test states: If $c_n$ is a sequence and
-	\[
-		\lim_{n\to\infty} \frac{|c_{n+1}|}{|c_n|} =\rho
-	\]
-	then $\displaystyle \sum_{n=0}^\infty c_n$ 
+	\begin{theorem}[(Ratio Test)]
+		If $c_n$ is a sequence and
+		\[
+			\lim_{n\to\infty} \frac{|c_{n+1}|}{|c_n|} =\rho
+		\]
+		then $\displaystyle \sum_{n=0}^\infty c_n$ 
 
-	\begin{minipage}{\textwidth}
-	\begin{itemize}
-		\item Converges if $\rho < 1$
-		\item Diverges if $\rho > 1$
-		\item Inconclusive if $\rho =1$
-	\end{itemize}
-\end{minipage}
+		\begin{itemize}
+			\item converges if $\rho < 1$
+			\item diverges if $\rho > 1$
+			\item could converge or diverge if $\rho =1$
+		\end{itemize}
+	\end{theorem}
 
 	\begin{parts}
+		\item 
+		\begin{minipage}[t]{0.45\textwidth}
+		The Ratio Test talks about the convergence of $\displaystyle \sum_{n=0}^\infty c_n$.
+		Does it also apply to sums that don't start at $n=0$? Explain.
+		\end{minipage}
 		\item Apply the ratio test to determine the convergence of the 
 		following series:
 		\begin{enumerate}
