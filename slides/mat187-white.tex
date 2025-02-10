@@ -1329,11 +1329,121 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 
 
 
+\begin{slide}
+	\question
+	We would like to compute
+	\[
+		F(\theta) = \int \sin^2(\theta)\,\mathrm d \theta
+	\]
+
+	\begin{parts}
+		\item (Review) Use integration by parts to find $F(\theta)$.
+
+		Hint: \emph{The identity $1=\cos^2\theta +\sin^2\theta$ may reduce your workload.}
+		
+		\item Use the trig identity $\displaystyle\sin^2\theta = \frac{1-\cos 2x}{2}$
+		to find $F(x)$.
+	\end{parts}
+\end{slide}
 
 
 
+\begin{slide}
+	\question
+	Let $f(x)=\sqrt{1-x^2}$ and consider 
+	\[
+		I=\int_0^1 f(x)\,\mathrm d x
+	\]
+
+	\begin{parts}
+		\item If we define a change of variables $x=\sin \theta$, what would
+		$\mathrm d x$ equal?
+		\item Apply the substitution $x=\sin\theta$ we get a new function
+		 $g(\theta)$ so that 
+		 \[
+		 \int_0^1 f(x)\,\mathrm d x
+		 =
+\int_?^? g(\theta)\,\mathrm d \theta
+		 \]
+		
+		 Find the function $g$ and the bounds for the new integral (i.e. fill in the $?$'s).
+
+		 \item Find $I$.
+
+		 \item Graph $f$. What shape does the graph make? Use your knowledge
+		 of geometry to find $I$.
+	\end{parts}
+\end{slide}
 
 
+\begin{slide}
+	\question
+	Let $f(x)=\sqrt{1-x^2}$ and consider 
+	\[
+		I=\int_0^1 f(x)\,\mathrm d x
+	\]
+
+	\begin{parts}
+		\item If we define a change of variables $x=\sin \theta$, what would
+		$\mathrm d x$ equal?
+		\item Apply the substitution $x=\sin\theta$ we get a new function
+		 $g(\theta)$ so that 
+		 \[
+		 \int_0^1 f(x)\,\mathrm d x
+		 =
+\int_?^? g(\theta)\,\mathrm d \theta
+		 \]
+		
+		 Find the function $g$ and the bounds for the new integral (i.e. fill in the $?$'s).
+
+		 \item Find $I$.
+
+		 \item Graph $f$. What shape does the graph make? Use your knowledge
+		 of geometry to find $I$.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Let $\displaystyle f(x)=\frac{\sqrt{9-x^2}}{x^2}$ and consider 
+	\[
+		F(x)=\int f(x)\,\mathrm d x
+	\]
+	Using a substitution of $x=3\sin\theta$,  we arrive at 
+	\[
+		F(x)=-\frac{\cos\theta}{\sin\theta} - \theta + C.
+	\]
+
+	\begin{parts}
+		\item Find an expression for $F(x)$ that involves only $x$.
+		\item Are there restrictions on domain of $x$ for which your 
+		answer makes sense?
+		\item The domain of $\arcsin$ is $[-1,1]$. Does this change your 
+		restrictions on the domain of $x$?
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+	Let $\displaystyle f(x)=\sqrt{\cos x}$ and consider 
+	\[
+		I=\int_0^{\pi/6} f(x)\,\mathrm d x
+	\]
+
+	You would like to find $I$.
+	\begin{parts}
+		\item Use WolframAlpha to find an anti-derivative of $f$.
+		Does WolframAlpha give you a useful answer?
+		 \item Using a 2$^{\text{nd}}$ degree Taylor approximation for $\cos$,
+		 write down an integral that will approximate $I$.
+		 \item Find an approximation for $I$.
+		 \item Use a 2$^{\text{nd}}$ degree Taylor approximation for $f$ to
+		 approximate $I$.
+		 \item Desmos claims $I\approx 0.51154910026$. Which of your estimates is more accurate?
+
+	\end{parts}
+\end{slide}
 
 
 
