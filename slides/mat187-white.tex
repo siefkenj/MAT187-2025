@@ -1341,15 +1341,16 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 
 		Hint: \emph{The identity $1=\cos^2\theta +\sin^2\theta$ may reduce your workload.}
 		
-		\item Use the trig identity $\displaystyle\sin^2\theta = \frac{1-\cos 2x}{2}$
-		to find $F(x)$.
+		\item Use the trig identity $\displaystyle\sin^2\theta = \frac{1-\cos 2\theta}{2}$
+		to find $F(\theta)$.
+
+		\item Find $\displaystyle \int \cos^2(\theta)\,\mathrm d \theta$ using any method you like.
 	\end{parts}
 \end{slide}
 
-
-
 \begin{slide}
 	\question
+	\label{qtrigsub1}
 	Let $f(x)=\sqrt{1-x^2}$ and consider 
 	\[
 		I=\int_0^1 f(x)\,\mathrm d x
@@ -1358,7 +1359,7 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 	\begin{parts}
 		\item If we define a change of variables $x=\sin \theta$, what would
 		$\mathrm d x$ equal?
-		\item Apply the substitution $x=\sin\theta$ we get a new function
+		\item Apply the substitution $x=\sin\theta$ to get a new function
 		 $g(\theta)$ so that 
 		 \[
 		 \int_0^1 f(x)\,\mathrm d x
@@ -1375,33 +1376,23 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 	\end{parts}
 \end{slide}
 
-
 \begin{slide}
 	\question
-	Let $f(x)=\sqrt{1-x^2}$ and consider 
+	In Exercise \ref{qtrigsub1} we computed
 	\[
-		I=\int_0^1 f(x)\,\mathrm d x
+		I=\int_0^1 f(x)\,\mathrm d x = \int_0^{\pi/2} \cos^2\theta\,\mathrm d \theta
 	\]
 
 	\begin{parts}
-		\item If we define a change of variables $x=\sin \theta$, what would
-		$\mathrm d x$ equal?
-		\item Apply the substitution $x=\sin\theta$ we get a new function
-		 $g(\theta)$ so that 
-		 \[
-		 \int_0^1 f(x)\,\mathrm d x
-		 =
-\int_?^? g(\theta)\,\mathrm d \theta
-		 \]
-		
-		 Find the function $g$ and the bounds for the new integral (i.e. fill in the $?$'s).
-
-		 \item Find $I$.
-
-		 \item Graph $f$. What shape does the graph make? Use your knowledge
-		 of geometry to find $I$.
+		\item Explain why the bounds changed from $[0,1]$ to $[0,\pi/2]$.
+		\item Would it be okay to change the bounds from $[0,1]$ to $[2\pi, 5\pi/2]$?
+		\item Would it be okay to change the bounds from $[0,1]$ to $[0, 5\pi/2]$?
+		\item Compute $I$ using the substitution $x=\cos\theta$. Pay close attention to 
+		make sure you use the correct bounds.
 	\end{parts}
 \end{slide}
+
+
 
 \begin{slide}
 	\question
