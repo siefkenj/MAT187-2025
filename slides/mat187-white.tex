@@ -351,10 +351,10 @@
 	\begin{parts}
 		\item Sketch the complex number $2p$.
 		\item Sketch the complex number $p^2$.
-		\item Sketch the complex numbers $p^n$ for $n=3,4,\ldots$. Will your answer 
+		\item Sketch the complex numbers $p^n$ for $n=3,4,\ldots$. Will your answer
 		depend on $r$?
 
-		\bigskip 
+		\bigskip
 		\item Use the geometry of the complex plane to find $\sqrt{i}$. Express
 		your answer in both polar and rectangular form.
 	\end{parts}
@@ -362,7 +362,7 @@
 
 \begin{slide}
 	\question
-	Consider the equation 
+	Consider the equation
 	\begin{equation}
 		\label{eq:complex}
 		z^3=-1
@@ -370,7 +370,7 @@
 
 	\begin{parts}
 		\item Find a solution to Equation \eqref{eq:complex}.
-		\item If $z=re^{i\theta}$ is a solution to Equation \eqref{eq:complex}, 
+		\item If $z=re^{i\theta}$ is a solution to Equation \eqref{eq:complex},
 		what conditions must $r$ and $\theta$ satisfy? Justify your conclusions.
 		\item Find all solutions to Equation \eqref{eq:complex}.
 
@@ -404,7 +404,7 @@
 	or \emph{polynomial interpolation} would be more appropriate.
 
 	\begin{parts}
-		\item You are modelling the arch used in the construction of a 
+		\item You are modelling the arch used in the construction of a
 		particular Roman aqueduct. You have collected several hundred data points
 		of height of the arch vs. distance from the base of the aqueduct.
 
@@ -412,7 +412,7 @@
 		which will be used for signalling a computer. There are three different brightnesses
 		that must be achieved exactly and the transition between those brightnesses must be smooth.
 
-		\item You are given exact data points from a lab and told that the data was created with a 4th 
+		\item You are given exact data points from a lab and told that the data was created with a 4th
 		degree polynomial. You are asked to find the coefficients of the polynomial.
 	\end{parts}
 \end{slide}
@@ -427,15 +427,15 @@
 
 	% Comes from the equation -.8t^2+2.2t+2.6
 	\begin{center}
-	\begin{tabular}{|c|c|}
-		\hline
-		$t$ & $h(t)$\\
-		\hline
-		1 & 4\\
-		2 & 3.8\\
-		3 & 2\\
-		\hline
-	\end{tabular}
+		\begin{tabular}{|c|c|}
+			\hline
+			$t$ & $h(t)$ \\
+			\hline
+			1   & 4      \\
+			2   & 3.8    \\
+			3   & 2      \\
+			\hline
+		\end{tabular}
 	\end{center}
 
 	\begin{parts}
@@ -448,8 +448,8 @@
 
 \begin{slide}
 	\question
-		While developing a robotics control system, you find the need for
-		a function $f$ which satisfies the following properties:
+	While developing a robotics control system, you find the need for
+	a function $f$ which satisfies the following properties:
 	\begin{enumerate}
 		\item[(i)] $f(0)=-1$ and $f(1)=2$
 		\item[(ii)] $f'(0)=-1$ and $f'(1)=2$
@@ -466,19 +466,19 @@
 		\item Can Lagrange interpolation be used to directly find $f$? Explain.
 		\item Complete the following table
 		\begin{center}
-		\begin{tabular}{|c|c|c|c|c|}
-			\hline
-			$g$ & $g(0)$ & $g(1)$ & $g'(0)$ & $g'(1)$\\
-			\hline
-			$L_1$ & & & & \\
-			\hline
-			$L_2$ & & & & \\
-			\hline
-			$S_1$ & & & & \\
-			\hline
-			$S_2$ & & & & \\
-			\hline
-		\end{tabular}
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				$g$   & $g(0)$ & $g(1)$ & $g'(0)$ & $g'(1)$ \\
+				\hline
+				$L_1$ &        &        &         &         \\
+				\hline
+				$L_2$ &        &        &         &         \\
+				\hline
+				$S_1$ &        &        &         &         \\
+				\hline
+				$S_2$ &        &        &         &         \\
+				\hline
+			\end{tabular}
 		\end{center}
 		\item Use $L_1$, $L_2$, $S_1$, and $S_2$ to find a polynomial satisfying the properties of $f$.
 		\item Explain how Lagrange interpolation can be generalized to allow finding a polynomial
@@ -489,17 +489,17 @@
 \begin{slide}
 	\question
 	\begin{parts}
-	\item For each polynomial approximation of the bell curve, is the approximation best at
-	$0$, best on the interval $[-2,2]$, or best on the interval $[0,2]$.
+		\item For each polynomial approximation of the bell curve, is the approximation best at
+		$0$, best on the interval $[-2,2]$, or best on the interval $[0,2]$.
 
-	% https://www.desmos.com/calculator/qjruzy8gvw
-	(A)~\includegraphics[width=1.25in]{B2-Plot1.png}
-	(B)~\includegraphics[width=1.25in]{B2-Plot2.png}\\
-	(C)~\includegraphics[width=1.25in]{B2-Plot3.png}
-	(D)~\includegraphics[width=1.25in]{B2-Plot4.png}
-	% Show list of 4 pictures approximating (a bell curve?) with 
-	% different styles of approximation
-	\item Based on the pictures, which polynomial(s) do you think come from a Taylor approximation?
+		% https://www.desmos.com/calculator/qjruzy8gvw
+		(A)~\includegraphics[width=1.25in]{B2-Plot1.png}
+		(B)~\includegraphics[width=1.25in]{B2-Plot2.png}\\
+		(C)~\includegraphics[width=1.25in]{B2-Plot3.png}
+		(D)~\includegraphics[width=1.25in]{B2-Plot4.png}
+		% Show list of 4 pictures approximating (a bell curve?) with 
+		% different styles of approximation
+		\item Based on the pictures, which polynomial(s) do you think come from a Taylor approximation?
 	\end{parts}
 \end{slide}
 
@@ -527,7 +527,7 @@
 
 \begin{slide}
 	\question
-	A bee is flying back and forth along a window sill trying to escape from your living room. 
+	A bee is flying back and forth along a window sill trying to escape from your living room.
 
 	The bee's position at time $t$ along the window sill is given by $r(t)$.
 
@@ -538,22 +538,22 @@
 	\]
 
 	\begin{parts}
-		\item Estimate the position of the bee on the window sill at time 
+		\item Estimate the position of the bee on the window sill at time
 		$2.1$. Is your answer exact or approximate?
 		\item Estimate the velocity of the bee at time $2.1$. Is your answer exact or approximate?
 		\item Are there any times you can compute the \emph{exact} position of the bee?
 		\item Are there any times you can compute the \emph{exact} velocity?
-		\item What is your best estimate for the acceleration of the 
+		\item What is your best estimate for the acceleration of the
 		bee at time $2.1$?
 	\end{parts}
 \end{slide}
 
 \begin{slide}
 	\question
-	A bee is flying back and forth along a window sill trying to escape from your living room. 
+	A bee is flying back and forth along a window sill trying to escape from your living room.
 
 	The bee's position at time $t$ along the window sill is given by $r(t)$.
-	
+
 	You know that a second-order Taylor approximation to $r(t)$ at time $t=2$
 	is
 	\[
@@ -561,12 +561,12 @@
 	\]
 
 	\begin{parts}
-	\item Estimate the position of the bee on the window sill at time 
+		\item Estimate the position of the bee on the window sill at time
 		$2.1$. Is your answer exact or approximate?
 		\item Estimate the velocity of the bee at time $2.1$. Is your answer exact or approximate?
 		\item Are there any times you can compute the \emph{exact} position of the bee?
 		\item Are there any times you can compute the \emph{exact} velocity?
-		\item What is your best estimate for the acceleration of the 
+		\item What is your best estimate for the acceleration of the
 		bee at time $2.1$?
 	\end{parts}
 \end{slide}
@@ -596,11 +596,11 @@
 	\begin{parts}
 		\item Find $R_3(1.5)$ (you may use a calculator).
 		\item What is the largest value of $R_3(x)$ when $0\leq x\leq 2$?
-		\item Is there a value of $x$ for which $R_3(x)=0$? What does this 
+		\item Is there a value of $x$ for which $R_3(x)=0$? What does this
 		say about $P_3$?
 
-		\medskip 
-		\item Given that $|f^{(5)}(x)| \leq 8$ when $x\in [0,2]$, 
+		\medskip
+		\item Given that $|f^{(5)}(x)| \leq 8$ when $x\in [0,2]$,
 		find an upper bound for $R_4(x)$ that
 		\begin{enumerate}
 			\item works for a fixed $x\in[0,2]$
@@ -623,8 +623,8 @@
 		\item[(A)] The degree of $P_n$, i.e., $n$.
 		\item[(B)] The magnitude of $f(a)$, i.e., $|f(a)|$.
 		\item[(C)] The magnitudes of the derivatives of $f$ at $a$, i.e., the size of $|f'(a)|$, $|f''(a)|$, etc..
-		\item[(D)] The distance from $a$ that you are approximating at, i.e., 
-		the size of $|x-a|$.
+		\item[(D)] The distance from $a$ that you are approximating at, i.e.,
+		      the size of $|x-a|$.
 
 	\end{enumerate}
 \end{slide}
@@ -656,8 +656,8 @@
 	Consider the function $f(x)=\frac{1}{2}x^2+1$ and the value $\displaystyle I=\int_{0}^3f(x)\,\mathrm d x$.
 
 	\begin{parts}
-		\item Make three sketches: one where the left-endpoint rule is used to approximate $I$, 
-		one where the right-endpoint rule is used, 
+		\item Make three sketches: one where the left-endpoint rule is used to approximate $I$,
+		one where the right-endpoint rule is used,
 		and one where the trapezoid rule is used. (Use at least three intervals.)
 
 		\item For the left-endpoint, right-endpoint, and trapezoid rules, which will give over estimates of
@@ -672,7 +672,7 @@
 		\end{itemize}
 		Each estimate comes from using the same partition.
 
-		Which estimates come from a left-endpoint approximation, a right-endpoint approximation, 
+		Which estimates come from a left-endpoint approximation, a right-endpoint approximation,
 		and a trapezoid approximation?
 
 		\emph{Hint: you know calculus!}
@@ -685,7 +685,7 @@
 \begin{slide}
 	% https://www.desmos.com/calculator/5lszweq0bd
 	\question
-	In a classic problem, you are trying to find the volume of a wine barrel. 
+	In a classic problem, you are trying to find the volume of a wine barrel.
 	Let $r(\ell)$ represent the radius of the barrel $\ell$ cm from the base. The total
 	length of the barrel is 80cm.
 
@@ -697,29 +697,29 @@
 	You have measured the barrel in several places and gotten the following data
 	\begin{center}
 		\begin{tabular}{ccccc}
-			r(0)&r(20)&r(40)&r(60)&r(80)\\
-			12.8 & 21.2 & 22.7 & 21.4 & 13.4  \\
+			r(0) & r(20) & r(40) & r(60) & r(80) \\
+			12.8 & 21.2  & 22.7  & 21.4  & 13.4  \\
 		\end{tabular}
 	\end{center}
 
 	\begin{parts}
 		\item Make a sketch of the barrel's profile. Make a second sketch of $\pi [r(\ell)]^2$.
 
-		\item Based on your sketch, do you think using a trapezoid approximation will produce an over 
+		\item Based on your sketch, do you think using a trapezoid approximation will produce an over
 		or under estimate for the volume?
 
 		\item Use a trapezoid approximation to estimate the volume of the barrel.
 
-		\item Use a Simpson's approximation to estimate the volume of the barrel. 
-		
-		\emph{Reminder:}
-		if $p$ is a quadratic polynomial, 
-		\[
-		 \int_a^b p(x)\,\mathrm d x = \frac{b-a}{6}\left(p(a)+4p\Big(\frac{a+b}{2}\Big)+p(b)\right)
-		 \]
+		\item Use a Simpson's approximation to estimate the volume of the barrel.
 
-		 \item The exact (rounded) volume of the barrel is 104384cm$^3$. What approximation
-		 method was most accurate? Why?
+		\emph{Reminder:}
+		if $p$ is a quadratic polynomial,
+		\[
+			\int_a^b p(x)\,\mathrm d x = \frac{b-a}{6}\left(p(a)+4p\Big(\frac{a+b}{2}\Big)+p(b)\right)
+		\]
+
+		\item The exact (rounded) volume of the barrel is 104384cm$^3$. What approximation
+		method was most accurate? Why?
 
 
 	\end{parts}
@@ -732,11 +732,11 @@
 
 	\begin{parts}
 		\item Draw a function where the left endpoint approximation is an \emph{under estimate}.
-		
+
 		\item Draw a function where the right endpoint approximation is an \emph{under estimate}.
-		
+
 		\item Draw a function where the trapezoid approximation is an \emph{under estimate}.
-		
+
 		\item Draw a function where the midpoint approximation is an \emph{under estimate}.
 
 	\end{parts}
@@ -754,12 +754,12 @@
 	\begin{parts}
 		\item On each interval, identify whether left/right/midpoint/trapezoid approximations will produce an
 		\begin{enumerate}
-			\item Underestimate 
-			\item Overestimate 
+			\item Underestimate
+			\item Overestimate
 			\item Cannot be determined
 		\end{enumerate}
 
-		\item Is there any interval where you're confident that Simpson's rule would produce 
+		\item Is there any interval where you're confident that Simpson's rule would produce
 		an over/under estimate?
 
 		\item Come up with a strategy (i.e., a choice of integration method for each interval)
@@ -833,24 +833,24 @@
 
 \begin{slide}
 	\question
-	Let $a_n$ (for $n\geq 1$) be a sequence and define 
+	Let $a_n$ (for $n\geq 1$) be a sequence and define
 	\[
-	S_n = \sum_{i=1}^n a_n.
+		S_n = \sum_{i=1}^n a_n.
 	\]
 	Let $S_\infty = \lim_{n\to\infty } S_n$.
 
 	\begin{parts}
 		\parbox{\textwidth}{
-		\item Which of the following statements must be true?
+			\item Which of the following statements must be true?
 
-		\begin{enumerate}
-			\item If $|a_n| \geq 1$ for all $n$, then $S_n$ converges.
-			\item If $|a_n| \leq 1$ for all $n$, then $S_n$ converges.
-			\item If $|S_n| \geq 1$ for all $n$, then $a_n$ diverges.
-			\item If $|S_n| \leq 1$ for all $n$, then $a_n$ diverges.
-			\item If $a_n\to 0$ then $S_n$ converges.
+			\begin{enumerate}
+				\item If $|a_n| \geq 1$ for all $n$, then $S_n$ converges.
+				\item If $|a_n| \leq 1$ for all $n$, then $S_n$ converges.
+				\item If $|S_n| \geq 1$ for all $n$, then $a_n$ diverges.
+				\item If $|S_n| \leq 1$ for all $n$, then $a_n$ diverges.
+				\item If $a_n\to 0$ then $S_n$ converges.
 
-		\end{enumerate}
+			\end{enumerate}
 		}
 
 		\bigskip
@@ -863,7 +863,7 @@
 
 \begin{slide}
 	\question
-	Consider the function $f(x)=1/x$, the sequence $a_n=1/n$ and 
+	Consider the function $f(x)=1/x$, the sequence $a_n=1/n$ and
 	the sequence of partial sums $\displaystyle S_n = \sum_{i=1}^n a_i$.
 
 	In this question we want to get bounds on the \emph{series}
@@ -888,7 +888,7 @@
 
 \begin{slide}
 	\question
-	Consider the function $f(x)=1/x^2$, the sequence $a_n=1/n^2$ and 
+	Consider the function $f(x)=1/x^2$, the sequence $a_n=1/n^2$ and
 	the sequence of partial sums $\displaystyle S_n = \sum_{i=1}^n a_i$.
 
 	In this question we want to get bounds on the \emph{series}
@@ -899,7 +899,7 @@
 		\item Use $\Sigma$-notation to write down a formula for the left-endpoint approximation of
 		$\displaystyle \int_1^n \frac{1}{x^2}\,\mathrm d x$ using a partition
 		whose intervals are width $1$.
-		
+
 		\bigskip
 		\bigskip
 		\bigskip
@@ -923,7 +923,7 @@
 	$C_n$, and $D_n$. (I.e., $\displaystyle A_n=\sum_{i=1}^n a_n$, etc.)
 
 	\begin{parts}
-		\item Use a comparison with known integrals to decide 
+		\item Use a comparison with known integrals to decide
 		the convergence of $A_n$, $B_n$, $C_n$.
 		\item Can you decide the convergence of $D_n$ using a comparison to
 		a known integral? Explain.
@@ -935,21 +935,21 @@
 	Consider the function $f(x)=\sin(x)$.
 
 	\begin{parts}
-		\item Write down $T_k(x)$, the $k$th Taylor approximation to 
-		$f$ centered at $0$. You may use ``$\cdots$'' notation or $\Sigma$-notation. 
+		\item Write down $T_k(x)$, the $k$th Taylor approximation to
+		$f$ centered at $0$. You may use ``$\cdots$'' notation or $\Sigma$-notation.
 
 		\item Write down, using $\Sigma$-notation, $T(x)$, the Taylor series
 		for $f$ centered at $0$.
 
-		\item In general a Taylor series may be written as $\displaystyle 
-		\sum_{n=0}^\infty a_n \frac{x^{n}}{n!}$, where $a_n$ is a sequence.
+		\item In general a Taylor series may be written as $\displaystyle
+			\sum_{n=0}^\infty a_n \frac{x^{n}}{n!}$, where $a_n$ is a sequence.
 		Find $a_n$ in this case.
 
 		\item Let $R_k(x)=f(x)-T_k(x)$. Find an expression for $R_k(x)$
 		using Taylor's Remainder Theorem. Use your expression to find an upper bound for $|R_k(x)|$ (Hint: your bound may depend on $x$).
-	
-		\item Using the fact that for any $\alpha\in \R$, 
-		$\displaystyle \lim_{n\to\infty} \frac{\alpha^n}{n!}=0$, 
+
+		\item Using the fact that for any $\alpha\in \R$,
+		$\displaystyle \lim_{n\to\infty} \frac{\alpha^n}{n!}=0$,
 		find $\displaystyle \lim_{k\to\infty} R_k(x)$.
 
 		\item For which $x$ is $f(x)=T(x)$? Justify your answer.
@@ -959,11 +959,11 @@
 \begin{slide}
 	\question
 	Consider the function $g(x)=\frac{1}{1-x}$. The $k$th Taylor approximation
-	of $g$ centered at $0$ is 
+	of $g$ centered at $0$ is
 	\[
-	T_k(x)=\sum_{i=0}^k x^k
+		T_k(x)=\sum_{i=0}^k x^k
 	\]
-	and the remainder $R_k(x)=g(x)-T_k(x)$ satisfies 
+	and the remainder $R_k(x)=g(x)-T_k(x)$ satisfies
 	\[
 		|R_k(x)| \leq \frac{1}{1-x}\left(\frac{x}{1-x}\right)^{k+1}
 	\]
@@ -993,7 +993,7 @@
 
 \begin{slide}
 	\question
-	Let $f(x)=\sin(x)$ and let 
+	Let $f(x)=\sin(x)$ and let
 	\[
 		T(x)=\sum_{n=0}^\infty (-1)^{n}\frac{x^{2n+1}}{(2n+1)!}
 	\]
@@ -1001,7 +1001,7 @@
 	$f(x)=T(x)$ for all $x\in \R$.
 
 	\begin{parts}
-		\item Find a series representation for $g_1(x)=f(2x)$ (without 
+		\item Find a series representation for $g_1(x)=f(2x)$ (without
 		computing any derivatives).
 		\item Find a series representation for $g_2(x)=f(x^2)$.
 		\item Use WolframAlpha to integrate $g_2$. Does WolframAlpha's solution make sense?
@@ -1013,7 +1013,7 @@
 
 \begin{slide}
 	\question
-	Let $f(x)=\frac{1}{1-x}$ and let 
+	Let $f(x)=\frac{1}{1-x}$ and let
 	\[
 		T(x)=\sum_{n=0}^\infty x^n
 	\]
@@ -1021,12 +1021,12 @@
 	$f(x)=T(x)$ for all $x\in (-1,1)$.
 
 	\begin{parts}
-		\item Find a series representation for $g_1(x)=f(2x)$ (without 
+		\item Find a series representation for $g_1(x)=f(2x)$ (without
 		computing any derivatives).
 		\item For which $x$ do you expect your series for $g_1(x)$ to be valid (i.e. to equal
 		$f(2x)$? Explain.
 		\item Find a series representation for $g_2(x)=f(x^2)$.
-		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term. 
+		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term.
 		\item For which $x$ do you expect $g_3(x)$ to be valid? Explain.
 	\end{parts}
 \end{slide}
@@ -1053,7 +1053,7 @@
 
 \begin{slide}
 	\question
-	Recall 
+	Recall
 	\[
 		\sin x = \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)!}
 		\qquad
@@ -1069,7 +1069,7 @@
 		\emph{Hint: you don't need to take any derivatives.}
 
 		\item Find $f^{(6)}(0)$.
-		
+
 		\item For what $x$ is $T(x)=f(x)$? Explain.
 
 		\item Using Desmos, make a conjecture: for which values of $x$ does your series converge?
@@ -1078,7 +1078,7 @@
 
 		\item Let $T$ be a Taylor series for an unknown function $g$.
 		If $T$ converges at a value $x_0$, must it be true that $T(x_0)=g(x_0)$?
-		Explain. 
+		Explain.
 
 	\end{parts}
 \end{slide}
@@ -1092,7 +1092,7 @@
 		\frac{a_{n+1}}{a_n}= \frac{1}{4}
 	\]
 
-	Define $\displaystyle S_n=\sum_{i=0}^n a_i$ and 
+	Define $\displaystyle S_n=\sum_{i=0}^n a_i$ and
 	$\displaystyle S=\lim_{n\to\infty} S_n$.
 
 	\begin{parts}
@@ -1100,10 +1100,10 @@
 		\item Is $S_n$ bounded? Explain.
 		\item Compute $S$.
 
-		\emph{Recall: 
-		$\displaystyle
-			\sum_{i=0}^n \alpha^i = \frac{1-\alpha^{n+1}}{1-\alpha}
-		$}
+		\emph{Recall:
+			$\displaystyle
+				\sum_{i=0}^n \alpha^i = \frac{1-\alpha^{n+1}}{1-\alpha}
+			$}
 
 	\end{parts}
 \end{slide}
@@ -1116,7 +1116,7 @@
 		\frac{a_{n+1}}{a_n}= \frac{1}{4}
 	$.
 
-	Consider the unknown, positive, sequence $b_n$. You know that $b_0=5$ and 
+	Consider the unknown, positive, sequence $b_n$. You know that $b_0=5$ and
 	$\displaystyle \frac{b_{n+1}}{b_n} < \frac{1}{5}$.
 
 	\begin{parts}
@@ -1126,10 +1126,10 @@
 		\[
 			a_n < b_n \qquad b_n < a_n \qquad a_n = b_n
 		\]
-		Justify your answer. 
+		Justify your answer.
 
-		\item Consider the series $\displaystyle \sum_{n=0}^\infty 
-		b_n$. Does the series converge? Justify your answer by comparing with
+		\item Consider the series $\displaystyle \sum_{n=0}^\infty
+			b_n$. Does the series converge? Justify your answer by comparing with
 		a known series.
 
 		\item If you were told that, actually, $b_0=100$, would that
@@ -1139,7 +1139,7 @@
 \end{slide}
 \begin{slide}
 	\question
-	The ratio test states for a sequence $c_n$ if 
+	The ratio test states for a sequence $c_n$ if
 	\[
 		\lim_{n\to\infty} \frac{|c_{n+1}|}{|c_n|} < 1
 	\]
@@ -1151,7 +1151,7 @@
 		\frac{a_{n+1}}{a_n}= \frac{1}{4}
 	$.
 
-	You know the following about the positive sequence $d_n$: 
+	You know the following about the positive sequence $d_n$:
 	$\displaystyle \lim_{n\to\infty} \frac{d_{n+1}}{d_n} =\rho < \frac{1}{5}$.
 
 	\begin{parts}
@@ -1165,8 +1165,8 @@
 		\]
 		Justify your answer.
 
-		\item Justify, without the ratio test, whether $\displaystyle 
-		\sum_{n=0}^\infty d_n$ converges.
+		\item Justify, without the ratio test, whether $\displaystyle
+			\sum_{n=0}^\infty d_n$ converges.
 
 		\item Prove the ratio test.
 	\end{parts}
@@ -1179,7 +1179,7 @@
 		\[
 			\lim_{n\to\infty} \frac{|c_{n+1}|}{|c_n|} =\rho
 		\]
-		then $\displaystyle \sum_{n=0}^\infty c_n$ 
+		then $\displaystyle \sum_{n=0}^\infty c_n$
 
 		\begin{itemize}
 			\item converges if $\rho < 1$
@@ -1189,12 +1189,12 @@
 	\end{theorem}
 
 	\begin{parts}
-		\item 
+		\item
 		\begin{minipage}[t]{0.45\textwidth}
-		The Ratio Test talks about the convergence of $\displaystyle \sum_{n=0}^\infty c_n$.
-		Does it also apply to sums that don't start at $n=0$? Explain.
+			The Ratio Test talks about the convergence of $\displaystyle \sum_{n=0}^\infty c_n$.
+			Does it also apply to sums that don't start at $n=0$? Explain.
 		\end{minipage}
-		\item Apply the ratio test to determine the convergence of the 
+		\item Apply the ratio test to determine the convergence of the
 		following series:
 		\begin{enumerate}
 			\item $\displaystyle \sum_{n=1}^\infty \frac{2^{n}}{n!}$
@@ -1222,15 +1222,15 @@
 
 \begin{slide}
 	\question
-The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
-		\[
-			H(x)=\sum_{n=0}^\infty \frac{(x-a)^n}{(1-a)^{n+1}}.
-		\]
+	The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
+	\[
+		H(x)=\sum_{n=0}^\infty \frac{(x-a)^n}{(1-a)^{n+1}}.
+	\]
 
 
 	\begin{parts}
 		\item Find the largest (open) interval of converge and radius of convergence for $H$.
-		\item Graph $h$. Just looking at the graph, can you determine 
+		\item Graph $h$. Just looking at the graph, can you determine
 		whether a Taylor series for $h$ should have an infinite or finite radius of converge?
 	\end{parts}
 \end{slide}
@@ -1243,31 +1243,31 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 	\begin{theorem}[(Integration by Parts)]
 		If $f(x)$ and $g(x)$ are differentiable functions, then
 		\[
-		\int f(x)g'(x)\,\mathrm d x
-		= f(x)g(x) - 
-		\int f'(x)g(x)\,\mathrm d x
+			\int f(x)g'(x)\,\mathrm d x
+			= f(x)g(x) -
+			\int f'(x)g(x)\,\mathrm d x
 		\]
 	\end{theorem}
 
 	\begin{parts}
 		\item The integration by parts formula comes from reversing
 		one of the differentiation rules (e.g., chain rule/product rule/quotient rule). Which rule does the integration by parts formula come from?
-		\item 
+		\item
 		Let $h_1(x)=x\sin x$.
 
 		\begin{enumerate}
 			\item
-		For $h_1$, write down all the ways to divide it into
-		a product of  ``parts'' $f$ and $g'$ so that $h_1=f\cdot g'$.
+			      For $h_1$, write down all the ways to divide it into
+			      a product of  ``parts'' $f$ and $g'$ so that $h_1=f\cdot g'$.
 			\item Pick the decomposition into parts that you think will be most useful and integrate $h_1$.
 		\end{enumerate}
-		
-		\item 
+
+		\item
 		Let $h_2(x)=x^3 e^{x^2}$.
 		\begin{enumerate}
 			\item
-		For $h_2$, write down all the ways to divide it into
-		a product of  ``parts'' $f$ and $g'$ so that $h_2=f\cdot g'$.
+			      For $h_2$, write down all the ways to divide it into
+			      a product of  ``parts'' $f$ and $g'$ so that $h_2=f\cdot g'$.
 			\item Pick the decomposition into parts that you think will be most useful and integrate $h_2$.
 		\end{enumerate}
 
@@ -1281,9 +1281,9 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 	\begin{theorem}[(Integration by Parts)]
 		If $f(x)$ and $g(x)$ are differentiable functions, then
 		\[
-		\int f(x)g'(x)\,\mathrm d x
-		= f(x)g(x) - 
-		\int f'(x)g(x)\,\mathrm d x
+			\int f(x)g'(x)\,\mathrm d x
+			= f(x)g(x) -
+			\int f'(x)g(x)\,\mathrm d x
 		\]
 	\end{theorem}
 
@@ -1291,7 +1291,7 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 		\item Use integration by parts to find $\displaystyle \int e^x\sin x\,\mathrm d x$.
 
 		Hint: \emph{if at first you don't succeed, try, try again.}
-		
+
 		\item Use integration by parts to find $\displaystyle \int_1^2 \ln x\,\mathrm d x$.
 
 		Hint: \emph{sometimes $g$ is hiding in plain sight.}
@@ -1340,7 +1340,7 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 		\item (Review) Use integration by parts to find $F(\theta)$.
 
 		Hint: \emph{The identity $1=\cos^2\theta +\sin^2\theta$ may reduce your workload.}
-		
+
 		\item Use the trig identity $\displaystyle\sin^2\theta = \frac{1-\cos 2\theta}{2}$
 		to find $F(\theta)$.
 
@@ -1351,7 +1351,7 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 \begin{slide}
 	\question
 	\label{qtrigsub1}
-	Let $f(x)=\sqrt{1-x^2}$ and consider 
+	Let $f(x)=\sqrt{1-x^2}$ and consider
 	\[
 		I=\int_0^1 f(x)\,\mathrm d x
 	\]
@@ -1360,19 +1360,19 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 		\item If we define a change of variables $x=\sin \theta$, what would
 		$\mathrm d x$ equal?
 		\item Apply the substitution $x=\sin\theta$ to get a new function
-		 $g(\theta)$ so that 
-		 \[
-		 \int_0^1 f(x)\,\mathrm d x
-		 =
-\int_?^? g(\theta)\,\mathrm d \theta
-		 \]
-		
-		 Find the function $g$ and the bounds for the new integral (i.e. fill in the $?$'s).
+		$g(\theta)$ so that
+		\[
+			\int_0^1 f(x)\,\mathrm d x
+			=
+			\int_?^? g(\theta)\,\mathrm d \theta
+		\]
 
-		 \item Find $I$.
+		Find the function $g$ and the bounds for the new integral (i.e. fill in the $?$'s).
 
-		 \item Graph $f$. What shape does the graph make? Use your knowledge
-		 of geometry to find $I$.
+		\item Find $I$.
+
+		\item Graph $f$. What shape does the graph make? Use your knowledge
+		of geometry to find $I$.
 	\end{parts}
 \end{slide}
 
@@ -1387,7 +1387,7 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 		\item Explain why the bounds changed from $[0,1]$ to $[0,\pi/2]$.
 		\item Would it be okay to change the bounds from $[0,1]$ to $[2\pi, 5\pi/2]$?
 		\item Would it be okay to change the bounds from $[0,1]$ to $[0, 5\pi/2]$?
-		\item Compute $I$ using the substitution $x=\cos\theta$. Pay close attention to 
+		\item Compute $I$ using the substitution $x=\cos\theta$. Pay close attention to
 		make sure you use the correct bounds.
 	\end{parts}
 \end{slide}
@@ -1396,20 +1396,20 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 
 \begin{slide}
 	\question
-	Let $\displaystyle f(x)=\frac{\sqrt{9-x^2}}{x^2}$ and consider 
+	Let $\displaystyle f(x)=\frac{\sqrt{9-x^2}}{x^2}$ and consider
 	\[
 		F(x)=\int f(x)\,\mathrm d x
 	\]
-	Using a substitution of $x=3\sin\theta$,  we arrive at 
+	Using a substitution of $x=3\sin\theta$,  we arrive at
 	\[
 		F(x)=-\frac{\cos\theta}{\sin\theta} - \theta + C.
 	\]
 
 	\begin{parts}
 		\item Find an expression for $F(x)$ that involves only $x$.
-		\item Are there restrictions on domain of $x$ for which your 
+		\item Are there restrictions on domain of $x$ for which your
 		answer makes sense?
-		\item The domain of $\arcsin$ is $[-1,1]$. Does this change your 
+		\item The domain of $\arcsin$ is $[-1,1]$. Does this change your
 		restrictions on the domain of $x$?
 	\end{parts}
 \end{slide}
@@ -1417,7 +1417,7 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 
 \begin{slide}
 	\question
-	Let $\displaystyle f(x)=\sqrt{\cos x}$ and consider 
+	Let $\displaystyle f(x)=\sqrt{\cos x}$ and consider
 	\[
 		I=\int_0^{\sqrt{2}} f(x)\,\mathrm d x
 	\]
@@ -1426,18 +1426,77 @@ The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
 	\begin{parts}
 		\item Use WolframAlpha to find an anti-derivative of $f$.
 		Does WolframAlpha give you a useful answer?
-		 \item Using a 2$^{\text{nd}}$ degree Taylor approximation for $\cos$,
-		 write down an integral that will approximate $I$.
-		 \item Find an approximation for $I$.
-		 \item Use a 2$^{\text{nd}}$ degree Taylor approximation for $f$ to
-		 approximate $I$.
-		 \item Desmos claims $I\approx 1.15686930348$. Which of your estimates is more accurate?
+		\item Using a 2$^{\text{nd}}$ degree Taylor approximation for $\cos$,
+		write down an integral that will approximate $I$.
+		\item Find an approximation for $I$.
+		\item Use a 2$^{\text{nd}}$ degree Taylor approximation for $f$ to
+		approximate $I$.
+		\item Desmos claims $I\approx 1.15686930348$. Which of your estimates is more accurate?
 
 	\end{parts}
 \end{slide}
 
 
+\begin{slide}
+	\question
+	Let
+		\[
+			f(x)=\frac{1}{x^2-1}\qquad
+			\text{and}
+			\qquad g(x)=\frac{A}{x-1}+\frac{B}{x+1}.
+		\]
 
+	\begin{parts}
+		\item
+		You would like to know if
+		there are constants $A$ and $B$ such that $f(x)=g(x)$ for all $x$.
+
+		Set up a system of linear equations (or a matrix equation) which has a
+		solution if and only if there are constants $A$ and $B$ that make $f(x)=g(x)$ for all $x$.
+		\item Find $A$ and $B$, if possible.
+		\item Compute $\displaystyle \int f(x)\,\mathrm d x$ using any method of your choice.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Let
+		\[
+			f(x)=\frac{1}{(x-1)x^2}\qquad
+			\text{and}
+			\qquad g(x)=\frac{A}{x-1}+\frac{B}{x}.
+		\]
+
+	\begin{parts}
+		\item
+		You would like to know if
+		there are constants $A$ and $B$ such that $f(x)=g(x)$ for all $x$.
+
+		Set up a system of linear equations (or a matrix equation) which has a
+		solution if and only if there are constants $A$ and $B$ that make $f(x)=g(x)$ for all $x$.
+		\item Find $A$ and $B$, if possible.
+		\item Let $h(x)=\frac{A}{x-1}+\frac{B}{x}+\frac{C}{x^2}$. Can you find 
+		constants $A$, $B$, and $C$ so that $f(x)=h(x)$ for all $x$? If so, do it.
+		\item Compute $\displaystyle \int f(x)\,\mathrm d x$ using any method of your choice.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	We know $\int \frac{1}{x^2+1}\,\mathrm d x = \arctan x + C$. However, we can 
+	also use partial fraction decomposition over the complex numbers to integrate.
+
+	Let $f(x)=\frac{1}{1+x^2}$ and $g(x)=\frac{A}{1+ix}+\frac{B}{1-ix}$.
+
+	\begin{parts}
+		\item Find $A$ and $B$ so that $f(x)=g(x)$ for all $x$.
+		\item Compute $\displaystyle \int f(x)\,\mathrm d x$ using any method of your choice.
+
+		\emph{However:} use $\ln x$ as the antiderivative of $\frac{1}{x}$ rather
+		than $\ln |x|$.
+		\item Use the fact that $\ln (re^{i\theta})=\ln r + i\theta$ to simplify your answer.
+	\end{parts}
+\end{slide}
 
 
 \end{document}
