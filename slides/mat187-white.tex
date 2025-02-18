@@ -1499,4 +1499,240 @@
 \end{slide}
 
 
+\begin{slide}
+	\question
+	An \emph{improper integral} formalizes the concept of the area 
+	under an ``infinite'' curve.
+
+	Suppose $f$ is a bounded function and let $\displaystyle I=\int_0^\infty f(x)\mathrm d x$.
+
+	\begin{parts}
+		\item Write down a formal definition of $I$.
+		\item Compute, using the definition, 
+		$\displaystyle \int_0^\infty \frac{1}{(x+1)^2}\mathrm d x$
+		\item Compute, using the definition, 
+		$\displaystyle \int_0^\infty \frac{1}{(x+1)}\mathrm d x$
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Let $\displaystyle f(x)=\frac{x}{x^2+1}$
+
+	In this question, we will try to compute
+	\[
+	Q=\int_{-\infty}^\infty f(x)\,\mathrm d x
+	\]
+
+	\begin{parts}
+		\item Graph $f$. Make a guess on what you thing the ``total area under the curve'' (i.e. $Q$) should be.
+		\item Find $\displaystyle \int f(x)\,\mathrm d x$
+		\item Compute $
+		\displaystyle 
+		\lim_{N\to\infty} \int_{-N}^N f(x)\,\mathrm d x
+		$. Should your result be equal to $Q$?
+		\item Should $
+		\displaystyle 
+		\lim_{N\to\infty} \int_{-N}^{2N} f(x)\,\mathrm d x
+		$ correspond to $Q$? Compute it and compare with the previous part.
+
+		\item Compute $A=\displaystyle \int_0^\infty f(x)\,\mathrm d x$
+		and $B=\displaystyle \int_{-\infty}^0 f(x)\,\mathrm d x$.
+
+		\item By the properties of integrals, we must have
+		\[
+			Q=A+B.
+		\]
+		Do the properties of integrals hold for this improper integral?
+		What does this say about $Q$?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	The moral of improper integral is:
+	\begin{quote}
+		\emph{Wherever an infinity might appear, take a separate limit.}
+	\end{quote}
+
+	\begin{parts}
+		\item Rewrite 
+		$\displaystyle \int_{-\infty}^\infty \frac{x}{x^2+1}\,\mathrm d x$
+		using limits of definite integrals.
+		\item Let $g(x)=\frac{1}{x^{1/3}}$ and consider 
+		$I=\displaystyle \int_{-8}^{27} g(x)\,\mathrm d x$.
+
+		\begin{enumerate}
+			\item Identify all regions where $\displaystyle \int g(x)\,\mathrm d x$ \emph{could} produce infinities.
+			\item Rewrite $I$ using limit(s) of definite integrals.
+		\end{enumerate}
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	\question
+
+	Let $\displaystyle f(x)=\frac{\ln|x|}{x^4+1}$
+	\[
+	J=\int_{-\infty}^\infty f(x)\,\mathrm d x
+	\]
+
+	\begin{parts}
+		\item Rewrite $J$ using limit(s) of definite integrals.
+		\item 
+		Consider the functions
+		\[
+			b_1(x)=\ln x \qquad b_2(x)=\frac{\ln x}{2}
+		\]
+		\[
+			b_3(x) = \frac{x}{x^4+1}\qquad b_4(x)=0
+		\]
+		\begin{enumerate}
+		\item Let $A=\displaystyle \int_0^1 f(x)\,\mathrm d x$.
+		Find upper and lower bounds for $A$ by comparing with the
+		appropriate $b_?$ 
+		functions.
+
+		\item Let $B=\displaystyle \int_1^\infty f(x)\,\mathrm d x$.
+		Find upper and lower bounds for $B$.
+
+		\end{enumerate}
+		
+		\item Use your results from the previous part to find upper and lower bounds for $J$.
+		
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+
+	Consider the functions
+	\[
+		A(t)=t \qquad B(t)=t^2 \qquad C(t)=t^{1/2}
+	\]
+	\[
+		D(t)=2t \qquad E(t)=2t^2 \qquad F(t)=2t^{1/2}
+	\]
+
+	\begin{parts}
+		\item Consider the parametric equations $x(t)=A(t)$ and $y(t)=D(t)$.
+
+		Graph, by hand, $(x,y)$ for $t\in [0,4]$.
+
+		\item Consider the parametric equations $x(t)=B(t)$ and $y(t)=A(t)$.
+
+		Graph, by hand, $(x,y)$ for $t\in [0,4]$.
+
+		\item Identify all possible assignments of $x(t)=\,??$ and $y(t)=\,??$ 
+		(where $??$ come from the functions above) so that 
+		the graph of $(x,y)$ for $t\in [0,4]$ is a line segment.
+
+		\item Out of your examples above, which example produces the \emph{longest} line segment?
+		
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	% https://www.desmos.com/calculator/bf4a7hrudl
+	\question
+
+		Show is the graph of $\displaystyle
+		\begin{cases}
+			x(t)=3\cos t \\
+			y(t)=t^2-5t
+		\end{cases}
+		$
+		for $t\in[0,2\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/parametric1.png}
+		\end{center}
+
+	
+	The parametric equations describe the position of a particle at time $t$.
+
+	\begin{parts}
+		\item Is the particle moving from $P$ to $Q$ or $Q$ to $P$? Explain.
+
+		\item At what time(s) is the particle moving up \emph{and} to the right?
+
+		\item At what time(s) is the particle moving parallel to the $x$-axis?
+
+		\item Find the tangent line to the particles path at time $t=\pi/2$.
+		
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	% https://www.desmos.com/calculator/bf4a7hrudl
+	\question
+
+		Show is the graph of $\displaystyle
+		\begin{cases}
+			x(t)=3\cos t \\
+			y(t)=t^2-5t
+		\end{cases}
+		$
+		for $t\in[0,2\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/parametric1.png}
+		\end{center}
+
+	
+	The parametric equations describe the position of a particle at time $t$.
+
+	\begin{parts}
+		\item Find a parameterization for a particle that traces the same path,
+		but starts at $Q$ and ends at $P$.
+
+		\item Find a parameterization so that the particle finishes its journey in $\pi$ seconds instead of $2\pi$ seconds.
+
+		\item Is there a parameterization so that the particle
+		finishes its journey in $\pi$ seconds but starts its journey at
+		the same speed as the original particle? If such a parameterization exists, how would you come up with it?
+		
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	% https://www.desmos.com/calculator/bf4a7hrudl
+	\question
+
+		Show is the graph of $\displaystyle
+		r(\theta)=\sin(3\theta)
+		$
+		in polar coordinates
+		for $\theta\in[0,\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/parametric2.png}
+		\end{center}
+
+	
+	The curve models the boundary of a propeller.
+
+	\begin{parts}
+		\item The blade in the first quadrant achieves a maximum length at 
+		an angle of $\theta =\pi/6$. Find the rectangular coordinates of
+		the tip of the blade in the first quadrant.
+
+		\item Find parametric equations $(x(t), y(t))$ that trace out the 
+		propeller.
+
+		\item Find the tangent line to the propeller when $\theta=0$
+		and when $\theta =\pi/3$.
+
+		\item We know that the propeller is contained in 
+		a circle with area $\pi$.
+
+		Come up with a better upper bound for the area of the 
+		propeller.
+
+		
+	\end{parts}
+\end{slide}
+
+
+
 \end{document}
