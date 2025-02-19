@@ -1727,9 +1727,106 @@
 		a circle with area $\pi$.
 
 		Come up with a better upper bound for the area of the 
-		propeller.
+		propeller.		
+	\end{parts}
+\end{slide}
 
+\begin{slide}
+	% https://www.desmos.com/calculator/agec13lrk2
+	\question
+		The same semi-circle can be described in polar coordinates by
+		\[
+r(\theta)=\cos\theta\quad\text{ with }\quad\theta\in[0,\pi/2]
+		\]
+		 or in rectangular
+		coordinates by \[
+		y(x)=\sqrt{\tfrac{1}{4}-(x-\tfrac{1}{2})^2}\quad\text{ with }\quad x\in[0,1].
+		\]
+
+		Below are two ways to divide up the semicircle to approximate its area: one with rectangles and one with circular \emph{sectors}.
+		\begin{center}
+	\includegraphics[height=1in]{images/riemann-rect.png}
+		\end{center}
+		\begin{center}
+	\includegraphics[height=1in]{images/riemann-polar.png}
+		\end{center}
+
+	
+	\begin{parts}
+		\item Write down a Riemann sum that approximates the area using 
+		\emph{rectangles}. Use $\Delta x$ as the width of a rectangle.
+
+		\item Write down a Riemann sum that approximates the area using 
+		\emph{sectors}. Use $\Delta \theta$ as the sector angle.
 		
+		\item Take limits of your previous two Riemann sums to find 
+		integrals integrals to represent the \emph{exact} area of the semicircle. 
+
+		\emph{Do not evaluate your integrals.}
+
+		\item Which integral would you rather do?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	% https://www.desmos.com/calculator/bf4a7hrudl
+	\question
+
+		Show is the graph of $\displaystyle
+		r(\theta)=\sin(3\theta)
+		$
+		in polar coordinates
+		for $\theta\in[0,\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/parametric2.png}
+		\end{center}
+
+	
+	The curve models the boundary of a propeller.
+
+	\begin{parts}
+		\item The first propeller blade is traced out for $\theta\in[0,\pi/3]$
+		
+		Set up a Riemann sum that approximates the area of the first propeller
+		blade.
+
+		\item Set up an integral that will give the \emph{exact} area of the
+		first propeller blade. Then, find the area of the first propeller blade.
+
+		\item Find the total area of the propeller.
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	% https://www.desmos.com/calculator/bf4a7hrudl
+	\question
+
+		Show is the graph of $\displaystyle
+		r(\theta)=\sin(3\theta)
+		$
+		in polar coordinates
+		for $\theta\in[0,\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/propeller-painted.png}
+		\end{center}
+
+	
+	The curve models the boundary of a propeller. The parts of the propeller
+	within distance $1/2$ of the origin are painted blue. The rest is painted yellow.
+
+	\begin{parts}
+		\item Consider the propeller blade in the first quadrant. At what
+		angle does the yellow paint start to appear? At what angle does it 
+		disappear?
+
+		\item Set up an integral that will give the amount of yellow paint needed for the first blade.
+
+		\item Set up an expression with integral(s) that will give the amount of blue paint needed
+		for the first blade.
+
+		\item Find the amounts of each paint needed to paint the 
+		whole propeller.
 	\end{parts}
 \end{slide}
 
