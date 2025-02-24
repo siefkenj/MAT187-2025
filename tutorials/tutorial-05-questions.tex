@@ -1,6 +1,5 @@
 \begin{objectives}
-	In this tutorial you will MAT 244's expectations around mathematical communication as well
-	as what makes a good executive summary.
+	In this tutorial you will practice using the standard MAT187 integration techniques.
 \end{objectives}
 
 \vspace{-.5em}
@@ -13,16 +12,14 @@
 	\item 
 	
 \begin{enumerate}
-    \item Evaluate $\int \frac{1}{x^2 - 9}\,dx$ for $x > 3$ using partial fractions.
-    \item How many coefficients ($A,B,C,...$) are needed to set up the partial fraction decomposition of this?
-	\[
-		\frac{x^3-3x+8}{(x^2-1)^2(x^2+1)(x+\pi)^3(x^2+x+1)}
-	\]
-\end{enumerate}
+    \item Find an anti-derivative of  $\frac{1}{x^2 - 9}$ using partial fraction decomposition.
+    \item Find an anti-derivative of  $\frac{1}{9 + x^2}$ using trig substitution.
+    \item (\textbf{Challenge}) Find an anti-derivative of  $\frac{1}{9 + x^2}$ using partial fraction decomposition. Does your answer match the answer you got using trig substitution?
 
-\item Evaluate $\displaystyle\int \frac{1}{x^2 + a}\,dx$ where $a$ is a constant.
-	
-	\textit{Hint: Consider different possible values of $a$.}
+    \emph{Hint:} You may need to use complex numbers during your partial fraction decomposition step, but after simplifying, you should be left with a real answer.
+
+    If a complex number $z=re^{i\theta}$, then $\ln z = \ln r + i\theta$.
+\end{enumerate}
 
 \item The magnitude of the force acting on a particle of charge $q_1$ that is $r$ meters away from another particle of charge $q_2$ is
    	\[
@@ -30,23 +27,45 @@
    	\]
    	Suppose both $q_1$ and $q_2$ are positive, which means the two particles are being pushed away from each other (``opposites attract, likes repel''). Use integrals to answer the following.
     \begin{enumerate}
-        \item The two particles are far apart. You now want to move them to be just $1$ meter apart. Put an upper bound on the amount of work required for this. Note that the work is done \textit{against} the force field and therefore is given by the integral of $-F(r)$ over distance from $r=a$ to $r=b$.%(work done against a force over a distance is $\int_a^b F(r) \,  dr$)
-        \item Is it possible to move the particles so that they are $0$ meters apart?
+        \item The electrons start out at a distance of $10m$.
+        The charge of the electrons is $q_1=q_2=1.6\cdot 10^{-19}$.
+
+        How much work is required to move the electrons so that they
+        are only $1m$ apart?
+        
+        \emph{Hint:} The work is done \textit{against} the force field and therefore is given by the integral of $-F(r)$ over distance from $r=a$ to $r=b$.%(work done against a force over a distance is $\int_a^b F(r) \,  dr$)
+        \item Is it possible to move the electrons so that they are $0$ meters apart?
+        \item If the electrons started very, very far away, would it be possible to bring them into a distance of $1m$ from each other with a 
+        finite amount of work?
     \end{enumerate}
 
-\item The usual definition of the Gamma function $\Gamma(x)$ is in terms of an improper integral. See Tutorial 4 question 4 for a proof that $\Gamma(x) = x\Gamma(x-1)$ and $\Gamma(1) = 1$. For integers $n$, $(n+1)! = \Gamma(n)$. See the Gamma function below: 
-
+\item The usual definition of the Gamma function $\Gamma(x)$ is in terms of an improper integral: 
 \[
-        \Gamma(x) = \int_0^\infty e^{-t}t^{x-1}\,\mathrm dt
+        \Gamma(x) = \int_0^\infty e^{-t}t^{x-1}\,\mathrm dt.
     \]
+
+In the last tutorial, you showed that $\Gamma(n)=n\Gamma(n-1)$, which means if $\Gamma(1)=1$, the function $\Gamma(x)$ will have a finite value for integers $x\geq 1$.
+
 
 The topic of this question is to prove that this integral converges for any $x\geq0$. 
 
 \begin{enumerate}
-    \item What happens when $x=1$?
-    \item Investigate the integrand $e^{-t}t^{x-1}$. How do the values change as $x$ changes?
+    \item Directly compute $\Gamma(1)$ from the integral definition of $\Gamma$.
 
-    \item We know that $\Gamma(n) = (n+1)!$. Use this fact and the comparison test to show that $\Gamma(x)$ converges when $x\geq1$.
+    \item Consider the integrand $g_x(t)=e^{-t}t^{x-1}$.
+    
+    \begin{enumerate}
+        \item For which values of $x$ does $g_x$ have a vertical asymptote? For which values of $x$ does $g_x$ have a horizontal asymptote?
+        For which values of $x$ is $g_x$ a non-negative function?
+        \item Show that if $t\geq 1$, then $g_{x_1}(t) \geq g_{x_2}(t)$ so
+        long as $x_1\geq x_2\geq 1$.
+    \end{enumerate}
+
+    \item We know that $\Gamma(n) = (n+1)!$, and so $\Gamma$ at any integer is
+     \emph{finite}. Using this fact, apply a comparison test to show that
+      $\Gamma(x)<\infty$ when $x\geq1$.
+
+      \emph{Hint:} You may need to do separate comparisons for $t<1$ and $t\geq 1$.
     
     \item Let's show that $\Gamma(x)$ converges for $0<x<1$. Split up $\Gamma(x)$ into the following two integrals:
 
@@ -55,9 +74,9 @@ The topic of this question is to prove that this integral converges for any $x\g
     If both $\Gamma_1$ and $\Gamma_2$ converge, then we're good!
 
     \begin{enumerate}
-        \item Use the comparison test to show $\Gamma_2(x)$ converges.
-
-        \item Use the $p$-test and comparison test to show that $\Gamma_1(x)$ converges. 
+        \item Show that $e^{-t}t^{x-1} \leq t^{x-1}$ and then 
+        use a comparison test to show that $\Gamma_1(x)$ converges. 
+        \item Show that $e^{-t}t^{x-1} \leq e^{-t}$ and then use a comparison test to show $\Gamma_2(x)$ converges.
     \end{enumerate}
 
     
