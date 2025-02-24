@@ -9,7 +9,7 @@
 
 \begin{enumerate}
     \item This question is about integration by parts. For each integral, identify what the ``parts'' are (i.e., the $u$ and $v$ in the formula
-    $\displaystyle \int u'v = uv-\int uv'$).
+    $\displaystyle \int u\mathrm dv = uv-\int v\mathrm d u$) and then evaluate them.
     \begin{enumerate}
         \item $\displaystyle \int x\sin x\,\mathrm d x$
         \item $\displaystyle\int\log_b x\,\mathrm d x$ where $b>0$.
@@ -84,21 +84,33 @@
 
     In this question, we will study the related antiderivative
     \[
-        \gamma(n) = \int e^{-t}t^{n-1}\,\mathrm dt.
+        \gamma_b(n) = \int_0^b e^{-t}t^{n-1}\,\mathrm dt.
     \]
     
+
+    Where $n$ is an integer greater than one.
     \begin{enumerate}
+        \item Graph $x!$ in Desmos.
     
-        \item Show by integration by parts that:
+        \item Use integration by parts to find a simplified expression for:
 
         \[
-            \gamma(n) = n\gamma(n-1)
+            \gamma(n) - (n-1)\gamma(n-1) 
         \]
-        \item We will choose our constant of integration so that $\gamma(1)=1$.
-        Given this choice, compute $\gamma(4)$
-        \item Can you find a formula for $\gamma(n)$ assuming $\gamma(1)=1$?
-        \item Does your recursive formula for $\gamma$ still hold
-        when computing $\gamma(x)$ when $x\in \R$ and $x\geq 1$? Explain.
+
+        \emph{Hint: Apply one integration by parts to $\gamma(n)$}
+        \item Using the expression in part b), show that
+
+        \[\lim_{b\to \infty} \gamma(n) - (n-1) \gamma(n-1) =0\]
+
+        Provided $n\geq 1$.
+        
+        \item Assuming $\lim_{b\to \infty} \gamma(1) = 1$, can you determine what $\lim_{b\to \infty} \gamma(4)$ is?
+
+        
+        \item With the same assumptions, can you find a formula for $\lim_{b\to \infty}\gamma(n)$?
+        \item Does your recursive formula for $\lim_{b\to \infty}\gamma$ still hold
+        when computing $\lim_{b\to\infty}\gamma(x)$ when $x\in \R$ and $x\geq 1$? Explain.
     \end{enumerate}    
 \end{enumerate}
 
