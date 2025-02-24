@@ -3,7 +3,7 @@
 \end{objectives}
 
 \begin{enumerate}
-    \item Consider a particle following a ``Lissajous'' trajectory that is given by the parametric equations
+    \item Consider a particle following a \emph{Lissajous curve} trajectory that is given by the parametric equations
     \[
     \begin{cases}
         x=\sin{4t}\\
@@ -11,14 +11,15 @@
     \end{cases}\qquad 0 \leq t \leq 2\pi
     \]
 
-    Assume that the $x$-axis is left/right and then $y$-axis is down/up.
-    
     \begin{enumerate}
-        \item Consider the derivatives $\frac{dx}{dt}$ and $\frac{dy}{dt}$. What does it mean for the motion of the particle if either is positive or negative?
+        \item Consider the derivatives $\frac{dx}{dt}$ and $\frac{dy}{dt}$. 
+        When the particle is moving left, what must be true about $\frac{dx}{dt}$ and $\frac{dy}{dt}$?
+        How about when the particle is moving right? Up? Down?
 
-        \item State one moment in time $t$ during which the particle is moving \textit{left and up at the same time}. Justify your answer.
+        \item Find a $t$ when the instantaneous velocity of the particle is moving diagonal, with a trajectory towards the upper left. Justify your answer.
 
-        \item Find \textbf{all times} $t$ during which the particle is moving \textit{left and up at the same time}.
+        \item Find \textbf{all times} $t$ during which the particle is moving
+        to the upper left.
         
     \end{enumerate}
 
@@ -37,19 +38,43 @@
     \end{tcolorbox}
     
     \begin{enumerate}
-        \item Which parametric equations produce the same shapes when plotted in an xy-coordinate system? Justify your answer.
+        \item Sketch the graph (by hand) of each set of parametric equations.
+        Add arrows to your sketches to signify which direction each curve is traced out.
+
+        \item Which parametric equations produce the same shapes when plotted in an $xy$-coordinate system? 
         
-        \item Plot each set of parametric equations, including the arrows signifying their directions.
+        Justify your answer by plotting in Desmos
+        
+        \url{https://www.desmos.com/calculator/24kii8joui}
+
+        Note: \emph{make sure to appropriately adjust the domains of the parametric curves when you plot in Desmos.}
+        
     \end{enumerate}
 
-    \item Consider constants $a,b,c,d$ such that $a^2+c^2 = b^2+d^2 = R^2$ and $ab+cd=0$. Show that the parametric equations below describe a circle of radius $R$.
-    \[
-        \begin{cases}
-        x = a\cos{t} + b\sin{t}\\
-        y = c\cos{t} + d\sin{t}
-        \end{cases}
-    \]
+    % \item Consider constants $a,b,c,d$ such that $a^2+c^2 = b^2+d^2 = R^2$ and $ab+cd=0$. Show that the parametric equations below describe a circle of radius $R$.
+    % \[
+    %     \begin{cases}
+    %     x = a\cos{t} + b\sin{t}\\
+    %     y = c\cos{t} + d\sin{t}
+    %     \end{cases}
+    % \]
 
-    \item A colony of ants is marching according to the trajectory $x = \cos{t}, y=\sin{3t}$. First draw $t$ vs. $x$ and $t$ vs. $y$ graphs. Then use these plots to plot the overall $x$ vs. $y$ graph to visualize trajectory of the ants. Determine all coordinates $(x,y)$ on the path at which the ants are facing directly in the horizontal or vertical direction.
+    \item A colony of ants is marching according to the trajectory $x(t) = \cos{t}, y(t)=\sin{3t}$. 
+    \begin{enumerate}
+    \item Graph $t$ vs.{} $x$ and $t$ vs.{} $y$.
+    \item  Use your plots from part (a) to sketch the
+    graph of $(x(t),y(t))$ for $t\in \R$.
+
+    Verify your sketch using Desmos.
+
+    \item Is there a tangent line to the graph at $(1/2,0)$ Why or why not?
+
+    \item If we restrict the domain of $(x(t),y(t))$ to $t\in[0,\pi]$ is
+    there a tangent line to the graph at $(1/2,0)$? If so, find it.
+    
+    \item If we restrict the domain of $(x(t),y(t))$ to $t\in[\pi,2\pi]$ is
+    there a tangent line to the graph at $(1/2,0)$? If so, find it.
+
+    \end{enumerate}
     
 \end{enumerate}
