@@ -1,14 +1,143 @@
 \begin{enumerate}
 \item 
+\begin{enumerate}
+    \item Choosing $u=x, dv=\sin{x}\mathrm dx$, the integral becomes 
+    \[
+    -x\cos{x} - \int-\cos{x}\mathrm dx
+    =-x\cos{x} + \sin{x} + C
+    \]
 
+    \item Using integration by parts, we can let $u = \log_b x, \mathrm dv = \mathrm dx$, giving $\mathrm du = \frac{dx}{x\ln b}, v = x$. Then we get
+		
+		\[
+			\int\log_b x \mathrm dx \\
+			= x\log_b x - \int\frac{x\mathrm dx}{x\ln b} \\
+			= x\log_b x - \frac{x}{\ln b} + C \\
+			= \frac{1}{\ln b}(x\ln x - x) + C
+		\]
+\end{enumerate}
 \item
+Using integration by parts, we can let $u = f(2x), \mathrm dv = \mathrm dx$, giving $\mathrm du = 2f'(2x)\mathrm dx, v = x$. Applying the integration by parts formula gives:
+        
+        \[
+            \int_1^2 f(2x)\mathrm dx \\
+            = \left[xf(2x)\right]_1^2 - \int_1^2 2xf'(2x)\mathrm dx \\
+            = (2)(-2) - (1)(10) - (2)(8) \\
+            = -30
+        \]
 
 \item 
-
 \begin{enumerate}
-    \item 
-    \item 
-    \item 
+    \item We can begin by finding the area under the upper half of the ellipse. The integral is given by:
+	    
+	    \[
+	        \int_{-a}^a \frac{b}{a}\sqrt{a^2-x^2}dx\\
+	        =\frac{b}{a}\int_{-a}^a\sqrt{a^2-x^2}dx
+	    \]
+	    
+	    We can use the trigonometric substitution $x = a\sin{\theta}, dx = a\cos{\theta}d\theta$:
+	    
+	    \begin{align*}
+	        \frac{b}{a}\int_{-\frac{\pi}{2}}^\frac{\pi}{2}a\cos{\theta}a\cos{\theta}d\theta \\
+	        = ab\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\cos^2{\theta}d\theta\\
+	        = ab\int_{-\frac{\pi}{2}}^\frac{\pi}{2}\frac{1}{2}(1+\cos{(2\theta)})d\theta\\
+	        = \frac{ab}{2}\left[\frac{\pi}{2}-(-\frac{\pi}{2})\right]\\
+	        = \frac{\pi ab}{2}
+	    \end{align*}
+	    
+	    Using symmetry, the total area of the ellipse is double the above result, i.e., $\pi ab$.
+
+        \item The trigonometric substitution solution is a bit more involved. First, we let $x = 3\sec{\theta}$:
+	    
+	    \begin{align*}
+	        \int\frac{dx}{x^2-9} \\
+	        = \int\frac{3\sec\theta\tan\theta}{9\tan^2\theta}d\theta \\
+	        = \frac{1}{3}\int \csc\theta d\theta \\
+	        = \frac{1}{3}\left(-\ln|\csc\theta + \cot\theta|\right) + C
+	    \end{align*}
+	    
+	    We can draw a triangle representing the trigonometric substitution, giving us $\csc\theta = \frac{x}{\sqrt{x^2 - 9}}$ and $\cot\theta = \frac{3}{\sqrt{x^2 - 9}}$. Substituting this into the above expression and noting that $x > 3$ gives:
+	    
+	    \begin{align*}
+	        \frac{1}{3}\left(-\ln\left|\frac{x+3}{\sqrt{x^2 - 9}}\right|\right) + C\\
+	        = -\frac{1}{3}\ln\sqrt{\frac{x+3}{x-3}} + C\\
+	        = \frac{1}{6}\ln\left(\frac{x-3}{x+3}\right) + C
+	    \end{align*}
+
+        \item A possible diagram that can represent this situation is given by a circle $x^2 + (y - a)^2 = 1$ for some constant $a$ that is tangent to two points on the cone $y = |x|$. The problem then becomes finding the area of the region between the circle and the cone. First, we must determine $a$ so that we can properly characterize the circle. Its equation is given by $y = a - \sqrt{1 - x^2}$. Since the circle is tangent to the cone, its slope must be given by: 
+	    
+	    \begin{align*}
+	        \frac{dy}{dx} = -\frac{1}{2}\left(1 - x^2\right)^{-\frac{1}{2}}(-2x) \\
+	        = \frac{x}{\sqrt{1 - x^2}}
+	        = \pm 1
+	    \end{align*}
+	    
+	    The points of tangency are also equal to the points of intersection. According to the above finding, the $x$ coordinate of of intersection is given by $x = \frac{1}{\sqrt{2}}$. Substituting this expression to the circle and cone equations gives:
+	    
+	    \begin{align*}
+	        a - \sqrt{1 - \frac{1}{2}} = \left|\frac{1}{\sqrt{2}}\right| \implies a = \sqrt{2}
+	    \end{align*}
+	    
+	    The area can then be given by the expression where we make use of symmetry about the y-axis:
+	    
+	    \begin{align*}
+	        2\int_0^\frac{1}{\sqrt{2}}\left(\sqrt{2} - \sqrt{1 - x^2} - x\right)dx
+	    \end{align*}
+	    
+	    The only somewhat tricky integral is given by the middle term of the integrand. Using a trigonometric substitution of $x = \sin\theta$, we should get an antiderivative of $\frac{1}{2}\sin^{-1}x + x\sqrt{1-x^2} + C$. The integral above then evaluates to:
+	    
+	    \begin{align*}
+	        2\left[\sqrt{2}x - \frac{1}{2}\left(\sin^{-1}x + x\sqrt{1-x^2}\right) - \frac{x^2}{2}\right]_0^\frac{1}{\sqrt{2}} \\ 
+	        = 1 - \sin^{-1}\frac{1}{\sqrt{2}} \\ 
+	        = 1 - \frac{\pi}{4}
+	    \end{align*}
 \end{enumerate}
+
+\item 
+\begin{enumerate}
+    \item Open up Desmos!
+    \item We would like to apply integration by parts. Recall the integration by parts formula:
+
+    \[
+    \int_0^b u\mathrm dv = uv|_0^b - \int_0^b v\mathrm du
+    \]
+
+    To the integral:
+    \[
+        \gamma(n) = \int_0^b e^{-t}t^{n-1}\,\mathrm dt.
+    \]
+    
+    Let $dv = e^{-t}\mathrm dt$ and $u = t^{n-1}$. Then $\mathrm d u = (n-1)t^{n-2} \mathrm d t$ and $v = -e^{-t}$. So:
+
+    
+    \[
+        \int_0^b e^{-t}t^{n-1}\,\mathrm dt = -e^{-t}t^{n-1}|_0^b -\int_0^b -e^{-t}(n-1)t^{n-2}dt
+    \]
+    
+    Since $-e^{-t}t^{n-1}|_0^b = -e^{-b}b^{n-1}$, we can see:
+    \[
+        =(n-1)\int_0^b e^{-t}t^{n-2}\mathrm dt =(n-1) \gamma(n-1)  -e^{-b}b^{n-1}
+    \]
+
+    So:
+    \[
+        \gamma(n) - (n-1)\gamma(n-1) = e^{-b}b^{n-1}
+    \]
+
+    \item Provided $n\geq 1$,
+
+    \[\lim_{b\to \infty} e^{-b}b^{n-1} = 0\]
+
+    
+    \item In this case, $\lim_{b\to \infty} \gamma(4) = 3\lim_{b\to \infty}\gamma(3) = 3\cdot 2 \lim_{b\to \infty}\gamma(2) = 3\cdot 2 \cdot 1 \gamma(1) = 3!$. 
+
+    \item For general $n$, $\lim_{b\to \infty}\gamma(n) = (n-1)!$.
+
+    \item The recursive formula $\lim_{b\to \infty}\gamma(x) = (x-1)\lim_{b\to \infty}\gamma(x-1)$ will work for general $x \geq 1$, since we never used the fact that $n$ was an integer during integration by parts. It's only important for $n$ to be an integer so that we can relate $\gamma(n)$ to $\gamma(1)$. 
+
+    
+\end{enumerate}
+
+
 
 \end{enumerate}
