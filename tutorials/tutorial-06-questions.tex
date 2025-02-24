@@ -1,4 +1,55 @@
-		\begin{objectives}
-	In this tutorial you will be exploring the relationship between real and complex solutions to differential equations.
+\begin{objectives}
+    In this tutorial you will be exploring parametric equations.
+\end{objectives}
 
-\begin{prob}
+\begin{enumerate}
+    \item Consider a particle following a ``Lissajous'' trajectory that is given by the parametric equations
+    \[
+    \begin{cases}
+        x=\sin{4t}\\
+        y=\sin{3t}
+    \end{cases}\qquad 0 \leq t \leq 2\pi
+    \]
+
+    Assume that the $x$-axis is left/right and then $y$-axis is down/up.
+    
+    \begin{enumerate}
+        \item Consider the derivatives $\frac{dx}{dt}$ and $\frac{dy}{dt}$. What does it mean for the motion of the particle if either is positive or negative?
+
+        \item State one moment in time $t$ during which the particle is moving \textit{left and up at the same time}. Justify your answer.
+
+        \item Find \textbf{all times} $t$ during which the particle is moving \textit{left and up at the same time}.
+        
+    \end{enumerate}
+
+    \item Consider the following curves given by parametric equations.
+
+    \begin{tcolorbox}[sharp corners=all,colframe=tolGrey,colback=white]
+    \begin{multicols}{2}
+    \begin{enumerate}[label={(\roman{enumii})},nosep,itemsep=1mm]
+        \item $x = \cos{2t}, y = \sin{2t}, 0 \leq t \leq \pi$
+        \item $x = \cos{t}, y = \sin{t}, 0 \leq t \leq 2\pi$
+        \item $x = \sin{t}, y = \cos{t}, 0 \leq t \leq 2\pi$
+        \item $x = \cos{2t}, y = \cos{2t}, 0 \leq t \leq \pi$
+        \item $x = \cos{t}, y = \sin{t}, 0 \leq t \leq \pi$
+    \end{enumerate}
+    \end{multicols}
+    \end{tcolorbox}
+    
+    \begin{enumerate}
+        \item Which parametric equations produce the same shapes when plotted in an xy-coordinate system? Justify your answer.
+        
+        \item Plot each set of parametric equations, including the arrows signifying their directions.
+    \end{enumerate}
+
+    \item Consider constants $a,b,c,d$ such that $a^2+c^2 = b^2+d^2 = R^2$ and $ab+cd=0$. Show that the parametric equations below describe a circle of radius $R$.
+    \[
+        \begin{cases}
+        x = a\cos{t} + b\sin{t}\\
+        y = c\cos{t} + d\sin{t}
+        \end{cases}
+    \]
+
+    \item A colony of ants is marching according to the trajectory $x = \cos{t}, y=\sin{3t}$. First draw $t$ vs. $x$ and $t$ vs. $y$ graphs. Then use these plots to plot the overall $x$ vs. $y$ graph to visualize trajectory of the ants. Determine all coordinates $(x,y)$ on the path at which the ants are facing directly in the horizontal or vertical direction.
+    
+\end{enumerate}
