@@ -1,86 +1,150 @@
 
 	
 \begin{enumerate}
-    \item \begin{enumerate}
-        \item Though we cannot know exactly what the author of each answer was thinking, the steps do not appear to have logical contradictions.
+\item 
+\begin{enumerate}
+    \item Evaluate $\int \frac{1}{x^2 - 9}\,\mathrm dx$ for $x > 3$ using partial fractions.	
+	The partial fractions solution is relatively straightforward where the integrand can be written as $\frac{1}{x^2 - 9} = \frac{A}{x-3} + \frac{B}{x+3}$ for some constants $A$ and $B$. The constants are given by $A = \frac{1}{6}$ and $B = -\frac{1}{6}$. The integral then becomes:
+	    
+    \[
+        \int\frac{\mathrm dx}{x^2-9} \\
+        = \int\frac{1/6}{x-3} - \frac{1/6}{x+3}\mathrm dx \\
+        = \frac{1}{6}\ln|x-3| - \frac{1}{6}\ln|x+3| + C
+    \]
+    
+    Since $x > 3$, we can drop the absolute value signs, and after some simplification, the expression simplifies to $\frac{1}{6}\ln\left(\frac{x-3}{x+3}\right) + C$.
+
+    \item We can use the trigonometric substitution $x = 3\tan{\theta} \implies \mathrm dx = 3\sec^2\theta \mathrm d\theta$.
+
+    Then we can write
+    \[
+    \int \frac{3\sec^2\theta\mathrm d\theta}{9\tan^2\theta + 9}\\
+    =\int\frac{\sec^2\theta\mathrm d\theta}{3\sec^2\theta} = \frac{1}{3}\int\mathrm d\theta = \frac{1}{3}\theta+C = \frac{1}{3}\tan^{-1}\left(\frac{x}{3}\right)+C
+    \]
+
+    \item We can write the integrand as: 
+    \[
+    \frac{1}{(x+3i)(x-3i)} = \frac{i/6}{x+3i} - \frac{i/6}{x-3i}
+    \]
+
+    Then we can write this indefinite integral as:
+    \[
+    \frac{i}{6}\ln(x+3i) - \frac{i}{6}\ln(x-3i) + C = \frac{i}{6}\ln\left(\frac{x+3i}{x-3i}\right) + C
+    \]
+
+    Using the provided formula, we can rewrite the natural logarithm expression as:
+
+    \[
+    \ln1 + 2i\tan^{-1}\left(\frac{3}{x}\right) = 2i\tan^{-1}\left(\frac{3}{x}\right) = 2i\left[\frac{\pi}{2} - \tan^{-1}\left(\frac{x}{3}\right)\right]
+    \]
+
+    where the last inequality can be shown by drawing a triangle. Then the indefinite integral can be written as:
+    \[
+    \int\frac{\mathrm dx}{9+x^2} = \frac{1}{3}\tan^{-1}\left(\frac{x}{3}\right) - \frac{\pi}{6} + C = \frac{1}{3}\tan^{-1}\left(\frac{x}{3}\right) + D
+    \]
+
+    where we let another constant $D = - \frac{\pi}{6} + C$. This expression is equivalent to the one from Part B.
+\end{enumerate}
+\item 
+\begin{enumerate}
+    \item The work is given by:
+    \[
+    \displaystyle\int_{10}^1 -\frac{\left(8.99\times10^9\right)\left(1.6\times10^{-19}\right)^2}{r^2}dr = 2.30\times10^{-28}
+    \]
+    \item 
+    No, this would require infinite energy. For any $D>0$
+    $$\int_D^0 -k\frac{q_1 q_2}{r^2} \, dr = \underset{t\rightarrow 0}{\lim} \Big( k\frac{q_1 q_2}{t} -  k\frac{q_1 q_2}{D}\Big) = \infty$$
+    \item Yes, this is given by the following improper integral which has a finite value:
+    $$\int_\infty^1 -k\frac{q_1 q_2}{r^2} \, dr = \underset{t\rightarrow \infty}{\lim} \Big( k\frac{q_1 q_2}{1} -  k\frac{q_1 q_2}{t}\Big) = kq_1q_2$$
+\end{enumerate}
+\item 
+\begin{enumerate}
+    \item Open up Desmos!
+    \item We would like to apply integration by parts. Recall the integration by parts formula:
+
+    \[
+    \int_0^\infty u\mathrm dv = uv|_0^\infty \int_0^\infty \mathrm du
+    \]
+
+    To the integral:
+    \[
+        \gamma(n) = \int_0^\infty e^{-t}t^{n-1}\,\mathrm dt.
+    \]    
+    Let $dv = e^{-t}\mathrm dt$ and $u = t^{n-1}$. Then $\mathrm d u = (n-1)t^{n-2} \mathrm d t$ and $v = -e^{-t}$. So:
+
+    
+    \[
+        \int_0^\infty e^{-t}t^{n-1}\,\mathrm dt = -e^{-t}t^{n-1}|_0^\infty -\int_0^\infty -e^{-t}(n-1)t^{n-2}dt
+    \]
+    
+    Since $-e^{-t}t^{n-1}|_0^\infty = 0$, we can see:
+    \[
+        =(n-1)\int_0^\infty e^{-t}t^{n-2}\mathrm dt =(n-1) \Gamma(n-1) 
+    \]
+
+    So:
+    \[
+        \Gamma(n) = (n-1)\Gamma(n-1) 
+    \]
+
+    \item We know that $-e^{-t}$ is an antiderivative for $e^{-t}$. So:
+
+    \[
+        \Gamma(1) = \int_0^\infty e^{-t} \mathrm dt
+    \]
+
+
+    
+    \item In this case, $ \Gamma(4) = 3\Gamma(3) = 3\cdot 2 \Gamma(2) = 3\cdot 2 \cdot 1 \Gamma(1) = 3!$. 
+
+    \item For general $n$, $\Gamma(n) = (n-1)!$.
+
+    \item The recursive formula $\Gamma(x) = (x-1)\Gamma(x-1)$ will work for general $x > 1$, since we never used the fact that $n$ was an integer during integration by parts, only that $n>1$. It's only important for $n$ to be an integer so that we can relate $\gamma(n)$ to $\gamma(1)$. 
+
+    
+\end{enumerate}
+\item 
+    \begin{enumerate}
         \item 
-        \item Question (A1) has no explanation of what $A$ is (or $t$ for that matter). Neither (A2) nor (A3) have any words at all.
-        They should be written in complete (mathematical) sentences.
-        \item 
+        \begin{enumerate}
+            \item For $x<1$, $g_x$ has a vertical asymptote. $g_x$ has a horizontal asymptote regardless of what $x$ is, and it is always nonnegative over the region $(0,\infty)$ that we care about for this question.
+            \item  Since $x_1 \geq x_2\geq 1$, it follows $t^{x_1} \geq t^{x_2}$. Because all other factors are positive for $t>0$, $e^{-t}t^{x_1-1} \geq e^{-t}t^{x_2-1}$.
+        \end{enumerate}
+        \item For this part we assume that $x\geq 1$. Using the previous part, we can see that $g_n\geq g_x$ provided $x\leq n$. Since $g_x$ is positive by the comparison test, we can see that the following integral converges:
+
+        \[
+            \int_1^\infty g_x(t) \mathrm dt \leq \int_1^\infty g_n(t) <\infty 
+        \]
+
+        On the other hand, if $0< t \leq 1$, then $t^{x-1} \leq 1$, and $t^{x-1}e^{-t} \leq e^{-t}$. So we can apply the comparison test:
+
+        \[
+            \int_0^1 e^{-t}t^{x-1} \leq \int_0^1 e^{-t} = e^{-1} - 1
+        \]
+        So the integral converges. Since both these integrals converge, we know that the full integral converges, provided $x\geq 1$: 
+
+        \[
+           \int_0^\infty e^{-t} t^{x-1} \mathrm dt <\infty  
+        \]
+        
+        \item Now we suppose that $0< x \leq 1$. 
 
         \begin{enumerate}
-            \item[(A1)] \emph{Write the complete solution to $y'=2y$. No work necessary.}
+            \item Suppose that $0\leq t \le q1$. Then $e^{-t}\leq 1$, so the integrand $e^{-t}t^{x-1} \leq t^{x-1}$. So:
 
-            \fbox{
-            \begin{minipage}{0.78\textwidth}
-                \begin{itemize}
-                    \item[] $y=Ae^{2t}$ where $A\in\R$ is a parameter.
-                \end{itemize}
-            \end{minipage}
-            }
+            \[
+                \int_0^1 e^{-t}t^{x-1} \mathrm dt \leq \int_0^1 t^{x-1} \mathrm dt 
+            \]
 
-            \item[(A2)] \emph{Let $f$ be a solution to $y'=2y$ satisfying $f(0)=1$. Use Euler's method to approximate $f(2)$. Explain how you arrived at your answer.}
-            
-            \fbox{
-            \begin{minipage}{0.78\textwidth}
-                \begin{itemize}
-                    \item[] We will use a step size of $\Delta=0.5$.
-                    \item[] Let $f_n$ be the approximation we get from the $n$th application of Euler's method. 
-                    Since $f'=2f$, using a tangent line approximation, we get the recursive formula
-                    \[
-                        f_{n+1}=f_{n}+2f_{n}\Delta
-                    \]
-                    \item[] We start with initial condition $f(0)=1$. I.e., $f_0=1$.
-                    \item[] After iterating four times, we get \[f(2)\approx 16.\]
-                \end{itemize}
-            \end{minipage}
-            }
+            Since $x>0$, $x-1>-1$. By the p-test, the integral on the right converges!
 
-            \item[(A3)] \emph{Let $\vec r\,'(t)=M\vec r(t)$ be a differential equation and let $\vec p(t)$ and $\vec q(t)$
-            be solutions. Show that $\vec s = \vec p+\vec q$ is also a solution.}
+            \item Suppose that $1 \leq t \leq \infty$. Then $t^{x-1} \leq 1$. So $e^{-t}t^{x-1} \leq e^{-t}$. By the comparison test:
 
-            
-            \fbox{
-            \begin{minipage}{0.78\textwidth}
-            \begin{itemize}
-                \item[] Because the derivative is linear, we have $\vec s\,'=\vec p\,'+\vec q\,'$.
-                \item[] Note that $\vec p\,'=A\vec p$,
-                \item[] and $\vec q\,'=A\vec q$.
-                \item[] Thus, $\vec p\,'+\vec q\,' = A\vec p+A\vec q$.
-                \item[] Because matrix multiplication is also linear, we have the identity $A(\vec p+\vec q) = A\vec p+A\vec q$.
-                \item[] Combining this with our previous formula, we see $A\vec s=A(\vec p+\vec q)$,
-                \item[] and so $\vec s\,'=A\vec s$, which means $\vec s$ is a solution to the differential equation.
-            \end{itemize}
-            \end{minipage}
-            }
+            \[
+            \int_1^\infty e^{-t} t^{x-1} \leq \int_1^\infty e^{-t} = -e^{-t}|_0^\infty = 1
+            \]
         \end{enumerate}
+        Since both of these integrals converge, the full integral $\int_0^\infty e^{-t}t^{x-1}\mathrm dt$ converges! 
+        
     \end{enumerate}
-
-        \item \begin{enumerate}
-            \item I would expect an opening statement explaining how bees can only pollinate flowers they can land on,
-            an overview of the model stating that it was based on differential equations and simulated using Euler's method,
-            and a summary of the model's results about how bees can only land on ``odd numbered'' flowers.
-
-            \item \begin{enumerate}
-                \item The AI wrote in complete sentences. It split the summary into sections with headings, and it 
-                provided a summary of the results of the model.
-                \item The AI did not explain how the model is relevant to the farmer's question about where to plant flowers.
-                It used overly-technical equations, and is overall written in a boring style that does not encourage the reader to continue.
-                \item No, the formulas included, while the basis for the model, are not self-explanatory. It takes simulations and phase 
-                portraits to understand what is going on and so including the formulas in the executive summary is not helpful. Instead,
-                the formulas belong in the body of the report. The executive summary itself should be more high-level, including things like
-                ``a system of differential equations was used to model the bees; it was simulated using Euler's method\ldots''.
-
-                \item \phantom{x}\begin{quote}
-                    Bees are the primary pollinator of <your crop> and as common sense suggests, bees will only pollinate flowers
-                    that they can land on. This report shows gives the details of a differential-equations based model predicting
-                    that if you place a hive, flowers that grow at distances approximately $3.1$, $9.2$, $12.4$ metres away from the hive
-                    will attract bees while other flowers will not. The findings suggest that you should follow specific planting patterns
-                    to maximize pollination.
-                \end{quote}
-            \end{enumerate}
-        \item
-        \end{enumerate}
-		
-
 \end{enumerate}
