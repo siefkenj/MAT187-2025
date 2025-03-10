@@ -1,92 +1,147 @@
 \begin{objectives}
-	In this tutorial you will be using linearization to classify equilibrium solutions.
-
-	These problems relate to the following course learning objectives:
-	\textit{Apply linear algebra techniques to classify solutions of linear systems of ordinary differential
-	equations including rigorously classifying the stability of equilibrium solutions and creating
-	linear approximations to non-linear systems of ordinary differential equations}.
+	In this tutorial you will characterize first order differential equations.
 \end{objectives}
 
-
 \subsection*{Problems}
-
 \begin{enumerate}
-	\item 	Consider the differential equation
-	      \begin{equation}
-		      y'=(y-2)(y+1)\tag{A}
-	      \end{equation}
+\item Draw a phase plot (plot of $y$ vs., $f(y)$) for an autonomous ODE $y'=f(y)$ such that:
+\begin{itemize}[nosep]
+	\item The ODE has three equilibria.
+	\item At least one of the equilibria is stable.
+	\item \textbf{NONE} of the equilibria are unstable.
+\end{itemize}
+Explain and justify that your phase plot does actually fulfill these requirements.
 
-	      Define $f(y)=(y-2)(y+1)$ and notice that Equation (A) can be written as $y'=f(y)$.
+\item Consider the following ODEs. Are they linear or not? Are they separable or not?
+\begin{tcolorbox}[sharp corners=all,colframe=tolGrey,colback=white]
+    \begin{multicols}{2}
+    \begin{enumerate}[label={(\roman{enumii})},nosep,itemsep=1mm]
+        \item $y'=t^2y$
+        \item $y'=t\sin y$
+        \item $y'=y\sin t$
+        \item $y'=t+\sin y$
+        \item $y'=y+\sin t$
+        \item $y'=y(t^2+1)$
+        \item $y'=e^{2t-y}$
+        \item $y'-2y=3e^t$
+        \item $y'e^{t/2}=y^2+4$
+        \item $y'+y=5\sin 2t$
+    \end{enumerate}
+    \end{multicols}
+\end{tcolorbox}
 
-	      \begin{enumerate}
-		      \item Look at the slope field for Equation (A).
+\item Consider the below ODEs and problem descriptions. Match each ODE to a problem description and justify your answer.
+\begin{tcolorbox}[sharp corners=all,colframe=tolGrey,colback=white]
+    \begin{multicols}{2}
+    \begin{enumerate}[label={(\roman{enumii})},nosep,itemsep=1mm]
+        \item $y'=ky$
+        \item $y'=ky(M-y)$
+        \item $y'=\frac{ky(M-y)}{\sqrt{t+1}}$
+    \end{enumerate}
+    \end{multicols}
+\end{tcolorbox}
 
-		            \url{https://www.desmos.com/calculator/z1c415u4fb}
+Consider the below descriptions:
+\begin{enumerate}
+    \item Babies are born on an island at a constant rate, but there is a carrying capacity which limits the number of people that the island can support.
+    \item Babies are born on an island at a constant rate.
+    \item Babies are born on an island at a constant rate, but as time progresses, people become more rich and have fewer children.
+\end{enumerate}
 
-		            Based on the slope field, describe what the shape of solutions to Equation (A) should look like.
+% \begin{minipage}[t]{\linewidth-7cm}
+% \item Consider the ODE
+% \[
+%     \frac{\mathrm dy}{\mathrm dt} = f(y) = (y-1)^2 (y-2) (y-3)
+% \]
+% The phase plot of this ODE is given on the right.
 
-		      \item Is $y=0$ an equilibrium solution to Equation (A)? Explain both analytically (e.g., in terms of equations)
-		            and qualitatively (e.g., by referring to the slope field).
-		      \item Find an \emph{affine approximation} (i.e. an approximation of the form $A(x) = m x+b$)
-		            to the function $f$ near $0$.\footnote{ In your calculus class, you might have used the term
-			            \emph{linear approximation} instead of affine approximation.} Call this affine approximation $A_0$.
+% \textit{You can answer this question based on the equation, the phase plot, or both!}
+% \begin{enumerate}
+% \item Find and classify the equilibrium points of the differential equation. Make sure to justify your answer.
+% \vspace{3mm}
 
-		      \item\label{sketch} Sketch the graphs of $f$ and $A_0$ on the same coordinate plane. Find an interval of $y$
-			  	values where you  would
-		            call $A_0(y)$ a ``good'' approximation to $f(y)$.
+% \item If $y(t)$ is a solution to the ODE, and $y(0.5)=2.8$, what is $\lim_{t\to\infty} y(t)$? Justify your choice.
+% \end{enumerate}
+% \end{minipage}\hfill
+% \begin{minipage}[t]{6cm}
+% 	\vfil
+% 	\vspace{-6mm}
+% 	\flushright
+% 	\begin{tikzpicture}[line width=1]
+% 		\draw [black!20] (-0.5,-1) grid [step=0.5] (4,3);
+% 		\begin{scope}
+% 		\clip (0,-1) rectangle (4,3);
+% 		\draw [smooth,samples=100,domain=0:3.5,tolOrange] plot ({\x},{(\x-1)*(\x-1)*(\x-2)*(\x-3)});
+% 		\end{scope}
+% 	\draw [->] (-0.5,0) -- (4,0) node [right] {$y$};
+% 	\draw [->] (0,-1) -- (0,3) node [above] {$f(y)$};
+% 	\draw (1,0.1) -- (1,-0.1) node [below] {1};
+% %	\draw (0.1,1) -- (-0.1,1) node [left] {1};
+% \end{tikzpicture}
+% \end{minipage}
 
-		            \textbf{Warning}: pay close attention to what your
-		            axes represent in your sketch. The $y$-axis may not be the one you think!
+% \clearpage
+% \item Match the direction fields below with the following ODEs. There are more ODEs than figures, so some won't have a match. Make sure to provide an argument in words justifying the matching.
+% \begin{multicols}{2}
+%     \begin{enumerate}[label={(\roman{enumii})},nosep,itemsep=1mm]
+%         \item $y'=2y-1$
+%         \item $y'=2+y$
+%         \item $y'=y-2$
+%         \item $y'=y(y+3)$
+%         \item $y'=y(y-3)$
+%         \item $y'=1+2y$
+%         \item $y'=-2-y$
+%         \item $y'=y(3-y)$
+%         \item $y'=1-2y$
+%         \item $y'=2-y$
+%     \end{enumerate}
+%     \end{multicols}
 
-		      \item Solve the differential equation $y'=A_0(y)$ with initial condition $y(0)=0$. Call your solution $y_{\text{approx}}$.
+% \includegraphics[width=0.4\linewidth]{field1}
+% \includegraphics[width=0.4\linewidth]{field2}\\
+% \null\hfill\textbf{(A)}\hfill\hfill
+% \textbf{(B)}\hfill
+% \null
 
-		      \item\label{errorest} Based on your answer to \ref{sketch}, for how long do you expect $y_{\text{approx}}$ to
-		            be a ``good'' approximation to the solution of Equation (A) with initial condition $y(0)=0$? Express your answer as an interval.
+% \vspace{3mm}
+% \hrule
 
-		      \item Use a spreadsheet and Euler's method with step size $\Delta=0.01$ to simulate a solution to Equation (A) with initial condition $y(0)=0$.
-		            Use Desmos to compare your simulated solution to $y_{\text{approx}}$.
-		            When does $y_{\text{approx}}$ stop being a good approximation? Does this match your intuition from \ref{errorest}?
+% \includegraphics[width=0.4\linewidth]{field3}
+% \includegraphics[width=0.4\linewidth]{field4}\\
+% \null\hfill\textbf{(C)}\hfill\hfill
+% \textbf{(D)}\hfill
+% \null
 
-		      \item Find the equilibrium solutions to Equation (A). For each equilibrium solution $e$, find an affine
-		            approximation, $A_e$, to $f$ near the equilibrium solution. For each equilibrium solution $e$, (i) solve
-		            the differential equation $y'=A_e(y)$ and, (ii) use your solutions to classify the nature of each equilibrium solution
-		            as attracting/repelling/etc..
-	      \end{enumerate}
+% \vspace{3mm}
+% \hrule
 
-	\item
+% \includegraphics[width=0.4\linewidth]{field5}
+% \includegraphics[width=0.4\linewidth]{field6}\\
+% \null\hfill\textbf{(E)}\hfill\hfill
+% \textbf{(F)}\hfill
+% \null
+% \clearpage
 
-	      Recall that for a function $\vec F(x,y)=\Big(F_1(x,y), F_2(x,y)\Big)$,
-	      the \emph{total derivative}\footnote{ This is also called the \emph{Jacobian} matrix.} of $\vec F$ at $\vec E$ can be expressed
-	      as the matrix
-	      $
-		      D_{\vec F}(\vec E) = \mat{
-			      \rule[-0.5cm]{0pt}{.8cm}\displaystyle \frac{\partial F_1}{\partial x} &\displaystyle  \frac{\partial F_1}{\partial y}\\
-			      \rule[-0.2cm]{0pt}{.3cm}\displaystyle  \frac{\partial F_2}{\partial x} &\displaystyle  \frac{\partial F_2}{\partial y}
-		      }
-	      $
-	      evaluated at $\vec E$.
+% \item We will attempt to model how people leave a soccer stadium at the end of a game. We define the radius of the populated area in the stadium around an exit as $r(t)$. $t$ is the time in minutes and our observation starts at $t=0$.
+	
+% 	The flow of people will obey Torricelli’s Law which states that \textit{the area of the region occupied by people will decrease at a rate proportional to the square root of the radius and also proportional to the size of the exit}.
+	
+% 	\begin{enumerate}
+% 	\begin{minipage}[t]{0.50\linewidth} 
+%     	\item Use this to create an ODE that models the size of the crowd exiting the stadium. Introduce parameters as necessary.\medskip
+    	
+%     	\item Classify the ODE from the last part (order, linearity, separability etc.). Without solving the ODE, consider each parameter and each variable: What are its units? How does it affect the behaviour of the ODE? How is the behaviour of this system affected if it is very large? very small? zero?\medskip
 
-	      \bigskip
-
-	      Define $\vec F:\R^2\to\R^2$ by
-	      \[
-		      \vec F(x,y) = \mat{(y-2)(x+1)\\x^2-y}
-	      \]
-	      and consider the differential equation
-	      \begin{equation}
-		      \mat{x\\y}' = \vec F(x,y).\tag{B}
-	      \end{equation}
-	      Define $\vec r(t) = \mat{x(t)\\y(t)}$. Note that we may express Equation (B) as $\vec r\,'(t) = \vec F\Big(\vec r(t)\Big)$.
-	      \begin{enumerate}
-		      \item Can Equation (B) be written in matrix or affine form?
-		      \item Verify that $\vec r(t) = \mat{-1\\1}$ is an equilibrium solution to Equation (B).
-		      \item Make a phase portrait for Equation (B) and use your phase portrait to guess the nature
-		            of the equilibrium solution $\vec r(t) = \mat{-1\\1}$.
-		      \item Find the \emph{total derivative} of $\vec F$ at $\mat{-1\\1}$.
-			  \item Make an affine approximation to $\vec F$ near $\mat{-1\\1}$. Call your affine approximation $\vec A$.
-			  \item Use eigenvalue/eigenvector analysis to classify the equilibrium solutions for $\vec r\,' = \vec A(\vec r)$.
-			  \item Rigorously classify the equilibrium solution $\vec r(t)=\mat{-1\\1}$ for Equation (B).
-			  \item Classify the remaining equilibrium solutions for Equation (B).
-		      
-	      \end{enumerate}
+        
+        
+%         \item Find the general solution to the ODE. What is the solution if $r(0)=3$?
+%     	\end{minipage}\hfill
+%     	\begin{minipage}[t]{0.33\textwidth} 
+%     	\vfil
+%             \begin{flushright}
+%             \includegraphics[width=1.0\textwidth]{stadium_fixed.pdf}\\
+%             \includegraphics[width=1.0\textwidth]{stadium2.pdf}    
+%             \end{flushright}
+%         \end{minipage}
+%     \end{enumerate}
 \end{enumerate}
