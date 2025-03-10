@@ -28,7 +28,14 @@
 \usepackage{multicol}
 \usepackage{fnpct} % fancy footnote spacing
 \usepackage{tikz}
+\usetikzlibrary{shapes,calc,arrows}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{calc}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 \usetikzlibrary{arrows.meta}
+\newcommand{\checkbox}{\tikz[baseline=-1mm,line width=1]{\draw (0,0) circle (0.15);}}
 %\usepackage{tcolorbox}
 
 \definecolor{tolBlue}{HTML}{0077BB}
@@ -48,9 +55,6 @@
 \definecolor{tolMagenta}{HTML}{EE3377} 
 \definecolor{tolGrey}{HTML}{BBBBBB}
 \usepackage{enumitem}
-
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
 %\pgfkeys{/pgf/fpu}
 
  
