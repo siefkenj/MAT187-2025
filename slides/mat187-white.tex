@@ -1831,6 +1831,255 @@ r(\theta)=\cos\theta\quad\text{ with }\quad\theta\in[0,\pi/2]
 	\end{parts}
 \end{slide}
 
+\begin{slide}
+	\question
 
+	\begin{parts}
+		\item Which of the following are solutions to the ODE
+		\[
+			ty'-6y=18
+		\]
+		\begin{minipage}{\textwidth}
+		\begin{enumerate}
+			\item $y=8-3t^6$
+			\item $y=3t^6-8$
+			\item $y=8t^6-3$
+			\item $y=3-8t^6$
+			\item $y=t^6-3$
+		\end{enumerate}
+	\end{minipage}
+
+		\item Consider the differential equation
+		\[
+			y''=\cos (t) y'+t^3
+		\]
+		\begin{enumerate}
+			\item What is the order of the ODE?
+			\item Is the ODE linear?
+		\end{enumerate}
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+
+	Consider $y'(t)=5y(1-y)$
+
+	\begin{parts}
+		\item What do we call the special values $y=0$ and $y=1$?
+		
+		(\emph{Hint: think back to MAT186.})
+
+		\item Draw a phase diagram for the ODE.
+\vspace{7mm}
+	\begin{center}
+	\begin{tikzpicture}[scale=1.5]
+		\draw[->] (1,0) -- (5,0) node [below] {$y$};
+		\draw (2,-0.1) node [below] {$0$} -- ++(0,0.2);
+		\draw (4,-0.1) node [below] {$1$} -- ++(0,0.2);
+	\end{tikzpicture}
+	\end{center}
+	\vspace{3mm}
+
+	\item Which of the following plots show a possible solution with initial condition 
+	$y(0)=1.5$? What about initial condition 
+	$y(0)=0.2$?
+
+		\begin{center}
+			\begin{tikzpicture}[line width=1,baseline=0.2cm]
+				\draw [->] (1.7,-0.25) -- (3.5,-0.25) node [below] {$t$};
+				\draw [->] (1.9,-0.45) -- (1.9,1) node [left] {(A) $y$};
+				\draw [orange] plot [smooth] coordinates {(1.9,-0.04) (2.4,0.05) (3,0.27) (3.4,0.79)};
+				\end{tikzpicture}
+				\hfill
+				\begin{tikzpicture}[line width=1,baseline=0.2cm]
+				\draw [->] (1.7,-0.25) -- (3.5,-0.25) node [below] {$t$};
+				\draw [->] (1.9,-0.45) -- (1.9,1) node [left] {(B) $y$};
+				\draw [orange] plot [smooth] coordinates {(1.9,0.79) (2.4,0.27) (3,0.05) (3.4,-0.04)};
+				\end{tikzpicture}
+				\hfill
+				\begin{tikzpicture}[line width=1,baseline=0.2cm]
+				\draw [->] (1.7,-0.25) -- (3.5,-0.25) node [below] {$t$};
+				\draw [->] (1.9,-0.45) -- (1.9,1) node [left] {(C) $y$};
+				\draw [orange] plot [smooth] coordinates {(1.9,-0.1) (2.5,0) (3,0.7) (3.5,0.8)};
+				\end{tikzpicture}
+				\hfill
+				\begin{tikzpicture}[line width=1,baseline=0.2cm]
+				\draw [->] (1.7,-0.25) -- (3.5,-0.25) node [below] {$t$};
+				\draw [->] (1.9,-0.45) -- (1.9,1) node [left] {(D) $y$};
+				\draw [orange] plot [smooth] coordinates {(1.9,0.8) (2.5,0.7) (3,0) (3.5,-0.1)};
+				\end{tikzpicture}
+		\end{center}
+
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE 
+	\[
+	y'=y^2
+	\]
+
+	\begin{parts}
+		\item Which of the following could be sketches of solutions to this ODE?
+
+		\begin{tikzpicture}[xscale=1.2,yscale=1.5,thick]
+			\draw[smooth,samples=100,domain=0.1:1.8,orange] plot({\x},{2/(3-\x)-0.65});
+			 \draw[->] (-0.2,1.3) -- (2,1.3) node [below] {$t$};
+			\draw[->] (0,-0.2) -- (0,1.8) node [left] {(A) $y$};
+			\draw (-0.1,1) node [left] {$-1$} -- ++(0.2,0);
+		\end{tikzpicture}~~%
+		\begin{tikzpicture}[xscale=1.2,yscale=1.5,thick]
+			\draw[smooth,samples=100,domain=0.1:1.8,orange,yscale=-1,xscale=-1] plot({\x-2},{2/(3-\x)-1.7});
+			\draw[->] (-0.2,1.3) -- (2,1.3) node [below] {$t$};
+			\draw[->] (0,-0.2) -- (0,1.8) node [left] {(B) $y$};
+			\draw (-0.1,1) node [left] {$-1$} -- ++(0.2,0);
+		\end{tikzpicture}
+
+		\item Sketch a \emph{slope field} for this ODE.
+		\item Make sketches of all \emph{qualitatively different} solutions
+		to this ODE (i.e., all solutions whose shape is fundamentally different).
+		\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	{\bfseries Level 1 Modelling}
+
+	\question
+	Let $y(t)$ denote the mass (measured in grams) at time $t$ of
+	a chemical substance in a  full 150 litre tank. A solution of
+	water and the chemical with a concentration of 10 grams/litre
+	is pumped into the tank at a rate of 3 litres/minute. The contents is pumped out
+	of  the tank at a rate of 3 litre/minute.
+
+	Assume
+	the tank is well mixed at all times.
+
+	\begin{parts} 
+		
+	\item What are the units of $\frac{dy}{dt}?$
+    
+
+    \item At what rate is the chemical substance \textbf{entering} the tank? What should these units be?
+
+
+    \item At what rate is the chemical substance \textbf{exiting} the tank? What should these units be?
+    
+
+    \item Assuming there is initially 100 grams of the chemical in the 150 litre tank, write down an initial value problem modeling the amount of chemical in the tank.
+
+
+    \item Without solving the IVP, do we expect the amount of chemical in the tank to initially increase or decrease?
+
+	\item You got a differential equation that looks like $y'=F(y)$. Can you solve this differential equation by integrating both sides? I.e., is $\displaystyle \int F(y)\,\mathrm d y$ a solution? Explain.
+
+
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	{\bfseries Level 2 Modelling}
+
+	\question
+	In this problem we use the same setup as before but with one minor tweak: substance is being pumped out at 2 litres/minute (instead of 3). The same 3 litres/minute is being pumped into the tank at the same concentration stated previously. Assume the 150L tank initially has only 50 litres of fluid in it with 100 grams of chemical inside.
+
+	\begin{parts} 
+		
+    \item Write down an initial value problem modeling the amount of chemical in the tank.
+
+
+    \item For what interval of time is this an appropriate model?
+
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	{\bfseries Level 3 Modelling}
+
+	\question
+	In this problem we use the same setup as in Level 2 but now when the tank reaches 150 litres it begins to overflow, spilling the well mixed solution out of the top of the tank. (Assume an initial volume of 50 litres in the tank with 100 grams of chemical, the 3 litre/min inflow and 2L/min outflow; everything is still perfectly mixed).
+
+
+	\begin{parts}  
+		
+	\item Write down an initial value problem modeling the amount of chemical in the tank. What range of $t$ values is your IVP valid for?
+
+
+    \item Write down an Initial value problem with a single ODE describing the amount of the chemical in the tank for $t\geq 100$. You may use the solution from Level 2: 
+    \begin{equation*}
+        y(t)=\frac{10(t^3+150t^2+7500t+25000)}{(t+50)^2},
+    \end{equation*}
+    which satisfies $y(100)=1455.555...$.
+    
+
+    \item Let $y(t)$ denote the IVP solution to part (a) of this question. Compute $\displaystyle \lim_{t\rightarrow \infty}y(t).$
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	{\bfseries Apple Products}
+
+	\question
+	We are modelling the popularity, $P(t)$, of Apple's newest product over time. Market research shows that a reasonable model could be created with
+	the following assumptions:
+	\begin{itemize}
+		\item[(A1)] Ignoring all else, popularity grows in proportion
+		to current popularity.
+		\item[(A2)] Ignoring all else, popularity decreases in proportion to
+		elapsed time since release.
+	\end{itemize}
+
+	Popularity is non-negative and can be unbounded.
+
+	\begin{parts}  
+		\item Are the marketing team's assumptions reasonable? Come up with 
+		explanations for each.
+		\item Write a differential equation based on assumptions (A1) and (A2).
+
+		\item Assume the constants of proportionality are $1$ and make a
+		slope field for your model using Desmos.
+
+		{\small \url{https://www.desmos.com/calculator/yeusl7guu3}}
+
+		\item Use Desmos to explore which initial conditions give rise to
+		qualitatively different solutions.
+
+		\item Is $P=0$ an equilibrium solution to your model? Explain.
+
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	{\bfseries Apple Products II}
+
+	\question
+	Recall the assumptions for modelling the popularity of a new Apple product.
+	\begin{itemize}
+		\item[(A1)] Ignoring all else, popularity grows in proportion
+		to current popularity.
+		\item[(A2)] Ignoring all else, popularity decreases in proportion to
+		elapsed time since release.
+	\end{itemize}
+
+	\begin{parts}  
+		\item From real-world data, we know that popularity of products
+		eventually ends up near zero.
+
+		Modify your model so that popularity always ends up at zero.
+
+		\item For certain \emph{timeless} products, the time limit
+		of popularity approaches a
+		positive constant.
+
+		Modify your model so that popularity will always tend towards a
+		positive constant.
+
+	\end{parts}
+\end{slide}
 
 \end{document}
