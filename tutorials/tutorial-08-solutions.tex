@@ -1,8 +1,5 @@
 \begin{enumerate}
 \item 
-Students will probably find $\mu(t)=e^t$, but we can take $\mu(t)=5e^t$ or really any other constant multiple. The integrating factor is only unique up to a constant.
-
-\item 
 \begin{enumerate}
     \item 
     $y=1$ is semistable,
@@ -15,64 +12,4 @@ Students will probably find $\mu(t)=e^t$, but we can take $\mu(t)=5e^t$ or reall
     At $y=2.8$, the derivative is negative. The function will decrease. It will continue to do so until $y$ is getting close to 2. The limit will be 2.
 \end{enumerate}
 
-    \item 
-    We can substitute $z = \frac{dy}{dx}$ in order to convert the ODE into a first-order one:
-	        \[
-	            \sqrt{1 + z^2} = x\frac{dz}{dx}\\
-	        \]
-	        This is a separable ODE, so we can write it as:
-	        \[
-	            \frac{dz}{\sqrt{1+z^2}} = \frac{dx}{x}\\
-	            \int\frac{dz}{\sqrt{1+z^2}} = \int\frac{dx}{x}\\
-	        \]
-	        The integral on the left can be solved by using the trigonometric substitution $z = \tan{\theta}, dz = \sec^2{\theta}d\theta$.
-	        
-	        \[
-	            \int\frac{\sec^2{\theta}d\theta}{\sec{\theta}}\\
-	            = \int\sec{\theta}d\theta\\
-	            = \ln|\sec{\theta} + \tan{\theta}| + C\\
-	            = \ln{\left|\sqrt{z^2+1} + z\right|} + C\\
-	            = \ln{\left(\sqrt{z^2+1} + z\right)} + C
-	        \]
-	        
-	        The last step is possible since $\sqrt{z^2+1} > |z| \implies \sqrt{z^2 + 1} + z > 0$.
-	        The ODE then becomes:
-	        \[
-	            \ln{\left(\sqrt{z^2+1} + z\right)} = \ln x + D\\
-	            \sqrt{z^2+1} + z = Ax\\
-	            z = \frac{A^2x^2-1}{2Ax}
-	        \]
-	        
-	        Since the tiger is initially facing the gazelle, we require $z(L)=0$, i.e., the slope of the trajectory is 0 at the tiger's initial position. We can then solve for the constant of integration $A$:
-	        
-	        \[
-	            z(L) = 0 = \frac{A^2L^2-1}{2AL} \implies A=\frac{1}{L}
-	        \]
-	        
-	        Substituting this into our expression for $z$, we get:
-	        
-	        \[
-	            z = \frac{\frac{x^2}{L^2} - 1}{2\frac{x}{L}}\\
-	            = \frac{1}{2L}x - \frac{L}{2x}
-	        \]
-	        
-	        Since we are interested in the trajectory of the tiger, we must solve for $y(x)$. Hence, we integrate $z$:
-	        
-	        \[
-	            y = \int zdx\\
-	            = \frac{1}{4L}x^2 - \frac{L}{2}\ln{x} + E
-	        \]
-	        
-	        The tiger starts at a position $(L, 0)$, so the initial condition is $y(L) = 0$:
-	        
-	        \[
-	            0 = \frac{L^2}{4L} - \frac{L}{2}\ln{L} + E\\
-	            E = \frac{L}{2}\ln{L} - \frac{L}{4}
-	        \]
-	        
-	        The final expression for $y(x)$ is then given by:
-	        
-	        \[
-	            y(x) = \frac{1}{4L}x^2 - \frac{L}{2}\ln{x} + \frac{L}{2}\ln{L} - \frac{L}{4}
-	        \]
 \end{enumerate}

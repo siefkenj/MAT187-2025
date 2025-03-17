@@ -49,17 +49,56 @@ The phase plot of this ODE is given on the right.
     \item $\frac{\mathrm d y}{\mathrm d t} = e^{-y}(2x-4),\qquad y(5)=0$ 
 \end{enumerate}
 
-\item 
-A hungry tiger is hiding in a bush at a position $(L, 0)$, intently watching a gazelle grazing at the origin. To catch the gazelle, the tiger's strategy is to run at a constant speed and towards the gazelle at all times. The gazelle's strategy is to run in the positive $y$ direction at the same speed as the tiger. The equation of motion of the tiger is represented by the differential equation:
-	
-	\[
-	    \sqrt{1+\left(\frac{dy}{dx}\right)^2} = x\frac{d^2y}{dx^2}
-	\]
+\item Consider a pendulum consisting of a massless rod of length $L$ that is connected to a hanging object with mass $m$. The acceleration due to gravity is $g$. We are interested in understanding the dynamics of the angle $\theta$ between the rod and the negative y-axis.
 \begin{enumerate}
-	    \item Apply the substitution $z=\frac{dy}{dx}$. You should now be able to find $z(x)$ and then $y(x)$, which is the tiger's trajectory.
-	    
-	    \textit{Hint: $\int\sec{\theta}d\theta = \ln\left|\frac{1+\sin\theta}{\cos\theta}\right| + C$.}
-    \item Will the tiger ever catch the gazelle? Justify your answer.
+    \item Determine expressions for the position and velocity of the pendulum with respect to the hinge of the pendulum. Assume the positive x-axis faces rightward, and the positive y-axis faces upward.
+
+    \item In addition to gravity, there is air resistance that imparts a force in the opposite direction of motion to the pendulum that is proportional to the speed of the mass. This proportionality constant is given by $b$. Write an expression for the air resistance force.
+
+    \item Write an ODE that models the dynamics of the pendulum.
+
+    \item Assuming an initial angular position $\theta_0$ and angular velocity $\frac{\mathrm d\theta}{dt}$, write an initial value problem that describes the pendulum.
+\end{enumerate}
+
+\clearpage
+\centering 
+\includegraphics[scale=2]{fish.jpeg}
+
+\raggedright 
+
+\item The graph above depicts the total tons of atlantic cod harvested  year by year from 1850 to the early 2000s on the east coast of Newfoundland. Significant progress in fishing technology led to record-breaking yields in the 1960s. In 1992, the total yield abruptly collapsed to 1\% of historic values, and the industry collapsed completely, destroying a way of life that had sustained the east coast for centuries.
+\begin{enumerate}
+
+\item In a few words, why would the harvesting yields decline so rapidly after an increase in harvesting efficiency?
+
+
+\item Let $h(t)$ be the harvesting rate in the year $t$, and let $k$ be the natural growth rate of cod populations. Suppose additionally that the ocean has a maximum cod-carrying capacity of $M$.
+\begin{enumerate}
+    \item Write down an ODE that models the cod biomass over time, without harvesting.
+    \item Modify the previous ODE to factor in the harvesting rate.
+\end{enumerate}
+
+\item  Find the equilibrium points of your ODE in terms of $h$, $k$, and $M$. Are they stable, semistable, or unstable equilibria?
+\item Graph your equilibria as a function of $h$. Is there a threshold for $h$ where the system changes drastically? What happens to the cod biomass then?
+\item What is a reasonable guess for the threshold, given the graph above?
 
 \end{enumerate}
+
+
+%\includegraphics[scale=0.7]{tutorials/fish.jpg}
+% \item 
+% A hungry tiger is hiding in a bush at a position $(L, 0)$, intently watching a gazelle grazing at the origin. To catch the gazelle, the tiger's strategy is to run at a constant speed and towards the gazelle at all times. The gazelle's strategy is to run in the positive $y$ direction at the same speed as the tiger. The equation of motion of the tiger is represented by the differential equation:
+	
+% 	\[
+% 	    \sqrt{1+\left(\frac{dy}{dx}\right)^2} = x\frac{d^2y}{dx^2}
+% 	\]
+% \begin{enumerate}
+% 	    \item Apply the substitution $z=\frac{dy}{dx}$. You should now be able to find $z(x)$ and then $y(x)$, which is the tiger's trajectory.
+	    
+% 	    \textit{Hint: $\int\sec{\theta}d\theta = \ln\left|\frac{1+\sin\theta}{\cos\theta}\right| + C$.}
+%     \item Will the tiger ever catch the gazelle? Justify your answer.
+
+% \end{enumerate}
+
+
 \end{enumerate}

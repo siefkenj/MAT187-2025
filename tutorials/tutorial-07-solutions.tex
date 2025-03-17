@@ -16,21 +16,16 @@
             
         \end{enumerate}
         \end{enumerate} 
-    \item 
-    $y=1$ is semistable,
-    $y=2$ is stable,
-    $y=3$ is unstable
-    
-    A visual argument (``If we are just below 1, the derivative is positive, so it's going back to 1'') is nicer than an abstract argument that seems memorized (``If the phase plot crosses from top left to bottom right, it is stable'')
 
-    \item 
-    We first note that all ODEs are first-order and autonomous, meaning we can look at their roots to find their equilibrium points and match them with the given direction fields. 
-    
-    Direction field (A) shows one equilibrium solution at $y = 2$. Therefore, either $y' = y - 2$ or $y'= 2 - y$ are valid candidates. We also see that for $y > 2$, the solutions are decreasing (i.e., $y' < 0$) while for $y < 2$, the solutions are increasing (i.e., $y' > 0$). Therefore, $y' = 2 - y$ must be the matching ODE.
-    
-    A similar line of reasoning applies for direction field (B) where now we see that for $y > 2$, the solutions are increasing (i.e., $y' > 0$) while for $y < 2$, the solutions are decreasing (i.e., $y' < 0$). Therefore, $y' = y - 2$ must be the matching ODE.
-    
-    Matching direction fields (C) and (D) follows a similar line of reasoning as matching direction fields (A) and (B). The only difference is that the equilibrium point is at $y = -2$, meaning either $y' = 2 + y$ or $y' = -2-y$ are valid ODEs. For direction field (C), $y' < 0$ for $y > -2$ and $y' > 0$ for $y < -2$. Therefore, $y' = -2 - y$ is the matching ODE. This leaves direction field (D) to match $y' = 2 + y$.
-    
-    Direction fields (E) and (F) have equilibrium points at $y = 0$ and $y = 3$, meaning $y' = y(3-y)$ and $y' = y(y-3)$ are potential candidates. For direction field (E), $y' < 0$ for $y < 0, y > 3$ and $y' > 0$ for $0 < y < 3$. Therefore, $y' = y(3 - y)$ is the matching ODE. This leaves direction field (F) to match $y' = y(y-3)$.
+    \item
+    \begin{enumerate}
+        \item Since $f(y)$ is positive, $y$ is increasing.
+        \item Since $f(y)$ is negative, $y$ is decreasing.
+        \item Yes, at $y=0$ and $y=1$, $y$ is neither increasing nor decreasing. These are called equilibrium points.
+        \item If $y(0)=0.5$, $y(100)$ will be just above 0. This is because $y$ is decreasing until it reaches $y=0$ where the magnitude of the derivative also tends towards 0.
+    \end{enumerate}
+
+    \item ODE (i) corresponds to description (b) since the rate of change of babies is proportional to the current baby population. ODE (ii) corresponds to description (a) since it has the same proportionality as (i), but the $M-y$ term causes the rate of change to be positive if under the carrying capacity $M$ and negative if over the carrying capacity $M$. ODE (iii) corresponds to description (c) since it has the same factors as (i), but but now there is an additional time factor where the rate of change decreases as time increases.
+
+    \item There are many correct graphs. The trick is that there needs to be at least one semistable equilibrium to make this work (which is allowed based on the requirements).
 \end{enumerate}

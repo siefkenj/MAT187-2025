@@ -1,13 +1,6 @@
 \begin{objectives}
-	In this tutorial you will learn how to leverage Euler's method to approximate the solution of boundary-value problems.
-
-	This tutorial relates to the following course learning objectives:
-	\textit{
-		Use a computer to approximate the solutions to differential equations and systems of differential
-		equations and explain the advantages and draw-backs of computer-based approximations
-	}.
+	In this tutorial you will practise solving 2nd order homogeneous ODEs.
 \end{objectives}
-
 
 \vspace{-.5em}
 \subsection*{Problems}
@@ -20,146 +13,60 @@
 
 
 \begin{enumerate}
-	\item\label{QIVP} Consider the initial-value problem:
-	      \begin{equation}\tag{IVP}\label{IVP}
-		      \begin{cases}
-			      w''(t) = -w(t) \\
-			      w(0) = 0       \\
-			      w'(0) = 5
-		      \end{cases}
-	      \end{equation}
+	\item Consider two differentiable, non-constant functions $y_1(t)$ and $y_2(t)$ such that:
+    \begin{enumerate}[label=(\roman*)]
+        \item $y_1(t) \rightarrow +\infty$ as $t \rightarrow +\infty$
+        \item $y_2(t)$ is periodic.
+        \item $y_2(0) = \pi$.
+    \end{enumerate}
 
+    Is it possible that both $y_1(t)$ and $y_2(t)$ solve the \textit{same} constant-coefficient ODE $ay'' + by' + cy = 0$? Explain.
 
-	      \begin{enumerate}
-		      \item Let $\vec{r}(t) = \mat{w \\ w'}$. 
-			  Write the system of differential equations above in matrix form (i.e., as $\vec{r}'=M \vec{r}$). 
-			  What is the initial condition for $\vec{r}$?
-		      \item Use a spreadsheet to approximate the value of $\vec{r}(1)$ (use a step size $\leq 0.01$).
-		      \item Find an approximate value for $w(1)$.
-	      \end{enumerate}
+    \item You're going to build a clock: an oscillator that approximately counts out short periods of time.
+    You're given a spring that has damping coefficient $b=2$ kg/s and spring constant $k=2$ kg/s$^2$, and a $4$ kg mass. The corresponding ODE for this problem is given by:
+    
+    \[
+        4y'' + 2y' + 2y = 0
+    \]
+    
+    What is the period of the trigonometric functions found in the resulting general solution? This number is the \textbf{quasi-period}, and for small values of $b$ it approximates well the actual time between peaks of the motion. Why is this just a quasi-period and not an actual period?
 
+    \item 
+    Consider the temperature of two adjacent rooms in a house. Room $A$ has no windows, and room $B$ has windows. Denote by $A$ the temperature in room $A$ and by $B$ the temperature in room $B$. We measure temperature in degrees Celsius and time in hours.
+    
+    There are three effects affecting the temperature [units are given in brackets for reference]:
+    \begin{itemize}[nosep,itemsep=2mm,topsep=2mm]
+    	\item Effect 1: The temperature in room $A$ increases/decreases at a rate proportional to the difference in temperature between room $A$ and room $B$. The proportionality constant is $2\left[\frac{1}{h}\right]$. Note that if room $B$ is warmer than room $A$, this means that this effect warms up room $A$.
+    	\item Effect 2: The temperature in room $B$ increases/decreases at a rate proportional to the difference in temperature between room $B$ and room $A$. The proportionality constant is $2\left[\frac{1}{h}\right]$. Note that if room $A$ is warmer than room $B$, this means that this effect warms up room $B$.
+    	\item Effect 3: Since Room $B$ has windows, the outside temperature (day/night) affects the temperature in room $B$. This effect leads to an additional change in temperature in room $B$ of $\frac12\sin \left(\frac{\pi t}{12}\right)$ $\left[\frac{\degree C}{h}\right]$.
+    \end{itemize}
 
-
-	\item Consider the boundary-value problem:
-	      \begin{equation}\tag{BVP}\label{BVP}
-		      \begin{cases}
-			      w''(t) = -w(t) \\
-			      w(0) = 0       \\
-			      w(1) = 1
-		      \end{cases}
-	      \end{equation}
-
-
-	      %	We want to approximate the solution of this differential equation with these two boundary conditions \eqref{BVP}.
-
-	      In Question \ref{QIVP}, we approximated
-		   a second-order differential equation with initial conditions by applying Euler's method to a corresponding system.
-		   We will modify this approach to approximate the solution to \eqref{BVP}.
-
-	      This method is called the \textbf{Shooting Method}.
-
-	      Notation: \textit{In this question, $w_a(t)$ will denote the Euler approximation to Equations 
-		  \eqref{IVP} with $w'(0)=a$.}
-
-
-	      \begin{enumerate}
-		      \item Find a number $a$ such that if $w'(0)=a$, then the Euler approximation satisfies $w_{a}(1)<1$.
-
-		      \item Find a number $b$ such that If $w'(0)=b$, then the Euler approximation satisfies $w_{b}(1)>1$.
-
-		      \item Let $c = \frac{a+b}{2}$. Use Euler's Method again to approximate $w_c(1)$.
-
-			  \item If the boundary problem has a solution, there is a value $k$ so that $w_k(1)=1$.
-			  Based on your previous results, is $k\in [a,c]$ or is $k\in [c,b]$? Explain.
-
-		      \item We will try to find $k$ by using \emph{bisection}. That is, when we identify an interval
-			  $[a_i, b_i]$ that must contain $k$, we will test $w_{c_i}(1)$ where $c_i=\frac{a_i+b_i}{2}$ and then
-			  narrow our search to either $[a_i, c_i]$ or $[c_i,b_i]$.
-
-		      Using $a_1=a$, $b_1=b$, and $c_1=c$ (which you calculated already), fill out the following table:
-
-		            \begin{tabular}{|c||c|c||c|c||c|c|}
-			            \hline
-			            $i$ & \hspace{20pt} $a_i$ \hspace{20pt} & \hspace{10pt} $w_{a_i}(1)$  \hspace{10pt} & $b_i$  \hspace{20pt} & \hspace{10pt} $w_{b_n}(1)$ \hspace{10pt} & \hspace{20pt} $c_i$  \hspace{20pt} & \hspace{10pt} $w_{c_i}(1)$ \hspace{10pt} \\ \hline
-			            1   &                                   &                                           &                      &                                          &                                    &                                          \\[10pt]\hline
-			            2   &                                   &                                           &                      &                                          &                                    &                                          \\[10pt]\hline
-			            3   &                                   &                                           &                      &                                          &                                    &                                          \\[10pt]\hline
-			            4   &                                   &                                           &                      &                                          &                                    &                                          \\[10pt]\hline
-			            5   &                                   &                                           &                      &                                          &                                    &                                          \\[10pt]\hline
-			            6   &                                   &                                           &                      &                                          &                                    &                                          \\[10pt]\hline
-			            7   &                                   &                                           &                      &                                          &                                    &                                          \\[10pt]\hline
-		            \end{tabular}
-		      \item The iterative process you just performed is called the \emph{Shooting Method}\footnote{ In this case,
-			  you used bisection to narrow down the ``target''; the shooting method does not require bisection. For example,
-			  you could use Newton's method to narrow the target.}.
-			  
-			  Use the following Desmos plot to compare the solution you arrived at via the Shooting Method 
-			  with the exact solution.
-			  
-			 \url{https://www.desmos.com/calculator/mvjr18tt2x}
-	      \end{enumerate}
-
-
-	\item The BVP below has infinitely many solutions.
-	      \begin{equation}\tag{$\star$}\label{BVP2}
-		      \begin{cases}
-			      w''(t) = -\pi^2 \cdot w(t) + \cos\Big(w(t)\Big) \\
-			      w(0) = 0                   \\
-			      w(1) = 0
-		      \end{cases}
-	      \end{equation}
-
-	      Use the Shooting Method to identify at least \emph{two} solutions to this boundary value problem.
-
-		  Hint: You may need to pick very different initial values for $w'(0)$ to find intervals that contain different solutions.
-
+\begin{enumerate}
+	\item Set up an ODE describing the change in temperature in room $A$. Explain.
+    \item Set up an ODE describing the change in temperature in room $B$. Explain.
+    \item Manipulate the two ODEs and combine them to get an ODE that does NOT include $B$ or its derivatives. In other words, eliminate $B$ completely from the equation.
+    \item Looking at the ODE you found in part (c), relate features of the ODE to the applied context. Here are some questions to consider:
+	\begin{itemize}[nosep]
+		\item Is this oscillator undamped, overdamped, underdamped, or criticially damped?
+		\item Is this oscillator free or forced?
+		\item Looking \textit{at the applied context}, why do these properties make sense?
+	\end{itemize}
 \end{enumerate}
 
+\begin{minipage}{12cm}
+\item The problem on the right is called a Boundary Value Problem (BVP) -- instead of an Initial Value Problem -- since there is a value given at the starting time $t=0$ and at an end time $t=t_1$.\medskip
 
+Find a value for $t_1$ such that this BVP has a solution (there are many correct choices for $t_1$!)
+\end{minipage}
+\hfill
+\begin{minipage}{5cm}
+\[
+\begin{cases}
+y'' + 4y' + 5y = 0\\
+y(0) = 1\\
+y(t_1) = 0
+\end{cases}
+\]
+\end{minipage}
 
-%
-%
-%\vfill
-%
-%
-%
-%\paragraph{Shooting Method:}	 To approximate the solution of the boundary-value problem:
-%$$
-%	\begin{cases}
-%		w'' = F\big(t,w,\tfrac{dw}{dt}\big) \\
-%		w(t_0)=w_0                          \\
-%		w(t_1)=w_1
-%	\end{cases}
-%$$
-%\begin{enumerate}[label={(Step \arabic*)}]
-%	\item Find two values $a$ and $b$ such that:
-%	      \begin{itemize}
-%		      \item If $w'(t_0)=a$, then the Euler approximation satisfies $w_a(t_1)<w_1$
-%		      \item If $w'(t_0)=b$, then the Euler approximation satisfies $w_b(t_1)>w_1$
-%	      \end{itemize}
-%
-%	\item \label{step}Let $c = \frac{a+b}{2}$. With $w'(t_0)=c$, use Euler's method to obtain an approximation of $w_c(t_1)$.
-%
-%	\item Repeat \ref{step} with new values for $(a,c)$ or $(b,c)$ instead of $(a,b)$, making sure that $w_1 \in [w_a(t_1), w_b(t_1)]$.
-%\end{enumerate}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
+\end{enumerate}
