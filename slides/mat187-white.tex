@@ -2082,4 +2082,94 @@ r(\theta)=\cos\theta\quad\text{ with }\quad\theta\in[0,\pi/2]
 	\end{parts}
 \end{slide}
 
+\begin{slide}
+	\question
+	Which of the following ODEs are separable? For each separable ODE,
+	rewrite it in a form that can be ``integrated'' to find a solution.
+
+	\begin{parts}  
+		\item $e^{t+y^2}\cdot y'-1=0$
+		\item $y'(t)+\tan(t)\cdot y(t)=\tan(t)$
+		\item $y'(t)=y(t)\cdot t +1$
+		\item $y'(t)-(t-1)(y(t))^2=t-1$
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	\begin{definition}[General Solution]
+		The general solution to an ODE is the set of \emph{all} solutions to 
+		that ODE.
+	\end{definition}
+
+	Consider the ODE $y'=2y$.
+
+	\begin{parts}  
+		\item Is $y(t)=e^Ce^{2t}$ a solution to the ODE for all $C\in \R$?
+		\item Is $y(t)=\pm e^Ce^{2t}$ a solution to the ODE for all $C\in \R$?
+		\item Are there any solutions missing from the two forms above?
+		\item Write the general solution to the ODE.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the IVP $y'=ty^2$ with $y(0)=0$.
+
+
+	\begin{minipage}{0.45\textwidth}
+
+	A student notices it is separable and does the following work:
+
+	\[
+	y'=ty^2 \qquad\implies \qquad \frac{y'}{y^2}=t
+	\]
+	\[
+	\implies \quad \int \frac{y'}{y^2}\,\mathrm d t = \int t\,\mathrm d t 
+	\quad
+	\implies
+	\quad \int \frac{1}{y^2}\,\mathrm d y = \int t\,\mathrm d t 
+	\]
+	\[
+	\implies\quad  \frac{-1}{y}=\frac{t^2}{2} + C \quad \implies \quad 
+	y=\frac{-2}{t^2+C}
+	\]
+
+	Plugging in $y(0)=0$ we get $0=\frac{-2}{0^2+C}$, which cannot be solved.
+	\end{minipage}
+
+	\begin{parts}  
+		\item Was there a mistake made?
+		\item Find the solution to the IVP.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE $y'=ty^2$.
+
+	Graph the solutions to the following IVPs. Pay attention to
+	the domain of each solution.
+
+	\begin{parts}  
+		\item $y(0)=1$
+		\item $y(0)=0$
+		\item $y(0)=-1$
+		\item The ODE models bacteria on a far-off planet. We
+		measure that $y(0)=1$.
+
+		Define $y(t)=\begin{cases}
+			\frac{-2}{t^2-2}&\text{ if } t\in (-\sqrt{2},\sqrt{2})\\
+			0&\text{ if }t\in (-\infty,-\sqrt{2})\cup (\sqrt{2},\infty)
+		\end{cases}$
+		\begin{enumerate}
+			\item Is $y$ a solution to the ODE?
+			\item Does $y$ satisfy $y(0)=1$?
+			\item The scientists want to predict the number of bacteria at time $2$. They compute $y(2)=0$. Is their prediction valid?
+		\end{enumerate}
+		
+		
+	\end{parts}
+\end{slide}
+
 \end{document}
