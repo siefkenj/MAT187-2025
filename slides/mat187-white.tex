@@ -2172,4 +2172,110 @@ r(\theta)=\cos\theta\quad\text{ with }\quad\theta\in[0,\pi/2]
 	\end{parts}
 \end{slide}
 
+\begin{slide}
+	\question
+	Consider the differential equation 
+	\[
+	\left[e^{-t^2}y(t)\right]^{\,\prime} = te^{-t^2}
+	\]
+
+	\begin{parts}  
+		\item Solve the differential equation for $y$.
+		\item Expand the differential equation and rewrite 
+		it as $y'(t)=\cdots$. Simplify your solution.
+		\item In finding $y'(t)$, did you divide by any quantities that could possibly be $0$? Do you need to correct for this? Explain.
+		\item Find the general solution to $y'=t+2t\cdot y$.	
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	Let $h$ and $f$ be functions and consider the differential equation
+	\[
+	\left[e^{h(t)}y(t)\right]^{\,\prime} = f(t)e^{h(t)}
+	\]
+
+	\begin{parts}
+		\item Write down the general solution to this differential equation. (Your answer may involve integrals/$f$/$h$.)
+
+		\item Rewrite the differential equation in the form $y'(t)=\cdots$.
+		\item In finding $y'(t)$, did you divide by any quantities that could possibly be $0$? Do you need to correct for this? Explain.
+		\item Let $a(t)$ be a function. Write down a general solution to
+		\[
+			y'(t)=a(t)\cdot y(t)+f(t).
+		\]
+		Congratulations! You just derived integrating factors.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	Consider the ODE
+	\[
+		(t^2-1)y'+2ty=t.
+	\]
+
+	\begin{parts}
+		\item Rewrite the ODE so that you can apply the method of integrating factors to solve it.
+		\item Solve the ODE.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	Consider the ODE
+	\[
+		(t^2-1)y'+2ty=t
+	\]
+	with several solutions graphed below.
+
+\begin{tikzpicture}[yscale=1,xscale=1.7]
+	\begin{scope}
+	\clip (-2,-2) rectangle (2,2);
+
+	
+	\foreach \c in {0,1,2,3,-1.5,-3} {
+	\draw[gray] plot [domain=1.05:2,samples=100] ({\x},{((\x)^2+\c)/(2*((\x)^2-1))});
+	\draw[gray] plot [domain=-0.9:0.9,samples=100] ({\x},{((\x)^2+\c)/(2*((\x)^2-1))});
+	\draw[gray] plot [domain=-1.05:-2,samples=100] ({\x},{((\x)^2+\c)/(2*((\x)^2-1))});
+	}
+
+
+	\draw[magenta, dashed] plot [domain=1.05:2,samples=100, dashed] ({\x},{((\x)^2-2)/(2*((\x)^2-1))});
+	\draw[teal, dashed] plot [domain=-0.9:0.9,samples=100, dashed] ({\x},{((\x)^2-2)/(2*((\x)^2-1))});
+	\draw[orange, dashed] plot [domain=-1.05:-2,samples=100, dashed] ({\x},{((\x)^2-2)/(2*((\x)^2-1))});
+	
+	\draw [blue, dashed] (-2,1/2) -- (2,1/2);
+
+	\end{scope}
+	\draw [->] (-2,0) -- (2,0) node [below] {$t$};
+	\draw [->] (0,-2) -- (0,2) node [left] {$y$};
+		\foreach \x in {-1,1} \draw (\x,-0.1) node [below] {$\x$} -- (\x,0.1);
+	\foreach \x in {-1,1} \draw (-0.05,\x) node [left] {$\x$} -- (0.05,\x);
+\end{tikzpicture}
+
+	\begin{parts}
+		\item For each dashed solution, find a pair $(a,b)$ so that
+		it is the solution to the IVP $y(a)=b$.
+		\item For each IVP you created, find the domain of the solution.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+Consider the line at the Myhal Second Cup. $P(t)$ describes the number of people in line at time $t$ (in minutes since 10:00 am).
+
+There are three effects:
+\begin{itemize}
+	\item[(E1)] Every minute, 3 students join the line
+	\item[(E2)] Every minute, 1 student leaves the line (as they are being served)
+	\item[(E3)] Every minute, 20\% of the students in line get impatient and leave the line
+\end{itemize}
+
+Initially, no one is in line.
+
+	\begin{parts}
+		\item Write down an ODE that models $P$.
+		\item Solve your ODE.
+		\item On what domain does your solution makes sense?
+	\end{parts}
+\end{slide}
+
+
 \end{document}
