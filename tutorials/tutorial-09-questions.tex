@@ -13,26 +13,46 @@
 
 
 \begin{enumerate}
-	\item Consider two differentiable, non-constant functions $y_1(t)$ and $y_2(t)$ such that:
-    \begin{enumerate}[label=(\roman*)]
-        \item $y_1(t) \rightarrow +\infty$ as $t \rightarrow +\infty$
-        \item $y_2(t)$ is periodic.
-        \item $y_2(0) = \pi$.
-    \end{enumerate}
+	% \item Consider two differentiable, non-constant functions $y_1(t)$ and $y_2(t)$ such that:
+    % \begin{enumerate}[label=(\roman*)]
+    %     \item $y_1(t) \rightarrow +\infty$ as $t \rightarrow +\infty$
+    %     \item $y_2(t)$ is periodic.
+    %     \item $y_2(0) = \pi$.
+    % \end{enumerate}
 
-    Is it possible that both $y_1(t)$ and $y_2(t)$ solve the \textit{same} constant-coefficient ODE $ay'' + by' + cy = 0$? Explain.
+    % Is it possible that both $y_1(t)$ and $y_2(t)$ solve the \textit{same} constant-coefficient ODE $ay'' + by' + cy = 0$? Explain.
 
     \item You're going to build a clock: an oscillator that approximately counts out short periods of time.
-    You're given a spring that has damping coefficient $b=2$ kg/s and spring constant $k=2$ kg/s$^2$, and a $4$ kg mass. The corresponding ODE for this problem is given by:
-    
+    You're given a spring that has damping coefficient $b=3$ kg/s and spring constant $k=2$ kg/s$^2$, and a $4$ kg mass. The corresponding ODE for this problem is given by
     \[
-        4y'' + 2y' + 2y = 0
+        4y'' + 3y' + 2y = 0
     \]
+    where $y(t)$ is the amount that the spring is stretched  at time $t$ relative to it's neutral position (i.e., it's stretch at rest).
+
+    \begin{enumerate}
+        \item By doing a unit-based analysis, explain whether or not 
+        \[
+            4y''+2y'+3y=0
+        \]
+        could also be a model for the dampened spring.
+
+        \item Find the characteristic equation for the ODE, but don't solve it.
+
+        \item Without solving the characteristic equation: do you expect it to have all real roots or a some complex roots? Explain.
+
+        Compute the roots. Did this match your expectation?
+
+        \item Write down the general, complex, solution to the ODE.
+
+        \item Write down the general, real, solution to the ODE.
+
+        \item This dampened spring model has a quasi-period of XXXXXX. Why
+        is XXXXXX called a quasi-period and not a period?
+    \end{enumerate}
     
-    What is the period of the trigonometric functions found in the resulting general solution? This number is the \textbf{quasi-period}, and for small values of $b$ it approximates well the actual time between peaks of the motion. Why is this just a quasi-period and not an actual period?
 
     \item 
-    Consider the temperature of two adjacent rooms in a house. Room $A$ has no windows, and room $B$ has windows. Denote by $A$ the temperature in room $A$ and by $B$ the temperature in room $B$. We measure temperature in degrees Celsius and time in hours.
+    Consider the temperature of two adjacent rooms in a house. Room $A$ has no windows, and room $B$ has windows. Denote by $A(t)$ the temperature in room $A$ at time $t$ and by $B(t)$ the temperature in room $B$ at time $t$. We measure temperature in degrees Celsius and time in hours.
     
     There are three effects affecting the temperature [units are given in brackets for reference]:
     \begin{itemize}[nosep,itemsep=2mm,topsep=2mm]
@@ -42,31 +62,38 @@
     \end{itemize}
 
 \begin{enumerate}
-	\item Set up an ODE describing the change in temperature in room $A$. Explain.
-    \item Set up an ODE describing the change in temperature in room $B$. Explain.
+	\item Set up an ODE describing the change in temperature in room $A$.
+     Label each term in your ODE that corresponds to an effect.
+    \item Set up an ODE describing the change in temperature in room $B$.
+     Label each term in your ODE that corresponds to an effect.
     \item Manipulate the two ODEs and combine them to get an ODE that does NOT include $B$ or its derivatives. In other words, eliminate $B$ completely from the equation.
-    \item Looking at the ODE you found in part (c), relate features of the ODE to the applied context. Here are some questions to consider:
-	\begin{itemize}[nosep]
-		\item Is this oscillator undamped, overdamped, underdamped, or criticially damped?
-		\item Is this oscillator free or forced?
-		\item Looking \textit{at the applied context}, why do these properties make sense?
-	\end{itemize}
+
+    \item There are various models of a spring:
+    \begin{itemize}
+        \item undamped
+        \item dampened
+        \item underdamped
+        \item overdamped
+    \end{itemize}
+    
+    What type of spring model most closely resembles your model for the temperature of room $A$? Does this make physical sense? Explain.
+    
 \end{enumerate}
 
-\begin{minipage}{12cm}
-\item The problem on the right is called a Boundary Value Problem (BVP) -- instead of an Initial Value Problem -- since there is a value given at the starting time $t=0$ and at an end time $t=t_1$.\medskip
+% \begin{minipage}{12cm}
+% \item The problem on the right is called a Boundary Value Problem (BVP) -- instead of an Initial Value Problem -- since there is a value given at the starting time $t=0$ and at an end time $t=t_1$.\medskip
 
-Find a value for $t_1$ such that this BVP has a solution (there are many correct choices for $t_1$!)
-\end{minipage}
-\hfill
-\begin{minipage}{5cm}
-\[
-\begin{cases}
-y'' + 4y' + 5y = 0\\
-y(0) = 1\\
-y(t_1) = 0
-\end{cases}
-\]
-\end{minipage}
+% Find a value for $t_1$ such that this BVP has a solution (there are many correct choices for $t_1$!)
+% \end{minipage}
+% \hfill
+% \begin{minipage}{5cm}
+% \[
+% \begin{cases}
+% y'' + 4y' + 5y = 0\\
+% y(0) = 1\\
+% y(t_1) = 0
+% \end{cases}
+% \]
+% \end{minipage}
 
 \end{enumerate}
