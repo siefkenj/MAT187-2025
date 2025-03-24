@@ -2082,4 +2082,204 @@ r(\theta)=\cos\theta\quad\text{ with }\quad\theta\in[0,\pi/2]
 	\end{parts}
 \end{slide}
 
+\begin{slide}
+	\question
+	Which of the following ODEs are separable? For each separable ODE,
+	rewrite it in a form that can be ``integrated'' to find a solution.
+
+	\begin{parts}  
+		\item $e^{t+y^2}\cdot y'-1=0$
+		\item $y'(t)+\tan(t)\cdot y(t)=\tan(t)$
+		\item $y'(t)=y(t)\cdot t +1$
+		\item $y'(t)-(t-1)(y(t))^2=t-1$
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	\begin{definition}[General Solution]
+		The general solution to an ODE is the set of \emph{all} solutions to 
+		that ODE.
+	\end{definition}
+
+	Consider the ODE $y'=2y$.
+
+	\begin{parts}  
+		\item Is $y(t)=e^Ce^{2t}$ a solution to the ODE for all $C\in \R$?
+		\item Is $y(t)=\pm e^Ce^{2t}$ a solution to the ODE for all $C\in \R$?
+		\item Are there any solutions missing from the two forms above?
+		\item Write the general solution to the ODE.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the IVP $y'=ty^2$ with $y(0)=0$.
+
+
+	\begin{minipage}{0.45\textwidth}
+
+	A student notices it is separable and does the following work:
+
+	\[
+	y'=ty^2 \qquad\implies \qquad \frac{y'}{y^2}=t
+	\]
+	\[
+	\implies \quad \int \frac{y'}{y^2}\,\mathrm d t = \int t\,\mathrm d t 
+	\quad
+	\implies
+	\quad \int \frac{1}{y^2}\,\mathrm d y = \int t\,\mathrm d t 
+	\]
+	\[
+	\implies\quad  \frac{-1}{y}=\frac{t^2}{2} + C \quad \implies \quad 
+	y=\frac{-2}{t^2+C}
+	\]
+
+	Plugging in $y(0)=0$ we get $0=\frac{-2}{0^2+C}$, which cannot be solved.
+	\end{minipage}
+
+	\begin{parts}  
+		\item Was there a mistake made?
+		\item Find the solution to the IVP.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE $y'=ty^2$.
+
+	Graph the solutions to the following IVPs. Pay attention to
+	the domain of each solution.
+
+	\begin{parts}  
+		\item $y(0)=1$
+		\item $y(0)=0$
+		\item $y(0)=-1$
+		\item The ODE models bacteria on a far-off planet. We
+		measure that $y(0)=1$.
+
+		Define $y(t)=\begin{cases}
+			\frac{-2}{t^2-2}&\text{ if } t\in (-\sqrt{2},\sqrt{2})\\
+			0&\text{ if }t\in (-\infty,-\sqrt{2})\cup (\sqrt{2},\infty)
+		\end{cases}$
+		\begin{enumerate}
+			\item Is $y$ a solution to the ODE?
+			\item Does $y$ satisfy $y(0)=1$?
+			\item The scientists want to predict the number of bacteria at time $2$. They compute $y(2)=0$. Is their prediction valid?
+		\end{enumerate}
+		
+		
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the differential equation 
+	\[
+	\left[e^{-t^2}y(t)\right]^{\,\prime} = te^{-t^2}
+	\]
+
+	\begin{parts}  
+		\item Solve the differential equation for $y$.
+		\item Expand the differential equation and rewrite 
+		it as $y'(t)=\cdots$. Simplify your solution.
+		\item In finding $y'(t)$, did you divide by any quantities that could possibly be $0$? Do you need to correct for this? Explain.
+		\item Find the general solution to $y'=t+2t\cdot y$.	
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Let $h$ and $f$ be functions and consider the differential equation
+	\[
+	\left[e^{h(t)}y(t)\right]^{\,\prime} = f(t)e^{h(t)}
+	\]
+
+	\begin{parts}
+		\item Write down the general solution to this differential equation. (Your answer may involve integrals/$f$/$h$.)
+
+		\item Rewrite the differential equation in the form $y'(t)=\cdots$.
+		\item In finding $y'(t)$, did you divide by any quantities that could possibly be $0$? Do you need to correct for this? Explain.
+		\item Let $a(t)$ be a function. Write down a general solution to
+		\[
+			y'(t)=a(t)\cdot y(t)+f(t).
+		\]
+		Congratulations! You just derived integrating factors.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		(t^2-1)y'+2ty=t.
+	\]
+
+	\begin{parts}
+		\item Rewrite the ODE so that you can apply the method of integrating factors to solve it.
+		\item Solve the ODE.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		(t^2-1)y'+2ty=t
+	\]
+	with several solutions graphed below.
+
+\begin{tikzpicture}[yscale=1,xscale=1.7]
+	\begin{scope}
+	\clip (-2,-2) rectangle (2,2);
+
+	
+	\foreach \c in {0,1,2,3,-1.5,-3} {
+	\draw[gray] plot [domain=1.05:2,samples=100] ({\x},{((\x)^2+\c)/(2*((\x)^2-1))});
+	\draw[gray] plot [domain=-0.9:0.9,samples=100] ({\x},{((\x)^2+\c)/(2*((\x)^2-1))});
+	\draw[gray] plot [domain=-1.05:-2,samples=100] ({\x},{((\x)^2+\c)/(2*((\x)^2-1))});
+	}
+
+
+	\draw[magenta, dashed] plot [domain=1.05:2,samples=100, dashed] ({\x},{((\x)^2-2)/(2*((\x)^2-1))});
+	\draw[teal, dashed] plot [domain=-0.9:0.9,samples=100, dashed] ({\x},{((\x)^2-2)/(2*((\x)^2-1))});
+	\draw[orange, dashed] plot [domain=-1.05:-2,samples=100, dashed] ({\x},{((\x)^2-2)/(2*((\x)^2-1))});
+	
+	\draw [blue, dashed] (-2,1/2) -- (2,1/2);
+
+	\end{scope}
+	\draw [->] (-2,0) -- (2,0) node [below] {$t$};
+	\draw [->] (0,-2) -- (0,2) node [left] {$y$};
+		\foreach \x in {-1,1} \draw (\x,-0.1) node [below] {$\x$} -- (\x,0.1);
+	\foreach \x in {-1,1} \draw (-0.05,\x) node [left] {$\x$} -- (0.05,\x);
+\end{tikzpicture}
+
+	\begin{parts}
+		\item For each dashed solution, find a pair $(a,b)$ so that
+		it is the solution to the IVP $y(a)=b$.
+		\item For each IVP you created, find the domain of the solution.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+Consider the line at the Myhal Second Cup. $P(t)$ describes the number of people in line at time $t$ (in minutes since 10:00 am).
+
+There are three effects:
+\begin{itemize}
+	\item[(E1)] Every minute, 3 students join the line
+	\item[(E2)] Every minute, 1 student leaves the line (as they are being served)
+	\item[(E3)] Every minute, 20\% of the students in line get impatient and leave the line
+\end{itemize}
+
+Initially, no one is in line.
+
+	\begin{parts}
+		\item Write down an ODE that models $P$.
+		\item Solve your ODE.
+		\item On what domain does your solution makes sense?
+	\end{parts}
+\end{slide}
+
+
 \end{document}

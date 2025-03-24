@@ -10,14 +10,14 @@
 \[
     \frac{\mathrm dy}{\mathrm d t} = f(y) = (y-1)^2 (y-2) (y-3)
 \]
-The phase plot of this ODE is given on the right.
+The graph of $f$ is given on the right.
 
-\textit{You can answer this question based on the equation, the phase plot, or both!}
+\textit{You can answer this question based on the equation, the graph, or both!}
 \begin{enumerate}
 \item Find and classify the equilibrium points of the differential equation. Make sure to justify.
     \vspace{3mm}
 
-\item If $y(t)$ is a solution and $y(0.5)=2.8$, what is $\displaystyle \lim_{t\to\infty} y(t)$? Justify your choice.
+\item If $y(t)$ is a solution and $y(0.5)=2.8$, what is $\displaystyle \lim_{t\to\infty} y(t)$? Justify your answer.
 
 \end{enumerate}
 \end{minipage}\hfill
@@ -39,7 +39,7 @@ The phase plot of this ODE is given on the right.
 \end{tikzpicture}
 
 \end{minipage}
-\item Solve the following first order ODEs using separation of variables, and determine over what interval the solution is defined.
+\item Solve the following initial value problems using separation of variables, and determine over what interval the solution is defined.
 
 \begin{enumerate}
     \item $\frac{\mathrm d y}{\mathrm d x} = 6y^2x$,\qquad $y(1) = \frac{1}{25}$
@@ -49,20 +49,20 @@ The phase plot of this ODE is given on the right.
     \item $\frac{\mathrm d y}{\mathrm d t} = e^{-y}(2x-4),\qquad y(5)=0$ 
 \end{enumerate}
 
-\item Consider a pendulum consisting of a massless rod of length $L$ that is connected to a hanging object with mass $m$. The acceleration due to gravity is $g$. We are interested in understanding the dynamics of the angle $\theta$ between the rod and the negative y-axis.
-\begin{enumerate}
-    \item Determine expressions for the position and velocity of the pendulum with respect to the hinge of the pendulum. Assume the positive x-axis faces rightward, and the positive y-axis faces upward.
+% \item Consider a pendulum consisting of a massless rod of length $L$ that is connected on one end to an object with mass $m$ and to the ceiling on the other end (via a frictionless hinge). The acceleration due to gravity is $g$. We are interested in understanding the dynamics of the angle $\theta$ between the rod and the negative y-axis.
+% \begin{enumerate}
+%     \item Determine expressions for the position and velocity of the pendulum with respect to the hinge of the pendulum. Assume the positive x-axis faces rightward, and the positive y-axis faces upward.
 
-    \item In addition to gravity, there is air resistance that imparts a force in the opposite direction of motion to the pendulum that is proportional to the speed of the mass. This proportionality constant is given by $b$. Write an expression for the air resistance force.
+%     \item In addition to gravity, there is air resistance that imparts a force in the opposite direction of motion to the pendulum that is proportional to the speed of the mass. This proportionality constant is given by $b$. Write an expression for the air resistance force.
 
-    \item Write an ODE that models the dynamics of the pendulum.
+%     \item Write an ODE that models the dynamics of the pendulum.
 
-    \item Assuming an initial angular position $\theta_0$ and angular velocity $\frac{\mathrm d\theta}{dt}$, write an initial value problem that describes the pendulum.
-\end{enumerate}
+%     \item Assuming an initial angular position $\theta_0$ and angular velocity $\frac{\mathrm d\theta}{dt}$, write an initial value problem that describes the pendulum.
+% \end{enumerate}
 
 \clearpage
 \centering 
-\includegraphics[scale=2]{fish.jpeg}
+\includegraphics[scale=1.8]{resources/fish.jpeg}
 
 \raggedright 
 
@@ -72,15 +72,30 @@ The phase plot of this ODE is given on the right.
 \item In a few words, why would the harvesting yields decline so rapidly after an increase in harvesting efficiency?
 
 
-\item Let $h(t)$ be the harvesting rate in the year $t$, and let $k$ be the natural growth rate of cod populations. Suppose additionally that the ocean has a maximum cod-carrying capacity of $M$.
+\item You are modelling cod in the ocean with the following setup.
+\begin{itemize}
+ 	\item Let $B(t)$ be the total biomass of cod in the ocean at year $t$ in units of tons.
+
+	\item 
+	Let $h(t)$ be the harvesting rate in the year $t$ in units of tons per year.
+	\item Let $k$ be the natural growth rate of cod populations. I.e., if there are no other factors, $B(t)=Ae^{kt}$ for some constant $A$. 
+	
+	\item Let $M$ tons be the maximum cod-carrying capacity of the ocean. That is if there are more than $M$ tons of cod in the ocean, competition for resources will result in unusually high cod death rates.
+\end{itemize}
+
 \begin{enumerate}
     \item Write down an ODE that models the cod biomass over time, without harvesting.
-    \item Modify the previous ODE to factor in the harvesting rate.
+    \item Modify the previous ODE so that it includes harvesting.
 \end{enumerate}
 
-\item  Find the equilibrium points of your ODE in terms of $h$, $k$, and $M$. Are they stable, semistable, or unstable equilibria?
-\item Graph your equilibria as a function of $h$. Is there a threshold for $h$ where the system changes drastically? What happens to the cod biomass then?
-\item What is a reasonable guess for the threshold, given the graph above?
+\item  Assume $h(t)=H$ is constant. Find the equilibrium points of your ODE in terms of $H$, $k$, and $M$. Are they stable or unstable equilibria?
+
+\item Let $k=1$ and $M=100$. How many equilibrium solutions are there if $H=50$? What about if $H=150$?
+
+\item 
+Let $k=1$ and $M=100$. For each equilibrium, graph that equilibrium as a function of $H$. Is there a threshold for $H$ where the system changes drastically? What happens to the cod biomass then?
+
+\item Explain in ``real life'' terms what you can learn about cod fishing from your graphs in the previous part.
 
 \end{enumerate}
 
