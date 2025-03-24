@@ -2281,5 +2281,128 @@ Initially, no one is in line.
 	\end{parts}
 \end{slide}
 
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		y''-y'-6y=0
+	\]
+	\begin{parts}
+		\item Which of the following functions are solutions to this ODE?
+		\begin{enumerate}
+			\item $f_1(t)=e^t$
+			\item $f_3(t)=e^{3t}$
+			\item $f_{-3}(t)=e^{-3t}$
+			\item $f_{-2}(t)=e^{2t}$
+		\end{enumerate}
+		\item Find all solutions to the ODE of the form $f(t)=e^{rt}$.
+		\item If $f$ is a solution to the ODE, is $f+1$ also a solution? Justify your answer.
+		\item If $f$ is a solution to the ODE, is $2f$ also a solution? Justify your answer.
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		y''-y'-6y=0
+	\]
+	Recall from MAT188 that $\Span\{a,b\}$ is the set of all linear combinations of $a$ and $b$. This is true even if $a$ and $b$ are both 
+	functions.
+
+	\begin{parts}
+		\item Suppose $f$ and $g$ are solutions to the ODE. 
+		Let $h\in\Span\{f,g\}$. Write $h$ in terms of $f$ and $g$.
+		\item Suppose $f$ and $g$ are solutions to the ODE. Show that
+		any function $h\in \Span\{f,g\}$ is also a solution.
+
+		\item Write down the general solution to the ODE. Justify your answer.
+
+		You may use the following facts:
+		\begin{itemize}
+			\item The solution space to the ODE is two dimensional.
+			\item The functions $a(t)=e^{k_1t}$ and $b(t)=e^{k_2t}$
+			are linearly independent if and only if $k_1\neq k_2$.
+		\end{itemize}
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		y''-y'-6y=0
+	\]
+
+	\begin{parts}
+		\item Write down the general solution to this ODE. (Hint: you'v already done this.)
+
+		\item Find a solution to the IVP 
+		\[
+		\begin{cases}
+			y''-y'-6y=0\\
+			y(0)=7\\
+			y'(0)=1
+		\end{cases}
+		\]
+
+		\item Does $y'(0)$ need to be specified to find a unique solution to the IVP? Explain.
+
+		\item If you changed the initial condition to $y(0)=7$ and $y'(0)=a$ for $a\in \R$, will there always be a unique solution (regardless of $a$)?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Hooke's Law states that the force a spring exerts is proportional
+	to its displacement. When combined with Newton's Laws, we arrive at
+	a differential equation for a particular spring of
+	\[
+		p''+4p=0
+	\]
+	where $p(t)$ is the spring's displacement from equilibrium in metres at time $t$.
+
+	\begin{parts}
+		\item Based on your knowledge of how springs work, sketch a guess of what solutions to this ODE will look like.
+		\item Based on your physical intuition, could an exponential curve be a potential solution to this ODE?
+		\item Find the characteristic equation for this ODE.
+		\item Write down the general (complex) solution to the ODE.
+		\item Should solutions to the spring equation be real or complex? Explain.
+		\item Find the general real solution to the ODE. Do your solutions make sense?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the differential equation
+	\[
+		y''+4y'+5y=0.
+	\]
+	This equation has complex solutions $f_1(t)=e^{(-2+i)t}$
+	and $f_2(t)=e^{(-2-i)t}$.
+
+	\begin{parts}
+		\item Apply Euler's Formula to $f_1$ and $f_2$ to get complex solutions in terms of sines and cosines.
+		\item Find real solutions to the ODE.
+		\item Suppose $g$ is a solution to the ODE. What is $\displaystyle 
+		\lim_{t\to\infty} g(t)$?
+		\item This ODE is a model for a ``dampened spring''. Do your
+		real solutions make sense in this context? Explain.
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+
+	\begin{parts}
+		\item Come up with a second order homogeneous ODE where all non-zero solutions 	grow exponentially.
+		\item Come up with a second order homogeneous ODE where all non-zero solutions are periodic.
+		\item Come up with a second order homogeneous ODE where all non-zero solutions oscillate and decay.
+		\item Come up with a \textbf{third} order homogeneous ODE where some solutions are periodic and others grow exponentially.
+		
+	\end{parts}
+\end{slide}
 
 \end{document}
