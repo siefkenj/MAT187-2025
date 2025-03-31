@@ -23,22 +23,22 @@
     % Is it possible that both $y_1(t)$ and $y_2(t)$ solve the \textit{same} constant-coefficient ODE $ay'' + by' + cy = 0$? Explain.
 
     \item You're going to build a clock: an oscillator that approximately counts out short periods of time.
-    You're given a spring that has damping coefficient $b=3$ kg/s and spring constant $k=2$ kg/s$^2$, and a $4$ kg mass. The corresponding ODE for this problem is given by
+    You're given a spring that has damping coefficient $b=2$ kg/s and spring constant $k=4$ kg/s$^2$, and a $1$ kg mass. The corresponding ODE for this problem is given by
     \[
-        4y'' + 3y' + 2y = 0
+        y'' + 2y' + 4y = 0
     \]
     where $y(t)$ is the amount that the spring is stretched  at time $t$ relative to it's neutral position (i.e., it's stretch at rest).
 
     \begin{enumerate}
         \item By doing a unit-based analysis, explain whether or not 
         \[
-            4y''+2y'+3y=0
+            y'' + 4y' + 2y = 0
         \]
-        could also be a model for the dampened spring.
+        could also be a model for the dampened spring. Note the only difference between this ODE and the previous is that we switched the coefficients 4 and 2.
 
         \item Find the characteristic equation for the ODE, but don't solve it.
 
-        \item Without solving the characteristic equation: do you expect it to have all real roots or a some complex roots? Explain.
+        \item Without solving the characteristic equation: do you expect it to have all real roots or some complex roots? Explain.
 
         Compute the roots. Did this match your expectation?
 
@@ -46,8 +46,7 @@
 
         \item Write down the general, real, solution to the ODE.
 
-        \item This dampened spring model has a quasi-period of XXXXXX. Why
-        is XXXXXX called a quasi-period and not a period?
+        \item Graph the solution by setting the coefficients to 1. A quasi-periodic function is a function that is ``almost periodic" in the sense that it appears to repeat itself at regular intervals, but its values at these intervals are off from each other by some factor. An example is the solution to the damped spring model ODE. Show that it has a quasi-period of $\frac{2\pi}{\sqrt{3}}$ rad/s. Why do we use the term ``quasi-period" and not ``period"?
     \end{enumerate}
     
 
@@ -70,10 +69,10 @@
 
     \item There are various models of a spring:
     \begin{itemize}
-        \item undamped
-        \item dampened
-        \item underdamped
-        \item overdamped
+        \item undamped: the system oscillates around its equilibrium point at some natural frequency, indefinitely
+        \item underdamped: the system oscillates around its equilibrium point at some quasi-period with decreasing amplitude
+        \item overdamped: the system exponentially decays to its equilibrium point with no oscillations
+        \item dampened: the system has some degree of damping: either underdamped or overdamped
     \end{itemize}
     
     What type of spring model most closely resembles your model for the temperature of room $A$? Does this make physical sense? Explain.
