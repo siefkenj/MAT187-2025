@@ -2,6 +2,8 @@
 
 \newcommand{\copyrightdate}{2025}
 
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{ifxetex}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
@@ -2448,6 +2450,84 @@ Initially, no one is in line.
 	\begin{parts}
 		\item Which one is right? Are they both right? Explain.
 		\item For the equation $y''-y'=t+4$ what linear transformation could Camelia be talking about?
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	\question
+	Let $y(t)$ represent the displacement of an object at time $t$.
+	A general model comes from Newton's laws:
+	\[
+		y''(t)= V(y'(t)) + P(y(t)) + F_{\text{external}}(t)
+	\]
+	where $V$ and $P$ are forces that depend on the velocity and the position of the object.
+
+	\begin{parts}
+		\item For a frictionless spring there are no external forces and
+		no forces proportional to velocity. The only force is in the opposite direction of displacement. Write down a general equation for a frictionless spring.
+		\item In a dampened spring there is friction that depends on velocity. Write down an equation for a dampened spring.
+		\item A \emph{forced} spring is one where there an external force applied.  Write a differential equation for a spring that is forced with an exponentially decaying force.
+		\item Come up with strategies to solve each differential equation you wrote down.
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the equation for a dampened spring
+	\[
+		y'' + 4y' + 5y=0
+	\]
+	\begin{parts}
+		\item Find a general solution to the ODE.
+		\item If the spring \emph{weren't} dampened, what would you expect its period to be.
+		\item Rewrite the differential equation as if there were an external force applied proportional to a function $F(t)$.
+		\item Can you find an external force so that the spring's motion would be periodic (i.e., the dampened spring would act like an undampened spring)? If so, add such a force to your equation and solve it. Otherwise explain why no such force exists.
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	\question
+    Each of the following ODEs has an IVP solution  which corresponds to one of the graphs below. Match the ODEs with their graphs.
+    \vspace{.5cm}
+
+    \begin{enumerate}
+        \item[(1)] $\displaystyle y''+4y=10e^{-\frac{t}{10}}$
+        \vspace{.5cm}
+        \item[(2)] $\displaystyle y''+4y=\sin(2t)$
+        \vspace{.5cm}
+        \item[(3)] $\displaystyle y''+2y'+4y=0$
+        \vspace{.5cm}
+        \item[(4)] $\displaystyle y''+4y=-1.2\sin(2.2t)$
+    \end{enumerate}
+
+         (1) \includegraphics[width=1in]{images/E7-Close.png}
+         \qquad(2) \includegraphics[width=1in]{images/E7-Damped.png}
+
+         (3) \includegraphics[width=1in]{images/E7-Exp.png}
+         \qquad (4) \includegraphics[width=1in]{images/E7-Res.png}
+
+\end{slide}
+
+\begin{slide}
+	\question
+
+	Consider the ODE
+	\[
+	y''+4y=\sin(2t)
+	\]
+
+	\begin{parts}
+		\item Find the general solution to the corresponding homogeneous ODE.
+		\item What happens if you ``guess'' $A\sin 2t + B\cos 2t$ as a particular solution to the ODE? Can you determine $A$ and $B$?
+		\item Guess $At \sin 2t + Bt\cos 2t$ as a particular solution
+		to the ODE. Can you determine $A$ and $B$?
+		\item Write down the general solution to the ODE.
+		\item When there is an external force matching an object's natural frequency, a phenomenon called \emph{resonance} occurs.
+
+		When resonance occurs, what happens to solutions? How might this manifest in the real world?
 	\end{parts}
 
 \end{slide}
