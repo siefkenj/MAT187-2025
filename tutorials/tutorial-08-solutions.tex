@@ -11,7 +11,63 @@
     \item 
     At $y=2.8$, the derivative is negative. The function will decrease. It will continue to do so until $y$ is getting close to 2. The limit will be 2.
 \end{enumerate}
+
+\item 
+\begin{enumerate}
+    \item We separate the equation as follows:
+    \[
+    \frac{\mathrm{d}y}{y^2} = 6x\mathrm{d}x \implies -\frac{1}{y} = 3x^2+C \implies y=-\frac{1}{3x^2+C}
+    \]
+    Using the initial condition, we solve for C:
+    \[
+    \frac{1}{25} = -\frac{1}{3+C} \implies C = -28
+    \]
+
+    The solution is $y = \frac{1}{28-3x^2}$.
+
+    \item By the method of separation of variables, we get:
+
+    \[\mathrm d r \frac{1}{r^2} = \frac{1}{\theta}\mathrm d \theta \]
+
+    Integrating both sides gives:
+
+    \[-r^{-1} = \ln(\theta) +c \implies r = \frac{1}{\ln(\theta)+c}\]
+
+    The intial condition gives $r(1) = 2$, so $1/2 = c$. The solution is $r = \frac{1}{\ln \theta + 1/2}$.
+
+    \item Separating variables: 
+
+    \[e^y \mathrm d y = (2t-4)\mathrm d t \implies e^y = t^2 -4t+c \implies y = \ln(t^2-4t+c)\]
+    Since $y(5) = 0$, we can see that $0 = \ln(5^2-4\cdot 5+c) \implies 5+c=1$. So $c=-4$. 
+
+    
+    
+
+\end{enumerate}
+
 \item 
 
-\item  
+\begin{enumerate}
+    \item We don't have data on the total cod population; if the harvesting rate is greater than the replacement rate for the cod, then the population could collapse, and the harvesting will collapse.
+
+    \item \begin{enumerate}
+        \item The ODE can be modeled as: $y' = ky(M-y)$
+        \item The ODE with harvesting is $y' = ky(M-y)- H$ 
+    \end{enumerate}
+    \item The equilibria solutions are the constant solutions $y_0$ to the equation:
+
+    \[0=ky(y-M)-H \implies -ky^2+kMy -H = 0\]
+
+    The solutions are:
+
+    \[y = \frac{-kM \pm \sqrt{k^2M^2 -4kH}}{-2k} =\frac{M \mp \sqrt{M^2 - \dfrac{H}{k}}}{2}\]
+
+    Provided the root is real, the negative root will be unstable and the positive root is a stable equilibrium point.
+
+    \item When $k=1$, $M=10$, and $H=20$, there are two equilibria: one is around 7.23 and the other is very close to 2.73. When $H=26$, there are no real equilibria.
+
+    \item Graph the function $H= -ky^2 +kMy$ on desmos, with $H=x$ and $M=20$. There is a significant change in behaviour when $H=100$, since the system transitions from two equilibria to none, and the cod stock collapses.
+
+    \item We have to be careful not to overharvest when harvesting a self-replenishing resource.
+\end{enumerate}
 \end{enumerate}
