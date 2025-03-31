@@ -1,6 +1,5 @@
 \begin{objectives}
-	In this tutorial you will MAT 244's expectations around mathematical communication as well
-	as what makes a good executive summary.
+	In this tutorial you will practice evaluating improper integrals.
 \end{objectives}
 
 \vspace{-.5em}
@@ -10,207 +9,101 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{enumerate}
-	\item The first step in solving a mathematics question is applying and understanding logic until \emph{you}
-	understand the question and its answer. The second step is documenting and communicating your steps/argument. 
+	\item 
 	
+\begin{enumerate}
+    \item Find an anti-derivative of  $\frac{1}{x^2 - 9}$ using partial fraction decomposition.
+    \item Find an anti-derivative of  $\frac{1}{9 + x^2}$ using trigonometric substitution.
+    \item (\textbf{Challenge}) Find an anti-derivative of  $\frac{1}{9 + x^2}$ using partial fraction decomposition. Does your answer match the answer you got using trig substitution?
 
-	Below are questions that might appear on a MAT244 exam paired with possible answers.
+    \emph{Hint:} You may need to use complex numbers during your partial fraction decomposition step, but after simplifying, you should be left with a real answer.
 
-	\begin{enumerate}
-		\item[(A1)] \emph{Write the complete solution to $y'=2y$. No work necessary.}
+    If a complex number $z=re^{i\theta}$, then $\ln z = \ln r + i\theta$.
+\end{enumerate}
 
-		\fbox{
-		\begin{minipage}{0.4\textwidth}
-			\begin{itemize}
-				\item[] $y=Ae^{2t}$
-			\end{itemize}
-		\end{minipage}
-		}
+\item The magnitude of the force acting on a particle of charge $q_1$ that is $r$ meters away from another particle of charge $q_2$ is
+   	\[
+	  	F =k\frac{q_1 q_2}{r^2}
+   	\]
+    where $k = 8.99 \times 10^9$ Nm$^2$/C$^2$. Suppose both $q_1$ and $q_2$ are positive, which means the two particles are being pushed away from each other (``opposites attract, likes repel''). Use integrals to answer the following.
+    \begin{enumerate}
+        \item The electrons start out at a distance of $10$m.
+        The charge of the electrons is $q_1=q_2=1.6\times 10^{-19}$.
 
-		\item[(A2)] \emph{Let $f$ be a solution to $y'=2y$ satisfying $f(0)=1$. Use Euler's method to approximate $f(2)$. Explain how you arrived at your answer.}
-		
-		\fbox{
-		\begin{minipage}{0.4\textwidth}
-			\begin{itemize}
-				\item[] $\Delta=0.5$
-				\item[] $f_{n+1}=f_{n}+2f_{n}\Delta$
-				\item[] $f_0=1$
-				\item[] $f(2)\approx 16$
-			\end{itemize}
-		\end{minipage}
-		}
-
-		\item[(A3)] \emph{Let $\vec r\,'(t)=A\vec r(t)$ be a differential equation and let $\vec p(t)$ and $\vec q(t)$
-		be solutions. Show that $\vec s = \vec p+\vec q$ is also a solution.}
-
-		
-		\fbox{
-		\begin{minipage}{0.4\textwidth}
-		\begin{itemize}
-			\item[] $\vec s\,'=\vec p\,'+\vec q\,'$
-			\item[] $\vec p\,'=A\vec p$
-			\item[] $\vec q\,'=A\vec q$
-			\item[] $\vec p\,'+\vec q\,' = A\vec p+A\vec q$
-			\item[] $A(\vec p+\vec q) = A\vec p+A\vec q$
-			\item[] $A\vec s=A(\vec p+\vec q)$
-			\item[] $\vec s\,'=A\vec s$
-		\end{itemize}
-		\end{minipage}
-		}
-		
-
-	\end{enumerate}
-
-	\bigskip
-	\begin{enumerate}
-		\item Read through each question/answer pair. Are there \emph{logical} errors in the answers? If so, what are they?
-		\item On a test, (A1) would be worth 2 points, and (A2) and (A3) would be worth 4 points. How many points do you think
-			each answer would be awarded? Why?
-		\item The actual scoring for each question was as follows: (A1) 1/2 points, (A2) 0/4 points, and (A3) 1/4 points. What is missing from each
-		answer that is prevent it from getting full marks?
-		\item Fix each argument so that it would receive full marks.
-	\end{enumerate}
-
-	\item As part of your final report and your Homework 3, you will be writing an executive summary. The University of Southern California (USC)
-	provides guidelines for what makes a good executive summary at \url{https://libguides.usc.edu/writingguide/executivesummary}
-	
-	Recall the \emph{bee} question from Homework 2. Imagine that you were commissioned by a farmer to study bees in his field and
-	to give him guidance on where to plant his flowers so that they will be pollinated.
-
-			\vspace{-.3cm}
-	\begin{enumerate}
-		\item Read through the USC guidelines. What are three things you would expect to appear in an executive summary for the bee question?
-		\item The following is an executive summary for the bee question created by an AI. 
-
-		\framebox{
-		\begin{minipage}{0.8\textwidth}
-			\small The summary of the bee's behavior can be described as
-			follows:
-
-			\vspace{-.3cm}
-			\paragraph{In English:}
-
-			The bee's movement is modeled based on the intensity of flower smell and its
-			distance from the hive. The bee travels in a field of flowers, where the smell
-			intensity varies on a logarithmic scale. The bee's movement is influenced
-			by both the current smell intensity and its distance from the hive. The model
-			suggests that bees will only stay still in the hive or on a flower, and
-			flowers are located at specific distances from the hive. The bee's behavior
-			includes moving towards or away from the hive based on smell intensity,
-			potentially overshooting its target before settling on a flower. Odd-numbered
-			flowers tend to attract bees, while even-numbered flowers are unstable
-			points.
-
-			\vspace{-.3cm}
-			\paragraph{In mathematical terms:}
-			\[
-				\begin{cases}
-					S'(t) & = \sin(D(t))   \\
-					D'(t) & = S(t) - D(t)
-				\end{cases}
-			\]
-			Where:
-			\begin{itemize}
-				\item $S(t) =$ intensity of flower smell at time $t$ (logarithmic scale
-					from $-\infty$ to $+\infty$)
-
-				\item $D(t) =$ (positive) distance between the bee and its hive at time $t$
-			\end{itemize}
-
-			\vspace{-.3cm}
-			\paragraph{Key points:}
-
-			Smell intensity is constant when $S' = 0$, which occurs when $\sin(D) = 0$
-			or $D = n\pi$, where $n$ is a non-negative integer.
-
-			Flowers are located at distances $k\pi$ from the hive, where $k > 0$ is a
-			whole number.
-
-			The system can be simulated using Euler's method for the differential
-			equations.
-
-			Phase portraits show that odd-numbered flowers are attracting points, while
-			even-numbered ones are unstable.
-
-			There's a critical smell intensity (around 7.1 $\pm$ 0.01) that determines
-			whether a bee will fly to the 1st or 3rd flower when starting from the hive.
-
-			\medskip
-			This model captures the essence of how bees navigate using smell intensity
-			and distance from their hive to locate flowers in a field.
-		\end{minipage}
-		}
-
-		\begin{enumerate}
-			\item What did the AI do well in the executive summary?
-			\item What did the AI do poorly?
-			\item Executive summaries rarely include mathematical formulas. Do you agree with its choice to include one? What is the alternative?
-			\item The AI's executive summary does not directly address the farmer's question about where to plant flowers.
-
-			Write an introductory paragraph to a new executive summary that addresses the farmer's question.
-		\end{enumerate}
-
-		\item For Homework 3, you are asked to write an executive summary. What key items should your executive summary for Homework 3 include?
-		What would be a good introductory paragraph?
-
-	\end{enumerate}
+        How much work is required to move the electrons so that they
+        are only $1$m apart?
+        
+        \emph{Hint:} The work is done \textit{against} the force field and therefore is given by the integral of $-F(r)$ over distance from $r=a$ to $r=b$.%(work done against a force over a distance is $\int_a^b F(r) \,  dr$)
+        \item Is it possible to move the electrons so that they are $0$ meters apart?
+        \item If the electrons started very, very far away, would it be possible to bring them into a distance of $1$m from each other with a 
+        finite amount of work?
+    \end{enumerate}
 
 
-	%\item We gave the AI$^{0}$ the Executive Summary guidelines from the
-	%	University of Southern California. Below is the revised Executive Summary.
 
-	%	\hspace{-1cm}
-	%	\framebox{
-	%	\begin{minipage}{\textwidth}
-	%		\small
-	%		\paragraph{Executive Summary:}
-	%		Bee Behavior Model Analysis\\
+\item The Gamma function is defined by the formula 
 
-	%		This study examines a mathematical model of bee behavior in a field of
-	%		flowers, focusing on the relationship between smell intensity and the bee's
-	%		distance from its hive. The model uses differential equations to describe
-	%		the bee's movement and decision-making process. \\
+    \[
+        \Gamma(x) = \int_0^\infty e^{-t}t^{x-1}\,\mathrm dt
+    \]
+    It's an extension of the factorial function that works for non-integer values. If you ever graph $x!$ in desmos, this is what's being graphed! In this question we'll show that the Gamma function extends the factorial function.
+   \begin{enumerate}
+        \item Graph $x!$ in Desmos.
+    
+        \item Let $n$ be an integer with $n\geq 2$. Use integration by parts to show that:
 
-	%		\paragraph{Key Findings:}
-	%		Smell intensity is constant at specific distances from the hive,
-	%		particularly when the distance is a non-negative multiple of $\pi$.
+        \[
+            \Gamma(n) = (n-1)\Gamma(n-1)
+        \]
 
-	%		Flowers are located at distances that are multiples of $\pi$ from the hive.
+        \item Show that $\Gamma(1) = 1$
 
-	%		When a bee starts at a distance of 5 units from its hive with neutral
-	%		smell intensity, it initially moves towards the hive, then towards the
-	%		first flower, eventually settling on the flower at a distance of $\pi$ from
-	%		the hive.
+        \item Using the formula above, find a value for $\Gamma(4)$.
+        
 
-	%		Odd-numbered flowers (at distances $\pi, 3\pi, 5\pi$, etc.) attract bees,
-	%		while even-numbered flowers are unstable attractors.
+        
+        \item With the same assumptions, can you find a formula for $\Gamma(n)$?
+        \item Does your recursive formula for $\Gamma$ still hold
+        when computing $\Gamma(x)$ when $x\in \R$ and $x>1$? Explain.
+    \end{enumerate}    
 
-	%		The minimum smell intensity required for a bee to venture to the third
-	%		flower ($3\pi$ distance) from its hive is approximately $7.1 \pm 0.01$ on
-	%		the logarithmic scale used in the model. \\
+\item (\textbf{Challenge}) In the last question, you showed that $\Gamma(n)=(n-1)\Gamma(n-1)$, which means if $\Gamma(1)=1$, the function $\Gamma(x)$ will have a finite value for integers $x\geq 1$.
 
-	%		\paragraph{Methodology:}
-	%		The study employed a mix of analytic arguments, computer-based simulations
-	%		using Euler's method, and qualitative analysis techniques such as phase portraits.
 
-	%		\paragraph{Implications:}
-	%		This model provides insights into bee foraging behavior, suggesting that bees
-	%		are more likely to visit certain flowers based on their distance from the hive
-	%		and the intensity of their smell. This information could be valuable for
-	%		understanding pollination patterns and optimizing flower placement in
-	%		agricultural settings. \\
+The topic of this question is to prove that this integral converges for any $x>0$. To do this, we will break it into parts. 
 
-	%		\paragraph{Recommendations:}
-	%		Further research to validate the model's predictions in real-world scenarios.
-	%		Exploration of how environmental factors might influence the model's
-	%		parameters. Investigation of potential applications in agriculture and ecology.
-	%		\\
+\begin{enumerate}
+    \item Consider the integrand $g_x(t)=e^{-t}t^{x-1}$.
+    
+    \begin{enumerate}
+        \item For which values of $x$ does $g_x$ have a vertical asymptote? For which values of $x$ does $g_x$ have a horizontal asymptote?
+        For which values of $x$ is $g_x$ a non-negative function?
+        \item Show that if $t\geq 1$, then $g_{x_1}(t) \geq g_{x_2}(t)$ so
+        long as $x_1\geq x_2\geq 1$.
+    \end{enumerate}
 
-	%		This executive summary provides a concise overview of the bee behavior model,
-	%		its key findings, and potential implications, serving as a foundation for
-	%		further discussion and research in this area.
-	%	\end{minipage}
-	%	}
+    \item We know that $\Gamma(n)$ has a finite value, and so $\Gamma$ at any integer $n\geq 1$ is
+     \emph{finite}. Using this fact, apply a comparison test to show that
+      $\Gamma(x)<\infty$ when $x\geq1$.
+
+      \emph{Hint:} You may need to do separate comparisons for $t<1$ and $t\geq 1$.
+    
+    \item Let's show that $\Gamma(x)$ converges for $0<x<1$. Split up $\Gamma(x)$ into the following two integrals:
+
+    \[\Gamma(x) = \Gamma_1(x) + \Gamma_2(x) = \int_0^1 e^{-t}t^{x-1}\mathrm dt + \int_1^\infty e^{-t}t^{x-1}\mathrm dt\]
+
+    If both $\Gamma_1$ and $\Gamma_2$ converge, then we're good!
+
+    \begin{enumerate}
+        \item Show that $e^{-t}t^{x-1} \leq t^{x-1}$ and then 
+        use a comparison test to show that $\Gamma_1(x)$ converges. 
+        \item Show that $e^{-t}t^{x-1} \leq e^{-t}$ and then use a comparison test to show $\Gamma_2(x)$ converges.
+    \end{enumerate}
+
+    
+\end{enumerate}
+
+
 
 \end{enumerate}
 

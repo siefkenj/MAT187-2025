@@ -351,10 +351,10 @@
 	\begin{parts}
 		\item Sketch the complex number $2p$.
 		\item Sketch the complex number $p^2$.
-		\item Sketch the complex numbers $p^n$ for $n=3,4,\ldots$. Will your answer 
+		\item Sketch the complex numbers $p^n$ for $n=3,4,\ldots$. Will your answer
 		depend on $r$?
 
-		\bigskip 
+		\bigskip
 		\item Use the geometry of the complex plane to find $\sqrt{i}$. Express
 		your answer in both polar and rectangular form.
 	\end{parts}
@@ -362,7 +362,7 @@
 
 \begin{slide}
 	\question
-	Consider the equation 
+	Consider the equation
 	\begin{equation}
 		\label{eq:complex}
 		z^3=-1
@@ -370,7 +370,7 @@
 
 	\begin{parts}
 		\item Find a solution to Equation \eqref{eq:complex}.
-		\item If $z=re^{i\theta}$ is a solution to Equation \eqref{eq:complex}, 
+		\item If $z=re^{i\theta}$ is a solution to Equation \eqref{eq:complex},
 		what conditions must $r$ and $\theta$ satisfy? Justify your conclusions.
 		\item Find all solutions to Equation \eqref{eq:complex}.
 
@@ -404,7 +404,7 @@
 	or \emph{polynomial interpolation} would be more appropriate.
 
 	\begin{parts}
-		\item You are modelling the arch used in the construction of a 
+		\item You are modelling the arch used in the construction of a
 		particular Roman aqueduct. You have collected several hundred data points
 		of height of the arch vs. distance from the base of the aqueduct.
 
@@ -412,7 +412,7 @@
 		which will be used for signalling a computer. There are three different brightnesses
 		that must be achieved exactly and the transition between those brightnesses must be smooth.
 
-		\item You are given exact data points from a lab and told that the data was created with a 4th 
+		\item You are given exact data points from a lab and told that the data was created with a 4th
 		degree polynomial. You are asked to find the coefficients of the polynomial.
 	\end{parts}
 \end{slide}
@@ -427,15 +427,15 @@
 
 	% Comes from the equation -.8t^2+2.2t+2.6
 	\begin{center}
-	\begin{tabular}{|c|c|}
-		\hline
-		$t$ & $h(t)$\\
-		\hline
-		1 & 4\\
-		2 & 3.8\\
-		3 & 2\\
-		\hline
-	\end{tabular}
+		\begin{tabular}{|c|c|}
+			\hline
+			$t$ & $h(t)$ \\
+			\hline
+			1   & 4      \\
+			2   & 3.8    \\
+			3   & 2      \\
+			\hline
+		\end{tabular}
 	\end{center}
 
 	\begin{parts}
@@ -448,8 +448,8 @@
 
 \begin{slide}
 	\question
-		While developing a robotics control system, you find the need for
-		a function $f$ which satisfies the following properties:
+	While developing a robotics control system, you find the need for
+	a function $f$ which satisfies the following properties:
 	\begin{enumerate}
 		\item[(i)] $f(0)=-1$ and $f(1)=2$
 		\item[(ii)] $f'(0)=-1$ and $f'(1)=2$
@@ -466,19 +466,19 @@
 		\item Can Lagrange interpolation be used to directly find $f$? Explain.
 		\item Complete the following table
 		\begin{center}
-		\begin{tabular}{|c|c|c|c|c|}
-			\hline
-			$g$ & $g(0)$ & $g(1)$ & $g'(0)$ & $g'(1)$\\
-			\hline
-			$L_1$ & & & & \\
-			\hline
-			$L_2$ & & & & \\
-			\hline
-			$S_1$ & & & & \\
-			\hline
-			$S_2$ & & & & \\
-			\hline
-		\end{tabular}
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				$g$   & $g(0)$ & $g(1)$ & $g'(0)$ & $g'(1)$ \\
+				\hline
+				$L_1$ &        &        &         &         \\
+				\hline
+				$L_2$ &        &        &         &         \\
+				\hline
+				$S_1$ &        &        &         &         \\
+				\hline
+				$S_2$ &        &        &         &         \\
+				\hline
+			\end{tabular}
 		\end{center}
 		\item Use $L_1$, $L_2$, $S_1$, and $S_2$ to find a polynomial satisfying the properties of $f$.
 		\item Explain how Lagrange interpolation can be generalized to allow finding a polynomial
@@ -489,17 +489,17 @@
 \begin{slide}
 	\question
 	\begin{parts}
-	\item For each polynomial approximation of the bell curve, is the approximation best at
-	$0$, best on the interval $[-2,2]$, or best on the interval $[0,2]$.
+		\item For each polynomial approximation of the bell curve, is the approximation best at
+		$0$, best on the interval $[-2,2]$, or best on the interval $[0,2]$.
 
-	% https://www.desmos.com/calculator/qjruzy8gvw
-	(A)~\includegraphics[width=1.25in]{B2-Plot1.png}
-	(B)~\includegraphics[width=1.25in]{B2-Plot2.png}\\
-	(C)~\includegraphics[width=1.25in]{B2-Plot3.png}
-	(D)~\includegraphics[width=1.25in]{B2-Plot4.png}
-	% Show list of 4 pictures approximating (a bell curve?) with 
-	% different styles of approximation
-	\item Based on the pictures, which polynomial(s) do you think come from a Taylor approximation?
+		% https://www.desmos.com/calculator/qjruzy8gvw
+		(A)~\includegraphics[width=1.25in]{B2-Plot1.png}
+		(B)~\includegraphics[width=1.25in]{B2-Plot2.png}\\
+		(C)~\includegraphics[width=1.25in]{B2-Plot3.png}
+		(D)~\includegraphics[width=1.25in]{B2-Plot4.png}
+		% Show list of 4 pictures approximating (a bell curve?) with 
+		% different styles of approximation
+		\item Based on the pictures, which polynomial(s) do you think come from a Taylor approximation?
 	\end{parts}
 \end{slide}
 
@@ -527,7 +527,7 @@
 
 \begin{slide}
 	\question
-	A bee is flying back and forth along a window sill trying to escape from your living room. 
+	A bee is flying back and forth along a window sill trying to escape from your living room.
 
 	The bee's position at time $t$ along the window sill is given by $r(t)$.
 
@@ -538,22 +538,22 @@
 	\]
 
 	\begin{parts}
-		\item Estimate the position of the bee on the window sill at time 
+		\item Estimate the position of the bee on the window sill at time
 		$2.1$. Is your answer exact or approximate?
 		\item Estimate the velocity of the bee at time $2.1$. Is your answer exact or approximate?
 		\item Are there any times you can compute the \emph{exact} position of the bee?
 		\item Are there any times you can compute the \emph{exact} velocity?
-		\item What is your best estimate for the acceleration of the 
+		\item What is your best estimate for the acceleration of the
 		bee at time $2.1$?
 	\end{parts}
 \end{slide}
 
 \begin{slide}
 	\question
-	A bee is flying back and forth along a window sill trying to escape from your living room. 
+	A bee is flying back and forth along a window sill trying to escape from your living room.
 
 	The bee's position at time $t$ along the window sill is given by $r(t)$.
-	
+
 	You know that a second-order Taylor approximation to $r(t)$ at time $t=2$
 	is
 	\[
@@ -561,12 +561,12 @@
 	\]
 
 	\begin{parts}
-	\item Estimate the position of the bee on the window sill at time 
+		\item Estimate the position of the bee on the window sill at time
 		$2.1$. Is your answer exact or approximate?
 		\item Estimate the velocity of the bee at time $2.1$. Is your answer exact or approximate?
 		\item Are there any times you can compute the \emph{exact} position of the bee?
 		\item Are there any times you can compute the \emph{exact} velocity?
-		\item What is your best estimate for the acceleration of the 
+		\item What is your best estimate for the acceleration of the
 		bee at time $2.1$?
 	\end{parts}
 \end{slide}
@@ -596,11 +596,11 @@
 	\begin{parts}
 		\item Find $R_3(1.5)$ (you may use a calculator).
 		\item What is the largest value of $R_3(x)$ when $0\leq x\leq 2$?
-		\item Is there a value of $x$ for which $R_3(x)=0$? What does this 
+		\item Is there a value of $x$ for which $R_3(x)=0$? What does this
 		say about $P_3$?
 
-		\medskip 
-		\item Given that $|f^{(5)}(x)| \leq 8$ when $x\in [0,2]$, 
+		\medskip
+		\item Given that $|f^{(5)}(x)| \leq 8$ when $x\in [0,2]$,
 		find an upper bound for $R_4(x)$ that
 		\begin{enumerate}
 			\item works for a fixed $x\in[0,2]$
@@ -623,8 +623,8 @@
 		\item[(A)] The degree of $P_n$, i.e., $n$.
 		\item[(B)] The magnitude of $f(a)$, i.e., $|f(a)|$.
 		\item[(C)] The magnitudes of the derivatives of $f$ at $a$, i.e., the size of $|f'(a)|$, $|f''(a)|$, etc..
-		\item[(D)] The distance from $a$ that you are approximating at, i.e., 
-		the size of $|x-a|$.
+		\item[(D)] The distance from $a$ that you are approximating at, i.e.,
+		      the size of $|x-a|$.
 
 	\end{enumerate}
 \end{slide}
@@ -656,8 +656,8 @@
 	Consider the function $f(x)=\frac{1}{2}x^2+1$ and the value $\displaystyle I=\int_{0}^3f(x)\,\mathrm d x$.
 
 	\begin{parts}
-		\item Make three sketches: one where the left-endpoint rule is used to approximate $I$, 
-		one where the right-endpoint rule is used, 
+		\item Make three sketches: one where the left-endpoint rule is used to approximate $I$,
+		one where the right-endpoint rule is used,
 		and one where the trapezoid rule is used. (Use at least three intervals.)
 
 		\item For the left-endpoint, right-endpoint, and trapezoid rules, which will give over estimates of
@@ -672,7 +672,7 @@
 		\end{itemize}
 		Each estimate comes from using the same partition.
 
-		Which estimates come from a left-endpoint approximation, a right-endpoint approximation, 
+		Which estimates come from a left-endpoint approximation, a right-endpoint approximation,
 		and a trapezoid approximation?
 
 		\emph{Hint: you know calculus!}
@@ -685,7 +685,7 @@
 \begin{slide}
 	% https://www.desmos.com/calculator/5lszweq0bd
 	\question
-	In a classic problem, you are trying to find the volume of a wine barrel. 
+	In a classic problem, you are trying to find the volume of a wine barrel.
 	Let $r(\ell)$ represent the radius of the barrel $\ell$ cm from the base. The total
 	length of the barrel is 80cm.
 
@@ -697,29 +697,29 @@
 	You have measured the barrel in several places and gotten the following data
 	\begin{center}
 		\begin{tabular}{ccccc}
-			r(0)&r(20)&r(40)&r(60)&r(80)\\
-			12.8 & 21.2 & 22.7 & 21.4 & 13.4  \\
+			r(0) & r(20) & r(40) & r(60) & r(80) \\
+			12.8 & 21.2  & 22.7  & 21.4  & 13.4  \\
 		\end{tabular}
 	\end{center}
 
 	\begin{parts}
 		\item Make a sketch of the barrel's profile. Make a second sketch of $\pi [r(\ell)]^2$.
 
-		\item Based on your sketch, do you think using a trapezoid approximation will produce an over 
+		\item Based on your sketch, do you think using a trapezoid approximation will produce an over
 		or under estimate for the volume?
 
 		\item Use a trapezoid approximation to estimate the volume of the barrel.
 
-		\item Use a Simpson's approximation to estimate the volume of the barrel. 
-		
-		\emph{Reminder:}
-		if $p$ is a quadratic polynomial, 
-		\[
-		 \int_a^b p(x)\,\mathrm d x = \frac{b-a}{6}\left(p(a)+4p\Big(\frac{a+b}{2}\Big)+p(b)\right)
-		 \]
+		\item Use a Simpson's approximation to estimate the volume of the barrel.
 
-		 \item The exact (rounded) volume of the barrel is 104384cm$^3$. What approximation
-		 method was most accurate? Why?
+		\emph{Reminder:}
+		if $p$ is a quadratic polynomial,
+		\[
+			\int_a^b p(x)\,\mathrm d x = \frac{b-a}{6}\left(p(a)+4p\Big(\frac{a+b}{2}\Big)+p(b)\right)
+		\]
+
+		\item The exact (rounded) volume of the barrel is 104384cm$^3$. What approximation
+		method was most accurate? Why?
 
 
 	\end{parts}
@@ -732,11 +732,11 @@
 
 	\begin{parts}
 		\item Draw a function where the left endpoint approximation is an \emph{under estimate}.
-		
+
 		\item Draw a function where the right endpoint approximation is an \emph{under estimate}.
-		
+
 		\item Draw a function where the trapezoid approximation is an \emph{under estimate}.
-		
+
 		\item Draw a function where the midpoint approximation is an \emph{under estimate}.
 
 	\end{parts}
@@ -754,12 +754,12 @@
 	\begin{parts}
 		\item On each interval, identify whether left/right/midpoint/trapezoid approximations will produce an
 		\begin{enumerate}
-			\item Underestimate 
-			\item Overestimate 
+			\item Underestimate
+			\item Overestimate
 			\item Cannot be determined
 		\end{enumerate}
 
-		\item Is there any interval where you're confident that Simpson's rule would produce 
+		\item Is there any interval where you're confident that Simpson's rule would produce
 		an over/under estimate?
 
 		\item Come up with a strategy (i.e., a choice of integration method for each interval)
@@ -833,24 +833,24 @@
 
 \begin{slide}
 	\question
-	Let $a_n$ (for $n\geq 1$) be a sequence and define 
+	Let $a_n$ (for $n\geq 1$) be a sequence and define
 	\[
-	S_n = \sum_{i=1}^n a_n.
+		S_n = \sum_{i=1}^n a_n.
 	\]
 	Let $S_\infty = \lim_{n\to\infty } S_n$.
 
 	\begin{parts}
 		\parbox{\textwidth}{
-		\item Which of the following statements must be true?
+			\item Which of the following statements must be true?
 
-		\begin{enumerate}
-			\item If $|a_n| \geq 1$ for all $n$, then $S_n$ converges.
-			\item If $|a_n| \leq 1$ for all $n$, then $S_n$ converges.
-			\item If $|S_n| \geq 1$ for all $n$, then $a_n$ diverges.
-			\item If $|S_n| \leq 1$ for all $n$, then $a_n$ diverges.
-			\item If $a_n\to 0$ then $S_n$ converges.
+			\begin{enumerate}
+				\item If $|a_n| \geq 1$ for all $n$, then $S_n$ converges.
+				\item If $|a_n| \leq 1$ for all $n$, then $S_n$ converges.
+				\item If $|S_n| \geq 1$ for all $n$, then $a_n$ diverges.
+				\item If $|S_n| \leq 1$ for all $n$, then $a_n$ diverges.
+				\item If $a_n\to 0$ then $S_n$ converges.
 
-		\end{enumerate}
+			\end{enumerate}
 		}
 
 		\bigskip
@@ -863,7 +863,7 @@
 
 \begin{slide}
 	\question
-	Consider the function $f(x)=1/x$, the sequence $a_n=1/n$ and 
+	Consider the function $f(x)=1/x$, the sequence $a_n=1/n$ and
 	the sequence of partial sums $\displaystyle S_n = \sum_{i=1}^n a_i$.
 
 	In this question we want to get bounds on the \emph{series}
@@ -888,7 +888,7 @@
 
 \begin{slide}
 	\question
-	Consider the function $f(x)=1/x^2$, the sequence $a_n=1/n^2$ and 
+	Consider the function $f(x)=1/x^2$, the sequence $a_n=1/n^2$ and
 	the sequence of partial sums $\displaystyle S_n = \sum_{i=1}^n a_i$.
 
 	In this question we want to get bounds on the \emph{series}
@@ -899,7 +899,7 @@
 		\item Use $\Sigma$-notation to write down a formula for the left-endpoint approximation of
 		$\displaystyle \int_1^n \frac{1}{x^2}\,\mathrm d x$ using a partition
 		whose intervals are width $1$.
-		
+
 		\bigskip
 		\bigskip
 		\bigskip
@@ -923,7 +923,7 @@
 	$C_n$, and $D_n$. (I.e., $\displaystyle A_n=\sum_{i=1}^n a_n$, etc.)
 
 	\begin{parts}
-		\item Use a comparison with known integrals to decide 
+		\item Use a comparison with known integrals to decide
 		the convergence of $A_n$, $B_n$, $C_n$.
 		\item Can you decide the convergence of $D_n$ using a comparison to
 		a known integral? Explain.
@@ -935,21 +935,21 @@
 	Consider the function $f(x)=\sin(x)$.
 
 	\begin{parts}
-		\item Write down $T_k(x)$, the $k$th Taylor approximation to 
-		$f$ centered at $0$. You may use ``$\cdots$'' notation or $\Sigma$-notation. 
+		\item Write down $T_k(x)$, the $k$th Taylor approximation to
+		$f$ centered at $0$. You may use ``$\cdots$'' notation or $\Sigma$-notation.
 
 		\item Write down, using $\Sigma$-notation, $T(x)$, the Taylor series
 		for $f$ centered at $0$.
 
-		\item In general a Taylor series may be written as $\displaystyle 
-		\sum_{n=0}^\infty a_n \frac{x^{n}}{n!}$, where $a_n$ is a sequence.
+		\item In general a Taylor series may be written as $\displaystyle
+			\sum_{n=0}^\infty a_n \frac{x^{n}}{n!}$, where $a_n$ is a sequence.
 		Find $a_n$ in this case.
 
 		\item Let $R_k(x)=f(x)-T_k(x)$. Find an expression for $R_k(x)$
 		using Taylor's Remainder Theorem. Use your expression to find an upper bound for $|R_k(x)|$ (Hint: your bound may depend on $x$).
-	
-		\item Using the fact that for any $\alpha\in \R$, 
-		$\displaystyle \lim_{n\to\infty} \frac{\alpha^n}{n!}=0$, 
+
+		\item Using the fact that for any $\alpha\in \R$,
+		$\displaystyle \lim_{n\to\infty} \frac{\alpha^n}{n!}=0$,
 		find $\displaystyle \lim_{k\to\infty} R_k(x)$.
 
 		\item For which $x$ is $f(x)=T(x)$? Justify your answer.
@@ -959,11 +959,11 @@
 \begin{slide}
 	\question
 	Consider the function $g(x)=\frac{1}{1-x}$. The $k$th Taylor approximation
-	of $g$ centered at $0$ is 
+	of $g$ centered at $0$ is
 	\[
-	T_k(x)=\sum_{i=0}^k x^k
+		T_k(x)=\sum_{i=0}^k x^k
 	\]
-	and the remainder $R_k(x)=g(x)-T_k(x)$ satisfies 
+	and the remainder $R_k(x)=g(x)-T_k(x)$ satisfies
 	\[
 		|R_k(x)| \leq \frac{1}{1-x}\left(\frac{x}{1-x}\right)^{k+1}
 	\]
@@ -993,7 +993,7 @@
 
 \begin{slide}
 	\question
-	Let $f(x)=\sin(x)$ and let 
+	Let $f(x)=\sin(x)$ and let
 	\[
 		T(x)=\sum_{n=0}^\infty (-1)^{n}\frac{x^{2n+1}}{(2n+1)!}
 	\]
@@ -1001,7 +1001,7 @@
 	$f(x)=T(x)$ for all $x\in \R$.
 
 	\begin{parts}
-		\item Find a series representation for $g_1(x)=f(2x)$ (without 
+		\item Find a series representation for $g_1(x)=f(2x)$ (without
 		computing any derivatives).
 		\item Find a series representation for $g_2(x)=f(x^2)$.
 		\item Use WolframAlpha to integrate $g_2$. Does WolframAlpha's solution make sense?
@@ -1013,7 +1013,7 @@
 
 \begin{slide}
 	\question
-	Let $f(x)=\frac{1}{1-x}$ and let 
+	Let $f(x)=\frac{1}{1-x}$ and let
 	\[
 		T(x)=\sum_{n=0}^\infty x^n
 	\]
@@ -1021,12 +1021,12 @@
 	$f(x)=T(x)$ for all $x\in (-1,1)$.
 
 	\begin{parts}
-		\item Find a series representation for $g_1(x)=f(2x)$ (without 
+		\item Find a series representation for $g_1(x)=f(2x)$ (without
 		computing any derivatives).
 		\item For which $x$ do you expect your series for $g_1(x)$ to be valid (i.e. to equal
 		$f(2x)$? Explain.
 		\item Find a series representation for $g_2(x)=f(x^2)$.
-		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term. 
+		\item Compute $g_3(x)=\displaystyle \int g_2(x)\,\mathrm d x$ by integrating your series for $g_2(x)$ term by term.
 		\item For which $x$ do you expect $g_3(x)$ to be valid? Explain.
 	\end{parts}
 \end{slide}
@@ -1035,7 +1035,7 @@
 	\question
 	The function $f$ has a Taylor series centered at $0$ of the form
 	\[
-		T(x)=\frac{1}{2}+\frac{x}{3}-\frac{x^2}{4}+\frac{x^3}{5}-\frac{x^4}{6}+\cdots.
+		T(x)=-\frac{1}{2}+\frac{x}{3}-\frac{x^2}{4}+\frac{x^3}{5}-\frac{x^4}{6}+\cdots.
 	\]
 
 	\begin{parts}
@@ -1046,14 +1046,14 @@
 
 		\url{https://www.desmos.com/calculator/try63qzvo5}
 
-		\item For which values of $x$ is your series for $f'(x)$ and $\displaystyle \int f(x)\,\mathrm d x$
+		\item Based on your conjecture, for which values of $x$ should your series for $f'(x)$ and $\displaystyle \int f(x)\,\mathrm d x$ be
 		valid?
 	\end{parts}
 \end{slide}
 
 \begin{slide}
 	\question
-	Recall 
+	Recall
 	\[
 		\sin x = \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)!}
 		\qquad
@@ -1064,2095 +1064,1392 @@
 	Let $f(x)=\cos(\sqrt{x})$.
 
 	\begin{parts}
-		\item Write down a Taylor series for $f$.
+		\item Write down a Taylor series, $T$, for $f$.
 
 		\emph{Hint: you don't need to take any derivatives.}
 
-		\item Find $f^{(10)}(0)$.
-		
-		\item For what $x$ is your series valid? Explain.s
+		\item Find $f^{(6)}(0)$.
 
-		\item Using Desmos, make a conjecture: for which values of $x$ does your series converges?
+		\item For what $x$ is $T(x)=f(x)$? Explain.
+
+		\item Using Desmos, make a conjecture: for which values of $x$ does your series converge?
 
 		{\small\url{https://www.desmos.com/calculator/try63qzvo5}}
 
 		\item Let $T$ be a Taylor series for an unknown function $g$.
-		If a Taylor series $T$ converges at a value $x_0$, must it be true that $T(x_0)=g(x_0)$?
-		Explain. 
+		If $T$ converges at a value $x_0$, must it be true that $T(x_0)=g(x_0)$?
+		Explain.
 
 	\end{parts}
 \end{slide}
 
-%\begin{slide}
-%	\question
-%	In the model \textbf{M$_1$}, we assumed the starfish had $K$ children at one point during the year.
-%
-%	\begin{parts}
-%		\item Create a model \textbf{M$_n$} where the starfish are assumed to have $K/n$ children $n$ times per year (at regular intervals).
-%		\item Simulate the models \textbf{M$_1$}, \textbf{M$_2$}, \textbf{M$_3$} in Excel. Which grows fastest?
-%		\item What happens to \textbf{M$_n$} as $n\to\infty$?
-%	\end{parts}
-%
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Exploring \textbf{M$_n$}
-%
-%	We can rewrite the assumptions of \textbf{M$_n$} as follows:
-%	\begin{itemize}
-%		\item At time $t$ there are $P_n(t)$ starfish.
-%		\item $P_n(0)=10$
-%		\item During the time interval $(t, t+1/n)$ there will be (on average) $K/n$ new children per starfish.
-%	\end{itemize}
-%
-%	\begin{parts}
-%		\item Write an expression for $P_n(t+1/n)$ in terms of $P_n(t)$.
-%		\item Write an expression for $\Delta P_n$, the change in population from time $t$ to $t+\Delta t$.
-%		\item Write an expression for $\frac{\Delta P_n}{\Delta t}$.
-%		\item Write down a \emph{differential equation} relating $P'(t)$ to $P(t)$ where $\displaystyle P(t)=\lim_{n\to\infty} P_n(t)$.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall the model \textbf{M$_1$} defined by
-%	\begin{itemize}
-%		\item $P_1(0)=10$
-%		\item $P_1(t+1) = KP(t)$ for $t\geq 0$ years and $K=1.1$.
-%	\end{itemize}
-%	Define the model \textbf{M$_\infty$} by
-%	\begin{itemize}
-%		\item $P(0)=10$
-%		\item $P'(t) = kP(t)$.
-%	\end{itemize}
-%
-%
-%	\begin{parts}
-%		\item If $k=K=1.1$, does the model \textbf{M$_\infty$} produce the same population estimates as \textbf{M$_1$}?
-%	\end{parts}
-%
-%	\vspace*{1in}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Suppose that the estimates produced by \textbf{M$_1$} agree with the actual (measured) population of starfish.
-%
-%	Fill out the table indicating which models have which
-%	properties.
-%
-%	\begin{center}
-%	\begin{tabular}{|c|c|c|c|}
-%		\hline
-%		Model & Accuracy & Explanatory & (your favourite property)\\
-%		\hline
-%		\textbf{M$_1$} & \phantom{$\displaystyle\int$} & & \\
-%		\hline
-%		\textbf{M$_1^*$} &\phantom{$\displaystyle\int$} & & \\
-%		\hline
-%		\textbf{M$_\infty$} &\phantom{$\displaystyle\int$} & & \\
-%		\hline
-%	\end{tabular}
-%	\end{center}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall the model \textbf{M$_1$} defined by
-%	\begin{itemize}
-%		\item $P_1(0)=10$
-%		\item $P_1(t+1) = KP(t)$ for $t\geq 0$ years and $K=1.1$.
-%	\end{itemize}
-%	Define the model \textbf{M$_\infty$} by
-%	\begin{itemize}
-%		\item $P(0)=10$
-%		\item $P'(t) = kP(t)$.
-%	\end{itemize}
-%
-%	\begin{parts}
-%		\item Suppose that \textbf{M$_1$} accurately predicts the population. Can you find a value of $k$ so that \textbf{M$_\infty$}
-%		accurately predicts the population?
-%		%\item What are some advantages and disadvantages of the models \textbf{M$_1$} and \textbf{M$_\infty$}?
-%	\end{parts}
-%
-%	\vspace*{1in}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	After more observations, scientists notice a seasonal effect on starfish. They propose a new model called \textbf{S}:
-%	\begin{itemize}
-%		\item $P(0)=10$
-%		\item $P'(t) = k\cdot P(t)\cdot |\sin(2\pi t)|$
-%	\end{itemize}
-%	
-%	\begin{parts}
-%		\item What can you tell about the population (without trying to compute it)?
-%		\item Assuming $k=1.1$, estimate the population after 10 years.
-%		\item Assuming $k=1.1$, estimate the population after 10.3 years.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Consider the following argument for the population model \textbf{S} where
-%	$P'(t)=P(t)\cdot\abs{\sin(2\pi t)}$ with $P(0)=10$:
-%	\begin{quote}
-%		\color{blue}
-%		At $t=0$, the change in population $\approx P'(0)=0$, so
-%		\[
-%			P(1) \approx P(0)+P'(0)\cdot 1 = P(0)=10.
-%		\]
-%		At $t=1$, the change in population $\approx P'(1)=0$, so
-%		\[
-%			P(2) \approx P(1)+P'(1)\cdot 1 = P(0)=10.
-%		\]
-%		And so on.
-%
-%		So, the population of starfish remains constant.
-%	\end{quote}
-%	
-%	%\vspace*{.1in}
-%	\begin{parts}
-%		\item Do you believe this argument? Can it be improved?
-%		\item Simulate an improved version using a spreadsheet.
-%	\end{parts}
-%	\vspace*{1.5in}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	(Simulating \textbf{M$_\infty$} with different $\Delta$s)
-%	
-%	\begin{center}
-%	\begin{tabular}{l|l|l|l}
-%		Time & Pop. ($\Delta=0.1$) & Time & Pop. ($\Delta=0.2$)\\
-%		\hline
-%		0.0&	10&		0.0&	10\\
-%		0.1&	11.1&		0.2&	12.2\\
-%		0.2&	12.321&		0.4&	14.884\\
-%		0.3&	13.67631&	0.6&	18.15848\\
-%		0.4&	15.1807041&	0.8&	22.1533456
-%	\end{tabular}
-%	\end{center}
-%
-%	\begin{parts}
-%		\item Compare $\Delta=0.1$ and $\Delta=0.2$. Which approximation grows faster?
-%		\item Graph the population estimates for $\Delta=0.1$ and $\Delta=0.2$ on the same plot. What does the graph show?
-%
-%		\vspace{1cm}
-%		\item What $\Delta$s give the largest estimate for the population at time $t$?
-%		\item Is there a limit as $\Delta\to 0$?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	(Simulating \textbf{M$_\infty$} with different $\Delta$s)
-%	
-%	% https://www.desmos.com/calculator/x7qbgv6mkc
-%	\includegraphics[width=2.5in]{compare-deltas.png}
-%
-%	\begin{parts}
-%		\item Compare $\Delta=0.1$ and $\Delta=0.2$. Which approximation grows faster?
-%		\item Graph the population estimates for $\Delta=0.1$ and $\Delta=0.2$ on the same plot. What does the graph show?
-%
-%		\vspace{1cm}
-%		\item What $\Delta$s give the largest estimate for the population at time $t$?
-%		\item Is there a limit as $\Delta\to 0$?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	\label{many-models}
-%	Consider the following models for starfish growth
-%	\begin{itemize}
-%		\item[\textbf{M}] \# new children per year $\sim$ current population
-%		\item[\textbf{N}] \# new children per year $\sim$ current population times resources available per individual
-%		\item[\textbf{O}] \# new children per year $\sim$ current population times the fraction of total resources remaining
-%	\end{itemize}
-%
-%	\begin{parts}
-%		\item Guess what the population vs. time curves look like for each model. \label{model-guess-part}
-%		\item Create a differential equation for each model.
-%		\item Simulate population vs. time curves for each model (but pick a common initial population).
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall the models
-%	\begin{itemize}
-%		\item[\textbf{M}] \# new children per year $\sim$ current population
-%		\item[\textbf{N}] \# new children per year $\sim$ current population times resources available per individual
-%		\item[\textbf{O}] \# new children per year $\sim$ current population times the fraction of total resources remaining
-%	\end{itemize}
-%
-%	\begin{parts}
-%		\item Determine which population grows fastest in the short term and which grows fastest in the long term.
-%		\item Are some models more sensitive to your choice of $\Delta$ when simulating?
-%		\item Are your simulations for each model consistently underestimates? Overestimates?
-%		\item Compare your simulated results with your guesses from question \ref{many-models}.\ref{model-guess-part}.
-%		What did you guess correctly? Where were you off the mark?
-%	\end{parts}
-%\end{slide}
-%
-%%
-%% Hours 7-9
-%%
-%
-%
-%\begin{slide}
-%	\question
-%	A simple model for population growth has the form
-%	\[
-%		P'(t) = bP(t)
-%	\]
-%	where $b$ is the \emph{birth rate}.
-%
-%	\begin{parts}
-%		\item Create a better model for population that includes both births and deaths.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	\emph{Lotka-Volterra Predator-Prey} models predict two populations, $F$ (foxes) and $R$ (rabbits), simultaneously. They take the form
-%	\begin{align*}
-%		F'(t) &= (B_F - D_F)\cdot F(t)\\
-%		R'(t) &= (B_R - D_R)\cdot R(t)
-%	\end{align*}
-%	where $B_{?}$ stands for births and $D_{?}$ stands for deaths.
-%
-%	We will assume:
-%	\vspace{-.3cm}
-%	\begin{itemize}
-%		\item Foxes die at a constant rate.
-%		\vspace{-.1cm}
-%		\item Foxes mate when food is plentiful.
-%		\vspace{-.1cm}
-%		\item Rabbits mate at a constant rate.
-%		\vspace{-.1cm}
-%		\item Foxes eat rabbits.
-%	\end{itemize}
-%
-%	\bigskip
-%	\begin{parts}
-%		\item Speculate on when $B_F$, $D_F$, $B_R$, and $D_R$ would be at their maximum(s)/minimum(s), given our assumptions.
-%		\item Come up with appropriate formulas for $B_F$, $B_R$, $D_F$, and $D_R$.
-%	\end{parts}
-%	\bigskip
-%	\bigskip
-%	\bigskip
-%	\bigskip
-%	\bigskip
-%	\bigskip
-%	\phantom{x}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Suppose the population of $F$ (foxes) and $R$ (rabbits) evolves over time following the rule
-%	\begin{align*}
-%		F'(t) &= (0.01\cdot R(t) - 1.1)\cdot F(t)\\
-%		R'(t) &= (1.1 - 0.1\cdot F(t))\cdot R(t)
-%	\end{align*}
-%
-%	\begin{parts}
-%		\item Simulate the population of foxes and rabbits with a spreadsheet.
-%		\item Do the populations continue to grow/shrink forever? Are they cyclic?
-%		\item Should the humps/valleys in the rabbit and fox populations be in phase? Out of phase?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	% https://utoronto-my.sharepoint.com/:x:/g/personal/jason_siefken_utoronto_ca/Eay4QOMvy7lNr5pOKRv22NgBLGUw7qMpSCShUjeAdrhsHQ?e=bpg4CP
-%	Open the spreadsheet
-%
-%	\url{https://uoft.me/foxes-and-rabbits}
-%
-%	which contains an Euler approximation for the Foxes and Rabbits population.
-%	\begin{align*}
-%		F'(t) &= (0.01\cdot R(t) - 1.1)\cdot F(t)\\
-%		R'(t) &= (1.1 - 0.1\cdot F(t))\cdot R(t)
-%	\end{align*}
-%
-%	\begin{parts}
-%		\item Is the max population of the rabbits over/under estimated? Sometimes over, sometimes under?
-%		\item What about the foxes?
-%		\item What about the min populations?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	% https://utoronto-my.sharepoint.com/:x:/g/personal/jason_siefken_utoronto_ca/Eay4QOMvy7lNr5pOKRv22NgBLGUw7qMpSCShUjeAdrhsHQ?e=bpg4CP
-%	Open the spreadsheet
-%
-%	\url{https://uoft.me/foxes-and-rabbits}
-%
-%	which contains an Euler approximation for the Foxes and Rabbits population.
-%	\begin{align*}
-%		F'(t) &= (0.01\cdot R(t) - 1.1)\cdot F(t)\\
-%		R'(t) &= (1.1 - 0.1\cdot F(t))\cdot R(t)
-%	\end{align*}
-%
-%	\SavedDefinitionRender{ComponentGraphAndPhasePlane}
-%
-%	\begin{parts}
-%		\item Plot the Fox vs.~Rabbit population in the \emph{phase plane}. 
-%		\item Should your plot show a closed curve or a spiral?
-%		\item What ``direction'' do points move along the curve as time increases? Justify by referring to the model.
-%		\item What is easier to see from plots in the phase plane than from component graphs (the graphs of
-%		fox and rabbit population vs. time)?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	% https://utoronto-my.sharepoint.com/:x:/g/personal/jason_siefken_utoronto_ca/Eay4QOMvy7lNr5pOKRv22NgBLGUw7qMpSCShUjeAdrhsHQ?e=bpg4CP
-%	Open the spreadsheet
-%
-%	\url{https://uoft.me/foxes-and-rabbits}
-%
-%	which contains an Euler approximation for the Foxes and Rabbits population.
-%	\begin{align*}
-%		F'(t) &= (0.01\cdot R(t) - 1.1)\cdot F(t)\\
-%		R'(t) &= (1.1 - 0.1\cdot F(t))\cdot R(t)
-%	\end{align*}
-%
-%	\SavedDefinitionRender{EquilibriumSolution}
-%
-%	\begin{parts}
-%		\item By changing initial conditions, what is the ``smallest'' curve you can get in the phase plane? What happens at
-%		those initial conditions?
-%		\item What should $F'$ and $R'$ be if $F$ and $R$ are \emph{equilibrium solutions}?
-%		\item How many equilibrium solutions are there for the fox-and-rabbit system? Justify your answer.
-%		\item What do the equilibrium solutions look like in the phase plane? What about their component graphs?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall the logistic model for starfish growth:
-%	\begin{itemize}
-%		\item[\textbf{O}] \# new children per year $\sim$ current population times the fraction of total resources remaining
-%	\end{itemize}
-%	which can be modeled with the equation
-%	\[
-%		P'(t) = k\cdot P(t)\cdot \left(1-\tfrac{R_i}{R}\cdot P(t)\right)
-%	\]
-%	where 
-%	\begin{itemize}
-%		\item $P(t)$ is the population at time $t$
-%		\item $k$ is a constant of proportionality 
-%		\item $R$ is the total number of resources
-%		\item $R_i$ is the resources that one starfish wants to consume
-%	\end{itemize}
-%
-%	Use $k=1.1$, $R=1$, and $R_i=0.1$ unless instructed otherwise.
-%
-%	\begin{parts}
-%		\item What are the equilibrium solutions for model \textbf{O}?
-%		\item What does a ``phase plane'' for model \textbf{O} look like? What do graphs of equilibrium solutions look like?
-%		\item Classify the behaviour of solutions that lie \emph{between} the equilibrium solutions. E.g., are they increasing, decreasing, oscillating?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%
-%	\SavedDefinitionRender{ClassificationOfEquilibria}
-%
-%	\SavedDefinitionRender{ClassificationOfEquilibriaFormal}
-%\end{slide}
-%
-%\begin{slide}
-%	\SavedDefinitionRender{ClassificationOfEquilibria}
-%
-%	Let
-%	\[
-%		F'(t) =\ ?
-%	\]
-%	be an unknown differential equation with equilibrium solution $f(t)=1$.
-%
-%	\begin{parts}
-%		\item Draw an example of what solutions might look like if $f$ is \emph{attracting}.
-%		\item Draw an example of what solutions might look like if $f$ is \emph{repelling}.
-%		\item Draw an example of what solutions might look like if $f$ is \emph{stable}.
-%		\item Could $f$ be stable but \emph{not} attracting?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	
-%	\SavedDefinitionRender{ClassificationOfEquilibria}
-%	
-%	Recall the starfish population model \textbf{O} given by
-%	\[
-%		P'(t) = k\cdot P(t)\cdot \left(1-\tfrac{R_i}{R}\cdot P(t)\right)
-%	\]
-%	Use $k=1.1$, $R=1$, and $R_i=0.1$ unless instructed otherwise.
-%
-%
-%	\begin{parts}
-%		\item Classify the equilibrium solutions for model \textbf{O} as attracting/repelling/stable/unstable/semi-stable.
-%		\item Does changing $k$ change the nature of the equilibrium solutions? How can you tell?
-%	\end{parts}
-%\end{slide}
-%
-%%
-%% Hours 10-12
-%%
-%
-%\begin{slide}
-%	% https://www.desmos.com/calculator/ghavqzqqjn
-%
-%	\question
-%	
-%	\begin{center}
-%	\includegraphics[width=2.5in]{slope-field-for-O.png}
-%	\end{center}
-%
-%	A \emph{slope field} is a plot of small segments of tangent lines
-%	to solutions of a differential equation at different initial conditions.
-%	
-%	On the left is a slope field for model \textbf{O}, available at
-%
-%	\url{https://www.desmos.com/calculator/ghavqzqqjn}
-%
-%	\begin{parts}
-%		\item If you were sketching the slope field for model \textbf{O} by hand, what line would you sketch
-%		(a segment of) at $(5,3)$? Write an equation for that line.
-%		\item How can you recognize equilibrium solutions in a slope field?
-%		\item Give qualitative descriptions of different solutions to the \emph{differential equation} used in model \textbf{O} (i.e., use words to describe them). Do all
-%		of those solutions make sense in terms of \emph{model \textbf{O}}?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	% https://www.desmos.com/3d/kvyztvmp0g
-%
-%	\question
-%	
-%	\begin{center}
-%		\includegraphics[width=2in]{slope-field-3d.png}
-%	\end{center}
-%
-%	3d slope fields are possible, but hard to interpret.
-%
-%	On the left is a slope field for the Foxes--Rabbits model.
-%
-%	\url{https://www.desmos.com/3d/kvyztvmp0g}
-%
-%	\begin{parts}
-%		\item What are the three dimensions in the plot?
-%		\item What should the graph of an equilibrium solution look like?
-%		\item What should the graph of a typical solution look like?
-%		\item What are ways to simplify the picture so we can more easily analyze solutions?
-%	\end{parts}
-%\end{slide}
-%
-%
-%\begin{slide}
-%	% https://www.desmos.com/calculator/wdgtznxndp
-%	%
-%	% Without Euler's built in:
-%	% https://www.desmos.com/calculator/vrk0q4espx
-%
-%	\question
-%	
-%	\begin{center}
-%		\includegraphics[width=2.5in]{phase-portrait-foxes-wolves.png}
-%	\end{center}
-%
-%
-%	\SavedDefinitionRender{PhasePortrait}
-%
-%	On the left is a phase portrait for the Foxes--Rabbits model.
-%
-%	\url{https://www.desmos.com/calculator/vrk0q4espx}
-%
-%	\begin{parts}
-%		\item What do the $x$ and $y$ axes correspond to?
-%		\item Identify the equilibria in the phase portrait. What are the lengths of the vectors at those points?
-%		\item Classify each equilibrium as stable/unstable.
-%		\item Copy and paste data from your simulation spreadsheet into the Desmos plot. Does the resulting
-%		curve fit with the picture?
-%		%\item Why is the vector at $(5,100)$ longer than the vector at $(10,100)$? Justify numerically.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	% https://www.desmos.com/calculator/wdgtznxndp
-%	%
-%	% Without Euler's built in:
-%	% https://www.desmos.com/calculator/vrk0q4espx
-%
-%	\question
-%	Sketch your own vector field where the corresponding system of differential equations:
-%
-%	\begin{parts}
-%		\item Has an attracting equilibrium solution.
-%		\item Has a repelling equilibrium solution.
-%		\item Has no equilibrium solutions.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	% https://www.desmos.com/calculator/ghavqzqqjn
-%
-%	\question
-%	
-%	\begin{center}
-%	\includegraphics[width=2.5in]{slope-field-for-O.png}
-%	\end{center}
-%
-%	Recall the slope field for model \textbf{O}.
-%
-%	\begin{parts}
-%		\item What would a phase portrait for model \textbf{O} look like? Draw it.
-%		\item Where are the arrows the longest? Shortest?
-%		\item How could you tell from a 1d phase portrait whether an equilibrium solution is
-%		attracting/repelling/etc.?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	%
-%	% Completed phase portrait in desmos:
-%	% https://www.desmos.com/calculator/tvjag852ja
-%	\question
-%	\label{q-phase}
-%	The following differential equation models the life cycle of a tree.
-%	In the model
-%	\begin{itemize}
-%		\item $H(t)\ =$ height (in meters) of tree trunk at time $t$
-%		\item $A(t)\ =$ surface area (in square meters) of all leaves at time $t$
-%	\end{itemize}
-%	\begin{align*}
-%		H'(t) &= 0.3\cdot A(t)-b\cdot H(t)\\
-%		A'(t) &= -0.3\cdot (H(t))^2 + A(t)
-%	\end{align*}
-%	and $0 \leq b \leq 2$
-%
-%	\bigskip
-%	\phantom{x}
-%	\begin{parts}
-%		\item 
-%		\label{part-phase}
-%		Modify 
-%
-%		{\small
-%		\url{https://www.desmos.com/calculator/vrk0q4espx}
-%		}
-%
-%		to make a phase portrait for the tree model.
-%		\item What do equilibrium solutions mean in terms of tree growth?
-%		\item For $b=1$ what are the equilibrium solution(s)?
-%	\end{parts}
-%	\bigskip
-%	\phantom{x}
-%\end{slide}
-%
-%\begin{slide}
-%	%
-%	% Completed phase portrait in desmos:
-%	% https://www.desmos.com/calculator/tvjag852ja
-%	\question
-%	The following differential equation models the life cycle of a tree.
-%	In the model
-%	\begin{itemize}
-%		\item $H(t)\ =$ height (in meters) of tree trunk at time $t$
-%		\item $A(t)\ =$ surface area (in square meters) of all leaves at time $t$
-%	\end{itemize}
-%	\begin{align*}
-%		H'(t) &= 0.3\cdot A(t)-b\cdot H(t)\\
-%		A'(t) &= -0.3\cdot (H(t))^2 + A(t)
-%	\end{align*}
-%	and $0 \leq b \leq 2$
-%
-%	\bigskip
-%	\phantom{x}
-%	\begin{parts}
-%		\item Fix a value of $b$ and use a spreadsheet to simulate some solutions with different initial conditions.
-%		Plot the results on your phase portrait from \ref{q-phase}.\ref{part-phase}.
-%		\item What will happen to a tree with $(H(0), A(0))=(20,10)$? Does this depend on $b$?
-%		\item What will happen to a tree with $(H(0), A(0))=(10,10)$? Does this depend on $b$?
-%	\end{parts}
-%	\bigskip
-%	\phantom{x}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	The tree model
-%	\begin{align*}
-%		H'(t) &= 0.3\cdot A(t)-b\cdot H(t)\\
-%		A'(t) &= -0.3\cdot (H(t))^2 + A(t)
-%	\end{align*}
-%	was based on the premises
-%	\begin{itemize}[leftmargin=3em]
-%		\item[ $P_{\text{height 1}}$] CO$_2$ is absorbed by the leaves and turned directly into trunk height.
-%		\item[ $P_{\text{height 2}}$] The tree is in a swamp and constantly sinks at a speed proportional to its height.
-%		\item[ $P_{\text{leaves 1}}$] Leaves grow proportionality to the energy available.
-%		\item[ $P_{\text{energy 1}}$] The tree gains energy from the sun proportionally to the leaf area.
-%		\item[ $P_{\text{energy 2}}$] The tree loses energy proportionally to the square of its height.
-%		%\item[ $P_{\text{energy 1}}$] The tree absorbs energy from the sun proportionality to the leaf area.
-%		%\item[ $P_{\text{energy 2}}$] It costs energy proportional to the square of the height for the tree to maintain its current size.
-%	\end{itemize}
-%
-%	\begin{parts}
-%		\item How are the premises expressed in the differential equations?
-%		\item What does the parameter $b$ represent (in the real world)?
-%		\item Applying Euler's method to this system shows solutions that pass from the 1st to 4th quadrants of the phase plane.
-%			Is this realistic? Describe the life cycle of such a tree?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall the tree model
-%	\begin{align*}
-%		H'(t) &= 0.3\cdot A(t)-b\cdot H(t)\\
-%		A'(t) &= -0.3\cdot (H(t))^2 + A(t)
-%	\end{align*}
-%
-%	\begin{parts}
-%		\item Find all equilibrium solutions for $0\leq b\leq 2$.
-%		\item For which $b$ does a tree have the possibility of living forever? If the wind occasionally blew off a few random leaves,
-%		would that change your answer?
-%		\item
-%		Find a value $b_5$ of $b$ so that there is an equilibrium with $H=5$.
-%
-%		Find a value $b_{12}$ of $b$ so that there is an equilibrium with $H=12$.
-%		
-%		\item
-%		Predict what happens to a tree near equilibrium in condition $b_5$ and a tree near equilibrium in condition $b_{12}$.
-%
-%	\end{parts}
-%\end{slide}
-%
-%%
-%% Hours 13-14
-%%
-%
-%\begin{slide}
-%	\question
-%	Consider the system of differential equations
-%	\begin{align*}
-%		x'(t) &= x(t)\\
-%		y'(t) &= 2y(t)
-%	\end{align*}
-%
-%	\begin{parts}
-%		\item Make a phase portrait for the system.
-%
-%		{\small \url{https://www.desmos.com/calculator/h3wtwjghv0}}
-%		\item What are the equilibrium solution(s) of the system?
-%		\item 
-%		Find a formula for $x(t)$ and $y(t)$ that satisfy the initial conditions $(x(0), y(0))=(x_0, y_0)$.
-%		\item Let $\vec r(t)=(x(t),y(t))$. Find a matrix $A$ so that the differential equation can be equivalently expressed
-%		as
-%		\[
-%			\vec r'(t) = A\,\vec r(t).
-%		\]
-%		\item Write a solution to $\vec r' = A\,\vec r$ (where $A$ is the matrix you came up with).
-%	\end{parts}
-%\end{slide}
-%
-%
-%\begin{slide}
-%	\question
-%	Let $A$ be an unknown matrix and suppose $\vec p$ and $\vec q$ are solutions to $\vec r'=A\,\vec r$.
-%
-%	\begin{parts}
-%		\item Is $\vec s(t)=\vec p(t)+\vec q(t)$ a solution to $\vec r'=A\,\vec r$? Justify your answer.
-%		\item Can you construct other solutions from $\vec p$ and $\vec q$? If yes, how so?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall from MAT223:
-%	\SavedDefinitionRender{LinearlyDependentIndependentAlgebraic}
-%
-%	Define
-%	\[
-%		\vec p(t) = \mat{e^t\\0}\qquad
-%		\vec q(t) = \mat{4e^t\\0}\qquad
-%		\vec h(t) = \mat{0\\ e^{2t}}\qquad
-%		\vec z(t) = \mat{0\\ e^{3t}}.
-%	\]
-%
-%
-%	\begin{parts}
-%		\item Are $\vec p$ and $\vec q$ linearly independent or linearly dependent? Justify with the definition.
-%		\item Are $\vec p$ and $\vec h$ linearly independent or linearly dependent? Justify with the definition.
-%		\item Are $\vec h$ and $\vec z$ linearly independent or linearly dependent? Justify with the definition.
-%		\item Is the set of three functions  $\Set{\vec p,\vec h,\vec z}$ linearly independent or linearly dependent? Justify with the definition.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall
-%	\[
-%		\vec p(t) = \mat{e^t\\0}\qquad
-%		\vec q(t) = \mat{4e^t\\0}\qquad
-%		\vec h(t) = \mat{0\\ e^{2t}}\qquad
-%		\vec z(t) = \mat{0\\ e^{3t}}.
-%	\]
-%
-%
-%	\begin{parts}
-%		\item Describe $\Span\Set{\vec p, \vec h}$. What is its dimension? What is a basis for it?
-%		\item Let $S$ be the set of all solutions to $\vec r'(t) = \mat{1&0\\0&2}\vec r(t)$. {
-%		\small(You've seen this equation before.)}
-%
-%		Is $S$ a subspace? If so, what is its dimension?
-%		\item Provided $S$ is a subspace, give a basis for $S$.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Consider the differential equation
-%	\[
-%		y'(t) = 2\cdot y(t).
-%	\]
-%
-%
-%	\begin{parts}
-%		\item Write a solution whose graph passes through the point $(t,y)=(0,3)$.
-%		\item Write a solution whose graph passes through the point $(t,y)=(0,y_0)$.
-%		\item Write a solution whose graph passes through the point $(t,y)=(t_0,y_0)$.
-%		\item Consider the following argument:
-%		\begin{quote}
-%			For every point $(t_0, y_0)$, there is a corresponding solution to $y'(t) = 2\cdot y(t)$.
-%
-%			Since $\Set{(t_0,y_0):t_0,y_0\in \R}$ is two dimensional, this means the set of solutions
-%			to $y'(t) = 2\cdot y(t)$ is two dimensional.
-%		\end{quote}
-%		Do you agree? Explain.
-%
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	%\begin{theorem}
-%	%	For an \emph{autonomous} ordinary differential equation (whose solutions are defined on all of $\R$),
-%	%	a solution that passes through $(t_0, y_0)$ also passes through $(0,y_0^*)$ for some $y_0^*$.
-%	%\end{theorem}
-%	\begin{theorem}[(Existence \& Uniqueness 1)]
-%		The system of differential equations represented by
-%		 $\vec r\,'(t) = M \vec r(t) + \vec p$ (or the single differential equation 
-%		 $y'=ay+b$) has a unique solution passing through every initial condition. Further, the domain of every
-%		solution is $\R$.
-%	\end{theorem}
-%
-%	Let $S$ be the set of all solutions to $\vec r'(t) = \mat{1&0\\0&2}\vec r(t)$.
-%
-%	\begin{parts}
-%		\item Show that $\Dim(S) \geq 2$ by finding at least two linearly independent solutions.
-%		\item Let $I$ be the set of all initial conditions. What is $I$?
-%		\item Show that $\Dim(S) \leq 3$ by applying the theorem to the set of initial conditions.
-%		\item Can two points in $I$ correspond to the same solution? Explain?
-%		\item Find a subset $U\subseteq I$ so that every solution corresponds to a unique point in $U$.
-%		\item Show that $\Dim(S) \leq 2$.
-%		\item Suppose $M$ is an $n\times n$ matrix. Consider the differential equation
-%		$\vec r\,'(t)=M\vec r(t)$. If you have found $n$ linearly
-%		independent solutions, can you determine the dimension of the set of all solutions?
-%		Explain. 
-%	\end{parts}
-%\end{slide}
-%
-%%
-%% Hours 15-18
-%%
-%
-%\begin{slide}
-%	\question
-%	\label{qeignsoln}
-%	Consider the system
-%	\begin{align*}
-%		x'(t) &= 2x(t)\\
-%		y'(t) &= 3y(t)
-%	\end{align*}
-%
-%	\begin{parts}
-%		\item Rewrite the system in matrix form.
-%		\item 
-%		\label{eigsoln}
-%		Classify the following as solutions or non-solutions to the system.
-%		\begin{align*}
-%			\vec r_1(t) &= e^{2t} &\qquad			\vec r_2(t) &= \mat{e^{2t}\\0}\\
-%			\vec r_3(t) &= \mat{e^{2t}\\4e^{3t}} &\qquad			\vec r_4(t) &= \mat{4e^{3t}\\e^{2t}}\\
-%			\vec r_5(t) &= \mat{0\\0}
-%		\end{align*}
-%		\item State the definition of an eigenvector for the matrix $M$.
-%		\item What should the definition of an \emph{eigen solution} be for this system?
-%		\item Which functions from \ref{qeignsoln}.\ref{eigsoln} are eigen solutions?
-%		\item Find an eigen solution $\vec r_6$ that is linearly independent from $\vec r_2$.
-%		\item Let $S=\Span\{\vec r_2, \vec r_6\}$. Does $S$ contain \emph{all} solutions to the system? Justify your answer.
-%	
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall the system
-%	\begin{align*}
-%		x'(t) &= 2x(t)\\
-%		y'(t) &= 3y(t)
-%	\end{align*}
-%	has eigen solutions $\vec r_2(t)=\mat{e^{2t}\\0}$ and $\vec r_6(t)=\mat{0\\e^{3t}}$.
-%
-%	\begin{parts}
-%		\item Sketch $\vec r_2$ and $\vec r_6$ in the phase plane.
-%		\item Use
-%
-%		\url{https://www.desmos.com/calculator/h3wtwjghv0}
-%
-%		to make a phase portrait for the system.
-%
-%		\item 	
-%		\begin{minipage}[t]{.45\textwidth}
-%		\begin{center}
-%			\begin{tikzpicture}[scale=1.2, baseline=(current bounding box.north)]
-%					\begin{axis}[
-%						width=4cm,
-%						height=4cm,
-%						xmin=-.5,xmax=3.5,ymin=-.5,
-%						ymax=3.5, xmajorgrids, ymajorgrids,
-%						xtick={-4,...,4}, ytick={-4,...,4}, axis lines=middle, yticklabels={,,}, xticklabels={,,},
-%						samples=50, domain=0:5]
-%						
-%						\addplot[blue, mark=none] coordinates {(0,0) (0,10)};
-%						\addplot[red] {0};
-%						\addplot[forestgreen, thick, dashed, dash pattern=on 3pt off 1pt] {x^(2/3)};
-%					\end{axis}
-%			\end{tikzpicture}%
-%			~~~~~\begin{tikzpicture}[scale=1.2, baseline=(current bounding box.north)]
-%					\begin{axis}[
-%						width=4cm,
-%						height=4cm,
-%						xmin=-.5,xmax=3.5,ymin=-.5,
-%						ymax=3.5, xmajorgrids, ymajorgrids,
-%						xtick={-4,...,4}, ytick={-4,...,4}, axis lines=middle, yticklabels={,,}, xticklabels={,,},
-%						samples=50, domain=0:5]
-%						
-%						\addplot[blue, mark=none] coordinates {(0,0) (0,10)};
-%						\addplot[red] {0};
-%						\addplot[forestgreen, thick, dashed, dash pattern=on 3pt off 1pt] {x^(3/2)};
-%					\end{axis}
-%			\end{tikzpicture}\\
-%			\begin{tikzpicture}[scale=1.2, baseline=(current bounding box.north)]
-%					\begin{axis}[
-%						width=4cm,
-%						height=4cm,
-%						xmin=-.5,xmax=3.5,ymin=-.5,
-%						ymax=3.5, xmajorgrids, ymajorgrids,
-%						xtick={-4,...,4}, ytick={-4,...,4}, axis lines=middle, yticklabels={,,}, xticklabels={,,},
-%						samples=50, domain=0:5]
-%						
-%						\addplot[blue, mark=none] coordinates {(0,0) (0,10)};
-%						\addplot[red] {0};
-%						\addplot[forestgreen, thick, dashed, dash pattern=on 3pt off 1pt] {1.5*x};
-%					\end{axis}
-%			\end{tikzpicture}\\
-%			\end{center}
-%		\end{minipage}
-%			In which phase plane above is the dashed (green) curve the graph of a solution to the system? Explain.
-%
-%		%\item Should graphs of solutions in the phase plane extend to other quadrants, or should every graph occupy only one quadrant?
-%
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%		Suppose $A$ is a $2\times 2$ matrix and $\vec s_1$ and $\vec s_2$ are eigen solutions to $\vec r'=A\,\vec r$ with eigenvalues $1$ and $-1$, respectively.
-%	\begin{parts}
-%		\item Write possible formulas for $\vec s_1(t)$ and $\vec s_2(t)$.
-%		\item Sketch a phase plane with graphs of $\vec s_1$ and $\vec s_2$ on it.
-%		\item Add a non-eigen solution to your sketch.
-%		\item Sketch a possible phase portrait for $\vec r'=A\,\vec r$. Can you extend your phase portrait to all quadrants?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%		Consider the following phase portrait for a system of the form $\vec r'=A\,\vec r$
-%		for an unknown matrix $A$.
-%
-%		\begin{center}
-%		\includegraphics[width=2in]{slope-field-eig-pm-one.png}
-%		\end{center}
-%	\begin{parts}
-%		\item Can you identify any eigen solutions?
-%		\item What are the eigenvalues of $A$? What are their sign(s)?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Consider the differential equation $\vec r'(t) = M\,\vec r(t)$ where $M=\mat{0&1\\1&0}$.
-%
-%	\begin{parts}
-%		%\item Find the eigenvectors and eigenvalues for $M$.
-%		\item Verify that $\mat{1\\1}$ and $\mat{1\\-1}$ are eigenvectors for $M$. What are the
-%		corresponding eigenvalues?
-%		\item 
-%		\begin{enumerate}
-%			\item Is $\vec r_1(t) =e^t \mat{1\\0}$ a solution to the differential equation? An eigen solution?
-%			\item Is $\vec r_2(t) =e^t \mat{1\\1}$ a solution to the differential equation? An eigen solution?
-%			\item Is $\vec r_3(t) =e^{2t} \mat{1\\-1}$ a solution to the differential equation? An eigen solution?
-%		\end{enumerate}
-%
-%		\item Find an eigen solution for the system corresponding to the eigenvalue $-1$. Write your answer
-%		in vector form.
-%
-%		\item Let $\vec v$ is an eigenvector for $M$ with eigenvalue $\lambda$. Explain how to write down an eigen solution
-%		to $\vec r'(t) = M\,\vec r(t)$ with eigenvalue $\lambda$.
-%
-%		\item Let $\vec v\neq \vec 0$ be a non-eigenvector for $M$. Could $\vec r(t)=e^{\lambda t}\vec v$ be a solution
-%		to $\vec r'(t) = M\,\vec r(t)$ for some $\lambda$? Explain.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall the differential equation $\vec r'(t) = M\,\vec r(t)$ where $M=\mat{0&1\\1&0}$.
-%
-%	\begin{parts}
-%		\item Write down a general solution to the differential equation.
-%		\item Write down a solution to the initial value problem $\vec r(0)=\mat{x_0\\y_0}$.
-%		\item Are your answers to the first two parts the same? Do they contain the same information?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	The phase portrait for a differential equation arising from the matrix $\mat{0&1\\1&0}$ (left)
-%	and $\mat{1&0\\0&-1}$ (right) are shown.
-%	\begin{center}
-%		\includegraphics[width=1.7in]{slope-field-eig-pm-one.png}~~~~
-%		\includegraphics[width=1.7in]{slope-field-eig-pm-one-rot.png}
-%	\end{center}
-%
-%	Both have eigenvalues $\pm 1$, but they have different eigenvectors.
-%
-%	\begin{parts}
-%		\item How are the phase portraits related to each other?
-%		\item Suppose $P$ is a $2\times 2$ matrix with eigenvalues $\pm 1$. In what ways could
-%		the phase portrait for $\vec r'(t) = P\,\vec r(t)$ look \emph{different} from the above portraits?
-%		In what way(s) must it look the same?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	\label{qclassifyorigin}
-%	Consider the following phase plane with lines in the direction of $\vec a$ (dashed green) and $\vec b$ (red).
-%			
-%			\begin{center}
-%			\begin{tikzpicture}[scale=1]
-%					\begin{axis}[
-%						width=5cm,
-%						height=5cm,
-%						xmin=-3.5,xmax=3.5,ymin=-3.5,
-%						ymax=3.5, xmajorgrids, ymajorgrids,
-%						xtick={-4,...,4}, ytick={-4,...,4}, axis lines=middle, yticklabels={,,}, xticklabels={,,},
-%						samples=5, domain=-5:5]
-%						
-%						\addplot[red, thick] {3*x} node[pos=0.6, left] {$\vec b$};
-%						\addplot[forestgreen, thick, dashed, dash pattern=on 3pt off 1pt] {1/3*x} node[pos=0.75, above] {$\vec a$};
-%					\end{axis}
-%			\end{tikzpicture}%
-%			\end{center}
-%
-%	\begin{parts}
-%		\item Sketch a phase portrait where the directions $\vec a$ and $\vec b$ correspond to eigen solutions with eigenvalues that are
-%
-%		\begin{tabular}{ccc}
-%		&sign for $\vec a$ & sign for $\vec b$\\
-%		\hline
-%		(1) & pos & pos\\
-%		(2) & neg & neg\\
-%		(3) & neg & pos\\
-%		(4) & pos & neg\\
-%		(5) & pos & zero\\
-%		\end{tabular}
-%
-%		\item\label{partclassifyorigin} Classify the solution at the origin for situations (1)--(5) as stable or unstable.
-%		\item Would any of your classifications in \ref{qclassifyorigin}.\ref{partclassifyorigin} change if the directions of $\vec a$ and $\vec b$ changed?
-%
-%	\end{parts}
-%\end{slide}
-%
-%
-%\begin{slide}
-%	\question
-%	You are examining a differential equation $\vec r'(t) = M\, \vec r(t)$ for an unknown $2\times 2$ matrix $M$.
-%
-%	 You would like to determine whether $\vec r(t)=\mat{0\\0}$ is stable/unstable/attracting/repelling.
-%	\begin{parts}
-%		\item Come up with a rule to determine the nature of the equilibrium solution $\vec r(t) =\mat{0\\0}$ based on the eigenvalues of $M$ (provided there exists two linearly independent eigen solutions).
-%		\item Consider the system of differential equations
-%		\begin{align*}
-%			x'(t) &= x(t)+2\,y(t)\\
-%			y'(t) &= 3\, x(t)-4\,y(t)
-%		\end{align*}
-%		\begin{enumerate}
-%			\item Classify the stability of the equilibrium solution $(x(t), y(t))=(0,0)$ using any method you want.
-%			\item Justify your answer analytically using eigenvalues.
-%		\end{enumerate}
-%	\end{parts}
-%\end{slide}
-%
-%%
-%% Hours 19-20
-%%
-%
-%\begin{slide}
-%	\question
-%	Consider the following model of Social Media Usage where
-%	\begin{align*}
-%		P(t) &= \text{millions of social media posts at year $t$}\\
-%		U(t) &= \text{millions of social media users at year $t$}
-%	\end{align*}
-%	\begin{itemize}
-%		\item[(P1$_P$)] Ignoring all else, each year posts decay proportionally to the current number of posts with proportionality constant 1.
-%		\item[(P2$_P$)] Ignoring all else (independent of decay), posts grow by a constant amount of 2 million posts every year.
-%		\item[(P1$_U$)] Ignoring all else, social media users increase/decrease in proportion to the number of posts.
-%		\item[(P2$_U$)] Ignoring all else, social media users increase/decrease in proportion to the number of users.
-%		\item[(P3$_U$)] Ignoring all else, 1 million people stop using the platform every year.
-%	\end{itemize}
-%
-%	\bigskip
-%	A school intervention is described by the parameter $a\in [-1/2, 1]$:
-%	\begin{itemize}
-%		\item After the intervention, the proportionality constant for (P1$_U$) is $1-a$.
-%		\item After the intervention, the proportionality constant for (P2$_U$) is $a$.
-%	\end{itemize}
-%
-%	\begin{parts}
-%		\item Model this situation using a system of differential equations. Explain
-%			which parts of your model correspond to which premise(s).
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	The \textbf{SM} model of Social Media Usage is
-%	\begin{align*}
-%		P'&=-P+2\\
-%		U'&=(1-a)P + aU - 1
-%	\end{align*}
-%	where
-%	\begin{align*}
-%		P(t) &= \text{millions of social media posts at year $t$}\\
-%		U(t) &= \text{millions of social media users at year $t$}\\
-%		a &\in [-1/2, 1]
-%	\end{align*}
-%
-%	\begin{parts}
-%		\item What are the equilibrium solution(s)?
-%		\item Make a phase portrait for the system.
-%		
-%		{\small \url{https://www.desmos.com/calculator/h3wtwjghv0}}
-%		\item Use phase portraits to conjecture: what do you think happens to the equilibrium
-%			solution(s) as $a$ transitions from negative to positive? Justify with a computation.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	The \textbf{SM} model of Social Media Usage is
-%	\begin{align*}
-%		P'&=-P+2\\
-%		U'&=(1-a)P + aU - 1
-%	\end{align*}
-%	where
-%	\begin{align*}
-%		P(t) &= \text{millions of social media posts at year $t$}\\
-%		U(t) &= \text{millions of social media users at year $t$}\\
-%		a &\in [-1/2, 1]
-%	\end{align*}
-%
-%	\begin{parts}
-%		\item Can you rewrite the system in matrix form? I.e., in the form $\vec r'(t) = M\, \vec r(t)$ for some matrix $M$ where $\vec r(t)=\Big(P(t), U(t)\Big)$.
-%		\item Define $\vec s(t)=\Big(S_P(t),S_U(t)\Big)$  to be the displacement from equilibrium in the \textbf{SM} model at time $t$ (provided an equilibrium exists).
-%		\begin{enumerate}
-%			\item Write $\vec s$ in terms of $P$ and $U$.
-%			\item Find $\vec s\,'$ in terms of $P$ and $U$.
-%			\item Find $\vec s\,'$ in terms of $S_P$ and $S_U$.
-%			\item Can one of your differential equation for $\vec s$ be written in matrix form? Which one?
-%			\item Analytically classify the equilibrium solution for your differential equation for $\vec s$
-%				when $a=-1/2$, $1/2$, and $1$. (You may use a calculator for computing eigenvectors/values.)
-%		\end{enumerate}
-%	\end{parts}
-%\end{slide}
-%
-%
-%\begin{slide}
-%	\question
-%	The \textbf{SM} model of Social Media Usage is
-%	\begin{align*}
-%		P'&=-P+2\\
-%		U'&=(1-a)P + aU - 1
-%	\end{align*}
-%	where
-%	\begin{align*}
-%		P(t) &= \text{millions of social media posts at year $t$}\\
-%		U(t) &= \text{millions of social media users at year $t$}\\
-%		a &\in [-1/2, 1]
-%	\end{align*}
-%
-%	Some politicians have been looking at the model. They made the following posts on social media:
-%	\begin{enumerate}
-%			\item \emph{The model shows the number of posts will always be increasing. SAD!}
-%			\item \emph{I see the number of social media users always increases. That's not what we want!}
-%			\item \emph{It looks like social media is just a fad. Although users initially increase, they eventually settle down.}
-%			\item \emph{I have a dream! That one day there will be social media posts, but eventually there will be no social media users!}
-%	\end{enumerate}
-%		
-%	\begin{parts}
-%		\item For each social media post, make an educated guess about what initial conditions and what
-%		value(s) of $a$ the politician was considering.
-%		\item The school board wants to limit the number of social media users to fewer than 10 million.
-%		Make a recommendation about what value of $a$ they should target.
-%	\end{parts}
-%\end{slide}
-%
-%%
-%% Hours 21-23
-%%
-%
-%
-%\begin{slide}
-%	\question
-%	Consider the following \textbf{FD} model of Fleas and Dogs where 
-%	\begin{align*}
-%		F(t) &= \text{number of parasites (fleas) at year $t$ (in millions)}\\
-%		D(t) &= \text{number of hosts (dogs) at year $t$ (in thousands)}
-%	\end{align*}
-%	\begin{itemize}
-%		\item[(P1$_F$)] Ignoring all else, the number of parasites decays in proportion to its population (with constant 1).
-%		\item[(P2$_F$)] Ignoring all else, parasite numbers grow in proportion to the number of hosts (with constant 1).
-%		\item[(P1$_D$)] Ignoring all else, hosts numbers grow in proportion to their current number (with constant 1).
-%		\item[(P2$_D$)] Ignoring all else, host numbers decrease in proportion to the number of parasites (with constant 2).
-%		\item[(P1$_c$)] Anti-flea collars remove 2 million fleas per year.
-%		\item[(P2$_c$)] Constant dog breeding adds 1 thousand dogs per year.
-%	\end{itemize}
-%
-%	\bigskip
-%	\begin{parts}
-%		\item Write a system of differential equations for the \textbf{FD} model.
-%		\item Can you rewrite the system in matrix form $\vec r' = M\,\vec r$? What about in \emph{affine}
-%		form $\vec r' = M\,\vec r + \vec b$?
-%		\item Make a phase portrait for your model.
-%		\item What should solutions to the system look like in the phase plane? What are the equilibrium solution(s)?
-%	\end{parts}
-%\end{slide}
-%
-%
-%\begin{slide}
-%	\question
-% 		Recall the \textbf{FD} model of Fleas and Dogs where 
-%	\begin{align*}
-%		F(t) &= \text{number of parasites (fleas) at year $t$ (in millions)}\\
-%		D(t) &= \text{number of hosts (dogs) at year $t$ (in thousands)}\\
-%		\vec r(t) &= \mat{F(t)\\D(t)}
-%	\end{align*}
-%	and
-%	\[
-%		\vec r'(t) = \mat{-1&1\\-2&1}\,\vec r(t) + \mat{-2\\1}
-%	\]
-%	
-%	Define $\vec s(t)$ to be the displacement of $\vec r(t)$ from equilibrium at time $t$.
-%	\begin{parts}
-%		\item Find a formula for $\vec s$ in terms of $\vec r$.
-%		\item Can you find a matrix $M$ so that $\vec s'(t) = M\,\vec s(t)$?
-%		\item What are the eigenvalues of $M$?
-%		\item Find an eigenvector for each eigenvalue $M$?
-%		\item What are the eigen solutions for $\vec s'=M\,\vec s$?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-% 		Recall the \textbf{FD} model of Fleas and Dogs where 
-%	\begin{align*}
-%		F(t) &= \text{number of parasites (fleas) at year $t$ (in millions)}\\
-%		D(t) &= \text{number of hosts (dogs) at year $t$ (in thousands)}\\
-%		\vec r(t) &= \mat{F(t)\\D(t)} \qquad\qquad
-%		\vec s(t) = \vec r(t) - \mat{3\\5}
-%	\end{align*}
-%	and
-%	\begin{align*}
-%		\vec s\,'(t) &= M\,\vec s(t)\qquad\text{where}\qquad M=\mat{-1&1\\-2&1}.
-%	\end{align*}
-%	
-%	This equation has eigen solutions
-%	\begin{align*}
-%		\vec s_1(t) &= e^{it}\matc{1-i\\2}\\
-%		\vec s_2(t) &= e^{-it}\matc{1+i\\2}
-%	\end{align*}
-%	
-%	\begin{parts}
-%		\item Recall Euler's formula $e^{it}=\cos(t)+i\sin(t)$. 
-%		\begin{enumerate}
-%			\item Use Euler's formula to expand $\vec s_1 + \vec s_2$. Are there any imaginary numbers remaining?
-%			\item Use Euler's formula to expand $i(\vec s_1 - \vec s_2)$. Are there any imaginary numbers remaining?
-%		\end{enumerate}
-%		\item Verify that your formulas for $\vec s_1+\vec s_2$ and $i(\vec s_1-\vec s_2)$ are solutions to
-%			$\vec s\,'(t) = M\,\vec s(t)$.
-%		\item Can you give a third \emph{real} solution to $\vec s\,'(t) = M\,\vec s(t)$?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-% 		Recall the \textbf{FD} model of Fleas and Dogs where 
-%	\begin{align*}
-%		F(t) &= \text{number of parasites (fleas) at year $t$ (in millions)}\\
-%		D(t) &= \text{number of hosts (dogs) at year $t$ (in thousands)}\\
-%		\vec r(t) &= \mat{F(t)\\D(t)} \qquad\qquad
-%		\vec s(t) = \vec r(t) - \mat{3\\5}
-%	\end{align*}
-%	and
-%	\begin{align*}
-%		\vec s\,'(t) &= M\,\vec s(t)\qquad\text{where}\qquad M=\mat{-1&1\\-2&1}.
-%	\end{align*}
-%	
-%	\begin{parts}
-%		\item What is the dimension of the space of solutions to $\vec s\,'(t) = M\,\vec s(t)$?
-%		\item Give a basis for all solutions to $\vec s\,'(t) = M\,\vec s(t)$.
-%		\item Find a solution satisfying $\vec s(0)=\mat{1\\3}$.
-%		\bigskip 
-%		\item Using what you know, find a general formula for $\vec r(t)$.
-%		\item Find a formula for $\vec r(t)$ satisfying $\vec r(0)=\mat{4\\8}$.
-%	\end{parts}
-%\end{slide}
-%
-%
-%\begin{slide}
-%	\question
-% 		Recall the \textbf{FD} model of Fleas and Dogs where 
-%	\begin{align*}
-%		F(t) &= \text{number of parasites (fleas) at year $t$ (in millions)}\\
-%		D(t) &= \text{number of hosts (dogs) at year $t$ (in thousands)}\\
-%		\vec r(t) &= \mat{F(t)\\D(t)} \qquad\qquad
-%		\vec s(t) = \vec r(t) - \mat{3\\5}
-%	\end{align*}
-%	and
-%	\begin{align*}
-%		\vec s\,'(t) &= M\,\vec s(t)\qquad\text{where}\qquad M=\mat{-1&1\\-2&1}.
-%	\end{align*}
-%
-%	Some research is being done on a shampoo for the dogs. It affects flea and dog reproduction:
-%	\begin{itemize}
-%		\item[(PS$_F$)] Ignoring all else, the number of parasites decays in proportion to its population with constant $1+a$.
-%		\item[(PS$_D$)] Ignoring all else, hosts numbers grow in proportion to their current number with constant $1-a$.
-%	\end{itemize}
-%	
-%	\vspace{-1.5em}
-%	where $-1\leq a\leq 1$. \emph{These premises replace (P1$_F$) and (P1$_D$).}
-%	
-%	\begin{parts}
-%		\item Modify the previous \textbf{FD} model to incorporate the effects of the shampoo.
-%		\item Make a phase portrait for the \textbf{FD Shampoo} model.
-%		\item Find the equilibrium solutions for the \textbf{FD Shampoo} model.
-%		\item For each equilibrium solution determine its stability/instability/etc..
-%		\item Analytically justify your conclusions about stability/instability/etc..
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%		Consider the differential equation
-%		\[
-%		\vec s\,'(t) = M\vec s(t)\qquad\text{where}\qquad M=\mat{-1&-4\\2&3}
-%		\]
-%	
-%	\begin{parts}
-%		\item Make a phase portrait. Based on your phase portrait, classify the equilibrium solution.
-%
-%		{\small \url{https://www.desmos.com/calculator/h3wtwjghv0}}
-%		\item Find eigen solutions for this differential equation (you may use a calculator/computer to assist).
-%		\item Find a general \emph{real} solution.
-%		\item Analytically classify the equilibrium solution.
-%	\end{parts}
-%\end{slide}
-%
-%
-%%
-%% Hours 24-26
-%%
-%
-%
-%\begin{slide}
-%	%
-%	% Completed phase portrait in desmos:
-%	% https://www.desmos.com/calculator/tvjag852ja
-%	\question
-%	Recall the tree model from Question \ref{q-phase}:
-%	\begin{itemize}
-%		\item $H(t)\ =$ height (in meters) of tree trunk at time $t$
-%		\item $A(t)\ =$ surface area (in square meters) of all leaves at time $t$
-%	\end{itemize}
-%	\begin{align*}
-%		H'(t) &= 0.3\cdot A(t)-b\cdot H(t)\\
-%		A'(t) &= -0.3\cdot (H(t))^2 + A(t)
-%	\end{align*}
-%	and $0 \leq b \leq 2$
-%
-%	A phase portrait for this model is available at 
-%	
-%		{\small
-%		\url{https://www.desmos.com/calculator/tvjag852ja}
-%		}
-%	\bigskip
-%	\phantom{x}
-%	\begin{parts}
-%		\item Visually classify the nature of each equilibrium solution as attracting/repelling/etc.. 
-%		Does the nature depend on $b$? Are you confident in your visual assessment?
-%		\item Can you rewrite the system in matrix/affine form? Why or why not?
-%	\end{parts}
-%	\bigskip
-%	\phantom{x}
-%\end{slide}
-%
-%\begin{slide}
-%	\question\label{qapprox1d}
-%	A simple logistic model for a population is
-%	\[
-%		\frac{\d P}{\d t} = P(t)\cdot\left(1-\frac{P(t)}{2}\right)
-%	\]
-%	where $P(t)$ represents the population at time $t$.
-%	
-%	We'd like to approximate $\d P/\d t$ when $P\approx 1/2$.
-%	\begin{parts}
-%		\item What is the value of $\d P/\d t$ when $P=1/2$?
-%		
-%		\item %\hbox{\vbox{
-%			Define $f(P)=P(t)\cdot\left(1-\frac{P(t)}{2}\right)$ and notice\\ $\d P/\d t = f(P)$.
-%
-%		Approximate $\d P/\d t$ (i.e, approximate $f$) when\\ $P=1/2+\Delta$ and $\Delta$ is small.
-%		%}}
-%
-%		\bigskip
-%		\item Write down an approximation $S(\Delta)$ that approximates $\d P/\d t$ when $P$ is $\Delta$ away from $1/2$.
-%		\item 
-%		
-%		Let $A_{1/2}(P)$ be an \emph{affine} approximation to $\d P/\d t$ that is a good approximation when $P\approx 1/2$.
-%		Find a formula for $A_{1/2}(P)$.
-%		\item Find additional affine approximations to $\d P/\d t$ centered at each equilibrium solution.
-%		\vspace{1cm}
-%		\phantom{x}
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Based on our calculations from Exercise \ref{qapprox1d}, we have several different affine approximations.
-%
-%	\begin{tabular}{rll}
-%		(Original) & $P'=P(1-P/2)$
-%		& ({\small \url{https://www.desmos.com/calculator/v1coz4shtw}})\\
-%		($A_{1/2}$) & $P'\approx \frac{3}{8}+\frac{1}{2}(P-\frac{1}{2})$
-%		& ({\small \url{https://www.desmos.com/calculator/zsb2apxhqs}})\\
-%		($A_0$) & $P'\approx P$
-%		& ({\small \url{https://www.desmos.com/calculator/vw48bvqgrc}})\\
-%		($A_2$) & $P'\approx -(P-2)$
-%		& ({\small \url{https://www.desmos.com/calculator/i2utk6vnqh}})\\
-%
-%	\end{tabular}
-%	
-%	\begin{parts}
-%		\item What are the similarities/differences in the Desmos plots of solutions
-%		to the original equation vs. the other equations?
-%		\item Does the nature of the equilibrium solutions change when using an affine approximation?
-%		\item Classify each equilibrium solution of the original equation by using affine approximations.
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Consider the differential equation whose slope field is sketched below.
-%	\begin{align*}
-%		P'(t) &= -P(t)\cdot(0.1+P(t))\cdot(0.2+P(t))\\ 
-%		&=-(P(t))^3-0.3\cdot (P(t))^2 -0.02\cdot P(t)
-%	\end{align*}
-%
-%	{\small \url{https://www.desmos.com/calculator/ikp9rgo0kv}}
-%	\begin{center}
-%	\includegraphics[width=2.5in]{slope-field-ambiguous.png}
-%	\end{center}
-%
-%
-%	\bigskip	
-%	\bigskip	
-%	\bigskip	
-%	\begin{parts}
-%		\item Find all equilibrium solutions.
-%		\item Use affine approximations to classify the equilibrium solutions as stable/unstable/etc..
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	To make a 1d affine approximation of a function $f$ at the point $E$ we have the formula
-%	\[
-%		f(x)\qquad \approx\qquad f(E) + f'(E)(x-E).
-%	\]		
-%
-%	To make a 2d approximation of a function $\vec F(x,y)=\Big(F_1(x,y), F_2(x,y)\Big)$ at the point $\vec E$,
-%	we have a similar formula
-%	\[
-%		\vec F(x,y)\qquad \approx \qquad \vec F(\vec E) + D_{\vec F}(\vec E)\left(\mat{x\\y}-\vec E\right)
-%	\]
-%	where $D_{\vec F}(\vec E)$ is the \emph{total derivative} of $\vec F$ at $\vec E$, which can be expressed
-%	as the matrix
-%	\[
-%		D_{\vec F}(\vec E) = \mat{
-%			\rule[-0.5cm]{0pt}{.8cm}\displaystyle \frac{\partial F_1}{\partial x} &\displaystyle  \frac{\partial F_1}{\partial y}\\
-%			\rule[-0.2cm]{0pt}{.3cm}\displaystyle  \frac{\partial F_2}{\partial x} &\displaystyle  \frac{\partial F_2}{\partial y}
-%		}
-%	\]
-%	evaluated at $\vec E$.
-%\end{slide}
-%
-%\begin{slide}
-%
-%	Recall our model from Exercise \ref{q-phase} for the life cycle of a tree where $H(t)$ was
-%	height, $A(t)$ was the leaves' surface area, and $t$ was time:
-%	\begin{align*}
-%		H'(t) &= 0.3\cdot A(t)-b\cdot H(t)\\
-%		A'(t) &= -0.3\cdot (H(t))^2 + A(t)
-%	\end{align*}
-%	with $0 \leq b \leq 2$
-%
-%	\bigskip
-%	
-%	We know the following:
-%	\begin{itemize}
-%		\item The equations cannot be written in matrix form.
-%		\item The equilibrium points are $(0,0)$ and $\Big(\frac{100}{9}b,\frac{1000}{27}b^2\Big)$.			
-%	\end{itemize}	
-%
-%	We want to find an affine approximation to the system.
-%
-%	Define $\vec F(H,A)=(H', A')$
-%	\begin{parts}
-%		\item Find the matrix for $D_{\vec F}$, the total derivative of $\vec F$.
-%		\item Create an affine approximation to $\vec F$ around $\vec e=(0,0)$ and use this to write an approximation to the original system.
-%		\item In the original system, the equilibrium $(0,0)$ is unstable and not repelling. Justify this using your affine approximation.
-%		\item\label{affine-approx}
-%		 Create an affine approximation to $\vec F$ around $\vec e=(\frac{100}{9}b,\frac{1000}{27}b^2)$ and use this to write an approximation to the original system.
-%		
-%		\item Make a phase portrait for the original system and your approximation from part \ref{affine-approx}. How do they compare?
-%		\item Analyze the nature of the equilibrium solution in part \ref{affine-approx} using eigen techniques. Relate your analysis to
-%		the original system.
-%
-%	\end{parts}
-%\end{slide}
-%
-%
-%\begin{slide}
-%	\question
-%	Define $\vec F(x,y)=\matc{y\\-xy+x^2-x-y}$ and consider the differential equation
-%	\[
-%		\mat{x'\\y'}=\vec F(x,y).
-%	\]
-%
-%
-%
-%	\begin{parts}
-%		\item Make a phase portrait for this differential equation. Based on your phase 
-%		portrait, can you determine the nature of the equilibrium at $(0,0)$?
-%
-%		{\small \url{https://www.desmos.com/calculator/peby3xd7jj}}
-%
-%		\bigskip
-%		\item Find an affine approximation to $\vec F$ centered at $(0,0)$.
-%		\item Write down a differential equation that approximates the original equation 
-%		near $(0,0)$.
-%		\item Analyze the nature of the equilibrium solution $\vec r(t)=(0,0)$ using eigen techniques. (You may use a computer to assist in eigen computations.) Relate your analysis to
-%		the original system.
-%
-%		\bigskip
-%		\phantom{x}
-%	\end{parts}
-%\end{slide}
-%
-%%
-%% Hours 27-29
-%%
-%
-%\begin{slide}
-%	\question
-%	Consider a spring with a mass attached to the end.
-%	
-%	\begin{tikzpicture}[scale=.4]
-%		\draw[ultra thick] (0,-1) -- (0,1);
-%		\draw[ultra thick,variable=\t,domain=1.5:30,samples=150] plot ({0.6+1.2*(0.3*\t-sin(180*\t/pi))},{1.2*(1-cos(180*\t/pi))-1});
-%		\draw[fill=brown!65!black,draw=none] (-1,-1) rectangle (0,1);
-%		\draw[fill=gray!50!white,ultra thick] ({0.6+1.2*(0.3*30-sin(180*30/pi))},{1.2*(1-cos(180*30/pi))-1}) circle (1) node {M};
-%	\end{tikzpicture}
-%	%[XXX Diagram] |-www-[M]
-%	
-%	Let $x(t) =$ displacement to the right of the spring from equilibrium at time $t$
-%	
-%	Recall from Physics the following laws:
-%	\vspace{-1em}
-%	\begin{itemize}
-%		\item[(HL)] Hooke's Law: For an elastic spring, force is proportional to negative the displacement from equilibrium. 
-%		\item[(NL)] Newton's Second Law: Force is proportional to acceleration (the proportionality constant is called \emph{mass}).
-%		\item[(ML)] Laws of Motion: Velocity is the time derivative of displacement and acceleration is the time derivative of velocity.
-%	\end{itemize}
-%
-%	\bigskip
-%	\bigskip
-%	\begin{parts}
-%		\item Model $x(t)$ with a differential equation.
-%		
-%		For the remaining parts, assume the elasticity of the spring is $k=1$ and the mass is $1$.
-%		\item Suppose the spring is stretched $0.5m$ from
-%		equilibrium and then let go (at time $t=0$).
-%		\begin{enumerate}
-%			\item At $t=0$, what are $x$, $x'$, and $x''$?
-%			\item Modify Euler's method to approximate a solution to the initial value problem.
-%		\end{enumerate}
-%
-%		\item Introduce the auxiliary equation $y=x'$. Can the second-order spring equation
-%		be rewritten as a first-order system involving $x'$ and $y'$? If so, do it.
-%		
-%		\item Simulate the system you found in the previous part using Euler's method.
-%		
-%	\end{parts}
-%	\bigskip
-%	\phantom{x}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Recall the a spring with a mass attached to the end.
-%	
-%	\begin{tikzpicture}[scale=.4]
-%		\draw[ultra thick] (0,-1) -- (0,1);
-%		\draw[ultra thick,variable=\t,domain=1.5:30,samples=150] plot ({0.6+1.2*(0.3*\t-sin(180*\t/pi))},{1.2*(1-cos(180*\t/pi))-1});
-%		\draw[fill=brown!65!black,draw=none] (-1,-1) rectangle (0,1);
-%		\draw[fill=gray!50!white,ultra thick] ({0.6+1.2*(0.3*30-sin(180*30/pi))},{1.2*(1-cos(180*30/pi))-1}) circle (1) node {M};
-%	\end{tikzpicture}
-%	
-%	$x(t) =$ displacement to the right of the spring from equilibrium at time $t$
-%	
-%	
-%	We have two competing models
-%	\begin{equation}
-%		x''=-kx \tag{A}
-%	\end{equation}
-%	\vbox{% prevent the equation and its description from splitting across columns
-%	\begin{equation}
-%			\mat{x\\y}' = \mat{0&1\\-k&0}\mat{x\\y}
-%		\tag{B}
-%	\end{equation}
-%	where $y=x'$.
-%	}
-%
-%	\bigskip
-%	\begin{parts}
-%		\item Make a phase portrait for system (B). What are the axes on the phase portrait? What do you expect general solutions to look like?
-%		\item Use eigenvalues/eigenvectors to find a general solution to (B). (You may use a computer to compute eigenvalues/vectors.)
-%		\item Use your solution to (B) to find a general solution to (A).
-%		
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\question
-%	Consider the second-order differential equation
-%	\[
-%		x''=-(1+x)\cdot x'+x^2-x
-%	\]
-%
-%	\begin{parts}
-%		\item Rewrite the second-order differential equation as a system of first-order differential equations. (Hint:
-%		you may need to introduce an auxiliary equation.)
-%
-%		\item The following Desmos link plots a phase portrait and draws an Euler approximation on the phase portrait:
-%
-%		{\small \url{https://www.desmos.com/calculator/fvqxqp6eds}}
-%
-%		Use the link to make a phase portrait for your system and answer the following questions:
-%		\begin{enumerate}
-%			\item Are there initial conditions with $x(0)<0$ so that a solution $x(t)$ is always increasing?
-%			\item Are there initial conditions with $x(0)<0$ so that a solution $x(t)$ first decreases and then increases?
-%		\end{enumerate}
-%
-%		\item Show that $x(t)=0$ is an equilibrium solution for this equation.
-%
-%		\item Use linearization and eigenvalues to classify the equilibrium $(x,x')=(0,0)$
-%		in phase space.
-%
-%		\item Let $x(t)$ be a solution to the original equation and suppose $x(0)=\delta_1\approx 0$.
-%		\begin{enumerate}
-%			\item If $x'(0)=\delta_2\approx 0$, speculate on the long term behaviour of $x(t)$.
-%			\item If we put no conditions on $x'(0)$ will your answer be the same? Explain.
-%		\end{enumerate}
-%
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\textbf{Boundary Value Problems}
-%
-%	\question
-%	Recall the spring-mass system modeled by
-%	\[
-%		x''=-x
-%	\]
-%	We would like to use the spring-mass system to ring a bell at regular intervals, 
-%	so we put a hammer at the end of the spring. Whenever the displacement is maximal,
-%	the hammer strikes a bell producing a ring.
-%
-%	\begin{parts}
-%		\item Convert the spring-mass system into a system of differential equations.
-%		Make a phase portrait for the system using the following Desmos link:
-%
-%		{\small \url{https://www.desmos.com/calculator/fvqxqp6eds}}
-%		\item In the \emph{Options Euler} on Desmos, adjust $\Delta$ and the number of steps so that simulated solutions are only 
-%		shown for $t\in[0,1]$.
-%
-%		Use simulations to answer the remaining questions.
-%		\item You start by displacing the hammer by $1m$ and letting go. Is it possible that the bell rings every 1 second?
-%		\item You start by displacing the hammer by $1m$ and giving the hammer a push. Is it possible that the bell rings every 1 second?
-%		\item What is the smallest amount of time between consecutive rings (given a positive displacement)?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\textbf{Boundary Value Problems}
-%
-%	\question
-%	Recall the spring-mass system modeled by
-%	\[
-%		x''=-x
-%	\]
-%	We would like to use the spring-mass system to ring a bell at regular intervals, 
-%	so we put a hammer at the end of the spring. Whenever the displacement is maximal,
-%	the hammer strikes a bell producing a ring.
-%
-%	Consider the subspaces
-%	\[
-%		S_1=\Span\{\,\sin(t),\cos(t)\,\}\quad S_2=\{\,A\cos(t+d):A,d\in\R\,\}
-%	\]
-%
-%	\begin{parts}
-%		\item What dimension is each subspace?
-%		\item Which subspaces are sets of solutions to the spring-mass system?
-%		\item Use what you know about complete solutions and linear algebra to prove $S_1=S_2$.
-%
-%		\medskip
-%		Use your knowledge about $S_1$ and $S_2$ to analytically answer the remaining questions.
-%		\item You start by displacing the hammer by $1m$ and letting go. Is it possible that the bell rings every 1 second?
-%		\item You start by displacing the hammer by $1m$ and giving the hammer a push. Is it possible that the bell rings every 1 second?
-%		\item What is the smallest amount of time between consecutive rings (given a positive displacement)?
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\textbf{Boundary Value Problems}
-%
-%	\question
-%		A \emph{boundary value problem} is a differential equation paired with two conditions
-%		at different values of $t$.
-%
-%		Consider the following boundary value problems:
-%		\begin{center}
-%			\begin{tabular}{ccc}
-%				(i) & (ii) & (iii) \\
-%				$x''=-x$ &
-%				$x''=-x$ &
-%				$x''=-x$ \\
-%				$x(0)=1$ &
-%				$x(0)=1$ &
-%				$x(0)=1$ \\ 
-%				$x(\pi)=1$ & 
-%				$x(\pi)=-1$ & 
-%				$x(\frac{\pi}{2})=0$
-%			\end{tabular}
-%		\end{center}
-%
-%	\begin{parts}
-%		\item Using phase portraits and simulations, determine how many solutions each boundary value problem has.
-%		\item Can you find analytic arguments to justify your conclusions?
-%
-%	\end{parts}
-%\end{slide}
-%
-%\begin{slide}
-%	\textbf{Existence and Uniqueness}
-%
-%	Whether a solution to a differential equations exists or is unique is a \emph{hard} question
-%	with many partial answers.
-%
-%	\begin{theorem}[Existence and Uniqueness II]
-%		Let $F(t,x,x')=0$ with $x(t_0)=x_0$ describe an initial value problem.
-%
-%		~~\hbox{\vbox{
-%		\begin{itemize}
-%		\item[IF] $F(t,x,x')=x'(t)+p(t)x(t)+g(t)$ for some functions $p$ and $g$\quad 
-%		\item[AND]
-%		$p$ and $g$ are continuous on an open interval $I$ containing $t_0$\quad 
-%		\item[THEN]
-%		the initial value problem has a unique solution on $I$.
-%		\end{itemize}
-%		}}
-%	\end{theorem}
-%
-%	\question
-%
-%	\begin{parts}
-%		\item The theorem expresses differential equations in the form $F(t,x,x',x'',\ldots)=0$ 
-%		(i.e. as a level set of some function $F$).
-%
-%		Rewrite the following differential equations in the form $F(t,x,x',x'',\ldots)=0$:\\
-%			(i) $x''=-kx$\qquad
-%			(ii) $x''=-x\cdot x'+x^2$\quad\\
-%			(iii) $x'''=(x')^2-\cos x$
-%
-%		\item Which of the following does the theorem say \emph{must} have a unique solution on 
-%		an interval containing $0$?
-%		\begin{enumerate}
-%			\item $y'=\frac{3}{2}y^{1/3}$ with $y(0)=0$
-%			\item $x'(t)=\lfloor t\rfloor x(t)$ with $x(0)=0$
-%			\item $x'(t)=\lfloor t-\frac{1}{2}\rfloor x(t)+t^2$ with $x(0)=0$
-%		\end{enumerate}
-%
-%		Note: $\lfloor x\rfloor$ is the \emph{floor} of $x$, i.e., the largest integer less than or equal to $x$.
-%
-%	\end{parts}
-%\end{slide}
-%
-%
-%
-%
-%\begin{slide}
-%
-%\question
-%
-%Consider a rope hanging from two poles.
-%
-%\vspace{-1em}
-%\begin{center}
-%%\begin{tikzpicture}
-%%  \draw (-1,0) node[below] {0} -- (-1,{cosh(-1)});
-%%  \draw (1.5,0) node[below] {1} -- (1.5,{cosh(1.5)});
-%%  \draw[fill=brown!65!black,draw=none] (-1.5,-0.1) rectangle (2,0);
-%%  \draw (-1.5,0) -- (2,0);
-%%  \draw[blue, ultra thick, variable=\x,domain=-1:1.5,samples=100] plot ({\x},{cosh(\x)});
-%%\end{tikzpicture}	
-%\begin{tikzpicture}
-%  \draw (-1,0) -- (-1,{cosh(-1)});
-%  \draw (1.5,0) -- (1.5,{cosh(1.5)});
-%  \draw[fill=brown!65!black,draw=none] (-1.5,-0.1) rectangle (2,0);
-%  \draw (-1.5,0) -- (2,0);
-%  \draw[blue, thick, variable=\x,domain=-1:1.5,samples=100] plot ({\x},{cosh(\x)});
-%  \draw[ultra thick,violet!50!white] (0,1) -- (0.5,{cosh(0.5)});
-%  \draw[->] (0,1) -- node[above] {\small $\vec{T}_L$} (-0.5,{2-cosh(0.5)+0.15});
-%  \draw[->] (0.5,{cosh(0.5)}) -- node[above] {\small $\vec{T}_R$} (1,{2*cosh(0.5)-1+0.15});
-%  \draw[->] (0.25,0.9) -- (0.25, 0.5) node[below] {\small $\vec{F}_g$};
-%  \draw[dashed,gray] (0,-0.12) node[below] {\scriptsize $d$} -- (0,1);
-%  \draw[dashed,gray] (0.5,-0.12) node[below] {\scriptsize $\quad d+\Delta$} -- (0.5,{cosh(0.5)});
-%\end{tikzpicture}
-%\end{center}
-%\vspace{-1em}
-%$H(d)=$ height of the rope above ground at position $d$.
-%
-%We will consider the following premises and physics laws:
-%\vspace{-1em}
-%\begin{itemize}
-%	\item[($P_D$)] The linear density of the rope is constant: $\rho$ kg/m
-%
-%	\item[($P_G$)] Gravity pulls downwards in proportion to mass (the proportionality constant is called $g$)
-%	
-%	\item[($P_T$)] Tension pulls tangentially to the rope
-%
-%%	\item[(S)] The rope is not moving (it is stationary)
-%
-%	\item[($P_{NL}$)] Newton's First Law: a body at rest will remain at rest unless it is acted upon by a force
-%
-%%	\item[(NL)] Newton's Second Law: Force is proportional to acceleration (the proportionality constant is called mass).
-%
-%%	\item[(ML)] Laws of Motion: Velocity is the time derivative of displacement and acceleration is the time derivative of velocity.
-%\end{itemize}
-%
-%To model the rope, imagine it is made of \textbf{small rigid rods}.
-%We will focus on one such rod, $S$, (drawn in the figure) from $d$ to $d+\Delta$.
-%
-%\begin{parts}
-%
-%\item Given ($P_{NL}$), find a relation between the force vectors $\vec{T}_L, \vec{T}_R, \vec{F}_g$.
-%\item Approximate the length of the segment $S$ and its mass. Approximate the vector $\vec{F}_g$.
-%\item Find a vector $\vec{V}_L$ in the direction of $\vec{T}_L$ (the magnitude doesn't matter at this point).
-%\end{parts}
-%	
-%\end{slide}
-%
-%
-%\begin{slide}
-%
-%\question
-%
-%Consider a rope hanging from two poles.
-%
-%The only forces acting on the rope are gravity and tension.
-%\vspace{-1em}
-%\begin{center}
-%%\begin{tikzpicture}
-%%  \draw (-1,0) node[below] {0} -- (-1,{cosh(-1)});
-%%  \draw (1.5,0) node[below] {1} -- (1.5,{cosh(1.5)});
-%%  \draw[fill=brown!65!black,draw=none] (-1.5,-0.1) rectangle (2,0);
-%%  \draw (-1.5,0) -- (2,0);
-%%  \draw[blue, ultra thick, variable=\x,domain=-1:1.5,samples=100] plot ({\x},{cosh(\x)});
-%%\end{tikzpicture}	
-%\begin{tikzpicture}
-%  \draw (-1,0)  -- (-1,{cosh(-1)});
-%  \draw (1.5,0)  -- (1.5,{cosh(1.5)});
-%  \draw[fill=brown!65!black,draw=none] (-1.5,-0.1) rectangle (2,0);
-%  \draw (-1.5,0) -- (2,0);
-%  \draw[blue, thick, variable=\x,domain=-1:1.5,samples=100] plot ({\x},{cosh(\x)});
-%  \draw[ultra thick,violet!50!white] (0,1) -- (0.5,{cosh(0.5)});
-%  \draw[->] (0,1) -- node[above] {\small $\vec{T}_L$} (-0.5,{2-cosh(0.5)+0.15});
-%  \draw[->] (0.5,{cosh(0.5)}) -- node[above] {\small $\vec{T}_R$} (1,{2*cosh(0.5)-1+0.15});
-%  \draw[->] (0.25,0.9) -- (0.25, 0.5) node[below] {\small $\vec{F}_g$};
-%  \draw[dashed,gray] (0,-0.12) node[below] {\scriptsize $d$} -- (0,1);
-%  \draw[dashed,gray] (0.5,-0.12) node[below] {\scriptsize $\quad d+\Delta$} -- (0.5,{cosh(0.5)});
-%\end{tikzpicture}
-%\end{center}
-%\vspace{-1em}
-%
-%
-%Similarly to the previous exercise, we can find a vector $\vec{V}_R = \matc{1\\H'(d+\Delta)}$ in the direction of $\vec{T}_R$, but with possibly different magnitude.
-%
-%So far we have:
-%\begin{itemize}
-%	\item $\vec{T}_L = \alpha \vec{V}_L$  for some $\alpha > 0$, and
-%	\item $\vec{T}_R = \beta \vec{V}_R$ for some $\beta >0$.
-%\end{itemize}
-%
-%
-%\begin{parts}
-%
-%\item Can you find approximations of the vectors $\vec{F}_g, \vec{T}_L, \vec{T}_R$ that only use $H(d)$, $H'(d)$, and $H''(d)$?
-%
-%Hint:
-%	\begin{itemize}
-%		\item $H(d+\Delta) \approx H(d) + \Delta \cdot H'(d)$,
-%		\item $H'(d+\Delta) \approx H'(d) + \Delta \cdot H''(d)$.
-%	\end{itemize}
-%
-%\item Put everything together to find a (second order) differential equation for $H$.
-%
-%\item Do $\alpha$ or $\beta$ depend on $d$? Explain.
-%	
-%\end{parts}
-%		
-%\end{slide}
-%
-%
-%\begin{slide}
-%
-%\question
-%
-%Recall a rope hanging from two poles.
-%
-%\vspace{-1em}
-%\begin{center}
-%\begin{tikzpicture}
-%  \draw (-1.5,0)  -- (-1.5,{cosh(-1.5)});
-%  \draw (1.5,0) -- (1.5,{cosh(1.5)});
-%  \draw[fill=brown!65!black,draw=none] (-2,-0.1) rectangle (2,0);
-%  \draw (-1.5,0) -- (2,0);
-%  \draw[blue, ultra thick, variable=\x,domain=-1.5:1.5,samples=100] plot ({\x},{cosh(\x)});
-%\end{tikzpicture}
-%\end{center}
-%\vspace{-1em}
-%$H(d)=$ the height of the rope at position $d$.
-%
-%We have the following model for it:
-%\[
-%H''(d) = k \sqrt{1+\big(H'(d)\big)^2}
-%\]
-%
-%Toronto Hydro is stringing some wire. The posts are 20m apart and at a height of 10m. At the lowest point, the wire is 5m above the ground.
-%
-%\vspace{1pt}
-%\begin{parts}
-%
-%	\item Set up a boundary value problem that can be used to find the total length of the wire.
-%
-%	\item Using the following Desmos link, can you find a solution to the boundary value problem?
-%
-%		{\small \url{https://www.desmos.com/calculator/l4fair6454}}
-%
-%	
-%	\item It happens that $k=\frac{\rho g}{T}$ where $T$ is the minimum tension in the rope.
-%
-%	Suppose Toronto Hydro hung the wires so that they were at minimum 9m above the ground.
-%	Would the tension be higher or lower? By how much?
-%
-%	\item Should the difference between maximum and minimum tension
-%	be higher or lower for low-hanging wires? What does your intuition say? What does the phase portrait say?
-%
-%	%The wire has a (linear) density of 1 kg/m and gravity is 9.8 m/s$^2$.
-%	
-%	%For safety reasons, the wire's tensile strength needs to be 5 times the maximum tension when the wire is resting.
-%	
-%	%What strength of wire do they need?
-%	
-%	%\item Assuming the posts are both the same height, relate the length of the rope with the tension at the posts. 
-%
-%	%\item Assuming the posts have different heights, relate the length of the rope with the tension at the posts. 
-%	
-%\end{parts}
-%
-%
-%	
-%\end{slide}
-%
-%
-%
-%
-%\begin{slide}
-%	
-%\question
-%
-%Consider a pendulum as in the figure below.
-%
-%\begin{multicols}{2}
-%\begin{center}
-%\begin{tikzpicture}[scale=0.5]
-%  \draw[fill=brown!65!black,draw=none] (-1,0.1) rectangle (1,0);
-%  \draw (-1,0) -- (1,0);
-%  \draw[ultra thick] (0,0) -- (1,-4);
-%  \draw[thick, fill=black!20!white] (1,-4) circle (0.5) node {m};
-%  \draw[dashed, gray] (0,0) -- (0,-4);
-%  \draw[->,gray] (0,-3) node[above] {$\quad\theta$} arc (-90:-76:3);
-%  \draw[->] (1, -4.75) -- (1, -5.25) node[below] {\small $\vec{F}_g$};
-%  \draw[->] (1.1, -3.3) -- (0.95, -2.7) node[right] {\small $\vec{T}$};  
-%\end{tikzpicture}
-%\end{center}
-%
-%\columnbreak
-%$\theta(t) = $ the angle the pendulum makes with the vertical axis (positive in the counterclockwise direction and negative in the clockwise direction).
-%\end{multicols}
-%
-%Assume the pendulum is composed of a weightless rigid rod of length $1$ meter and a mass of $1$ kg at its end. In 
-%addition assume:
-%
-%\begin{itemize}
-%	\item[($P_G$)] Gravity pulls downwards in proportion to mass (the proportionality constant is called $g$).
-%	\item[($P_T$)] Tension pulls the mass in the direction of the rod.
-%	\item[($P_{NL}$)] Newton's Second Law: Force is proportional to acceleration (the proportionality constant is called mass).
-%	\item[($P_{ML}$)] Laws of Motion: Velocity is the time derivative of displacement and acceleration is the time derivative of velocity.
-%\end{itemize}
-%
-%\begin{parts}
-%	\item Let $\theta(t)$ be the angle at time $t$ and let $\vec r(t)$ be the mass's position at time $t$.
-%	
-%	Find $\vec r(t)$ and $\vec r\,''(t)$ in terms of $\theta(t)$.
-%	\item Find the vector $\vec{F}_g$.
-%	\item Find a vector $\vec{T}_d$ so that $\vec T = \alpha\vec T_d$ for some $\alpha>0$.
-%%	\item Find the velocity and acceleration vectors for the mass.
-%	\item Find a second-order differential equation for the pendulum.
-%	\textit{(Hint: ($P_{NL}$) gives you an equation for each coordinate. Solve one for $(\theta')^2$ and substitute it into 
-%	the other equation.)}
-%%	\item Write the differential equation as a system of 1$^{\rm st}$-order differential equations.
-%
-%\end{parts}
-%\end{slide}
-%
-%
-%
-%\begin{slide}
-%
-%\question
-%
-%Consider a pendulum as in the figure below.
-%
-%\begin{multicols}{2}
-%\begin{center}
-%\begin{tikzpicture}[scale=0.5]
-%  \draw[fill=brown!65!black,draw=none] (-1,0.1) rectangle (1,0);
-%  \draw (-1,0) -- (1,0);
-%  \draw[ultra thick] (0,0) -- (1,-4);
-%  \draw[thick, fill=black!20!white] (1,-4) circle (0.5) node {m};
-%  \draw[dashed, gray] (0,0) -- (0,-4);
-%  \draw[->,gray] (0,-3) node[above] {$\quad\theta$} arc (-90:-76:3);
-%  \draw[->] (1, -4.75) -- (1, -5.25) node[below] {\small $\vec{F}_g$};
-%  \draw[->] (1.1, -3.3) -- (0.95, -2.7) node[right] {\small $\vec{T}$};  
-%\end{tikzpicture}
-%\end{center}
-%
-%\columnbreak
-%$\theta(t) = $ the angle the pendulum makes with the vertical axis (positive in the counterclockwise direction and negative in the clockwise direction).
-%\end{multicols}
-%If we had preserved length and mass in our derivation, we would have the following model:
-%\[
-%\theta''(t) = -\frac{g}{L} \sin\Big( \theta(t) \Big)
-%\]
-%\medskip
-%
-%Let (P) be the corresponding system of first-order differential equations.
-%The following Desmos link is already set up with (P).
-%
-%{\small \url{https://www.desmos.com/calculator/acmiingcqf}}
-%
-%\begin{parts}
-%	\item If $L=3$m, and you set the pendulum in motion at $\theta =0$ by giving it a \textbf{small} push,
-%	what does the motion look like?
-%
-%	\item If $L=3$m, and you set the pendulum in motion at $\theta =0$ by giving it a \textbf{big} push,
-%	what does the motion look like?
-%
-%	\item Why are there infinitely many equilibrium solutions? Based on your physical intuition,
-%	which equilibria are stable and which are unstable?
-%	
-%	\item Find an affine approximation to (P) around $(\theta,\theta')=(0,0)$.
-%
-%	\item Physicists often claim that $\theta(t)$ oscillates like a sine wave with
-%	period $2\pi\sqrt{\frac{L}{g}}$. Under what conditions are the (mostly) correct?
-%
-%
-%
-%
-%%	\item Show that $\theta(t)=k\pi$ are equilibrium solutions for all $k\in \mathbb{Z}$. Analyze its nature using eigen techniques.
-%%
-%%	\bigskip
-%%
-%%	\item Using the following Desmos link, use different initial conditions to explore the different behaviours of the pendulum with $L=3$.
-%%
-%%		{\small \url{https://www.desmos.com/calculator/5qifixelmb}}
-%%		
-%%	\item If the pendulum starts vertically with a 5 m/s push to the right, is the solution periodic?
-%%	
-%%	\item Assume $\theta(0)=0$. Find an initial velocity $v^\star$ such that the behaviour of the phase portrait for $\theta'(0)<v^\star$ is different than that for $\theta'(0)>v^\star$. What is the practical meaning of $v^\star$?
-%%	
-%%	\item We have a pendulum with $L=3$ m on Earth. We want to take a pendulum to the Moon that will behave exactly in the same way. What should be the specifications of that pendulum?
-%
-%\end{parts}
-%
-%
-%\end{slide}
 
+\begin{slide}
+	\question%
+	\label{geomseq}
+	The sequence $a_n$ is defined by $a_0=10$ and
+	\[
+		\frac{a_{n+1}}{a_n}= \frac{1}{4}
+	\]
+
+	Define $\displaystyle S_n=\sum_{i=0}^n a_i$ and
+	$\displaystyle S=\lim_{n\to\infty} S_n$.
+
+	\begin{parts}
+		\item  Find an expression for $a_n$.
+		\item Is $S_n$ bounded? Explain.
+		\item Compute $S$.
+
+		\emph{Recall:
+			$\displaystyle
+				\sum_{i=0}^n \alpha^i = \frac{1-\alpha^{n+1}}{1-\alpha}
+			$}
+
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Recall the sequence $a_n$ from Exercise \ref{geomseq} defined by
+	$a_0=10$ and
+	$\displaystyle
+		\frac{a_{n+1}}{a_n}= \frac{1}{4}
+	$.
+
+	Consider the unknown, positive, sequence $b_n$. You know that $b_0=5$ and
+	$\displaystyle \frac{b_{n+1}}{b_n} < \frac{1}{5}$.
+
+	\begin{parts}
+		\item Do you have enough information to write down an expression for $b_n$?
+
+		\item Which (if any) of the following relationships must hold for all $n$?
+		\[
+			a_n < b_n \qquad b_n < a_n \qquad a_n = b_n
+		\]
+		Justify your answer.
+
+		\item Consider the series $\displaystyle \sum_{n=0}^\infty
+			b_n$. Does the series converge? Justify your answer by comparing with
+		a known series.
+
+		\item If you were told that, actually, $b_0=100$, would that
+		change your answer to the previous part?
+	\end{parts}
+
+\end{slide}
+\begin{slide}
+	\question
+	The ratio test states for a sequence $c_n$ if
+	\[
+		\lim_{n\to\infty} \frac{|c_{n+1}|}{|c_n|} < 1
+	\]
+	then $\displaystyle \sum_{n=0}^\infty c_n$ converges.
+
+	Recall the sequence $a_n$ from Exercise \ref{geomseq} defined by
+	$a_0=10$ and
+	$\displaystyle
+		\frac{a_{n+1}}{a_n}= \frac{1}{4}
+	$.
+
+	You know the following about the positive sequence $d_n$:
+	$\displaystyle \lim_{n\to\infty} \frac{d_{n+1}}{d_n} =\rho < \frac{1}{5}$.
+
+	\begin{parts}
+		\item Which (if any) of the following relationships must hold for all $n$?
+		\[
+			a_n < d_n \qquad d_n < a_n \qquad a_n = d_n
+		\]
+		\item Which (if any) of the following relationships \emph{eventually} hold (i.e. hold for all sufficiently large $n$)?
+		\[
+			a_n < d_n \qquad d_n < a_n \qquad a_n = d_n
+		\]
+		Justify your answer.
+
+		\item Justify, without the ratio test, whether $\displaystyle
+			\sum_{n=0}^\infty d_n$ converges.
+
+		\item Prove the ratio test.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	\begin{theorem}[(Ratio Test)]
+		If $c_n$ is a sequence and
+		\[
+			\lim_{n\to\infty} \frac{|c_{n+1}|}{|c_n|} =\rho
+		\]
+		then $\displaystyle \sum_{n=0}^\infty c_n$
+
+		\begin{itemize}
+			\item converges if $\rho < 1$
+			\item diverges if $\rho > 1$
+			\item could converge or diverge if $\rho =1$
+		\end{itemize}
+	\end{theorem}
+
+	\begin{parts}
+		\item
+		\begin{minipage}[t]{0.45\textwidth}
+			The Ratio Test talks about the convergence of $\displaystyle \sum_{n=0}^\infty c_n$.
+			Does it also apply to sums that don't start at $n=0$? Explain.
+		\end{minipage}
+		\item Apply the ratio test to determine the convergence of the
+		following series:
+		\begin{enumerate}
+			\item $\displaystyle \sum_{n=1}^\infty \frac{2^{n}}{n!}$
+			\item $\displaystyle \sum_{n=1}^\infty \frac{8^n}{(-2)^{n+1}n}$
+			\item $\displaystyle \sum_{n=1}^\infty \frac{1}{n}$
+		\end{enumerate}
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	The Taylor series for $f(x)=\frac{1}{1-2x}$ is
+	\[
+		T(x)=\sum_{n=0}^\infty 2^nx^n
+	\]
+
+	\begin{parts}
+		\item Apply the ratio test to $T(x)$. Does $T(x)$ converge?
+		Does your answer depend on $x$?
+		\item Let $G(x)$ be the Taylor series for $g(x)=e^x$. Apply the ratio
+		test to $G(x)$. Does your answer depend on $x$?
+		\item Write down the largest (open) interval of convergence and the radius of convergence for $T$ and $G$.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	The Taylor series for $h(x)=\frac{1}{1-x}$ centered at $a>1$ is
+	\[
+		H(x)=\sum_{n=0}^\infty \frac{(x-a)^n}{(1-a)^{n+1}}.
+	\]
+
+
+	\begin{parts}
+		\item Find the largest (open) interval of converge and radius of convergence for $H$.
+		\item Graph $h$. Just looking at the graph, can you determine
+		whether a Taylor series for $h$ should have an infinite or finite radius of converge?
+	\end{parts}
+\end{slide}
+
+
+
+\begin{slide}
+	\question
+
+	\begin{theorem}[(Integration by Parts)]
+		If $f(x)$ and $g(x)$ are differentiable functions, then
+		\[
+			\int f(x)g'(x)\,\mathrm d x
+			= f(x)g(x) -
+			\int f'(x)g(x)\,\mathrm d x
+		\]
+	\end{theorem}
+
+	\begin{parts}
+		\item The integration by parts formula comes from reversing
+		one of the differentiation rules (e.g., chain rule/product rule/quotient rule). Which rule does the integration by parts formula come from?
+		\item
+		Let $h_1(x)=x\sin x$.
+
+		\begin{enumerate}
+			\item
+			      For $h_1$, write down all the ways to divide it into
+			      a product of  ``parts'' $f$ and $g'$ so that $h_1=f\cdot g'$.
+			\item Pick the decomposition into parts that you think will be most useful and integrate $h_1$.
+		\end{enumerate}
+
+		\item
+		Let $h_2(x)=x^3 e^{x^2}$.
+		\begin{enumerate}
+			\item
+			      For $h_2$, write down all the ways to divide it into
+			      a product of  ``parts'' $f$ and $g'$ so that $h_2=f\cdot g'$.
+			\item Pick the decomposition into parts that you think will be most useful and integrate $h_2$.
+		\end{enumerate}
+
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+
+	\begin{theorem}[(Integration by Parts)]
+		If $f(x)$ and $g(x)$ are differentiable functions, then
+		\[
+			\int f(x)g'(x)\,\mathrm d x
+			= f(x)g(x) -
+			\int f'(x)g(x)\,\mathrm d x
+		\]
+	\end{theorem}
+
+	\begin{parts}
+		\item Use integration by parts to find $\displaystyle \int e^x\sin x\,\mathrm d x$.
+
+		Hint: \emph{if at first you don't succeed, try, try again.}
+
+		\item Use integration by parts to find $\displaystyle \int_1^2 \ln x\,\mathrm d x$.
+
+		Hint: \emph{sometimes $g$ is hiding in plain sight.}
+	\end{parts}
+\end{slide}
+
+
+% \begin{slide}
+% 	\question
+
+% 	\begin{minipage}{\textwidth}
+% 	For each integral, decide whether you would use integration by
+% 	parts. If you would, describe the parts.
+
+
+% 	\begin{center}
+% 	\renewcommand{\arraystretch}{2.5}
+% 	\begin{tabular}{|c|c|c|}
+% 		\hline 
+% 		Integral & $\phantom{x}\qquad f=?$\qquad $g=?$\qquad \phantom{x}& Other method? \\
+% 		\hline 
+% 		$\displaystyle \int xe^{2x-3}\,\mathrm d x$ &&\\[6pt]
+% 		 \hline
+% 		$\displaystyle \int t^3e^{t^3}\,\mathrm d t$ &&\\[6pt]
+% 		 \hline
+% 		$\displaystyle \int \sin(\ln x)\,\mathrm d t$ &&\\[6pt]
+% 		 \hline
+% 		$\displaystyle \int x^2\sin(t)\,\mathrm d t$ &&\\[6pt]
+% 		 \hline
+% 	\end{tabular}
+% 	\end{center}
+% 	\end{minipage}
+
+% \end{slide}
+
+
+
+\begin{slide}
+	\question
+	We would like to compute
+	\[
+		F(\theta) = \int \sin^2(\theta)\,\mathrm d \theta
+	\]
+
+	\begin{parts}
+		\item (Review) Use integration by parts to find $F(\theta)$.
+
+		Hint: \emph{The identity $1=\cos^2\theta +\sin^2\theta$ may reduce your workload.}
+
+		\item Use the trig identity $\displaystyle\sin^2\theta = \frac{1-\cos 2\theta}{2}$
+		to find $F(\theta)$.
+
+		\item Find $\displaystyle \int \cos^2(\theta)\,\mathrm d \theta$ using any method you like.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	\label{qtrigsub1}
+	Let $f(x)=\sqrt{1-x^2}$ and consider
+	\[
+		I=\int_0^1 f(x)\,\mathrm d x
+	\]
+
+	\begin{parts}
+		\item If we define a change of variables $x=\sin \theta$, what would
+		$\mathrm d x$ equal?
+		\item Apply the substitution $x=\sin\theta$ to get a new function
+		$g(\theta)$ so that
+		\[
+			\int_0^1 f(x)\,\mathrm d x
+			=
+			\int_?^? g(\theta)\,\mathrm d \theta
+		\]
+
+		Find the function $g$ and the bounds for the new integral (i.e. fill in the $?$'s).
+
+		\item Find $I$.
+
+		\item Graph $f$. What shape does the graph make? Use your knowledge
+		of geometry to find $I$.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	In Exercise \ref{qtrigsub1} we computed
+	\[
+		I=\int_0^1 \sqrt{1-x^2}\,\mathrm d x = \int_0^{\pi/2} \cos^2\theta\,\mathrm d \theta
+	\]
+
+	\begin{parts}
+		\item Explain why the bounds changed from $[0,1]$ to $[0,\pi/2]$.
+		\item Would it be okay to change the bounds from $[0,1]$ to $[2\pi, 5\pi/2]$?
+		\item Would it be okay to change the bounds from $[0,1]$ to $[0, 5\pi/2]$?
+		\item Compute $I$ using the substitution $x=\cos\theta$. Pay close attention to
+		make sure you use the correct bounds.
+	\end{parts}
+\end{slide}
+
+
+
+\begin{slide}
+	\question
+	Let $\displaystyle f(x)=\frac{\sqrt{9-x^2}}{x^2}$ and consider
+	\[
+		F(x)=\int f(x)\,\mathrm d x
+	\]
+	Using a substitution of $x=3\sin\theta$,  we arrive at
+	\[
+		F(x)=-\frac{\cos\theta}{\sin\theta} - \theta + C.
+	\]
+
+	\begin{parts}
+		\item Find an expression for $F(x)$ that involves only $x$.
+		\item Are there restrictions on domain of $x$ for which your
+		answer makes sense?
+		\item The domain of $\arcsin$ is $[-1,1]$. Does this change your
+		restrictions on the domain of $x$?
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+	Let $\displaystyle f(x)=\sqrt{\cos x}$ and consider
+	\[
+		I=\int_0^{\sqrt{2}} f(x)\,\mathrm d x
+	\]
+
+	You would like to find $I$.
+	\begin{parts}
+		\item Use WolframAlpha to find an anti-derivative of $f$.
+		Does WolframAlpha give you a useful answer?
+		\item Using a 2$^{\text{nd}}$ degree Taylor approximation for $\cos$,
+		write down an integral that will approximate $I$.
+		\item Find an approximation for $I$.
+		\item Use a 2$^{\text{nd}}$ degree Taylor approximation for $f$ to
+		approximate $I$.
+		\item Desmos claims $I\approx 1.15686930348$. Which of your estimates is more accurate?
+
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+	Let
+		\[
+			f(x)=\frac{1}{x^2-1}\qquad
+			\text{and}
+			\qquad g(x)=\frac{A}{x-1}+\frac{B}{x+1}.
+		\]
+
+	\begin{parts}
+		\item
+		You would like to know if
+		there are constants $A$ and $B$ such that $f(x)=g(x)$ for all $x$.
+
+		Set up a system of linear equations (or a matrix equation) which has a
+		solution if and only if there are constants $A$ and $B$ that make $f(x)=g(x)$ for all $x$ (in the domain of $f$).
+		\item Find $A$ and $B$, if possible.
+		\item Compute $\displaystyle \int f(x)\,\mathrm d x$ using any method of your choice.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Let
+		\[
+			f(x)=\frac{1}{(x-1)x^2}\qquad
+			\text{and}
+			\qquad g(x)=\frac{A}{x-1}+\frac{B}{x}.
+		\]
+
+	\begin{parts}
+		\item
+		You would like to know if
+		there are constants $A$ and $B$ such that $f(x)=g(x)$ for all $x$.
+
+		Set up a system of linear equations (or a matrix equation) which has a
+		solution if and only if there are constants $A$ and $B$ that make $f(x)=g(x)$ for all $x$ (in the domain of $f$).
+		\item Find $A$ and $B$, if possible.
+		\item Let $h(x)=\frac{A}{x-1}+\frac{B}{x}+\frac{C}{x^2}$. Can you find 
+		constants $A$, $B$, and $C$ so that $f(x)=h(x)$ for all $x$ (in the domain of $f$)? If so, do it.
+		\item Compute $\displaystyle \int f(x)\,\mathrm d x$ using any method of your choice.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	We know $\int \frac{1}{x^2+1}\,\mathrm d x = \arctan x + C$. However, we can 
+	also use partial fraction decomposition over the complex numbers to integrate.
+
+	Let $f(x)=\frac{1}{1+x^2}$ and $g(x)=\frac{A}{1+ix}+\frac{B}{1-ix}$.
+
+	\begin{parts}
+		\item Find $A$ and $B$ so that $f(x)=g(x)$ for all $x$ (in the domain of $f$).
+		\item Compute $\displaystyle \int f(x)\,\mathrm d x$ using your result from the previous part.
+
+		\emph{However:} use $\ln x$ as the antiderivative of $\frac{1}{x}$ rather
+		than $\ln |x|$.
+		\item Use the fact that $\ln (re^{i\theta})=\ln r + i\theta$ to simplify your answer.
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+	An \emph{improper integral} formalizes the concept of the area 
+	under an ``infinite'' curve.
+
+	Suppose $f$ is a bounded function and let $\displaystyle I=\int_0^\infty f(x)\mathrm d x$.
+
+	\begin{parts}
+		\item Write down a formal definition of $I$.
+		\item Compute, using the definition, 
+		$\displaystyle \int_0^\infty \frac{1}{(x+1)^2}\mathrm d x$
+		\item Compute, using the definition, 
+		$\displaystyle \int_0^\infty \frac{1}{(x+1)}\mathrm d x$
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Let $\displaystyle f(x)=\frac{x}{x^2+1}$
+
+	In this question, we will try to compute
+	\[
+	Q=\int_{-\infty}^\infty f(x)\,\mathrm d x
+	\]
+
+	\begin{parts}
+		\item Graph $f$. Make a guess on what you think the ``total area under the curve'' (i.e. $Q$) should be.
+		\item Find $\displaystyle \int f(x)\,\mathrm d x$
+		\item Compute $
+		\displaystyle 
+		\lim_{N\to\infty} \int_{-N}^N f(x)\,\mathrm d x
+		$. Should your result be equal to $Q$?
+		\item Should $
+		\displaystyle 
+		\lim_{N\to\infty} \int_{-N}^{2N} f(x)\,\mathrm d x
+		$ correspond to $Q$? Compute it and compare with the previous part.
+
+		\item Compute $A=\displaystyle \int_0^\infty f(x)\,\mathrm d x$
+		and $B=\displaystyle \int_{-\infty}^0 f(x)\,\mathrm d x$.
+
+		\item By the properties of integrals, we must have
+		\[
+			Q=A+B.
+		\]
+		Do the properties of integrals hold for this improper integral?
+		What does this say about $Q$?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	The moral of improper integral is:
+	\begin{quote}
+		\emph{Wherever an infinity might appear, take a separate limit.}
+	\end{quote}
+
+	\begin{parts}
+		\item Rewrite 
+		$\displaystyle \int_{-\infty}^\infty \frac{x}{x^2+1}\,\mathrm d x$
+		using limits of definite integrals.
+		\item Let $g(x)=\frac{1}{x^{1/3}}$ and consider 
+		$I=\displaystyle \int_{-8}^{27} g(x)\,\mathrm d x$.
+
+		\begin{enumerate}
+			\item Identify all regions where $\displaystyle \int g(x)\,\mathrm d x$ \emph{could} produce infinities.
+			\item Rewrite $I$ using limit(s) of definite integrals.
+			\item Find $I$.
+		\end{enumerate}
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	\question
+
+	Let $\displaystyle f(x)=\frac{\ln|x|}{x^4+1}$
+	\[
+	J=\int_{-\infty}^\infty f(x)\,\mathrm d x
+	\]
+
+	\begin{parts}
+		\item Rewrite $J$ using limit(s) of definite integrals.
+		\item 
+		Consider the functions
+		\[
+			b_1(x)=\ln x \qquad b_2(x)=\frac{\ln x}{2}
+		\]
+		\[
+			b_3(x) = \frac{x}{x^4+1}\qquad b_4(x)=0
+		\]
+		\begin{enumerate}
+		\item Let $A=\displaystyle \int_0^1 f(x)\,\mathrm d x$.
+		Find upper and lower bounds for $A$ by comparing with the
+		appropriate $b_?$ 
+		functions.
+
+		\item Let $B=\displaystyle \int_1^\infty f(x)\,\mathrm d x$.
+		Find upper and lower bounds for $B$.
+
+		\end{enumerate}
+		
+		\item Use your results from the previous part to find upper and lower bounds for $J$.
+		
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+
+	Consider the functions
+	\[
+		A(t)=t \qquad B(t)=t^2 \qquad C(t)=t^{1/2}
+	\]
+	\[
+		D(t)=2t \qquad E(t)=2t^2 \qquad F(t)=2t^{1/2}
+	\]
+
+	\begin{parts}
+		\item Consider the parametric equations $x(t)=A(t)$ and $y(t)=D(t)$.
+
+		Graph, by hand, $(x,y)$ for $t\in [0,4]$.
+
+		\item Consider the parametric equations $x(t)=B(t)$ and $y(t)=A(t)$.
+
+		Graph, by hand, $(x,y)$ for $t\in [0,4]$.
+
+		\item Identify all possible assignments of $x(t)=\,??$ and $y(t)=\,??$ 
+		(where $??$ come from the functions above) so that 
+		the graph of $(x,y)$ for $t\in [0,4]$ is a line segment.
+
+		\item Out of your examples above, which example produces the \emph{longest} line segment?
+		
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	% https://www.desmos.com/calculator/bf4a7hrudl
+	\question
+
+		Shown is the graph of $\displaystyle
+		\begin{cases}
+			x(t)=3\cos t \\
+			y(t)=t^2-5t
+		\end{cases}
+		$
+		for $t\in[0,2\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/parametric1.png}
+		\end{center}
+
+	
+	The parametric equations describe the position of a particle at time $t$.
+
+	\begin{parts}
+		\item Is the particle moving from $P$ to $Q$ or $Q$ to $P$? Explain.
+
+		\item At what time(s) is the particle moving up \emph{and} to the right?
+
+		\item At what time(s) is the particle moving parallel to the $x$-axis?
+
+		\item Find the tangent line to the particles path at time $t=\pi/2$.
+		
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	% https://www.desmos.com/calculator/bf4a7hrudl
+	\question
+
+		Shown is the graph of $\displaystyle
+		\begin{cases}
+			x(t)=3\cos t \\
+			y(t)=t^2-5t
+		\end{cases}
+		$
+		for $t\in[0,2\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/parametric1.png}
+		\end{center}
+
+	
+	The parametric equations describe the position of a particle at time $t$.
+
+	\begin{parts}
+		\item Find a parameterization for a particle that traces the same path,
+		but starts at $Q$ and ends at $P$.
+
+		\item Find a parameterization so that the particle finishes its journey in $\pi$ seconds instead of $2\pi$ seconds.
+
+		\item Is there a parameterization so that the particle
+		finishes its journey in $\pi$ seconds but starts its journey at
+		the same speed as the original particle? If such a parameterization exists, how would you come up with it?
+		
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	% https://www.desmos.com/calculator/bf4a7hrudl
+	\question
+
+		Shown is the graph of $\displaystyle
+		r(\theta)=\sin(3\theta)
+		$
+		in polar coordinates
+		for $\theta\in[0,\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/parametric2.png}
+		\end{center}
+
+	
+	The curve models the boundary of a propeller.
+
+	\begin{parts}
+		\item The blade in the first quadrant achieves a maximum length at 
+		an angle of $\theta =\pi/6$. Find the rectangular coordinates of
+		the tip of the blade in the first quadrant.
+
+		\item Find parametric equations $(x(t), y(t))$ that trace out the 
+		propeller.
+
+		\item Find the tangent line to the propeller when $\theta=0$
+		and when $\theta =\pi/3$.
+
+		\item We know that the propeller is contained in 
+		a circle with area $\pi$.
+
+		Come up with a better upper bound for the area of the 
+		propeller.		
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	% https://www.desmos.com/calculator/agec13lrk2
+	\question
+		The same semi-circle can be described in polar coordinates by
+		\[
+r(\theta)=\cos\theta\quad\text{ with }\quad\theta\in[0,\pi/2]
+		\]
+		 or in rectangular
+		coordinates by \[
+		y(x)=\sqrt{\tfrac{1}{4}-\left(x-\tfrac{1}{2}\right)^2}\quad\text{ with }\quad x\in[0,1].
+		\]
+
+		Below are two ways to divide up the semicircle to approximate its area: one with rectangles and one with circular \emph{sectors}.
+		\begin{center}
+	\includegraphics[height=1in]{images/riemann-rect.png}
+		\end{center}
+		\begin{center}
+	\includegraphics[height=1in]{images/riemann-polar.png}
+		\end{center}
+
+	
+	\begin{parts}
+		\item Write down a Riemann sum that approximates the area using 
+		\emph{rectangles}. Use $\Delta x$ as the width of a rectangle.
+
+		\item Write down a Riemann sum that approximates the area using 
+		\emph{sectors}. Use $\Delta \theta$ as the sector angle.
+		
+		\item Take limits of your previous two Riemann sums to find 
+		integrals that represent the \emph{exact} area of the semicircle. 
+
+		\emph{Do not evaluate your integrals.}
+
+		\item Which integral would you rather do?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	% https://www.desmos.com/calculator/bf4a7hrudl
+	\question
+
+		Shown is the graph of $\displaystyle
+		r(\theta)=\sin(3\theta)
+		$
+		in polar coordinates
+		for $\theta\in[0,\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/parametric2.png}
+		\end{center}
+
+	
+	The curve models the boundary of a propeller.
+
+	\begin{parts}
+		\item The first propeller blade is traced out for $\theta\in[0,\pi/3]$
+		
+		Set up a Riemann sum that approximates the area of the first propeller
+		blade.
+
+		\item Set up an integral that will give the \emph{exact} area of the
+		first propeller blade. Then, find the area of the first propeller blade.
+
+		\item Find the total area of the propeller.
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	% https://www.desmos.com/calculator/yrzsjkewdc
+	\question
+
+		Shown is the graph of $\displaystyle
+		r(\theta)=\sin(3\theta)
+		$
+		in polar coordinates
+		for $\theta\in[0,\pi]$.
+		\begin{center}
+	\includegraphics[height=2in]{images/propeller-painted.png}
+		\end{center}
+
+	
+	The curve models the boundary of a propeller. The parts of the propeller
+	within distance $1/2$ of the origin are painted blue. The rest is painted yellow.
+
+	\begin{parts}
+		\item Consider the propeller blade in the first quadrant. At what
+		angle does the yellow paint start to appear? At what angle does it 
+		disappear?
+
+		\item Set up an integral that will give the amount of yellow paint needed for the first blade.
+
+		\item Set up an expression with integral(s) that will give the amount of blue paint needed
+		for the first blade.
+
+		\item Find the amounts of each paint needed to paint the 
+		whole propeller.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+
+	\begin{parts}
+		\item Which of the following are solutions to the ODE
+		\[
+			ty'-6y=18
+		\]
+		\begin{minipage}{\textwidth}
+		\begin{enumerate}
+			\item $y=8-3t^6$
+			\item $y=3t^6-8$
+			\item $y=8t^6-3$
+			\item $y=3-8t^6$
+			\item $y=t^6-3$
+		\end{enumerate}
+	\end{minipage}
+
+		\item Consider the differential equation
+		\[
+			y''=\cos (t) y'+t^3
+		\]
+		\begin{enumerate}
+			\item What is the order of the ODE?
+			\item Is the ODE linear?
+		\end{enumerate}
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+
+	Consider $y'(t)=5y(1-y)$
+
+	\begin{parts}
+		\item What do we call the special values $y=0$ and $y=1$?
+		
+		(\emph{Hint: think back to MAT186.})
+
+		\item Draw a phase diagram for the ODE.
+\vspace{7mm}
+	\begin{center}
+	\begin{tikzpicture}[scale=1.5]
+		\draw[->] (1,0) -- (5,0) node [below] {$y$};
+		\draw (2,-0.1) node [below] {$0$} -- ++(0,0.2);
+		\draw (4,-0.1) node [below] {$1$} -- ++(0,0.2);
+	\end{tikzpicture}
+	\end{center}
+	\vspace{3mm}
+
+	\item Which of the following plots show a possible solution with initial condition 
+	$y(0)=1.5$? What about initial condition 
+	$y(0)=0.2$?
+
+		\begin{center}
+			\begin{tikzpicture}[line width=1,baseline=0.2cm]
+				\draw [->] (1.7,-0.25) -- (3.5,-0.25) node [below] {$t$};
+				\draw [->] (1.9,-0.45) -- (1.9,1) node [left] {(A) $y$};
+				\draw [orange] plot [smooth] coordinates {(1.9,-0.04) (2.4,0.05) (3,0.27) (3.4,0.79)};
+				\end{tikzpicture}
+				\hfill
+				\begin{tikzpicture}[line width=1,baseline=0.2cm]
+				\draw [->] (1.7,-0.25) -- (3.5,-0.25) node [below] {$t$};
+				\draw [->] (1.9,-0.45) -- (1.9,1) node [left] {(B) $y$};
+				\draw [orange] plot [smooth] coordinates {(1.9,0.79) (2.4,0.27) (3,0.05) (3.4,-0.04)};
+				\end{tikzpicture}
+				\hfill
+				\begin{tikzpicture}[line width=1,baseline=0.2cm]
+				\draw [->] (1.7,-0.25) -- (3.5,-0.25) node [below] {$t$};
+				\draw [->] (1.9,-0.45) -- (1.9,1) node [left] {(C) $y$};
+				\draw [orange] plot [smooth] coordinates {(1.9,-0.1) (2.5,0) (3,0.7) (3.5,0.8)};
+				\end{tikzpicture}
+				\hfill
+				\begin{tikzpicture}[line width=1,baseline=0.2cm]
+				\draw [->] (1.7,-0.25) -- (3.5,-0.25) node [below] {$t$};
+				\draw [->] (1.9,-0.45) -- (1.9,1) node [left] {(D) $y$};
+				\draw [orange] plot [smooth] coordinates {(1.9,0.8) (2.5,0.7) (3,0) (3.5,-0.1)};
+				\end{tikzpicture}
+		\end{center}
+
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE 
+	\[
+	y'=y^2
+	\]
+
+	\begin{parts}
+		\item Which of the following could be sketches of solutions to this ODE?
+
+		\begin{tikzpicture}[xscale=1.2,yscale=1.5,thick]
+			\draw[smooth,samples=100,domain=0.1:1.8,orange] plot({\x},{2/(3-\x)-0.65});
+			 \draw[->] (-0.2,1.3) -- (2,1.3) node [below] {$t$};
+			\draw[->] (0,-0.2) -- (0,1.8) node [left] {(A) $y$};
+			\draw (-0.1,1) node [left] {$-1$} -- ++(0.2,0);
+		\end{tikzpicture}~~%
+		\begin{tikzpicture}[xscale=1.2,yscale=1.5,thick]
+			\draw[smooth,samples=100,domain=0.1:1.8,orange,yscale=-1,xscale=-1] plot({\x-2},{2/(3-\x)-1.7});
+			\draw[->] (-0.2,1.3) -- (2,1.3) node [below] {$t$};
+			\draw[->] (0,-0.2) -- (0,1.8) node [left] {(B) $y$};
+			\draw (-0.1,1) node [left] {$-1$} -- ++(0.2,0);
+		\end{tikzpicture}
+
+		\item Sketch a \emph{slope field} for this ODE.
+		\item Make sketches of all \emph{qualitatively different} solutions
+		to this ODE (i.e., all solutions whose shape is fundamentally different).
+		\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	{\bfseries Level 1 Modelling}
+
+	\question
+	Let $y(t)$ denote the mass (measured in grams) at time $t$ of
+	a chemical substance in a  full 150 litre tank. A solution of
+	water and the chemical with a concentration of 10 grams/litre
+	is pumped into the tank at a rate of 3 litres/minute. The contents is pumped out
+	of  the tank at a rate of 3 litre/minute.
+
+	Assume
+	the tank is well mixed at all times.
+
+	\begin{parts} 
+		
+	\item What are the units of $\frac{dy}{dt}?$
+    
+
+    \item At what rate is the chemical substance \textbf{entering} the tank? What should these units be?
+
+
+    \item At what rate is the chemical substance \textbf{exiting} the tank? What should these units be?
+    
+
+    \item Assuming there is initially 100 grams of the chemical in the 150 litre tank, write down an initial value problem modeling the amount of chemical in the tank.
+
+
+    \item Without solving the IVP, do we expect the amount of chemical in the tank to initially increase or decrease?
+
+	\item You got a differential equation that looks like $y'=F(y)$. Can you solve this differential equation by integrating both sides? I.e., is $\displaystyle \int F(y)\,\mathrm d y$ a solution? Explain.
+
+
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	{\bfseries Level 2 Modelling}
+
+	\question
+	In this problem we use the same setup as before but with one minor tweak: substance is being pumped out at 2 litres/minute (instead of 3). The same 3 litres/minute is being pumped into the tank at the same concentration stated previously. Assume the 150L tank initially has only 50 litres of fluid in it with 100 grams of chemical inside.
+
+	\begin{parts} 
+		
+    \item Write down an initial value problem modeling the amount of chemical in the tank.
+
+
+    \item For what interval of time is this an appropriate model?
+
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	{\bfseries Level 3 Modelling}
+
+	\question
+	In this problem we use the same setup as in Level 2 but now when the tank reaches 150 litres it begins to overflow, spilling the well mixed solution out of the top of the tank. (Assume an initial volume of 50 litres in the tank with 100 grams of chemical, the 3 litre/min inflow and 2L/min outflow; everything is still perfectly mixed).
+
+
+	\begin{parts}  
+		
+	\item Write down an initial value problem modeling the amount of chemical in the tank. What range of $t$ values is your IVP valid for?
+
+
+    \item Write down an Initial value problem with a single ODE describing the amount of the chemical in the tank for $t\geq 100$. You may use the solution from Level 2: 
+    \begin{equation*}
+        y(t)=\frac{10(t^3+150t^2+7500t+25000)}{(t+50)^2},
+    \end{equation*}
+    which satisfies $y(100)=1455.555...$.
+    
+
+    \item Let $y(t)$ denote the IVP solution to part (a) of this question. Compute $\displaystyle \lim_{t\rightarrow \infty}y(t).$
+	\end{parts}
+
+\end{slide}
+
+\begin{slide}
+	{\bfseries Apple Products}
+
+	\question
+	We are modelling the popularity, $P(t)$, of Apple's newest product over time. Market research shows that a reasonable model could be created with
+	the following assumptions:
+	\begin{itemize}
+		\item[(A1)] Ignoring all else, popularity grows in proportion
+		to current popularity.
+		\item[(A2)] Ignoring all else, popularity decreases in proportion to
+		elapsed time since release.
+	\end{itemize}
+
+	Popularity is non-negative and can be unbounded.
+
+	\begin{parts}  
+		\item Are the marketing team's assumptions reasonable? Come up with 
+		explanations for each.
+		\item Write a differential equation based on assumptions (A1) and (A2).
+
+		\item Assume the constants of proportionality are $1$ and make a
+		slope field for your model using Desmos.
+
+		{\small \url{https://www.desmos.com/calculator/yeusl7guu3}}
+
+		\item Use Desmos to explore which initial conditions give rise to
+		qualitatively different solutions.
+
+		\item Is $P=0$ an equilibrium solution to your model? Explain.
+
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	{\bfseries Apple Products II}
+
+	\question
+	Recall the assumptions for modelling the popularity of a new Apple product.
+	\begin{itemize}
+		\item[(A1)] Ignoring all else, popularity grows in proportion
+		to current popularity.
+		\item[(A2)] Ignoring all else, popularity decreases in proportion to
+		elapsed time since release.
+	\end{itemize}
+
+	\begin{parts}  
+		\item From real-world data, we know that popularity of products
+		eventually ends up near zero.
+
+		Modify your model so that popularity always ends up at zero.
+
+		\item For certain \emph{timeless} products, the time limit
+		of popularity approaches a
+		positive constant.
+
+		Modify your model so that popularity will always tend towards a
+		positive constant.
+
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Which of the following ODEs are separable? For each separable ODE,
+	rewrite it in a form that can be ``integrated'' to find a solution.
+
+	\begin{parts}  
+		\item $e^{t+y^2}\cdot y'-1=0$
+		\item $y'(t)+\tan(t)\cdot y(t)=\tan(t)$
+		\item $y'(t)=y(t)\cdot t +1$
+		\item $y'(t)-(t-1)(y(t))^2=t-1$
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	\begin{definition}[General Solution]
+		The general solution to an ODE is the set of \emph{all} solutions to 
+		that ODE.
+	\end{definition}
+
+	Consider the ODE $y'=2y$.
+
+	\begin{parts}  
+		\item Is $y(t)=e^Ce^{2t}$ a solution to the ODE for all $C\in \R$?
+		\item Is $y(t)=\pm e^Ce^{2t}$ a solution to the ODE for all $C\in \R$?
+		\item Are there any solutions missing from the two forms above?
+		\item Write the general solution to the ODE.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the IVP $y'=ty^2$ with $y(0)=0$.
+
+
+	\begin{minipage}{0.45\textwidth}
+
+	A student notices it is separable and does the following work:
+
+	\[
+	y'=ty^2 \qquad\implies \qquad \frac{y'}{y^2}=t
+	\]
+	\[
+	\implies \quad \int \frac{y'}{y^2}\,\mathrm d t = \int t\,\mathrm d t 
+	\quad
+	\implies
+	\quad \int \frac{1}{y^2}\,\mathrm d y = \int t\,\mathrm d t 
+	\]
+	\[
+	\implies\quad  \frac{-1}{y}=\frac{t^2}{2} + C \quad \implies \quad 
+	y=\frac{-2}{t^2+C}
+	\]
+
+	Plugging in $y(0)=0$ we get $0=\frac{-2}{0^2+C}$, which cannot be solved.
+	\end{minipage}
+
+	\begin{parts}  
+		\item Was there a mistake made?
+		\item Find the solution to the IVP.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE $y'=ty^2$.
+
+	Graph the solutions to the following IVPs. Pay attention to
+	the domain of each solution.
+
+	\begin{parts}  
+		\item $y(0)=1$
+		\item $y(0)=0$
+		\item $y(0)=-1$
+		\item The ODE models bacteria on a far-off planet. We
+		measure that $y(0)=1$.
+
+		Define $y(t)=\begin{cases}
+			\frac{-2}{t^2-2}&\text{ if } t\in (-\sqrt{2},\sqrt{2})\\
+			0&\text{ if }t\in (-\infty,-\sqrt{2})\cup (\sqrt{2},\infty)
+		\end{cases}$
+		\begin{enumerate}
+			\item Is $y$ a solution to the ODE?
+			\item Does $y$ satisfy $y(0)=1$?
+			\item The scientists want to predict the number of bacteria at time $2$. They compute $y(2)=0$. Is their prediction valid?
+		\end{enumerate}
+		
+		
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the differential equation 
+	\[
+	\left[e^{-t^2}y(t)\right]^{\,\prime} = te^{-t^2}
+	\]
+
+	\begin{parts}  
+		\item Solve the differential equation for $y$.
+		\item Expand the differential equation and rewrite 
+		it as $y'(t)=\cdots$. Simplify your solution.
+		\item In finding $y'(t)$, did you divide by any quantities that could possibly be $0$? Do you need to correct for this? Explain.
+		\item Find the general solution to $y'=t+2t\cdot y$.	
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Let $h$ and $f$ be functions and consider the differential equation
+	\[
+	\left[e^{h(t)}y(t)\right]^{\,\prime} = f(t)e^{h(t)}
+	\]
+
+	\begin{parts}
+		\item Write down the general solution to this differential equation. (Your answer may involve integrals/$f$/$h$.)
+
+		\item Rewrite the differential equation in the form $y'(t)=\cdots$.
+		\item In finding $y'(t)$, did you divide by any quantities that could possibly be $0$? Do you need to correct for this? Explain.
+		\item Let $a(t)$ be a function. Write down a general solution to
+		\[
+			y'(t)=a(t)\cdot y(t)+f(t).
+		\]
+		Congratulations! You just derived integrating factors.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		(t^2-1)y'+2ty=t.
+	\]
+
+	\begin{parts}
+		\item Rewrite the ODE so that you can apply the method of integrating factors to solve it.
+		\item Solve the ODE.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		(t^2-1)y'+2ty=t
+	\]
+	with several solutions graphed below.
+
+\begin{tikzpicture}[yscale=1,xscale=1.7]
+	\begin{scope}
+	\clip (-2,-2) rectangle (2,2);
+
+	
+	\foreach \c in {0,1,2,3,-1.5,-3} {
+	\draw[gray] plot [domain=1.05:2,samples=100] ({\x},{((\x)^2+\c)/(2*((\x)^2-1))});
+	\draw[gray] plot [domain=-0.9:0.9,samples=100] ({\x},{((\x)^2+\c)/(2*((\x)^2-1))});
+	\draw[gray] plot [domain=-1.05:-2,samples=100] ({\x},{((\x)^2+\c)/(2*((\x)^2-1))});
+	}
+
+
+	\draw[magenta, dashed] plot [domain=1.05:2,samples=100, dashed] ({\x},{((\x)^2-2)/(2*((\x)^2-1))});
+	\draw[teal, dashed] plot [domain=-0.9:0.9,samples=100, dashed] ({\x},{((\x)^2-2)/(2*((\x)^2-1))});
+	\draw[orange, dashed] plot [domain=-1.05:-2,samples=100, dashed] ({\x},{((\x)^2-2)/(2*((\x)^2-1))});
+	
+	\draw [blue, dashed] (-2,1/2) -- (2,1/2);
+
+	\end{scope}
+	\draw [->] (-2,0) -- (2,0) node [below] {$t$};
+	\draw [->] (0,-2) -- (0,2) node [left] {$y$};
+		\foreach \x in {-1,1} \draw (\x,-0.1) node [below] {$\x$} -- (\x,0.1);
+	\foreach \x in {-1,1} \draw (-0.05,\x) node [left] {$\x$} -- (0.05,\x);
+\end{tikzpicture}
+
+	\begin{parts}
+		\item For each dashed solution, find a pair $(a,b)$ so that
+		it is the solution to the IVP $y(a)=b$.
+		\item For each IVP you created, find the domain of the solution.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+Consider the line at the Myhal Second Cup. $P(t)$ describes the number of people in line at time $t$ (in minutes since 10:00 am).
+
+There are three effects:
+\begin{itemize}
+	\item[(E1)] Every minute, 3 students join the line
+	\item[(E2)] Every minute, 1 student leaves the line (as they are being served)
+	\item[(E3)] Every minute, 20\% of the students in line get impatient and leave the line
+\end{itemize}
+
+Initially, no one is in line.
+
+	\begin{parts}
+		\item Write down an ODE that models $P$.
+		\item Solve your ODE.
+		\item On what domain does your solution makes sense?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		y''-y'-6y=0
+	\]
+	\begin{parts}
+		\item Which of the following functions are solutions to this ODE?
+		\begin{enumerate}
+			\item $f_1(t)=e^t$
+			\item $f_3(t)=e^{3t}$
+			\item $f_{-3}(t)=e^{-3t}$
+			\item $f_{2}(t)=e^{2t}$
+		\end{enumerate}
+		\item Find all solutions to the ODE of the form $f(t)=e^{rt}$.
+		\item If $f$ is a solution to the ODE, is $f+1$ also a solution? Justify your answer.
+		\item If $f$ is a solution to the ODE, is $2f$ also a solution? Justify your answer.
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		y''-y'-6y=0
+	\]
+	Recall from MAT188 that $\Span\{a,b\}$ is the set of all linear combinations of $a$ and $b$. This is true even if $a$ and $b$ are both 
+	functions.
+
+	\begin{parts}
+		\item Suppose $f$ and $g$ are solutions to the ODE. 
+		Let $h\in\Span\{f,g\}$. Write $h$ in terms of $f$ and $g$.
+		\item Suppose $f$ and $g$ are solutions to the ODE. Show that
+		any function $h\in \Span\{f,g\}$ is also a solution.
+
+		\item Write down the general solution to the ODE. Justify your answer.
+
+		You may use the following facts:
+		\begin{itemize}
+			\item The solution space to the ODE is two dimensional.
+			\item The functions $a(t)=e^{k_1t}$ and $b(t)=e^{k_2t}$
+			are linearly independent if and only if $k_1\neq k_2$.
+		\end{itemize}
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		y''-y'-6y=0
+	\]
+
+	\begin{parts}
+		\item Write down the general solution to this ODE. (Hint: you'v already done this.)
+
+		\item Find a solution to the IVP 
+		\[
+		\begin{cases}
+			y''-y'-6y=0\\
+			y(0)=7\\
+			y'(0)=1
+		\end{cases}
+		\]
+
+		\item Does $y'(0)$ need to be specified to find a unique solution to the IVP? Explain.
+
+		\item If you changed the initial condition to $y(0)=7$ and $y'(0)=a$ for $a\in \R$, will there always be a unique solution (regardless of $a$)?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Hooke's Law states that the force a spring exerts is proportional
+	to its displacement. When combined with Newton's Laws, we arrive at
+	a differential equation for a particular spring of
+	\[
+		p''+4p=0
+	\]
+	where $p(t)$ is the spring's displacement from equilibrium in metres at time $t$.
+
+	\begin{parts}
+		\item Based on your knowledge of how springs work, sketch a guess of what solutions to this ODE will look like.
+		\item Based on your physical intuition, could an exponential curve be a potential solution to this ODE?
+		\item Find the characteristic equation for this ODE.
+		\item Write down the general (complex) solution to the ODE.
+		\item Should solutions to the spring equation be real or complex? Explain.
+		\item Find the general real solution to the ODE. Do your solutions make sense?
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the differential equation
+	\[
+		y''+4y'+5y=0.
+	\]
+	This equation has complex solutions $f_1(t)=e^{(-2+i)t}$
+	and $f_2(t)=e^{(-2-i)t}$.
+
+	\begin{parts}
+		\item Apply Euler's Formula to $f_1$ and $f_2$ to get complex solutions in terms of sines and cosines.
+		\item Find real solutions to the ODE.
+		\item Suppose $g$ is a solution to the ODE. What is $\displaystyle 
+		\lim_{t\to\infty} g(t)$?
+		\item This ODE is a model for a ``dampened spring''. Do your
+		real solutions make sense in this context? Explain.
+	\end{parts}
+\end{slide}
+
+
+\begin{slide}
+	\question
+
+	\begin{parts}
+		\item Come up with a second order homogeneous ODE where all non-zero solutions 	grow exponentially.
+		\item Come up with a second order homogeneous ODE where all non-zero solutions are periodic.
+		\item Come up with a second order homogeneous ODE where all non-zero solutions oscillate and decay.
+		\item Come up with a \textbf{third} order homogeneous ODE where some solutions are periodic and others grow exponentially.
+		
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Consider the ODE
+	\[
+		y''-y'=t+4
+	\]
+
+
+	\begin{parts}
+		\item Is there a solution to this ODE of the form $f(t)=e^{rt}$? Explain.
+		\item Find a \emph{polynomial} solution to this ODE.
+
+		Hint: try guessing a general quadratic polynomial and figuring out what the coefficients should be.
+
+		\item If $f$ and $g$ are solutions to the ODE, must $f+g$ be a solution?
+		
+		\item Suppose $f$ is a solution to the ODE and $h$ is a solution to the
+		related ODE $y''-y'=0$.
+
+		Must $f+h$ be a solution to the original ODE? Justify your answer.
+
+		\item Find a non-polynomial solution to the ODE.
+
+		\item Find the general solution to the ODE.
+	\end{parts}
+\end{slide}
+
+\begin{slide}
+	\question
+	Your MAT186 instructor, Sean, and your MAT188 instructor, Camelia, are 
+	arguing.
+
+	Sean says: \emph{the general solution to a non-homogeneous linear ODE is 
+	the set consisting of a particular solution plus the homogeneous solutions.}
+
+	Camelia says: \emph{the general solution to a non-homogeneous linear ODE
+	is a particular solution plus vectors in the kernel of a particular linear transformation.}
+
+	\bigskip
+
+	\begin{parts}
+		\item Which one is right? Are they both right? Explain.
+		\item For the equation $y''-y'=t+4$ what linear transformation could Camelia be talking about?
+	\end{parts}
+
+\end{slide}
 
 \end{document}

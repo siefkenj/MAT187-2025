@@ -1,70 +1,119 @@
 \begin{objectives}
-	In this tutorial you explore the limits of what affine approximations can
-	tell you about the nature of equilibrium solutions.
-
-	These problems relate to the following course learning objectives:
-	\textit{Apply linear algebra techniques to classify solutions of linear systems of ordinary differential
-		equations including rigorously classifying the stability of equilibrium solutions and creating
-		linear approximations to non-linear systems of ordinary differential equations}.
+	In this tutorial, you will explore separable and first-order linear ODEs.
 \end{objectives}
 
 \subsection*{Problems}
+\begin{enumerate}
+    \begin{minipage}[t]{\linewidth-7cm}
 
-Linearization is a powerful technique to classify critical points, but it can provide inconclusive results.
+    \item Consider the ODE
+\[
+    \frac{\mathrm dy}{\mathrm d t} = f(y) = (y-1)^2 (y-2) (y-3)
+\]
+The graph of $f$ is given on the right.
+
+\textit{You can answer this question based on the equation, the graph, or both!}
+\begin{enumerate}
+\item Find and classify the equilibrium points of the differential equation. Make sure to justify.
+    \vspace{3mm}
+
+\item If $y(t)$ is a solution and $y(0.5)=2.8$, what is $\displaystyle \lim_{t\to\infty} y(t)$? Justify your answer.
+
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{6cm}
+	\vfil
+	\vspace{-6mm}
+	\flushright
+	\begin{tikzpicture}[line width=1]
+	
+		\draw [black!20] (-0.5,-1) grid [step=0.5] (4,3);
+		\begin{scope}
+		\clip (0,-1) rectangle (4,3);
+		\draw [smooth,samples=100,domain=0:3.5,tolOrange] plot ({\x},{(\x-1)*(\x-1)*(\x-2)*(\x-3)});
+		\end{scope}
+	\draw [->] (-0.5,0) -- (4,0) node [right] {$y$};
+	\draw [->] (0,-1) -- (0,3) node [above] {$f(y)$};
+	\draw (1,0.1) -- (1,-0.1) node [below] {1};
+%	\draw (0.1,1) -- (-0.1,1) node [left] {1};
+\end{tikzpicture}
+
+\end{minipage}
+\item Solve the following initial value problems using separation of variables, and determine over what interval the solution is defined.
 
 \begin{enumerate}
-	\item Consider the differential equations
-	      \begin{equation}
-		      y'=-y^3-y \tag{A}
-	      \end{equation}
-	      \begin{equation}
-		      y'=-y^3 \tag{B}
-	      \end{equation}
-	      \begin{equation}
-		      y'=y^3 \tag{C}
-	      \end{equation}
-	      \begin{enumerate}
-		      \item Use Desmos to graph the slope field for each equation. Based on the slope
-		            field, how would you classify the equilibrium solution $y=0$ for each equation?
+    \item $\frac{\mathrm d y}{\mathrm d x} = 6y^2x$,\qquad $y(1) = \frac{1}{25}$
 
-		            \url{https://www.desmos.com/calculator/ghavqzqqjn}
-		            %\item Find the general solution to each differential equation and use the general solution to classify the equilibrium $y(t)=0$
-		            %      as stable/unstable.
-		      \item Find affine approximations for each differential equation centered at the equilibrium $y=0$.
-		      \item Classify the critical points of each of your affine approximations as stable/unstable.
-		      \item Why didn't your affine approximations correctly predict stability/instability in all cases? Explain.
-		      \item In calculus, the \emph{first derivative test} states that at a point:
-		            (i) if the derivative is positive, the function is increasing; (ii)
-		            if				  the derivative is negative, the function is decreasing; and
-		            (iii) if the derivative is zero, the test is inconclusive.
+    \item $\frac{\mathrm d r}{\mathrm d \theta} = \frac{r^2}{\theta},\qquad r(1) = 2 $  
 
-		            Make up your own ``affine approximation test'' for the stability/instability of an equilibrium solution
-		            for a differential equation.
-	      \end{enumerate}
+    \item $\frac{\mathrm d y}{\mathrm d t} = e^{-y}(2x-4),\qquad y(5)=0$ 
+\end{enumerate}
 
-	\item Let $\vec r(t)=\mat{x(t)\\y(t)}$ and consider the differential equation
-	      \begin{equation}
-		      \vec r\,' = \mat{-y-x^3\\x-y^3} \tag{D}
-	      \end{equation}
-	      which has $\vec r(t)=(0,0)$ as its only equilibrium solution.
-	      \begin{enumerate}
-		      \item Find an affine approximation Equation (D) centered at $(0,0)$.
-		      \item Classify the nature of the equilibrium solution in your affine approximation.
-		      \item Do you believe that the nature of the equilibrium solution in your affine approximation
-		            is the same as the nature of the equilibrium solution in Equation (D)? Why or why not?
-		      \item Make a phase portrait for Equation (D). Can you tell what the nature of the equilibrium solution is?
+% \item Consider a pendulum consisting of a massless rod of length $L$ that is connected on one end to an object with mass $m$ and to the ceiling on the other end (via a frictionless hinge). The acceleration due to gravity is $g$. We are interested in understanding the dynamics of the angle $\theta$ between the rod and the negative y-axis.
+% \begin{enumerate}
+%     \item Determine expressions for the position and velocity of the pendulum with respect to the hinge of the pendulum. Assume the positive x-axis faces rightward, and the positive y-axis faces upward.
 
-		            \textbf{Note:} Make sure to zoom in on your phase portrait before you draw a strong conclusion.
-		      \item Use numerical simulations to classify the nature of the equilibrium solution.
+%     \item In addition to gravity, there is air resistance that imparts a force in the opposite direction of motion to the pendulum that is proportional to the speed of the mass. This proportionality constant is given by $b$. Write an expression for the air resistance force.
 
-		            \textbf{Hint:} You may need to use \emph{very} small step sizes to ensure that rounding error
-		            doesn't obscure your results.
+%     \item Write an ODE that models the dynamics of the pendulum.
 
-		            %\item Come up with an analytic argument to classify the nature of the equilibrium solution.
+%     \item Assuming an initial angular position $\theta_0$ and angular velocity $\frac{\mathrm d\theta}{dt}$, write an initial value problem that describes the pendulum.
+% \end{enumerate}
 
-		      \item Suppose you have an affine approximation of a system of differential equations. Further suppose
-		            that the matrix in your affine approximation has eigenvalues $a_1+b_1i$, $a_2+b_2i$, $a_3+b_3i$, \ldots, $a_n+b_ni$.
-		            Explain how to classify an equilibrium solution as stable/unstable based on the eigenvalues.
+\clearpage
+\centering 
+\includegraphics[scale=1.8]{resources/fish.jpeg}
 
-	      \end{enumerate}
+\raggedright 
+
+\item The graph above depicts the total tons of atlantic cod harvested  year by year from 1850 to the early 2000s on the east coast of Newfoundland. Significant progress in fishing technology led to record-breaking yields in the 1960s. In 1992, the total yield abruptly collapsed to 1\% of historic values, and the industry collapsed completely, destroying a way of life that had sustained the east coast for centuries.
+\begin{enumerate}
+
+\item In a few words, why would the harvesting yields decline so rapidly after an increase in harvesting efficiency?
+
+
+\item You are modelling cod in the ocean with the following setup.
+\begin{itemize}
+ 	\item Let $B(t)$ be the total biomass of cod in the ocean at year $t$ in units of tons.
+
+	\item 
+	Let $h(t)$ be the harvesting rate in the year $t$ in units of tons per year.
+	\item Let $k$ be the natural growth rate of cod populations. I.e., if there are no other factors, $B(t)=Ae^{kt}$ for some constant $A$. 
+	
+	\item Let $M$ tons be the maximum cod-carrying capacity of the ocean. That is if there are more than $M$ tons of cod in the ocean, competition for resources will result in unusually high cod death rates.
+\end{itemize}
+
+\begin{enumerate}
+    \item Write down an ODE that models the cod biomass over time, without harvesting.
+    \item Modify the previous ODE so that it includes harvesting.
+\end{enumerate}
+
+\item  Assume $h(t)=H$ is constant. Find the equilibrium points of your ODE in terms of $H$, $k$, and $M$. Are they stable or unstable equilibria?
+
+\item Let $k=1$ and $M=100$. How many equilibrium solutions are there if $H=50$? What about if $H=150$?
+
+\item 
+Let $k=1$ and $M=100$. For each equilibrium, graph that equilibrium as a function of $H$. Is there a threshold for $H$ where the system changes drastically? What happens to the cod biomass then?
+
+\item Explain in ``real life'' terms what you can learn about cod fishing from your graphs in the previous part.
+
+\end{enumerate}
+
+
+%\includegraphics[scale=0.7]{tutorials/fish.jpg}
+% \item 
+% A hungry tiger is hiding in a bush at a position $(L, 0)$, intently watching a gazelle grazing at the origin. To catch the gazelle, the tiger's strategy is to run at a constant speed and towards the gazelle at all times. The gazelle's strategy is to run in the positive $y$ direction at the same speed as the tiger. The equation of motion of the tiger is represented by the differential equation:
+	
+% 	\[
+% 	    \sqrt{1+\left(\frac{dy}{dx}\right)^2} = x\frac{d^2y}{dx^2}
+% 	\]
+% \begin{enumerate}
+% 	    \item Apply the substitution $z=\frac{dy}{dx}$. You should now be able to find $z(x)$ and then $y(x)$, which is the tiger's trajectory.
+	    
+% 	    \textit{Hint: $\int\sec{\theta}d\theta = \ln\left|\frac{1+\sin\theta}{\cos\theta}\right| + C$.}
+%     \item Will the tiger ever catch the gazelle? Justify your answer.
+
+% \end{enumerate}
+
+
 \end{enumerate}

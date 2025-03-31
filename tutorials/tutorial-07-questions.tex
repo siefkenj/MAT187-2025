@@ -1,92 +1,77 @@
 \begin{objectives}
-	In this tutorial you will be using linearization to classify equilibrium solutions.
-
-	These problems relate to the following course learning objectives:
-	\textit{Apply linear algebra techniques to classify solutions of linear systems of ordinary differential
-	equations including rigorously classifying the stability of equilibrium solutions and creating
-	linear approximations to non-linear systems of ordinary differential equations}.
+	In this tutorial, you will characterize first order differential equations.
 \end{objectives}
 
-
 \subsection*{Problems}
-
 \begin{enumerate}
-	\item 	Consider the differential equation
-	      \begin{equation}
-		      y'=(y-2)(y+1)\tag{A}
-	      \end{equation}
+    \item Consider the following ODEs. For each one, identify if it is (a) linear, and (b) separable.
 
-	      Define $f(y)=(y-2)(y+1)$ and notice that Equation (A) can be written as $y'=f(y)$.
+    \begin{tcolorbox}[sharp corners=all,colframe=tolGrey,colback=white]
+        \begin{multicols}{2}
+        \begin{enumerate}[label={(\roman{enumii})},nosep,itemsep=1mm]
+            \item $y'=t^2y$
+            \item $y'=t\sin y$
+            \item $y'=y\sin t$
+            \item $y'=t+\sin y$
+            \item $y'=y+\sin t$
+            \item $y'=y(t^2+1)$
+            \item $y'=e^{2t-y}$
+            \item $y'-2y=3e^t$
+            \item $y'e^{t/2}=y^2+4$
+            \item $y'+y=5\sin 2t$
+        \end{enumerate}
+        \end{multicols}
+    \end{tcolorbox}
 
-	      \begin{enumerate}
-		      \item Look at the slope field for Equation (A).
 
-		            \url{https://www.desmos.com/calculator/z1c415u4fb}
+    \item Consider the differential equation $y'=F(y)$ where $F(y)$ is graphed
+    below.
 
-		            Based on the slope field, describe what the shape of solutions to Equation (A) should look like.
+    \begin{center}
+    \includegraphics[width=3in]{resources/tutorial-07-phase1.png}
+    \end{center}
 
-		      \item Is $y=0$ an equilibrium solution to Equation (A)? Explain both analytically (e.g., in terms of equations)
-		            and qualitatively (e.g., by referring to the slope field).
-		      \item Find an \emph{affine approximation} (i.e. an approximation of the form $A(x) = m x+b$)
-		            to the function $f$ near $0$.\footnote{ In your calculus class, you might have used the term
-			            \emph{linear approximation} instead of affine approximation.} Call this affine approximation $A_0$.
+    Let $y(t)$ be a solution to this differential equation.
 
-		      \item\label{sketch} Sketch the graphs of $f$ and $A_0$ on the same coordinate plane. Find an interval of $y$
-			  	values where you  would
-		            call $A_0(y)$ a ``good'' approximation to $f(y)$.
+    \begin{enumerate}
+        \item When $y(t)=1.5$, is $y$ increasing or decreasing? 
+        \item When $y(t)=0.5$, is $y$ increasing or decreasing?
+        \item Are there values of $y$ for which $y$ is neither increasing nor decreasing? What are these values called? (\emph{Hint: it starts with an ``E''.})
+        \item If $y(0)=0.5$, predict what $y(100)$ will be. How did you arrive at your predication?
+    \end{enumerate}
 
-		            \textbf{Warning}: pay close attention to what your
-		            axes represent in your sketch. The $y$-axis may not be the one you think!
+    \item Consider the below ODEs and problem descriptions. Match each ODE to a problem description and justify your answer.
+    \begin{tcolorbox}[sharp corners=all,colframe=tolGrey,colback=white]
+        \begin{multicols}{2}
+        \begin{enumerate}[label={(\roman{enumii})},nosep,itemsep=1mm]
+            \item $y'=ky$
+            \item $y'=ky(M-y)$
+            \item $y'=\frac{ky}{\sqrt{t+1}}$
+        \end{enumerate}
+        \end{multicols}
+    \end{tcolorbox}
 
-		      \item Solve the differential equation $y'=A_0(y)$ with initial condition $y(0)=0$. Call your solution $y_{\text{approx}}$.
+    Consider the below descriptions:
+    \begin{enumerate}
+        \item Babies are born on an island at a rate proportional to the total population, but there is a carrying capacity which limits the number of people that the island can support.
+        \item Babies are born on an island at a rate proportional to the total population.
+        \item Babies are born on an island at a rate prportional to the total population, but as time progresses, people become richer, lazier, and have fewer children.
+    \end{enumerate}
 
-		      \item\label{errorest} Based on your answer to \ref{sketch}, for how long do you expect $y_{\text{approx}}$ to
-		            be a ``good'' approximation to the solution of Equation (A) with initial condition $y(0)=0$? Express your answer as an interval.
 
-		      \item Use a spreadsheet and Euler's method with step size $\Delta=0.01$ to simulate a solution to Equation (A) with initial condition $y(0)=0$.
-		            Use Desmos to compare your simulated solution to $y_{\text{approx}}$.
-		            When does $y_{\text{approx}}$ stop being a good approximation? Does this match your intuition from \ref{errorest}?
 
-		      \item Find the equilibrium solutions to Equation (A). For each equilibrium solution $e$, find an affine
-		            approximation, $A_e$, to $f$ near the equilibrium solution. For each equilibrium solution $e$, (i) solve
-		            the differential equation $y'=A_e(y)$ and, (ii) use your solutions to classify the nature of each equilibrium solution
-		            as attracting/repelling/etc..
-	      \end{enumerate}
+    \item Consider the differential equation for an autonomous ODE $y'=f(y)$.
+    Your job is to graph a function $f$ so that the corresponding ODE:
+    \begin{itemize}[nosep]
+        \item has three equilibria;
+        \item has at least one stable equilibrium; and
+        \item \textbf{NONE} of the equilibria are unstable.
+    \end{itemize}
 
-	\item
-
-	      Recall that for a function $\vec F(x,y)=\Big(F_1(x,y), F_2(x,y)\Big)$,
-	      the \emph{total derivative}\footnote{ This is also called the \emph{Jacobian} matrix.} of $\vec F$ at $\vec E$ can be expressed
-	      as the matrix
-	      $
-		      D_{\vec F}(\vec E) = \mat{
-			      \rule[-0.5cm]{0pt}{.8cm}\displaystyle \frac{\partial F_1}{\partial x} &\displaystyle  \frac{\partial F_1}{\partial y}\\
-			      \rule[-0.2cm]{0pt}{.3cm}\displaystyle  \frac{\partial F_2}{\partial x} &\displaystyle  \frac{\partial F_2}{\partial y}
-		      }
-	      $
-	      evaluated at $\vec E$.
-
-	      \bigskip
-
-	      Define $\vec F:\R^2\to\R^2$ by
-	      \[
-		      \vec F(x,y) = \mat{(y-2)(x+1)\\x^2-y}
-	      \]
-	      and consider the differential equation
-	      \begin{equation}
-		      \mat{x\\y}' = \vec F(x,y).\tag{B}
-	      \end{equation}
-	      Define $\vec r(t) = \mat{x(t)\\y(t)}$. Note that we may express Equation (B) as $\vec r\,'(t) = \vec F\Big(\vec r(t)\Big)$.
-	      \begin{enumerate}
-		      \item Can Equation (B) be written in matrix or affine form?
-		      \item Verify that $\vec r(t) = \mat{-1\\1}$ is an equilibrium solution to Equation (B).
-		      \item Make a phase portrait for Equation (B) and use your phase portrait to guess the nature
-		            of the equilibrium solution $\vec r(t) = \mat{-1\\1}$.
-		      \item Find the \emph{total derivative} of $\vec F$ at $\mat{-1\\1}$.
-			  \item Make an affine approximation to $\vec F$ near $\mat{-1\\1}$. Call your affine approximation $\vec A$.
-			  \item Use eigenvalue/eigenvector analysis to classify the equilibrium solutions for $\vec r\,' = \vec A(\vec r)$.
-			  \item Rigorously classify the equilibrium solution $\vec r(t)=\mat{-1\\1}$ for Equation (B).
-			  \item Classify the remaining equilibrium solutions for Equation (B).
-		      
-	      \end{enumerate}
+    After you make your plot:
+    \begin{enumerate}
+        \item Explain/justify why your sketch ensures each of the above properties.
+        \item Make a rough sketch of each \emph{qualitatively different} 
+        solution to your ODE. E.g., an always increasing concave-up solution would be different from an always increasing concave-down solution, etc..
+    \end{enumerate}
 \end{enumerate}

@@ -1,44 +1,80 @@
-		\begin{objectives}
-	In this tutorial you will be exploring the relationship between real and complex solutions to differential equations.
-
-	These problems relate to the following course learning objectives:
-			\textit{
-				Apply linear algebra techniques to classify solutions of linear systems of ordinary differential
-equations including rigorously classifying the stability of equilibrium solutions and creating
-linear approximations to non-linear systems of ordinary differential equations}.
-		\end{objectives}
-
-
-\subsection*{Problems}
-
-For this tutorial, you will be using Euler's formula (Not to be confused with Euler's method)
-$
-	e^{i\theta}=\cos \theta + i\sin \theta
-$ and the fact that the complex conjugate of a number $a+bi$ is $a-bi$.
-
+\begin{objectives}
+    In this tutorial you will be exploring parametric equations.
+\end{objectives}
 
 \begin{enumerate}
-	\item Consider the differential equation $y''=-y$.
-	\begin{enumerate}
-		\item Show that $f(t)=e^{it}$ is a solution to $y''=-y$.
-		\item Should the equation $y''=-y$ have a \emph{real} solution? Why or why not?
-		\item\label{sin} Use Euler's formula to find the real part of $f$. Is the real part of $f$ still a solution? Justify.
-		\item\label{cos} Use Euler's formula to find the imaginary part of $f$. Is the imaginary part of $f$ still a solution? Justify.
-		\item The solution space to $y''=-y$ is two dimensional and has a basis $\{e^{it}, e^{-it}\}$. Express your
-		solutions to parts \ref{sin} and \ref{cos} in terms of this basis.
-		\item\label{realsoln} If a \emph{real polynomial} (i.e., a polynomial with only real coefficients) has a complex solution $a+bi$, then
-		the complex conjugate $a-bi$ is also a solution. Suppose that a real differential equation has solutions $e^{(a+bi)t}$
-		and $e^{(a-bi)t}$. Prove that this differential equation also has two linearly independent real solutions.
-		\item Consider the equation $y'=iy$. Find a solution, $g$, to this differential equation. Is the real part of $g$ also a solution? What 
-		about the imaginary part? Explain.
-	\end{enumerate}
+    \item Consider a particle following a \emph{Lissajous curve} trajectory that is given by the parametric equations
+    \[
+    \begin{cases}
+        x=\sin{4t}\\
+        y=\sin{3t}
+    \end{cases}\qquad 0 \leq t \leq 2\pi
+    \]
 
-	\item Let $M=\mat{0&-1\\1&0}$ and consider the differential equation $\vec r\,'=M\vec r$.
-		\begin{enumerate}
-			\item Make a phase portrait for this system. Based on the phase portrait, do you think this solution has real solutions?
-			\item Find the eigenvectors and eigenvalues of $M$.
-			\item The solution space to $\vec r\,'=M\vec r$ is two dimensional. Find a basis of eigen solutions for $\vec r\,'=M\vec r$.
-			\item Find a basis of real solutions for $\vec r\,'=M\vec r$.
-			\item Is there a real eigen solution to $\vec r\,'=M\vec r$? Why or why not?
-		\end{enumerate}
+    \begin{enumerate}
+        \item Consider the derivatives $\frac{dx}{dt}$ and $\frac{dy}{dt}$. 
+        When the particle is moving left, what must be true about $\frac{dx}{dt}$ and $\frac{dy}{dt}$?
+        How about when the particle is moving right? Up? Down?
+
+        \item Find a $t$ when the instantaneous velocity of the particle is moving diagonal, with a trajectory towards the upper left. Justify your answer.
+
+        \item Find \textbf{all times} $t$ during which the particle is moving
+        to the upper left.
+        
+    \end{enumerate}
+
+    \item Consider the following curves given by parametric equations.
+
+    \begin{tcolorbox}[sharp corners=all,colframe=tolGrey,colback=white]
+    \begin{multicols}{2}
+    \begin{enumerate}[label={(\roman{enumii})},nosep,itemsep=1mm]
+        \item $x = \cos{2t}, y = \sin{2t}, 0 \leq t \leq \pi$
+        \item $x = \cos{t}, y = \sin{t}, 0 \leq t \leq 2\pi$
+        \item $x = \sin{t}, y = \cos{t}, 0 \leq t \leq 2\pi$
+        \item $x = \cos{2t}, y = \cos{2t}, 0 \leq t \leq \pi$
+        \item $x = \cos{t}, y = \sin{t}, 0 \leq t \leq \pi$
+    \end{enumerate}
+    \end{multicols}
+    \end{tcolorbox}
+    
+    \begin{enumerate}
+        \item Sketch the graph (by hand) of each set of parametric equations.
+        Add arrows to your sketches to signify which direction each curve is traced out.
+
+        \item Which parametric equations produce the same shapes when plotted in an $xy$-coordinate system? 
+        
+        Justify your answer by plotting in Desmos
+        
+        \url{https://www.desmos.com/calculator/24kii8joui}
+
+        Note: \emph{make sure to appropriately adjust the domains of the parametric curves when you plot in Desmos.}
+        
+    \end{enumerate}
+
+    % \item Consider constants $a,b,c,d$ such that $a^2+c^2 = b^2+d^2 = R^2$ and $ab+cd=0$. Show that the parametric equations below describe a circle of radius $R$.
+    % \[
+    %     \begin{cases}
+    %     x = a\cos{t} + b\sin{t}\\
+    %     y = c\cos{t} + d\sin{t}
+    %     \end{cases}
+    % \]
+
+    \item A colony of ants is marching according to the trajectory $x(t) = \cos{t}, y(t)=\sin{3t}$. 
+    \begin{enumerate}
+    \item Graph $t$ vs.{} $x$ and $t$ vs.{} $y$.
+    \item  Use your plots from part (a) to sketch the
+    graph of $(x(t),y(t))$ for $t\in \R$.
+
+    Verify your sketch using Desmos.
+
+    \item Is there a tangent line to the graph at $(1/2,0)$ Why or why not?
+
+    \item If we restrict the domain of $(x(t),y(t))$ to $t\in[0,\pi]$ is
+    there a tangent line to the graph at $(1/2,0)$? If so, find it.
+    
+    \item If we restrict the domain of $(x(t),y(t))$ to $t\in[\pi,2\pi]$ is
+    there a tangent line to the graph at $(1/2,0)$? If so, find it.
+
+    \end{enumerate}
+    
 \end{enumerate}

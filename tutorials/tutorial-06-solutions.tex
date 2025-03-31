@@ -1,69 +1,85 @@
 \begin{enumerate}
-		\item \begin{enumerate}
-			\item Differentiating $f'=ie^{it}$ and so $f''=i^2e^{it}=-e^{it}=-f$.
-			\item Yes. The equation is a real equation and so it should have a real solution.
-			\item By Euler's formula, $e^{it}=\cos t + i\sin t$, so the real part of $f$ is $\cos t$. 
+	\item 
+    The question is asking for one time when $\frac{dx}{dt}<0$ and $\frac{dy}{dt}>0$.
+    
+        Note that this solution provides more information than what is asked of the students. They only need to find one moment in time.
+    
+        The particle is moving left when $\frac{dx}{dt} < 0$, and it is moving right when $\frac{dx}{dt} > 0$. Similarly, the particle is moving up when $\frac{dy}{dt} > 0$, and it is moving down when $\frac{dy}{dt} < 0$. 
+        
+        For moving left, we have:
+\[
+    \begin{aligned}
+       4\cos{4t} < 0\\
+            \implies \cos{4t} < 0\\
+            \implies \frac{\pi}{2} < 4t < \frac{3\pi}{2}, \frac{5\pi}{2} < 4t < \frac{7\pi}{2}, \frac{9\pi}{2} < 4t < \frac{11\pi}{2}, \frac{13\pi}{2} < 4t < \frac{15\pi}{2}\\
+            \implies \frac{\pi}{8} < t < \frac{3\pi}{8}, \frac{5\pi}{8} < t < \frac{7\pi}{8}, \frac{9\pi}{8} < t < \frac{11\pi}{8}, \frac{13\pi}{8} < t < \frac{15\pi}{8}
+    \end{aligned}
+\]
+        
+        For moving right, we can simply take the complementary times:
+        \[
+            0 < t < \frac{\pi}{8}, \frac{3\pi}{8} < t < \frac{5\pi}{8}, \frac{7\pi}{8} < t < \frac{9\pi}{8}, \frac{11\pi}{8} < t < \frac{13\pi}{8}, \frac{15\pi}{8} < t < 2\pi
+        \]
+        For moving down, we can write a very similar set of inequalities, except now $3t$ is the main argument instead of $4t$ and we exclude one of the inequalities to stay within the required bound for $t$:
+        
+        \[
+        \begin{aligned}
+            &3\cos{3t} < 0\\
+            \implies &\cos{3t} < 0\\
+            \implies &\frac{\pi}{2} < 3t < \frac{3\pi}{2}, \frac{5\pi}{2} < 3t < \frac{7\pi}{2}, \frac{9\pi}{2} < 3t < \frac{11\pi}{2}, \frac{13\pi}{2} < 3t < \frac{15\pi}{2}\\
+            \implies &\frac{\pi}{6} < t < \frac{\pi}{2}, \frac{5\pi}{6} < t < \frac{7\pi}{6}, \frac{3\pi}{2} < t < \frac{11\pi}{6}
+        \end{aligned}
+        \]
+        Like before, we determine when the particle is moving up by finding the complementary times:
+        \[
+            0 < t < \frac{\pi}{6}, \frac{\pi}{2} < t < \frac{5\pi}{6}, \frac{7\pi}{6} < t < \frac{3\pi}{2}, \frac{11\pi}{6} < t < 2\pi
+        \]
+        
+        To determine a time $t$ where the particle moves left and up, we can take the intersection between the intervals found for moving left and moving up:
+        
+        \[
+            \frac{\pi}{8} < t < \frac{\pi}{6}, \frac{5\pi}{8} < t < \frac{5\pi}{6}, \frac{7\pi}{6} < t < \frac{11\pi}{8}, \frac{11\pi}{6} < t < \frac{15\pi}{8}
+        \]
 
-			Differentiating, we see $\cos '' = -\cos$, so it is still a solution.
-			\item By Euler's formula, $e^{it}=\cos t+i\sin t$, so the imaginary part of $f$ is $\sin t$.
+    \item 
+    \begin{enumerate}
+        \item All plots are circles with radius 1 centered at the origin, except for set 4 which is just the line segment $y=x$ from $(0,0)$ to $(1,1)$ and set 5 which is a semi-circle with radius 1 defined for $y > 0$. The direction for the circles is counterclockwise except set 3 which is clockwise. For the line, the direction is down-left followed by up-right since $t=0$ corresponds to the coordinate $(1,1)$, $t=\frac{\pi}{2}$ corresponds to $(-1,-1)$, and $t=\pi$ corresponds to $(1,1)$.
 
-			Differentiating, we see $\sin '' = -\sin$, so it is still a solution.
-			\item Again, we can apply Euler's formula. We see
-			\[
-				e^{it}=\cos t+i\sin t \qquad\text{and}\qquad e^{-it}=\cos(-t) + i\sin(-t)=\cos t-i\sin t,
-			\]
-			so
-			\[
-				\tfrac{1}{2}e^{it}+\tfrac{1}{2}e^{-it}=\cos t.
-			\]
-			Similarly,
-			\[
-				\tfrac{-i}{2}e^{it}+\tfrac{i}{2}e^{-it}=\sin t.
-			\]
-			
-			\item Again, we can apply Euler's formula.
-			\[
-				e^{(a+bi)t}=e^{at}e^{ibt}=e^{at}(\cos (bt)+i\sin (bt))
-				\qquad\text{and}\qquad
-				e^{(a-bi)t}=e^{at}e^{-ibt}=e^{at}(\cos (bt)-i\sin (bt))
-			\]
-			and so
-			\[
-				\tfrac{1}{2}e^{(a+bi)t}+\tfrac{1}{2}e^{(a-bi)t}=e^{at}\cos(bt)
-			\]
-				and 
-			\[
-				\tfrac{-i}{2}e^{(a+bi)t}+\tfrac{i}{2}e^{(a-bi)t}=e^{at}\sin(bt).
-			\]
-			Notice that $e^{at}\cos(bt)$ and $e^{at}\sin(bt)$ are linearly independent functions that are real.
+        \item All sets except the 4th and 5th ones are equivalent to each other. Their shapes are circles with radius 1 centered at the origin.
+    \end{enumerate}
 
-			\item A solution is $g(t)=e^{it}$. The real part of $g(t)$ is $\cos t$ and the imaginary part is $\sin t$.
-			Neither of these are solutions to $y'=iy$. Since $y'=iy$ is not a real equation, we don't expect real solutions,
-			so we wouldn't expect the real and imaginary parts of $g$ to be a solution.
+    \item
+    We first plot the functions $x=\cos{t}, y=\sin{3t}$. Tracing $0 < t < 2\pi$, we can plot the parametric equation on the $x-y$ plane.
+	
+	    \begin{figure}[!ht]
+	    \centering
+    
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+            \begin{axis}[
+                x=2cm,y=2cm,
+                axis lines=middle,
+                ymajorgrids=true,
+                xmajorgrids=true,
+                xmin=-0.22083994729243386,
+                xmax=6.549381871767769,
+                ymin=-2.164789358246741,
+                ymax=2.0599704714017775,
+            ]
+            \clip(-0.22083994729243386,-2.164789358246741) rectangle (6.549381871767769,2.0599704714017775);
+            \draw[line width=2pt,color=black,smooth,samples=100,domain=-0.22083994729243386:6.549381871767769] plot(\x,{cos(((\x))*180/pi)});
+            \draw[line width=2pt,color=blue,smooth,samples=100,domain=-0.22083994729243386:6.549381871767769] plot(\x,{sin((3*(\x))*180/pi)});
+            \begin{scriptsize}
+                \draw[color=black] (6, 1.1) node {$x=\cos{t}$};
+                \draw[color=blue] (6,0.5) node {$y=\sin{3t}$};
+            \end{scriptsize}
+            \end{axis}
+        \end{tikzpicture}
+    
+        \end{figure}
 
-		\end{enumerate}
-
-		\item
-		\begin{enumerate}
-			\item The phase portrait shows arrows going in a circle. There should be real solutions to this equation,
-			because Euler's method will simulate a solution and there is no reason to expect that Euler's method will
-			not converge.
-			\item The eigenvalues of $M$ are $\pm i$ and the eigenvectors are $\mat{1\\-i}$ with eigenvalue $i$ and $\mat{1\\i}$
-			with eigenvalue $-i$.
-			\item The eigen solutions are $e^{it}\mat{1\\-i}$ and $e^{-it}\mat{1\\i}$. They are linearly independent and so form a basis.
-			\item We can find a real basis either by finding a linear combination of the complex eigen solutions that is real or by 
-			guessing and checking. We can guess that the real and imaginary parts of the complex eigen solutions are real solutions.
-			
-			Expanding with Euler's formula, we see
-			\[
-				e^{it}\mat{1\\-i}=\mat{e^{it}\\-ie^{it}}=\mat{\cos t+i\sin t\\\sin t-i\cos t},
-			\]
-			and so we guess that $\vec s_1(t) = \mat{\cos t\\\sin t}$ and $\vec s_2(t)=\mat{\sin t\\-\cos t}$ are solutions. Differentiating,
-			we indeed see that these are solutions. Since they are real, linearly independent, and we have two of them, we have found a basis
-			of real solutions.
-			\item There is no real eigen solution to $\vec r\,'=M\vec r$. We have already found a basis of eigen solutions to the equation.
-			All other eigen solutions must be multiples of the eigen solutions we found. However, there is no complex eigen solution that will
-			make $e^{it}\mat{1\\-i}$ or $e^{it}\mat{1\\i}$ real.
-		\end{enumerate}
+        See \href{https://www.desmos.com/calculator/xdoroqqzdz}{here} for an interactive Desmos plot of the paths that the ants take. Feel free to play around with the parameter $t$!
+        
+        To find the coordinates of the horizontal and vertical tangents, we can set $\frac{dx}{dt}=-\sin{t}=0$ and $\frac{dy}{dt}=3\cos{3t}=0$, respectively. This corresponds to $t=0, \pi$ and $t=\frac{\pi}{6}, \frac{\pi}{2}, \frac{5\pi}{6}, \frac{7\pi}{6}, \frac{3\pi}{2}, \frac{11\pi}{6}$, respectively. If we plug these values of $t$ into the parametric equation, we find that the vertical tangents are located at (1,0) and (-1,0). The horizontal tangents are located at $\left(\frac{\sqrt{3}}{2},1\right), (0,-1), \left(-\frac{\sqrt{3}}{2},1\right), \left(-\frac{\sqrt{3}}{2},-1\right), (0,1), \left(\frac{\sqrt{3}}{2},-1\right)$.
+        
 
 \end{enumerate}
